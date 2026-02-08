@@ -19,6 +19,7 @@ technologies:
   - OSC
   - Multi-brain BCMI
   - Emotion Detection
+  - MATLAB
 links:
   paper: ''
   video: ''
