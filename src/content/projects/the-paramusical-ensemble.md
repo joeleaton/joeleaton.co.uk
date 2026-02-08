@@ -1,6 +1,6 @@
 ---
 title: The ParaMusical Ensemble
-slug: /projects
+slug: paramusical-ensemble
 description: Four patients and friends with neuro-impairments play music together for the first time.
 categories:
   - bcmi
