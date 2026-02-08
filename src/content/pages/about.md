@@ -8,9 +8,11 @@ showInMenu: false
 
 I specialize in the intersection of technology, creativity, and education, bringing [over 18 years of experience](https://www.linkedin.com/in/joel-eaton-uk/) in learning and research consultancy, interactive technology development, and educational leadership.
 
-My career began in academia, but I now lead innovative products, teams, and services in the software industry, working with global leaders such as [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com).
+My career began in academia, but I now lead innovative products, teams, and services in the software industry, working with global leaders such as [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com). I have spoken at industry events, such as Pulse Europe, on topics around Customer Education and Enablement in the SaaS sector.
 
 In my spare time, I'm a long distance runner and continue to dabble in music technology for fun. I'm an England Athletics Level 3 Coach in Running Fitness, and love supporting and coaching other runners through injury towards endurance events.
+
+![portrait photo of Joel](/images/uploads/joel_effected.jpg "Joel")
 
 As a freelance consultant and developer, I have successfully delivered projects for diverse organizations, including Volvo, Barclays Wealth, The National Library of Scotland, and Smirnoff. My expertise spans customer education leadership, designing bio-engineering systems for research, managing undergraduate programs, and advising bodies and institutions across the Higher Education and Cultural Heritage sectors.
 
