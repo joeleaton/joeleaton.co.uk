@@ -9,7 +9,7 @@ tags:
   - performance
   - research
 year: 2017
-location: Plymouth, UK
+location: Berlin, Germany
 featured: true
 featuredImage: ''
 videoUrl: https://vimeo.com/116013316
@@ -35,6 +35,8 @@ A collaborative brain-computer music performance that explores the concept of sh
 ## Concept
 
 When two people share an experience, their brain activity can synchronise in measurable ways. This project asks:  what does that synchronisation sound like?  What happens musically when two minds drift apart? And what if the audience could direct a performance based on how they're feeling?
+
+The Space Between us features the composer and pianist [Weiwei Jin](http://www.weiweijin.com/) on piano and composition, and  [Fiona Miller](http://www.fionasallymiller.co.uk/)  on vocals. The piece was performed at the 9th Conference on Interdisciplinary Musicology at the Museum of Musical Instruments, Berlin, Germany.
 
 ## Technical Implementation
 
