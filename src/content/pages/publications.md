@@ -2,7 +2,7 @@
 title: Publications
 slug: publications
 description: Academic publications, conference papers, and research outputs.
-menuOrder: 1
+menuOrder: 3
 showInMenu: true
 ---
 
