@@ -51,3 +51,5 @@ Kirke, A., Eaton, J. 2013. _Open Outcry: A “Reality” Opera that uses Music t
 Kirke, A., Eaton, J. 2013. _InSight: Emulating Neurological Conditions through Performance Technology_. Proceedings of the Intl. Music and Emotion Conference. Jyväskylä, Finland.
 
 Eaton, J., Miranda, E. 2012. _New Approaches for Brain‐Computer Music Interfacing_. Proceedings of Music of the Mind - Music, Mind Invention, University of New Jersey, USA.
+
+![photo of books](/images/uploads/PXL_20260208_161256174.MP.jpg "Books of publications")
