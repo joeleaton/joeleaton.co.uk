@@ -432,6 +432,40 @@ h3 { font-size: var(--text-h3); }
   margin: var(--space-xl) 0;
 }
 
+/* --- Markdown Columns --- */
+.prose .md-columns {
+  display: grid;
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.prose .md-columns-2 { grid-template-columns: 1fr 1fr; }
+.prose .md-columns-3 { grid-template-columns: 1fr 1fr 1fr; }
+.prose .md-columns-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.prose .md-column > *:first-child {
+  margin-top: 0;
+}
+
+.prose .md-column > *:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .prose .md-columns-2,
+  .prose .md-columns-3,
+  .prose .md-columns-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .prose .md-columns-3,
+  .prose .md-columns-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* --- Section spacing --- */
 .section {
   padding: var(--space-3xl) 0;
