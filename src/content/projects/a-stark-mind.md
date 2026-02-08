@@ -1,21 +1,30 @@
 ---
-title: "A Stark Mind"
-slug: "a-stark-mind"
-description: "Brain-controlled audiovisual performance with real-time graphic score generation"
-categories: ["bcmi", "music"]
-tags: ["performance", "research"]
+title: A Stark Mind
+slug: a-stark-mind
+description: Brain-controlled audiovisual performance with real-time graphic score generation
+categories:
+  - bcmi
+  - music
+tags:
+  - performance
+  - research
 year: 2015
-location: "University of Plymouth, UK"
+location: University of Plymouth, UK
 featured: true
-featuredImage: ""
-videoUrl: ""
-technologies: ["EEG", "SSVEP", "MaxScore", "Pure Data"]
+featuredImage: /images/uploads/QVZqNTc4QzB0bjBnajA5a1FWQXZTNGZQ.jpeg
+videoUrl: https://vimeo.com/134393784
+technologies:
+  - EEG
+  - SSVEP
+  - MaxScore
+  - Pure Data
 links:
-  paper: ""
-  video: ""
-  github: ""
-relatedProjects: ["the-space-between-us"]
+  paper: ''
+  video: ''
+  github: ''
 publishedDate: 2015-06-01
+relatedProjects:
+  - the-space-between-us
 ---
 
 # A Stark Mind
