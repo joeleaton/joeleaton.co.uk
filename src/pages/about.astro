@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DomainCard from '../components/DomainCard.astro';
+import { url } from '../utils/paths';
 ---
 
 <BaseLayout title="About" description="Joel Eaton - Multi-disciplinary researcher with a PhD in Brain-Computer Music Interfacing, running coach, music technologist, and education leader.">
@@ -43,28 +44,28 @@ import DomainCard from '../components/DomainCard.astro';
           title="BCMI Research"
           description="Brain-Computer Music Interfacing. PhD research exploring neurotechnology and musical expression."
           highlights={['15+ Projects', '40+ Publications', 'Worldwide performances']}
-          href="/work?filter=bcmi"
+          href={url('/work?filter=bcmi')}
           domain="bcmi"
         />
         <DomainCard
           title="Education Leadership"
           description="Workshops, speaking, and customer education. Building learning experiences at scale."
           highlights={['Workshops', 'Speaking', 'Customer education']}
-          href="/work?filter=education"
+          href={url('/work?filter=education')}
           domain="education"
         />
         <DomainCard
           title="Music Technology"
           description="Pure Data, synthesis, drone music. Creative coding and experimental sound design."
           highlights={['Pure Data', 'Synthesis', 'Drone music']}
-          href="/work?filter=music"
+          href={url('/work?filter=music')}
           domain="music"
         />
         <DomainCard
           title="Running Coaching"
           description="Ultramarathon and distance running coaching. Personalised training programs for 10 athletes."
           highlights={['Ultramarathons', '10 Athletes', 'Personalised plans']}
-          href="/work?filter=running"
+          href={url('/work?filter=running')}
           domain="running"
         />
       </div>
@@ -92,9 +93,9 @@ import DomainCard from '../components/DomainCard.astro';
         Interested in collaboration, coaching, or speaking?
       </p>
       <div class="cta-buttons">
-        <a href="/work" class="btn btn-primary">View Projects</a>
-        <a href="/blog" class="btn btn-outline">Read Blog</a>
-        <a href="/contact" class="btn btn-outline">Contact</a>
+        <a href={url('/work')} class="btn btn-primary">View Projects</a>
+        <a href={url('/blog')} class="btn btn-outline">Read Blog</a>
+        <a href={url('/contact')} class="btn btn-outline">Contact</a>
       </div>
     </div>
   </section>

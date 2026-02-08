@@ -1,4 +1,6 @@
 ---
+import { url } from '../utils/paths';
+
 interface Props {
   title: string;
   slug: string;
@@ -30,12 +32,12 @@ const formattedDate = publishedDate.toLocaleDateString('en-GB', {
       <time datetime={publishedDate.toISOString()}>{formattedDate}</time>
     </div>
     <h3 class="blog-title">
-      <a href={`/blog/${slug}`}>{title}</a>
+      <a href={url(`/blog/${slug}`)}>{title}</a>
     </h3>
     <p class="blog-excerpt">{description}</p>
     <div class="blog-footer">
       {readTime && <span class="read-time">{readTime} min read</span>}
-      <a href={`/blog/${slug}`} class="blog-link">
+      <a href={url(`/blog/${slug}`)} class="blog-link">
         Read More <span class="arrow">&rarr;</span>
       </a>
     </div>

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { url } from '../utils/paths';
 
 const currentPath = Astro.url.pathname;
 
@@ -10,48 +11,46 @@ const menuPages = allPages
   .sort((a, b) => (a.data.menuOrder ?? 99) - (b.data.menuOrder ?? 99));
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/work', label: 'Work' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contact' },
+  { href: url('/work'), label: 'Work' },
+  { href: url('/blog'), label: 'Blog' },
+  { href: url('/contact'), label: 'Contact' },
 ];
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo gradient-text">Joel Eaton</a>
+    <a href={url('/')} class="logo gradient-text">Joel Eaton</a>
     <nav class="main-nav" aria-label="Main navigation">
       <ul>
         <li>
           <a
-            href="/"
-            class:list={[{ active: currentPath === '/' }]}
+            href={url('/')}
+            class:list={[{ active: currentPath === url('/') }]}
           >
             Home
           </a>
         </li>
         <!-- About with dropdown -->
         <li class="has-dropdown">
-          <a
-            href="/about"
-            class:list={[{ active: currentPath.startsWith('/about') }]}
-          >
-            About
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            <a
+              href={url('/about')}
+              class:list={[{ active: currentPath.startsWith(url('/about')) }]}
+            >
+              About
+            </a>
             {menuPages.length > 0 && <span class="dropdown-arrow">▾</span>}
-          </a>
+          </button>
           {menuPages.length > 0 && (
             <ul class="dropdown" role="menu">
               <li role="menuitem">
-                <a href="/about" class:list={[{ active: currentPath === '/about' || currentPath === '/about/' }]}>
+                <a href={url('/about')}>
                   About Me
                 </a>
               </li>
               {menuPages.map((page) => (
                 <li role="menuitem">
-                  <a
-                    href={`/about/${page.data.slug}`}
-                    class:list={[{ active: currentPath === `/about/${page.data.slug}` || currentPath === `/about/${page.data.slug}/` }]}
-                  >
+                  <a href={url(`/about/${page.data.slug}`)}>
                     {page.data.title}
                   </a>
                 </li>
@@ -59,11 +58,11 @@ const navLinks = [
             </ul>
           )}
         </li>
-        {navLinks.slice(1).map((link) => (
+        {navLinks.map((link) => (
           <li>
             <a
               href={link.href}
-              class:list={[{ active: currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+              class:list={[{ active: currentPath.startsWith(link.href) }]}
             >
               {link.label}
             </a>
@@ -139,6 +138,19 @@ const navLinks = [
     width: 100%;
   }
 
+  /* Dropdown toggle button */
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    font: inherit;
+    color: inherit;
+  }
+
   /* Dropdown */
   .has-dropdown {
     position: relative;
@@ -149,6 +161,7 @@ const navLinks = [
     margin-left: 0.25rem;
     opacity: 0.6;
     transition: transform 0.2s;
+    color: var(--text-secondary);
   }
 
   .has-dropdown:hover .dropdown-arrow {
@@ -173,8 +186,8 @@ const navLinks = [
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   }
 
-  .has-dropdown:hover .dropdown,
-  .has-dropdown:focus-within .dropdown {
+  /* Desktop: show on hover only */
+  .has-dropdown:hover .dropdown {
     display: flex;
   }
 
@@ -260,9 +273,13 @@ const navLinks = [
       display: none;
     }
 
-    /* Mobile dropdown — always visible, indented */
+    /* Mobile dropdown — hidden by default, toggled via JS */
+    .has-dropdown:hover .dropdown {
+      display: none;
+    }
+
     .dropdown {
-      display: flex;
+      display: none;
       position: static;
       transform: none;
       min-width: 0;
@@ -272,6 +289,10 @@ const navLinks = [
       border-radius: 0;
       padding: 0;
       box-shadow: none;
+    }
+
+    .dropdown.open {
+      display: flex;
     }
 
     .dropdown::before {
@@ -291,13 +312,26 @@ const navLinks = [
       background: transparent;
     }
 
+    .dropdown-toggle {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     .dropdown-arrow {
-      display: none;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .dropdown-arrow.rotated {
+      transform: rotate(180deg);
     }
   }
 </style>
 
 <script>
+  // Mobile hamburger toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const mainNav = document.querySelector('.main-nav');
   const menuIcon = document.querySelector('.menu-icon');
@@ -308,6 +342,29 @@ const navLinks = [
       const isExpanded = mainNav.classList.contains('active');
       menuToggle.setAttribute('aria-expanded', String(isExpanded));
       menuIcon.innerHTML = isExpanded ? '&#10005;' : '&#9776;';
+    });
+  }
+
+  // Mobile dropdown toggle for About sub-menu
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown');
+  const dropdownArrow = document.querySelector('.dropdown-arrow');
+
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', (e) => {
+      // Only toggle on mobile (when hamburger is visible)
+      if (window.innerWidth <= 767) {
+        // If clicking the arrow area, toggle dropdown
+        const target = e.target as HTMLElement;
+        if (target.classList.contains('dropdown-arrow') || target === dropdownToggle) {
+          e.preventDefault();
+          dropdown.classList.toggle('open');
+          if (dropdownArrow) dropdownArrow.classList.toggle('rotated');
+          const isOpen = dropdown.classList.contains('open');
+          dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+        }
+        // If clicking the <a> link inside, let it navigate
+      }
     });
   }
 </script>

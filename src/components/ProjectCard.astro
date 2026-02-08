@@ -1,4 +1,6 @@
 ---
+import { url } from '../utils/paths';
+
 interface Props {
   title: string;
   slug: string;
@@ -47,7 +49,7 @@ const borderColor = borderColors[primaryCategory] || 'var(--accent-primary)';
     </div>
   )}
 
-  <a href={`/projects/${slug}`} class="project-link">
+  <a href={url(`/projects/${slug}`)} class="project-link">
     View Project <span class="arrow">&rarr;</span>
   </a>
 </article>
