@@ -28,7 +28,7 @@ On mobile, columns stack vertically. On tablet, 3-4 columns collapse to a 2-colu
 
 You can put anything inside columns — text, lists, bold, links, images. Just keep each column's content between the --- dividers.
 
-#Video embeds — how to use
+# Video embeds — how to use
 In blog posts / project body content:
 Just paste a YouTube or Vimeo URL on its own line in the markdown editor:
 
@@ -45,7 +45,7 @@ youtu.be/...
 vimeo.com/...
 For project hero videos (the big video at the top of a project page): use the Video URL field in the project editor. Paste the embed URL there (e.g. https://www.youtube.com/embed/VIDEO_ID).
 
-#Images — how to use
+# Images — how to use
 Upload images through the CMS Featured Image field or drag them into the markdown body. They're automatically:
 
 Lazy-loaded (below the fold)
