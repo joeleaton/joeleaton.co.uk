@@ -1,6 +1,6 @@
 ---
 title: About Joel Eaton
-slug: about-me
+slug: about
 description: Multi-disciplinary researcher, coach, and technologist.
 menuOrder: 0
 showInMenu: false
