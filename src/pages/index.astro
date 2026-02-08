@@ -42,7 +42,7 @@ const filters = [
         music technology, education leadership, and running coaching.
       </p>
       <div class="hero-actions">
-        <a href={url('/work')} class="btn btn-primary">View Work</a>
+        <a href={url('/projects')} class="btn btn-primary">View Projects</a>
         <a href={url('/about')} class="btn btn-outline">About Me</a>
       </div>
     </div>
@@ -56,28 +56,28 @@ const filters = [
           title="BCMI Research"
           description="Brain-Computer Music Interfacing. PhD research exploring neurotechnology and musical expression."
           highlights={['15+ Projects', '40+ Publications', 'Worldwide performances']}
-          href={url('/work?filter=bcmi')}
+          href={url('/projects?filter=bcmi')}
           domain="bcmi"
         />
         <DomainCard
           title="Education Leadership"
           description="Workshops, speaking, and customer education. Building learning experiences at scale."
           highlights={['Workshops', 'Speaking', 'Customer education']}
-          href={url('/work?filter=education')}
+          href={url('/projects?filter=education')}
           domain="education"
         />
         <DomainCard
           title="Music Technology"
           description="Pure Data, synthesis, drone music. Creative coding and experimental sound design."
           highlights={['Pure Data', 'Synthesis', 'Drone music']}
-          href={url('/work?filter=music')}
+          href={url('/projects?filter=music')}
           domain="music"
         />
         <DomainCard
           title="Running Coaching"
           description="Ultramarathon and distance running coaching. Personalised training programs for 10 athletes."
           highlights={['Ultramarathons', '10 Athletes', 'Personalised plans']}
-          href={url('/work?filter=running')}
+          href={url('/projects?filter=running')}
           domain="running"
         />
       </div>
@@ -104,7 +104,7 @@ const filters = [
           ))}
         </div>
         <div class="view-all">
-          <a href={url('/work')} class="btn btn-outline">View All Projects</a>
+          <a href={url('/projects')} class="btn btn-outline">View All Projects</a>
         </div>
       </div>
     </section>

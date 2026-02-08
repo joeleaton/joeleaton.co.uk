@@ -19,7 +19,7 @@ const projects = defineCollection({
       paper: z.string().optional().default(''),
       video: z.string().optional().default(''),
       github: z.string().optional().default(''),
-    }).optional(),
+    }).nullable().optional(),
     relatedProjects: z.array(z.string()).optional().default([]),
     publishedDate: z.coerce.date(),
   }),
