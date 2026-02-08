@@ -3,8 +3,6 @@ backend:
   repo: joeleaton/joeleaton.co.uk
   branch: main
 
-local_backend: true
-
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
