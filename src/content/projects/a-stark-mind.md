@@ -16,11 +16,13 @@ videoUrl: https://vimeo.com/134393784
 technologies:
   - EEG
   - SSVEP
-  - MaxScore
+  - Motor Imagery
+  - Emotion Detection
+  - Resolve
   - Pure Data
 links:
   paper: ''
-  video: ''
+  video: https://vimeo.com/134393784
   github: ''
 publishedDate: 2015-06-01
 relatedProjects:
@@ -33,13 +35,14 @@ A groundbreaking audiovisual performance where the graphic score is controlled e
 
 ## Technical Approach
 
-The system uses SSVEP (Steady-State Visual Evoked Potentials) to detect brain responses to flickering visual stimuli. This data controls MaxScore, generating musical notation in real-time that performers sight-read during the performance.
+A Stark Mind uses a brain-computer music interface (BCMI) to conduct a visual score that is projected on screen for the musicians to follow. The hyrbid-BCMI performer uses a combination of three brainwave control methods to direct and arrange the graphical score, controlling the musicians. The abstract score acts as visual cues to the musicians directing their playing styles and interaction with each other throughout the performance. The hybrid-BCMI uses visual gazing for SSVEP control, simultaneous two way motor imagery control and emotion detection to generate and control the score.
 
 ## Key Innovation
 
-Rather than using brain data to directly produce sound, this project positions the brain as a composer — generating scores that human musicians interpret. This creates a unique feedback loop between neurotechnology and musical expression.
+Rather than using brain data to directly produce sound, this project positions the brain as a composer, generating moving scores of abstract shapes that human musicians interpret. 
+This creates a unique feedback loop between neurotechnology and musical expression.
 
 ## Performances
 
-- University of Plymouth, 2015
+- The House, University of Plymouth, 2015
 - International Computer Music Conference, 2016
