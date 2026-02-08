@@ -15,13 +15,15 @@ const navLinks = [
   { href: url('/blog'), label: 'Blog' },
   { href: url('/contact'), label: 'Contact' },
 ];
+
+const hasDropdown = menuPages.length > 0;
 ---
 
 <header class="site-header">
   <div class="container header-inner">
     <a href={url('/')} class="logo gradient-text">Joel Eaton</a>
     <nav class="main-nav" aria-label="Main navigation">
-      <ul>
+      <ul class="nav-list">
         <li>
           <a
             href={url('/')}
@@ -30,29 +32,24 @@ const navLinks = [
             Home
           </a>
         </li>
-        <!-- About with dropdown -->
-        <li class="has-dropdown">
-          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            <a
-              href={url('/about')}
-              class:list={[{ active: currentPath.startsWith(url('/about')) }]}
-            >
-              About
-            </a>
-            {menuPages.length > 0 && <span class="dropdown-arrow">▾</span>}
-          </button>
-          {menuPages.length > 0 && (
+        <li class:list={['nav-item-about', { 'has-dropdown': hasDropdown }]}>
+          <a
+            href={url('/about')}
+            class:list={['about-link', { active: currentPath.startsWith(url('/about')) }]}
+          >
+            About
+          </a>
+          {hasDropdown && (
+            <button class="dropdown-arrow" aria-label="Toggle About submenu" aria-expanded="false">▾</button>
+          )}
+          {hasDropdown && (
             <ul class="dropdown" role="menu">
               <li role="menuitem">
-                <a href={url('/about')}>
-                  About Me
-                </a>
+                <a href={url('/about')}>About Me</a>
               </li>
               {menuPages.map((page) => (
                 <li role="menuitem">
-                  <a href={url(`/about/${page.data.slug}`)}>
-                    {page.data.title}
-                  </a>
+                  <a href={url(`/about/${page.data.slug}`)}>{page.data.title}</a>
                 </li>
               ))}
             </ul>
@@ -102,7 +99,7 @@ const navLinks = [
     text-decoration: none;
   }
 
-  .main-nav ul {
+  .nav-list {
     display: flex;
     gap: var(--space-lg);
     list-style: none;
@@ -138,40 +135,32 @@ const navLinks = [
     width: 100%;
   }
 
-  /* Dropdown toggle button */
-  .dropdown-toggle {
+  /* About item with dropdown */
+  .nav-item-about {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .dropdown-arrow {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0;
-    font: inherit;
-    color: inherit;
-  }
-
-  /* Dropdown */
-  .has-dropdown {
-    position: relative;
-  }
-
-  .dropdown-arrow {
     font-size: 0.7em;
-    margin-left: 0.25rem;
     opacity: 0.6;
     transition: transform 0.2s;
     color: var(--text-secondary);
+    line-height: 1;
+    display: none; /* hidden on desktop — dropdown uses hover */
   }
 
-  .has-dropdown:hover .dropdown-arrow {
-    transform: rotate(180deg);
-  }
-
+  /* Dropdown panel */
   .dropdown {
     display: none;
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 14px);
     left: 50%;
     transform: translateX(-50%);
     min-width: 180px;
@@ -184,21 +173,22 @@ const navLinks = [
     flex-direction: column;
     gap: 0;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    list-style: none;
   }
 
-  /* Desktop: show on hover only */
-  .has-dropdown:hover .dropdown {
+  /* Desktop: show dropdown on hover over the whole <li> */
+  .has-dropdown:hover > .dropdown {
     display: flex;
   }
 
-  /* Invisible bridge to prevent gap hover loss */
+  /* Invisible bridge so mouse can travel from link to dropdown */
   .dropdown::before {
     content: '';
     position: absolute;
-    top: -12px;
+    top: -16px;
     left: 0;
     right: 0;
-    height: 12px;
+    height: 16px;
   }
 
   .dropdown li {
@@ -218,12 +208,12 @@ const navLinks = [
     display: none;
   }
 
-  .dropdown a:hover,
-  .dropdown a.active {
+  .dropdown a:hover {
     color: var(--text-primary);
     background: rgba(255, 51, 102, 0.08);
   }
 
+  /* Hamburger button */
   .menu-toggle {
     display: none;
     background: none;
@@ -234,6 +224,7 @@ const navLinks = [
     padding: var(--space-xs);
   }
 
+  /* ---- Mobile ---- */
   @media (max-width: 767px) {
     .menu-toggle {
       display: block;
@@ -255,12 +246,12 @@ const navLinks = [
       display: block;
     }
 
-    .main-nav ul {
+    .nav-list {
       flex-direction: column;
       gap: 0;
     }
 
-    .main-nav li {
+    .nav-list > li {
       border-bottom: 1px solid var(--border-color);
     }
 
@@ -273,16 +264,41 @@ const navLinks = [
       display: none;
     }
 
-    /* Mobile dropdown — hidden by default, toggled via JS */
-    .has-dropdown:hover .dropdown {
+    /* About row: link + arrow side by side */
+    .nav-item-about {
+      flex-wrap: wrap;
+    }
+
+    .nav-item-about > .about-link {
+      flex: 1;
+    }
+
+    .dropdown-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+
+    .dropdown-arrow.rotated {
+      transform: rotate(180deg);
+    }
+
+    /* Disable desktop hover */
+    .has-dropdown:hover > .dropdown {
       display: none;
     }
 
+    /* Mobile dropdown: hidden by default, toggled via JS */
     .dropdown {
       display: none;
       position: static;
       transform: none;
       min-width: 0;
+      width: 100%;
       background: transparent;
       backdrop-filter: none;
       border: none;
@@ -311,22 +327,6 @@ const navLinks = [
     .dropdown a:hover {
       background: transparent;
     }
-
-    .dropdown-toggle {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .dropdown-arrow {
-      display: inline-block;
-      transition: transform 0.2s;
-    }
-
-    .dropdown-arrow.rotated {
-      transform: rotate(180deg);
-    }
   }
 </style>
 
@@ -345,26 +345,17 @@ const navLinks = [
     });
   }
 
-  // Mobile dropdown toggle for About sub-menu
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  // Mobile: toggle About sub-menu via arrow button
+  const arrowBtn = document.querySelector('.dropdown-arrow') as HTMLButtonElement | null;
   const dropdown = document.querySelector('.dropdown');
-  const dropdownArrow = document.querySelector('.dropdown-arrow');
 
-  if (dropdownToggle && dropdown) {
-    dropdownToggle.addEventListener('click', (e) => {
-      // Only toggle on mobile (when hamburger is visible)
-      if (window.innerWidth <= 767) {
-        // If clicking the arrow area, toggle dropdown
-        const target = e.target as HTMLElement;
-        if (target.classList.contains('dropdown-arrow') || target === dropdownToggle) {
-          e.preventDefault();
-          dropdown.classList.toggle('open');
-          if (dropdownArrow) dropdownArrow.classList.toggle('rotated');
-          const isOpen = dropdown.classList.contains('open');
-          dropdownToggle.setAttribute('aria-expanded', String(isOpen));
-        }
-        // If clicking the <a> link inside, let it navigate
-      }
+  if (arrowBtn && dropdown) {
+    arrowBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+      arrowBtn.classList.toggle('rotated');
+      arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
     });
   }
 </script>
