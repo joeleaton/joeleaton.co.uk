@@ -1,7 +1,7 @@
 ---
-title: "About Joel Eaton"
-slug: "about-me"
-description: "Multi-disciplinary researcher, coach, and technologist."
+title: About Me
+slug: about-me
+description: Multi-disciplinary researcher, coach, and technologist.
 menuOrder: 0
 showInMenu: false
 ---
