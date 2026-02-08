@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import OptimizedImage from '../components/OptimizedImage.astro';
+import { url } from '../utils/paths';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -8,7 +9,8 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, category, publishedDate, updatedDate, featuredImage, author, readTime } = post.data;
+const { title, description, category, publishedDate, updatedDate, featuredImage: rawImage, author, readTime } = post.data;
+const featuredImage = rawImage && rawImage.startsWith('/') ? url(rawImage) : rawImage;
 
 const formattedDate = publishedDate.toLocaleDateString('en-GB', {
   year: 'numeric',
