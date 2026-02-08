@@ -36,7 +36,7 @@ A collaborative brain-computer music performance that explores the concept of sh
 
 When two people share an experience, their brain activity can synchronise in measurable ways. This project asks:  what does that synchronisation sound like?  What happens musically when two minds drift apart? And what if the audience could direct a performance based on how they're feeling?
 
-The Space Between us features the composer and pianist [Weiwei Jin](http://www.weiweijin.com/) on piano and composition, and  [Fiona Miller](http://www.fionasallymiller.co.uk/)  on vocals. The piece was performed at the 9th Conference on Interdisciplinary Musicology at the Museum of Musical Instruments, Berlin, Germany.
+The Space Between us features the composer and pianist [Weiwei Jin](http://www.weiweijin.com/) on piano and composition, and  [Fiona Miller](http://www.fionasallymiller.co.uk/)  on vocals.
 
 ## Technical Implementation
 
@@ -45,3 +45,7 @@ Two people wear EEG headsets simultaneously. A custom Pure Data patch receives b
 ## Impact
 
 This work contributed to the growing field of multi-brain BCIs and demonstrated new possibilities for collaborative human-computer performance.
+
+## Performances
+
+- CIM 14 - 9th Conference on Interdisciplinary Musicology at the Museum of Musical Instruments, Berlin, Germany.
