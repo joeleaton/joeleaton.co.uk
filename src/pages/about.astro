@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DomainCard from '../components/DomainCard.astro';
+---
+
+<BaseLayout title="About" description="Joel Eaton - Multi-disciplinary researcher with a PhD in Brain-Computer Music Interfacing, running coach, music technologist, and education leader.">
+  <section class="about-hero">
+    <div class="container">
+      <h1>About <span class="gradient-text">Joel Eaton</span></h1>
+      <p class="about-tagline">
+        Technologist. Researcher. Coach.
+      </p>
+    </div>
+  </section>
+
+  <section class="section about-story">
+    <div class="container content-wrapper">
+      <div class="prose">
+        <p>
+          I'm a multi-disciplinary professional working at the intersection of
+          neuroscience, music, sport, and technology. With a PhD in Brain-Computer
+          Music Interfacing from the University of Plymouth, my work explores how
+          we can use brainwave data to create meaningful musical experiences.
+        </p>
+        <p>
+          Beyond research, I coach ultramarathon runners, create experimental
+          electronic music with Pure Data, and lead education initiatives that
+          help people learn complex technical concepts.
+        </p>
+        <p>
+          This website is a home for all of these threads — a place to share
+          projects, ideas, and the connections between them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section expertise-areas">
+    <div class="container">
+      <h2 class="section-title">Areas of Expertise</h2>
+      <div class="domain-grid">
+        <DomainCard
+          title="BCMI Research"
+          description="Brain-Computer Music Interfacing. PhD research exploring neurotechnology and musical expression."
+          highlights={['15+ Projects', '40+ Publications', 'Worldwide performances']}
+          href="/work?filter=bcmi"
+          domain="bcmi"
+        />
+        <DomainCard
+          title="Education Leadership"
+          description="Workshops, speaking, and customer education. Building learning experiences at scale."
+          highlights={['Workshops', 'Speaking', 'Customer education']}
+          href="/work?filter=education"
+          domain="education"
+        />
+        <DomainCard
+          title="Music Technology"
+          description="Pure Data, synthesis, drone music. Creative coding and experimental sound design."
+          highlights={['Pure Data', 'Synthesis', 'Drone music']}
+          href="/work?filter=music"
+          domain="music"
+        />
+        <DomainCard
+          title="Running Coaching"
+          description="Ultramarathon and distance running coaching. Personalised training programs for 10 athletes."
+          highlights={['Ultramarathons', '10 Athletes', 'Personalised plans']}
+          href="/work?filter=running"
+          domain="running"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section credentials">
+    <div class="container content-wrapper">
+      <h2 class="section-title">Credentials</h2>
+      <div class="prose">
+        <ul>
+          <li><strong>PhD</strong> — Brain-Computer Music Interfacing, University of Plymouth</li>
+          <li><strong>Research</strong> — 40+ publications in neurotechnology and music</li>
+          <li><strong>Coaching</strong> — Certified running coach, 10 active athletes</li>
+          <li><strong>Education</strong> — Workshop facilitator and speaker</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container" style="text-align: center;">
+      <h2>Get in Touch</h2>
+      <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+        Interested in collaboration, coaching, or speaking?
+      </p>
+      <div class="cta-buttons">
+        <a href="/work" class="btn btn-primary">View Projects</a>
+        <a href="/blog" class="btn btn-outline">Read Blog</a>
+        <a href="/contact" class="btn btn-outline">Contact</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .about-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-tagline {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+  }
+
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

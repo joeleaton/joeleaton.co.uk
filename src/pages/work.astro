@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import FilterBar from '../components/FilterBar.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const sortedProjects = allProjects.sort((a, b) => b.data.year - a.data.year);
+
+const filters = [
+  { label: 'All Projects', value: 'all' },
+  { label: 'BCMI', value: 'bcmi' },
+  { label: 'Running', value: 'running' },
+  { label: 'Music', value: 'music' },
+  { label: 'Education', value: 'education' },
+  { label: 'Research', value: 'research' },
+  { label: 'Performance', value: 'performance' },
+  { label: 'Tools', value: 'tools' },
+];
+---
+
+<BaseLayout title="Work" description="Projects spanning brain-computer interfaces, running coaching, music technology, and education.">
+  <section class="work-hero">
+    <div class="container">
+      <h1>Work & Projects</h1>
+      <p class="work-intro">
+        A collection of projects across brain-computer music interfaces,
+        running coaching, music technology, and education leadership.
+      </p>
+    </div>
+  </section>
+
+  <FilterBar filters={filters} />
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        {sortedProjects.map((project) => (
+          <ProjectCard
+            title={project.data.title}
+            slug={project.data.slug}
+            description={project.data.description}
+            categories={project.data.categories}
+            tags={project.data.tags}
+            year={project.data.year}
+            location={project.data.location}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .work-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .work-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .work-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 479px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

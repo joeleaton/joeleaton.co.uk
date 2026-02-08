@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import FilterBar from '../../components/FilterBar.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime()
+);
+
+const filters = [
+  { label: 'All Posts', value: 'all' },
+  { label: 'BCMI', value: 'bcmi' },
+  { label: 'Running', value: 'running' },
+  { label: 'Music', value: 'music' },
+  { label: 'Education', value: 'education' },
+  { label: 'General', value: 'general' },
+];
+---
+
+<BaseLayout title="Blog" description="Thoughts and articles on brain-computer interfaces, running, music technology, and education.">
+  <section class="blog-hero">
+    <div class="container">
+      <h1>Blog</h1>
+      <p class="blog-intro">
+        Thoughts, tutorials, and insights across brain-computer interfaces,
+        running, music technology, and education.
+      </p>
+    </div>
+  </section>
+
+  <FilterBar filters={filters} />
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {sortedPosts.map((post) => (
+          <div data-categories={post.data.category}>
+            <BlogCard
+              title={post.data.title}
+              slug={post.data.slug}
+              description={post.data.description}
+              category={post.data.category}
+              publishedDate={post.data.publishedDate}
+              featuredImage={post.data.featuredImage}
+              readTime={post.data.readTime}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .blog-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .blog-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 479px) {
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

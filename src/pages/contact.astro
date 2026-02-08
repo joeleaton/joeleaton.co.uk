@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DomainIcon from '../components/DomainIcon.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with Joel Eaton for research collaboration, running coaching, workshops, or speaking engagements.">
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Get in <span class="gradient-text">Touch</span></h1>
+      <p class="contact-intro">
+        Whether you're interested in research collaboration, coaching,
+        workshops, or speaking engagements — I'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-options">
+        <div class="option-card" data-topic="bcmi">
+          <DomainIcon domain="bcmi" size={40} />
+          <h3>BCMI Collaboration</h3>
+          <p>Research partnerships, performances, neurotechnology projects</p>
+        </div>
+        <div class="option-card" data-topic="running">
+          <DomainIcon domain="running" size={40} />
+          <h3>Running Coaching</h3>
+          <p>Training programs, race preparation, consultations</p>
+        </div>
+        <div class="option-card" data-topic="speaking">
+          <DomainIcon domain="education" size={40} />
+          <h3>Speaking & Workshops</h3>
+          <p>Education, innovation, technology talks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="form-wrapper">
+        <h2>Send a Message</h2>
+        <form action="https://formspree.io/f/mojnqkod" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .contact-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .contact-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+  }
+
+  .option-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .option-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 40px var(--hover-glow);
+  }
+
+  .option-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .option-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .option-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .form-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .form-wrapper h2 {
+    margin-bottom: var(--space-lg);
+  }
+
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+
+  .form-group label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(27, 36, 68, 0.3);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+</style>
+
+<script>
+  const optionCards = document.querySelectorAll('.option-card');
+  const subjectInput = document.getElementById('subject') as HTMLInputElement | null;
+
+  optionCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const h3 = card.querySelector('h3');
+      if (h3 && subjectInput) {
+        subjectInput.value = h3.textContent || '';
+        subjectInput.focus();
+      }
+    });
+  });
+</script>

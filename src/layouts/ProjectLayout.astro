@@ -1,0 +1,251 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, description, categories, tags, year, location, featuredImage, videoUrl, technologies, links } = project.data;
+
+const borderColors: Record<string, string> = {
+  bcmi: 'var(--accent-bcmi)',
+  running: 'var(--accent-running)',
+  music: 'var(--accent-music)',
+  education: 'var(--accent-education)',
+};
+
+const primaryCategory = categories[0] || 'bcmi';
+const accent = borderColors[primaryCategory] || 'var(--accent-primary)';
+---
+
+<BaseLayout title={title} description={description} ogImage={featuredImage || undefined}>
+  <article class="project-page">
+    <!-- Hero -->
+    <section class="project-hero">
+      <div class="container">
+        <div class="project-badges">
+          {categories.map((cat) => (
+            <span class={`tag tag-${cat}`}>{cat}</span>
+          ))}
+        </div>
+        <h1>{title}</h1>
+        <p class="project-subtitle">{description}</p>
+        <div class="project-meta-bar">
+          {year && <span class="meta-item">{year}</span>}
+          {location && <span class="meta-item">{location}</span>}
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured media -->
+    {(featuredImage || videoUrl) && (
+      <section class="project-media">
+        <div class="container">
+          {videoUrl ? (
+            <div class="video-embed">
+              <iframe
+                src={videoUrl}
+                title={title}
+                allow="autoplay; fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+          ) : featuredImage ? (
+            <OptimizedImage
+              src={featuredImage}
+              alt={title}
+              aspectRatio="16/9"
+              eager={true}
+            />
+          ) : null}
+        </div>
+      </section>
+    )}
+
+    <!-- Content + Sidebar -->
+    <section class="project-content-section">
+      <div class="container project-grid">
+        <div class="project-body prose">
+          <slot />
+        </div>
+        <aside class="project-sidebar">
+          {technologies && technologies.length > 0 && (
+            <div class="sidebar-block">
+              <h4>Technologies</h4>
+              <ul class="tech-list">
+                {technologies.map((tech) => (
+                  <li>{tech}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {links && (links.paper || links.video || links.github) && (
+            <div class="sidebar-block">
+              <h4>Links</h4>
+              <ul class="link-list">
+                {links.paper && <li><a href={links.paper} target="_blank" rel="noopener">Paper</a></li>}
+                {links.video && <li><a href={links.video} target="_blank" rel="noopener">Video</a></li>}
+                {links.github && <li><a href={links.github} target="_blank" rel="noopener">GitHub</a></li>}
+              </ul>
+            </div>
+          )}
+          {tags && tags.length > 0 && (
+            <div class="sidebar-block">
+              <h4>Tags</h4>
+              <div class="tag-list">
+                {tags.map((tag) => (
+                  <span class="sidebar-tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style define:vars={{ accent }}>
+  .project-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .project-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: var(--space-md);
+  }
+
+  .project-meta-bar {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .meta-item {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding-left: var(--space-sm);
+    border-left: 2px solid var(--accent);
+  }
+
+  .meta-item:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .project-media {
+    margin-bottom: var(--space-xl);
+  }
+
+  .video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  :global(.optimized-image) {
+    width: 100%;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-xl);
+  }
+
+  .project-sidebar {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+  }
+
+  .sidebar-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .sidebar-block h4 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .tech-list li,
+  .link-list li {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .tech-list li:last-child,
+  .link-list li:last-child {
+    border-bottom: none;
+  }
+
+  .link-list a {
+    color: var(--accent-primary);
+    text-decoration: none;
+  }
+
+  .link-list a:hover {
+    text-decoration: underline;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sidebar-tag {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 1023px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-sidebar {
+      position: static;
+    }
+  }
+</style>

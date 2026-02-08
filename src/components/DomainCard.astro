@@ -1,0 +1,118 @@
+---
+import DomainIcon from './DomainIcon.astro';
+
+interface Props {
+  icon?: string;
+  title: string;
+  description: string;
+  highlights: string[];
+  href: string;
+  domain: 'bcmi' | 'running' | 'music' | 'education';
+}
+
+const { title, description, highlights, href, domain } = Astro.props;
+
+const accentColors: Record<string, string> = {
+  bcmi: 'var(--accent-bcmi)',
+  running: 'var(--accent-running)',
+  music: 'var(--accent-music)',
+  education: 'var(--accent-education)',
+};
+
+const accent = accentColors[domain];
+---
+
+<article class="domain-card" data-domain={domain}>
+  <DomainIcon domain={domain} size={48} />
+  <h2 class="card-title">{title}</h2>
+  <p class="card-description">{description}</p>
+  <ul class="card-highlights">
+    {highlights.map((h) => <li>{h}</li>)}
+  </ul>
+  <a href={href} class="card-link">
+    Explore <span class="arrow">&rarr;</span>
+  </a>
+</article>
+
+<style define:vars={{ accent }}>
+  .domain-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .domain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--accent);
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .domain-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .domain-card:hover::before {
+    height: 100%;
+  }
+
+  .card-title {
+    font-size: var(--text-h3);
+    margin-bottom: var(--space-xs);
+  }
+
+  .card-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .card-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+  }
+
+  .card-highlights li {
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .card-link {
+    color: var(--accent);
+    font-weight: var(--weight-semibold);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: gap 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .card-link:hover {
+    color: var(--accent);
+  }
+
+  .card-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .arrow {
+    transition: transform 0.3s;
+  }
+</style>

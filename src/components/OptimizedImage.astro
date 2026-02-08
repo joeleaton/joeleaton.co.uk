@@ -1,0 +1,76 @@
+---
+/**
+ * OptimizedImage — a smart image wrapper that:
+ * • Adds lazy loading, async decoding, and fetchpriority attributes
+ * • Provides responsive width/height hints to prevent CLS
+ * • Wraps images in a container with aspect-ratio for layout stability
+ * • Shows a subtle loading placeholder
+ *
+ * For images in `public/` (CMS uploads), Astro cannot do build-time
+ * optimisation, so we maximise browser-level optimisation instead.
+ */
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  aspectRatio?: string;  // e.g. "16/9"
+  eager?: boolean;       // true for above-fold hero images
+  rounded?: boolean;
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  aspectRatio = '16/9',
+  eager = false,
+  rounded = true,
+  class: className = '',
+} = Astro.props;
+
+const loading = eager ? 'eager' : 'lazy';
+const fetchpriority = eager ? 'high' : 'auto';
+const decoding = eager ? 'sync' : 'async';
+---
+
+<div
+  class:list={['optimized-image', { rounded }, className]}
+  style={`aspect-ratio: ${aspectRatio};`}
+>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    decoding={decoding}
+    fetchpriority={fetchpriority}
+    class="optimized-img"
+  />
+</div>
+
+<style>
+  .optimized-image {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    width: 100%;
+  }
+
+  .optimized-image.rounded {
+    border-radius: 12px;
+  }
+
+  .optimized-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+</style>

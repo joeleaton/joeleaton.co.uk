@@ -1,0 +1,136 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, category, publishedDate, updatedDate, featuredImage, author, readTime } = post.data;
+
+const formattedDate = publishedDate.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  datePublished: publishedDate.toISOString(),
+  ...(updatedDate && { dateModified: updatedDate.toISOString() }),
+  author: {
+    '@type': 'Person',
+    name: author || 'Joel Eaton',
+  },
+  description,
+});
+---
+
+<BaseLayout title={title} description={description} ogImage={featuredImage || undefined}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={jsonLd} />
+  </Fragment>
+
+  <article class="blog-post-page">
+    <section class="blog-hero">
+      <div class="container">
+        <div class="blog-post-meta">
+          <span class={`tag tag-${category}`}>{category}</span>
+          <time datetime={publishedDate.toISOString()}>{formattedDate}</time>
+          {readTime && <span class="read-time">{readTime} min read</span>}
+        </div>
+        <h1>{title}</h1>
+        <p class="blog-subtitle">{description}</p>
+        <div class="blog-author">
+          By <strong>{author || 'Joel Eaton'}</strong>
+        </div>
+      </div>
+    </section>
+
+    {featuredImage && (
+      <section class="blog-featured-image">
+        <div class="container">
+          <OptimizedImage
+            src={featuredImage}
+            alt={title}
+            aspectRatio="16/9"
+            eager={true}
+          />
+        </div>
+      </section>
+    )}
+
+    <section class="blog-content">
+      <div class="container">
+        <div class="prose content-wrapper">
+          <slot />
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+    max-width: var(--content-max);
+    margin: 0 auto;
+  }
+
+  .blog-hero .container {
+    max-width: var(--content-max);
+  }
+
+  .blog-post-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-post-meta time,
+  .read-time {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+
+  .blog-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .blog-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-author {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .blog-author strong {
+    color: var(--text-primary);
+  }
+
+  .blog-featured-image {
+    margin-bottom: var(--space-xl);
+  }
+
+  .blog-featured-image .container {
+    max-width: var(--content-max);
+  }
+
+  .blog-featured-image :global(.optimized-image) {
+    width: 100%;
+  }
+
+  .blog-content .container {
+    max-width: var(--content-max);
+  }
+</style>

@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DomainCard from '../components/DomainCard.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BlogCard from '../components/BlogCard.astro';
+import FilterBar from '../components/FilterBar.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => b.data.year - a.data.year)
+  .slice(0, 6);
+
+const allPosts = await getCollection('blog');
+const latestPosts = allPosts
+  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
+  .slice(0, 3);
+
+const filters = [
+  { label: 'All Projects', value: 'all' },
+  { label: 'BCMI', value: 'bcmi' },
+  { label: 'Running', value: 'running' },
+  { label: 'Music', value: 'music' },
+  { label: 'Education', value: 'education' },
+];
+---
+
+<BaseLayout title="Home" description="Joel Eaton - Multi-disciplinary researcher, running coach, music technologist, and education leader.">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-heading">
+        <span class="gradient-text">Joel Eaton</span>
+      </h1>
+      <p class="hero-subtitle">
+        Technologist. Researcher. Coach.
+      </p>
+      <p class="hero-intro">
+        Multi-disciplinary work spanning brain-computer music interfaces,
+        music technology, education leadership, and running coaching.
+      </p>
+      <div class="hero-actions">
+        <a href="/work" class="btn btn-primary">View Work</a>
+        <a href="/about" class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Domain Cards -->
+  <section class="section domains" style="padding-top: var(--space-lg);">
+    <div class="container">
+      <div class="domain-grid">
+        <DomainCard
+          title="BCMI Research"
+          description="Brain-Computer Music Interfacing. PhD research exploring neurotechnology and musical expression."
+          highlights={['15+ Projects', '40+ Publications', 'Worldwide performances']}
+          href="/work?filter=bcmi"
+          domain="bcmi"
+        />
+        <DomainCard
+          title="Education Leadership"
+          description="Workshops, speaking, and customer education. Building learning experiences at scale."
+          highlights={['Workshops', 'Speaking', 'Customer education']}
+          href="/work?filter=education"
+          domain="education"
+        />
+        <DomainCard
+          title="Music Technology"
+          description="Pure Data, synthesis, drone music. Creative coding and experimental sound design."
+          highlights={['Pure Data', 'Synthesis', 'Drone music']}
+          href="/work?filter=music"
+          domain="music"
+        />
+        <DomainCard
+          title="Running Coaching"
+          description="Ultramarathon and distance running coaching. Personalised training programs for 10 athletes."
+          highlights={['Ultramarathons', '10 Athletes', 'Personalised plans']}
+          href="/work?filter=running"
+          domain="running"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  {featuredProjects.length > 0 && (
+    <section class="section featured-projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <FilterBar filters={filters} />
+        <div class="projects-grid">
+          {featuredProjects.map((project) => (
+            <ProjectCard
+              title={project.data.title}
+              slug={project.data.slug}
+              description={project.data.description}
+              categories={project.data.categories}
+              tags={project.data.tags}
+              year={project.data.year}
+              location={project.data.location}
+            />
+          ))}
+        </div>
+        <div class="view-all">
+          <a href="/work" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Latest Blog Posts -->
+  {latestPosts.length > 0 && (
+    <section class="section latest-posts">
+      <div class="container">
+        <h2 class="section-title">Latest Posts</h2>
+        <div class="blog-grid">
+          {latestPosts.map((post) => (
+            <BlogCard
+              title={post.data.title}
+              slug={post.data.slug}
+              description={post.data.description}
+              category={post.data.category}
+              publishedDate={post.data.publishedDate}
+              featuredImage={post.data.featuredImage}
+              readTime={post.data.readTime}
+            />
+          ))}
+        </div>
+        <div class="view-all">
+          <a href="/blog" class="btn btn-outline">View All Posts</a>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: var(--space-3xl) 0 var(--space-lg);
+    text-align: center;
+  }
+
+  .hero-heading {
+    font-size: var(--text-hero);
+    font-weight: var(--weight-black);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: var(--text-h3);
+    color: var(--text-secondary);
+    font-weight: var(--weight-light);
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .view-all {
+    text-align: center;
+    margin-top: var(--space-xl);
+  }
+
+  @media (max-width: 479px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

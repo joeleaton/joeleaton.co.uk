@@ -1,0 +1,146 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  publishedDate: Date;
+  featuredImage?: string;
+  readTime?: number;
+}
+
+const { title, slug, description, category, publishedDate, featuredImage, readTime } = Astro.props;
+
+const formattedDate = publishedDate.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<article class="blog-card stagger-item" data-category={category}>
+  {featuredImage && (
+    <div class="blog-image">
+      <img src={featuredImage} alt={title} loading="lazy" decoding="async" fetchpriority="low" />
+    </div>
+  )}
+  <div class="blog-content">
+    <div class="blog-meta">
+      <span class={`tag tag-${category}`}>{category}</span>
+      <time datetime={publishedDate.toISOString()}>{formattedDate}</time>
+    </div>
+    <h3 class="blog-title">
+      <a href={`/blog/${slug}`}>{title}</a>
+    </h3>
+    <p class="blog-excerpt">{description}</p>
+    <div class="blog-footer">
+      {readTime && <span class="read-time">{readTime} min read</span>}
+      <a href={`/blog/${slug}`} class="blog-link">
+        Read More <span class="arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .blog-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px var(--hover-glow);
+    border-color: var(--accent-primary);
+  }
+
+  .blog-image {
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .blog-card:hover .blog-image img {
+    transform: scale(1.05);
+  }
+
+  .blog-content {
+    padding: var(--space-md);
+  }
+
+  .blog-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .blog-meta time {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+
+  .blog-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+  }
+
+  .blog-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .blog-title a:hover {
+    color: var(--accent-primary);
+  }
+
+  .blog-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+  }
+
+  .blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .read-time {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+
+  .blog-link {
+    color: var(--accent-primary);
+    font-weight: var(--weight-semibold);
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .blog-link:hover {
+    color: var(--accent-secondary);
+  }
+
+  .blog-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .arrow {
+    transition: transform 0.3s;
+  }
+</style>

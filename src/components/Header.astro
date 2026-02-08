@@ -1,0 +1,313 @@
+---
+import { getCollection } from 'astro:content';
+
+const currentPath = Astro.url.pathname;
+
+// Fetch CMS pages for the About dropdown
+const allPages = await getCollection('pages');
+const menuPages = allPages
+  .filter((p) => p.data.showInMenu !== false)
+  .sort((a, b) => (a.data.menuOrder ?? 99) - (b.data.menuOrder ?? 99));
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/work', label: 'Work' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo gradient-text">Joel Eaton</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li>
+          <a
+            href="/"
+            class:list={[{ active: currentPath === '/' }]}
+          >
+            Home
+          </a>
+        </li>
+        <!-- About with dropdown -->
+        <li class="has-dropdown">
+          <a
+            href="/about"
+            class:list={[{ active: currentPath.startsWith('/about') }]}
+          >
+            About
+            {menuPages.length > 0 && <span class="dropdown-arrow">▾</span>}
+          </a>
+          {menuPages.length > 0 && (
+            <ul class="dropdown" role="menu">
+              <li role="menuitem">
+                <a href="/about" class:list={[{ active: currentPath === '/about' || currentPath === '/about/' }]}>
+                  About Me
+                </a>
+              </li>
+              {menuPages.map((page) => (
+                <li role="menuitem">
+                  <a
+                    href={`/about/${page.data.slug}`}
+                    class:list={[{ active: currentPath === `/about/${page.data.slug}` || currentPath === `/about/${page.data.slug}/` }]}
+                  >
+                    {page.data.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+        {navLinks.slice(1).map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[{ active: currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span class="menu-icon">&#9776;</span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 8, 20, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    animation: slideDown 0.6s ease-out;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: var(--weight-black);
+    text-decoration: none;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: var(--space-lg);
+    list-style: none;
+  }
+
+  .main-nav a {
+    position: relative;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s;
+  }
+
+  .main-nav a:hover,
+  .main-nav a.active {
+    color: var(--text-primary);
+  }
+
+  .main-nav a:hover::after,
+  .main-nav a.active::after {
+    width: 100%;
+  }
+
+  /* Dropdown */
+  .has-dropdown {
+    position: relative;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.7em;
+    margin-left: 0.25rem;
+    opacity: 0.6;
+    transition: transform 0.2s;
+  }
+
+  .has-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    background: rgba(0, 8, 20, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .has-dropdown:hover .dropdown,
+  .has-dropdown:focus-within .dropdown {
+    display: flex;
+  }
+
+  /* Invisible bridge to prevent gap hover loss */
+  .dropdown::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
+
+  .dropdown li {
+    border-bottom: none;
+  }
+
+  .dropdown a {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+  }
+
+  .dropdown a::after {
+    display: none;
+  }
+
+  .dropdown a:hover,
+  .dropdown a.active {
+    color: var(--text-primary);
+    background: rgba(255, 51, 102, 0.08);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--space-xs);
+  }
+
+  @media (max-width: 767px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(0, 8, 20, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      padding: var(--space-md);
+    }
+
+    .main-nav.active {
+      display: block;
+    }
+
+    .main-nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .main-nav li {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-nav a {
+      display: block;
+      padding: var(--space-sm) 0;
+    }
+
+    .main-nav a::after {
+      display: none;
+    }
+
+    /* Mobile dropdown — always visible, indented */
+    .dropdown {
+      display: flex;
+      position: static;
+      transform: none;
+      min-width: 0;
+      background: transparent;
+      backdrop-filter: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .dropdown::before {
+      display: none;
+    }
+
+    .dropdown li {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .dropdown a {
+      padding: var(--space-sm) 0 var(--space-sm) var(--space-md);
+      font-size: 0.9rem;
+    }
+
+    .dropdown a:hover {
+      background: transparent;
+    }
+
+    .dropdown-arrow {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const menuIcon = document.querySelector('.menu-icon');
+
+  if (menuToggle && mainNav && menuIcon) {
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      const isExpanded = mainNav.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', String(isExpanded));
+      menuIcon.innerHTML = isExpanded ? '&#10005;' : '&#9776;';
+    });
+  }
+</script>
