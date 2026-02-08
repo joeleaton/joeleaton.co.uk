@@ -31,7 +31,7 @@ relatedProjects:
 
 # A Stark Mind
 
-A groundbreaking audiovisual performance where the graphic score is controlled entirely by brainwaves. Musicians respond to visual cues generated in real-time by brain activity patterns.
+An audiovisual performance where the graphic score is controlled entirely by brainwaves. Musicians respond to visual cues generated in real-time by me, the "composer's" brain activity patterns.  
 
 ## Technical Approach
 
@@ -39,7 +39,7 @@ A Stark Mind uses a brain-computer music interface (BCMI) to conduct a visual sc
 
 ## Key Innovation
 
-Rather than using brain data to directly produce sound, this project positions the brain as a composer, generating moving scores of abstract shapes that human musicians interpret. 
+Rather than using brain data to directly produce sound, this project positions the brain as a composer, generating moving scores of abstract shapes that human musicians interpret.
 This creates a unique feedback loop between neurotechnology and musical expression.
 
 ## Performances
