@@ -68,9 +68,9 @@ https://www.youtube.com/watch?v=5IajJyMbOyo
 
 https://www.youtube.com/watch?v=yIa7PGJRTi0
 
-## :::
+:::
 
-5. Exercises 1 – Foundational
+## 5. Exercises 1 – Foundational
 
 These exercises build strength in key muscle groups used in running, particularly the core muscles, glutes, and hamstrings. Perfect your technique with minimal or no weight before increasing reps or weight:
 
@@ -88,7 +88,7 @@ https://vimeo.com/143363985
 
 https://vimeo.com/143363985
 
-***
+---
 
 ### Goblet squats
 
