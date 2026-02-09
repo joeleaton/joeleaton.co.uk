@@ -58,11 +58,10 @@ These two exercises form the foundation for finding your centre of gravity, unde
 
 :::columns
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=5IajJyMbOyo
 
----
+***
 
-https://vimeo.com/134393784
-
+https://www.youtube.com/watch?v=yIa7PGJRTi0
 
 :::
