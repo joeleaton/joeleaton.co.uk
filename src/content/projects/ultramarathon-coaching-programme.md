@@ -58,12 +58,11 @@ These two exercises form the foundation for finding your centre of gravity, unde
 
 :::columns
 
-Mountain pose
+https://vimeo.com/143363985
 
-***
+---
 
-Body squat
+https://vimeo.com/134393784
 
-***
 
 :::
