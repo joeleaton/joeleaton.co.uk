@@ -82,29 +82,29 @@ These exercises build strength in key muscle groups used in running, particularl
 
 ### Oblique twists
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=WApm11w0v78
 
 ### Ab-wheel Holds
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=5EC8r4f2FSY
 
 ### Side Plank
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=4B-uOIRqGsE
 
 ***
 
 ### Goblet squats
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=h8tCyraxK-c
 
 ### Weighted Sit-up
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=_sSiDh6hxeI
 
-### Glute Walk-Outs
+### Glute Brigde Walk-Outs
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=SaF5ICRGiiU
 
 :::
 
@@ -118,29 +118,29 @@ Once you're comfortable with the foundational exercises, progress to these. As a
 
 ### Glute ball rollouts
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=2QMDTQPlzxg
 
 ### Calf raises
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=XKawSU_ERL8
 
 ### Shoulder press
 
-https://vimeo.com/143363985
+https://www.youtube.com/watch?v=WeTP94r742E
 
 ***
 
 ### Deadlifts
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=Qk7rI34Onos
 
 ### Bulgarian split-squats
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=LG6E0SYCVmA
 
 ### Split-leg dumbell swings
 
-https://vimeo.com/134393784
+https://www.youtube.com/watch?v=UhtZFgJNwDU
 
 :::
 
@@ -168,11 +168,11 @@ Beyond the resistance training covered here, plyometrics and cross-training (oth
 
 **Q**: How often should I do these exercises?
 
-**A:** Aim for at least once a week, but more frequently if possible. 3-4 times a week is ideal. Start with 30-minute sessions twice a week for a good balance.
+\*\*A:\*\* Aim for at least once a week, but more frequently if possible. 3-4 times a week is ideal. Start with 30-minute sessions twice a week for a good balance.
 
 **Q**: I am unable to perform one or more of these exercises due to an injury or a movement deficiency, what should I do?
 
-**A:** Back-off and avoid hurting yourself. Having a specific exercise that you can’t do can be a useful tool for a physiotherapist or coach to help identify what the issue might be, if you don’t already know.
+\*\*A:\*\* Back-off and avoid hurting yourself. Having a specific exercise that you can’t do can be a useful tool for a physiotherapist or coach to help identify what the issue might be, if you don’t already know.
 
 **Q**: How should I fuel when doing these exercises?
 
