@@ -428,7 +428,8 @@ h3 { font-size: var(--text-h3); }
 
 .prose hr {
   border: none;
-  border-top: 1px solid var(--border-color);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 51, 102, 0.4), rgba(0, 229, 255, 0.4), transparent);
   margin: var(--space-xl) 0;
 }
 
