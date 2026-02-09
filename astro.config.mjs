@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import rehypeVideoEmbeds from './src/plugins/rehype-video-embeds.mjs';
 import rehypeBasePath from './src/plugins/rehype-base-path.mjs';
 import remarkColumns from './src/plugins/remark-columns.mjs';
+import remarkAccordion from './src/plugins/remark-accordion.mjs';
 
 const basePath = '/joeleaton.co.uk';
 
@@ -13,7 +14,7 @@ export default defineConfig({
   integrations: [sitemap()],
   output: 'static',
   markdown: {
-    remarkPlugins: [remarkColumns],
+    remarkPlugins: [remarkColumns, remarkAccordion],
     rehypePlugins: [rehypeVideoEmbeds, [rehypeBasePath, { base: basePath }]],
   },
 });

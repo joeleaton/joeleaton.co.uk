@@ -467,6 +467,86 @@ h3 { font-size: var(--text-h3); }
   }
 }
 
+/* --- Markdown Accordion --- */
+.prose .md-accordion {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  margin: var(--space-sm) 0;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.prose .md-accordion:first-of-type {
+  margin-top: var(--space-lg);
+}
+
+.prose .md-accordion:last-of-type {
+  margin-bottom: var(--space-lg);
+}
+
+/* Remove gap between consecutive accordions */
+.prose .md-accordion + .md-accordion {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.prose .md-accordion:has(+ .md-accordion) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.prose .md-accordion summary {
+  padding: var(--space-md) var(--space-lg);
+  cursor: pointer;
+  font-weight: var(--weight-semibold);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.prose .md-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom chevron */
+.prose .md-accordion summary::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--text-secondary);
+  border-bottom: 2px solid var(--text-secondary);
+  transform: rotate(-45deg);
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.prose .md-accordion[open] > summary::after {
+  transform: rotate(45deg);
+}
+
+.prose .md-accordion summary:hover {
+  background: rgba(255, 51, 102, 0.05);
+}
+
+.prose .md-accordion .md-accordion-body {
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.prose .md-accordion .md-accordion-body > *:first-child {
+  margin-top: 0;
+}
+
+.prose .md-accordion .md-accordion-body > *:last-child {
+  margin-bottom: 0;
+}
+
 /* --- Section spacing --- */
 .section {
   padding: var(--space-3xl) 0;
