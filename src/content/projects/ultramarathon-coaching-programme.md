@@ -60,16 +60,10 @@ These two exercises form the foundation for finding your centre of gravity, unde
 
 Mountain pose
 
-Brain-computer music interfacing and neurotechnology for creative expression.
-
-https://www.youtube.com/watch?v=5IajJyMbOyo
-
----
+***
 
 Body squat
 
-https://www.youtube.com/watch?v=yIa7PGJRTi0
-
----
+***
 
 :::
