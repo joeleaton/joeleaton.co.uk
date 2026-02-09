@@ -2,6 +2,7 @@
 In any CMS markdown body (blog posts, projects, pages), write:
 
 :::columns
+
 **Research Focus**
 
 Brain-computer music interfacing and neurotechnology for creative expression.
@@ -17,13 +18,17 @@ Workshops on Pure Data, synthesis, and creative coding.
 **Coaching**
 
 Ultra-distance running programs for athletes of all levels.
+
 :::
 
 This creates a 3-column responsive grid. The --- dividers split the content into columns. It supports:
 
 2 columns — one --- divider
+
 3 columns — two --- dividers
+
 4 columns — three --- dividers
+
 On mobile, columns stack vertically. On tablet, 3-4 columns collapse to a 2-column grid.
 
 You can put anything inside columns — text, lists, bold, links, images. Just keep each column's content between the --- dividers.
