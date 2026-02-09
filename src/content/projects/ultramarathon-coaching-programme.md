@@ -112,7 +112,7 @@ https://www.youtube.com/watch?v=SaF5ICRGiiU
 
 ## 6. Exercises 2 – Follow-on
 
-Once you're comfortable with the foundational exercises, progress to these. As always, focus on technique and adjust weights and reps as needed:
+Once you're comfortable with the foundational exercises, progress to these. Remember to focus on technique first and then adjust weights and reps as you progress:
 
 :::columns
 
