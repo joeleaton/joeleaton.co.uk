@@ -52,6 +52,8 @@ Here are some tips to keep in mind as you incorporate strength training into you
 - **Everything is interconnected**: Strengthening all areas of the body is essential, as injuries can often stem from weaknesses elsewhere. When you strengthen an injured area, you’re often missing the area of deficiency that caused the injury, which could mean further issues later on.
 - **Training is about conditioning**: We train to condition our bodies for the loads they will endure during races and training. This means that your training should be appropriate for your goals, with space for extended seasonal periods of no or minimal training for full body recovery.
 
+---
+
 ## 4. Basics
 
 These two exercises form the foundation for finding your centre of gravity, understanding spinal length, and properly engaging your glutes:
@@ -70,7 +72,7 @@ https://www.youtube.com/watch?v=yIa7PGJRTi0
 
 :::
 
-***
+---
 
 ## 5. Exercises 1 – Foundational
 
@@ -106,7 +108,7 @@ https://vimeo.com/134393784
 
 :::
 
-***
+---
 
 ## 6. Exercises 2 – Follow-on
 
@@ -166,11 +168,11 @@ Beyond the resistance training covered here, plyometrics and cross-training (oth
 
 **Q**: How often should I do these exercises?
 
-**A:** Aim for at least once a week, but more frequently if possible. 3-4 times a week is ideal. Start with 30-minute sessions twice a week for a good balance.
+\*\*A:\*\* Aim for at least once a week, but more frequently if possible. 3-4 times a week is ideal. Start with 30-minute sessions twice a week for a good balance.
 
 **Q**: I am unable to perform one or more of these exercises due to an injury or a movement deficiency, what should I do?
 
-**A:** Back-off and avoid hurting yourself. Having a specific exercise that you can’t do can be a useful tool for a physiotherapist or coach to help identify what the issue might be, if you don’t already know.
+\*\*A:\*\* Back-off and avoid hurting yourself. Having a specific exercise that you can’t do can be a useful tool for a physiotherapist or coach to help identify what the issue might be, if you don’t already know.
 
 **Q**: How should I fuel when doing these exercises?
 
