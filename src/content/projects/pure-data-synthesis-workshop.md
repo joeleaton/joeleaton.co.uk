@@ -16,11 +16,13 @@ technologies:
   - Pure Data
   - Synthesis
   - Audio Programming
+  - Plugdata
+  - VST plugin
 links:
   paper: ''
   video: ''
   github: ''
-publishedDate: 2022-09-01
+publishedDate: 2026-03-03T01:00:00
 relatedProjects:
   - customer-education-framework
 ---
@@ -29,30 +31,12 @@ relatedProjects:
 
 Elysium is a software synthesiser based on additive synthesis that allows you to build textured harmonic layers of drone-based bliss from scratch.
 
-Download Elysium (including instructions to run as a VST in a DAW).
+Build chords of sine waves, control the movement between chords playing, layer chords, apply effects, sit back and bliss-out.
 
 ## Technical Implementation
 
-Workshop Content
+Elysium is built using the free/open source [Plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. To run Elysium, you need to download and install [Plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
 
-### Session 1: Foundations
+## Download
 
-- Introduction to Pure Data interface
-- Basic oscillators and waveforms
-- Amplitude and frequency control
-
-### Session 2: Subtractive Synthesis
-
-- Filters and resonance
-- Envelope generators
-- Building a simple synthesiser
-
-### Session 3: Advanced Techniques
-
-- FM synthesis
-- Granular processing
-- Drone and texture creation
-
-## Audience
-
-Designed for musicians, artists, and curious technologists with no prior programming experience. The workshop emphasises creative exploration over technical complexity.
+Download Elysium (including instructions).
