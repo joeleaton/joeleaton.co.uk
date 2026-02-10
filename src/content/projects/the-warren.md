@@ -30,7 +30,7 @@ The Warren is the the first piece of music I composed for brainwave control. It 
 
 The music was inspired both by nature recordings I was making at the time, whilst I was living in the Mendip Hills in Somerset, as well as early electroacoustic pieces I was discovering, such as _Valley Flow_ by Dennis Smalley, and the recordings of Chris Watson.
 
-The system comprised a big powerful desktop computer with a crazy-spec GPU for ensuring the visual stimuli stayed clocked (to ensure strong SSVEP responses), a big electrode amplifier for the brain cap, and a laptop running the musical system via MID, with the screen providing some feedback on the musical arrangement and what was being triggered. I have a distinct memory of the computer power bank dying on me on the day before a performance in Plymouth! Thankfully it wasn't too bad a fix. 
+The system comprised a big powerful desktop computer with a crazy-spec GPU for ensuring the visual stimuli stayed clocked (to ensure strong SSVEP responses), a big electrode amplifier for the brain cap, and a laptop running the musical system via MID, with the screen providing some feedback on the musical arrangement and what was being triggered. I have a distinct memory of the computer power bank dying on me on the day before a performance in Plymouth! Thankfully it wasn't too bad a fix.
 
 The move towards a more portable, cheaper and accessible system formed the basis for the next piece I made after The Warren, Flex.
 
@@ -39,3 +39,5 @@ The move towards a more portable, cheaper and accessible system formed the basis
 The piece was first performed at the Arnolfini in Bristol in 2011, then at the Peninsula Arts Festival in 2012.
 
 ![flyer for the warren and a talk at the Arnolfini, Bristol](/images/uploads/brainwaves-2.jpg)
+
+![photo of rowberrow warren in somerset](/images/uploads/The-_Warren_effected1.jpg "Rowberrow Warren, looking out to Wales over the Bristol Channel. ")
