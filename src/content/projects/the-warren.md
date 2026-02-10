@@ -38,6 +38,10 @@ The move towards a more portable, cheaper and accessible system formed the basis
 
 The piece was first performed at the Arnolfini in Bristol in 2011, then at the Peninsula Arts Festival in 2012.
 
+Poster for the Bristol event:
+
 ![flyer for the warren and a talk at the Arnolfini, Bristol](/images/uploads/brainwaves-2.jpg)
 
-![photo of rowberrow warren in somerset](/images/uploads/The-_Warren_effected1.jpg "Rowberrow Warren, looking out to Wales over the Bristol Channel. ")
+A photo of Rowberrow Warren, the inspiration for the piece, looking beyond the Bristol Channel over to Wales. This was the background image used for my printed performance notes.
+
+![photo of rowberrow warren in somerset](/images/uploads/The-_Warren_effected1.jpg "Rowberrow Warren, looking out to Wales over the Bristol Channel.")
