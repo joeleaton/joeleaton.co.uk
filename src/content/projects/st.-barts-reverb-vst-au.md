@@ -49,7 +49,11 @@ In the spectrogram views here, you can clearly see the predominant low frequency
 
 Before spectral repair (first 4.5 seconds):
 
+![spectrogram before repair](/images/uploads/Screenshot%202026-02-10%20at%2020.15.53.png)
+
 After spectral repair (first 4.5 seconds):
+
+![spectrogram after repair](/images/uploads/Screenshot%202026-02-10%20at%2020.14.18.png)
 
 ## Further restoration
 
