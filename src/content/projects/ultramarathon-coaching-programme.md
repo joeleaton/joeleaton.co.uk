@@ -36,7 +36,7 @@ This is not a comprehensive guide to strength training but an accessible startin
 
 ## 2. Benefits of strength training to runners
 
-Runners are most vulnerable to injury when fatigued—whether from lack of rest, overtraining, or overexertion during events or workouts [2]. Strength training helps combat muscle fatigue, allowing you to run further and faster before reaching the danger zone where injuries are more likely.
+Runners are most vulnerable to injury when fatigued. Whether from lack of rest, overtraining, or overexertion during events or workouts [2]. Strength training helps combat muscle fatigue, allowing you to run further and faster before reaching the danger zone where injuries are more likely.
 
 Improving your body’s alignment and impact resistance also helps maintain good running form [3], making your body work more efficiently and conserve energy. This leads to running faster and longer, with improvements in key fitness indicators like VO2 Max [1].
 
