@@ -1,40 +1,54 @@
 ---
-title: "Pure Data Synthesis Workshop"
-slug: "pure-data-synthesis-workshop"
-description: "Educational workshop series teaching sound synthesis fundamentals using Pure Data"
-categories: ["music", "education"]
-tags: ["workshops", "tools"]
-year: 2022
-location: "Online & In-person"
+title: Elysium
+slug: pure-data-synthesis-workshop
+description: A software instrument for creating drone-based textured soundscapes.
+categories:
+  - music
+tags:
+  - tools
+  - performance
+year: 2026
+location: ''
 featured: true
-featuredImage: ""
-videoUrl: ""
-technologies: ["Pure Data", "Synthesis", "Audio Programming"]
+featuredImage: ''
+videoUrl: ''
+technologies:
+  - Pure Data
+  - Synthesis
+  - Audio Programming
 links:
-  paper: ""
-  video: ""
-  github: ""
-relatedProjects: ["customer-education-framework"]
+  paper: ''
+  video: ''
+  github: ''
 publishedDate: 2022-09-01
+relatedProjects:
+  - customer-education-framework
 ---
 
-# Pure Data Synthesis Workshop
+# Elysium
 
-A hands-on workshop series introducing participants to the fundamentals of sound synthesis using Pure Data, the open-source visual programming language for audio.
+Elysium is a software synthesiser based on additive synthesis that allows you to build textured harmonic layers of drone-based bliss from scratch.
 
-## Workshop Content
+Download Elysium (including instructions to run as a VST in a DAW).
+
+## Technical Implementation
+
+Workshop Content
 
 ### Session 1: Foundations
+
 - Introduction to Pure Data interface
 - Basic oscillators and waveforms
 - Amplitude and frequency control
 
 ### Session 2: Subtractive Synthesis
+
 - Filters and resonance
 - Envelope generators
 - Building a simple synthesiser
 
 ### Session 3: Advanced Techniques
+
 - FM synthesis
 - Granular processing
 - Drone and texture creation
