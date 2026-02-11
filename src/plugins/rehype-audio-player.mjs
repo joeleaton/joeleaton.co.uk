@@ -17,6 +17,7 @@
  * since the CMS file widget sometimes uses image syntax.
  */
 import { visit } from 'unist-util-visit';
+import { writeFileSync, appendFileSync } from 'node:fs';
 
 const AUDIO_EXT = /\.(mp3|wav|ogg|m4a|flac|aac|webm)(\?.*)?$/i;
 
@@ -53,7 +54,19 @@ function createAudioNode(src, label) {
 }
 
 export default function rehypeAudioPlayer() {
+  appendFileSync('/tmp/audio-debug.log', 'plugin factory called\n');
   return (tree) => {
+    appendFileSync('/tmp/audio-debug.log', `tree children: ${tree.children?.length}\n`);
+    // Debug: log all <p> elements to understand the tree structure
+    visit(tree, 'element', (node) => {
+      if (node.tagName === 'p') {
+        const childTypes = node.children?.map(c => `${c.type}${c.tagName ? ':'+c.tagName : ''}${c.value ? '="'+c.value.substring(0,60)+'"' : ''}`);
+        if (childTypes?.some(t => t.includes('mp3') || t.includes('MP3') || t.includes('.mp3'))) {
+          console.log('[audio-debug] Found <p> with audio ref:', JSON.stringify(childTypes));
+        }
+      }
+    });
+
     visit(tree, 'element', (node, index, parent) => {
       if (!parent || index === undefined) return;
 
@@ -99,6 +112,22 @@ export default function rehypeAudioPlayer() {
         const alt = img.properties?.alt || '';
         parent.children[index] = createAudioNode(src, alt);
         return;
+      }
+
+      // Case 3: <p> containing plain text that is an audio file path
+      // e.g. pasting /images/uploads/recording.mp3 on its own line
+      if (node.tagName === 'p') {
+        // Gather all text content from the paragraph
+        const textParts = node.children
+          ?.filter((c) => c.type === 'text')
+          .map((c) => c.value)
+          .join('')
+          .trim();
+
+        if (textParts && AUDIO_EXT.test(textParts) && /^[\/\w\-. %]+$/.test(textParts)) {
+          parent.children[index] = createAudioNode(textParts, '');
+          return;
+        }
       }
     });
   };
