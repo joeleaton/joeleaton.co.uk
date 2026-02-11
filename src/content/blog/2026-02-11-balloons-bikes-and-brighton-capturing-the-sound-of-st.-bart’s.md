@@ -52,22 +52,20 @@ First, I used **iZotope RX** to manually attenuate the frequency spikes of the e
 
 **The Goal:** Extend that $RT_{60}$ to a more realistic 6.5 seconds.
 
-To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting:
+To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting. Specifically:
 
-Step,Process,Goal
-
-1. Decay Analysis,Measuring the slope of the cleaned audio.,"Ensure the new tail matches the original's ""vibe."""
-2. Spectral Extension,Generating filtered noise matched to the IR’s late reflections.,"Creating a seamless ""ghost"" of the original sound."
-3. Crossfade Blending,Smoothing the transition from real data to synthesized tail.,"Avoiding any audible ""seams"" or jumps."
-4. Exponential Envelope,Applying a natural decay curve targeting 6.5s.,Mimicking the physics of a massive stone room.
-
-***
+| Step | Process | Goal |
+| --- | --- | --- |
+| **1. Decay Analysis** | Measuring the slope of the cleaned audio. | Ensure the new tail matches the original's "vibe." |
+| **2. Spectral Extension** | Generating filtered noise matched to the IR’s late reflections. | Creating a seamless "ghost" of the original sound. |
+| **3. Crossfade Blending** | Smoothing the transition from real data to synthesized tail. | Avoiding any audible "seams" or jumps. |
+| **4. Exponential Envelope** | Applying a natural decay curve targeting 6.5s $RT_{60}$. | Mimicking the physics of a massive stone room. |
 
 ***
 
 ### Building the Plugin
 
-To actually _use_ this restored IR, I built a plugin using a **partitioned overlap-add FFT convolution** algorithm. This is the gold standard for real-time reverb because it allows the computer to process long audio files without catching fire.
+To actually _use_ this restored IR, I built a plugin in C++ using a **partitioned overlap-add FFT convolution** algorithm. This is the gold standard for real-time reverb because it allows the computer to process long audio files without catching fire. The UI wrapper was built in [JUCE](https://juce.com/).
 
 #### The Technical Specs:
 
@@ -80,7 +78,4 @@ The final result is an IR that preserves the authentic, dark, early character of
 
 ## Experience the St. Bart’s Sound
 
-I’ve uploaded everything to the official project page so you can put the restoration to the test.
-
-- **Listen to some Audio Demos.**
-- **Download the Plugin:** Grab the VST/AU version for your own sessions and bring a piece of Brighton's architectural history into your DAW.
+I’ve uploaded everything to [the official project page](../../projects/st-barts-reverb) so you can put the restoration to the test. Listen to some demos and download the Plugin to bring a piece of Brighton's gothic history into your DAW.
