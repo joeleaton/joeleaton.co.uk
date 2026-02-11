@@ -4,7 +4,7 @@ import ProjectCard from '../../components/ProjectCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { getCollection } from 'astro:content';
 
-const allProjects = await getCollection('projects');
+const allProjects = await getCollection('projects', ({ data }) => !data.draft);
 const sortedProjects = allProjects.sort((a, b) => b.data.year - a.data.year);
 
 const filters = [

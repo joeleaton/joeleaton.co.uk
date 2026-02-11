@@ -4,7 +4,7 @@ import BlogCard from '../../components/BlogCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection('blog');
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const sortedPosts = allPosts.sort(
   (a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime()
 );

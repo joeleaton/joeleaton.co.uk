@@ -16,6 +16,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, hint: "Drafts are saved but not visible on the live site" }
       - { label: "Description", name: "description", widget: "text" }
       - label: "Categories"
         name: "categories"
@@ -65,6 +66,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false, hint: "Drafts are saved but not visible on the live site" }
       - { label: "Description", name: "description", widget: "text" }
       - label: "Category"
         name: "category"

@@ -6,6 +6,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
+    draft: z.boolean().optional().default(false),
     description: z.string(),
     categories: z.array(z.enum(['bcmi', 'running', 'music', 'education'])),
     tags: z.array(z.string()).optional().default([]),
@@ -30,6 +31,7 @@ const blog = defineCollection({
   schema: z.object({
     title: z.string(),
     slug: z.string(),
+    draft: z.boolean().optional().default(false),
     description: z.string(),
     category: z.enum(['bcmi', 'running', 'music', 'education', 'general']),
     tags: z.array(z.string()).optional().default([]),
