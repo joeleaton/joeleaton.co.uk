@@ -10,7 +10,7 @@ tags:
 year: 2026
 location: ''
 featured: true
-featuredImage: ''
+featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.01.51.png
 videoUrl: ''
 technologies:
   - Pure Data
