@@ -36,3 +36,5 @@ After our first session with Rosie, she contacted us (using her speller board an
 > "Thankyou, it felt great to be in control again”.
 
 I even kept a recording of her playing the first controlled musical system I built for her:
+
+/images/uploads/Patient-Playing.mp3
