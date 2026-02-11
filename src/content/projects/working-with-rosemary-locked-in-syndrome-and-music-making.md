@@ -35,6 +35,8 @@ After our first session with Rosie, she contacted us (using her speller board an
 
 > "Thankyou, it felt great to be in control again”.
 
+That was an incredible message to receive and it really validated the path I had started to take around developing tools for those with limited or no movement.
+
 I even kept a recording of her playing the first controlled musical system I built for her:
 
 /images/uploads/Patient-Playing.mp3
