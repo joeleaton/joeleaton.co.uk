@@ -1,5 +1,5 @@
 ---
-title: St. Barts reverb VST/AU
+title: St. Barts Reverb Plugin
 slug: st-barts-reverb-plugin
 description: A plug-in that captures the reverb of a neo-gothic church that you can apply to your music.
 categories:
@@ -10,7 +10,7 @@ tags:
 year: 2026
 location: ''
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.09.10.png
 videoUrl: ''
 technologies:
   - c++
