@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import rehypeVideoEmbeds from './src/plugins/rehype-video-embeds.mjs';
 import rehypeBasePath from './src/plugins/rehype-base-path.mjs';
+import rehypeAudioPlayer from './src/plugins/rehype-audio-player.mjs';
 import remarkColumns from './src/plugins/remark-columns.mjs';
 import remarkAccordion from './src/plugins/remark-accordion.mjs';
 
@@ -15,6 +16,6 @@ export default defineConfig({
   output: 'static',
   markdown: {
     remarkPlugins: [remarkColumns, remarkAccordion],
-    rehypePlugins: [rehypeVideoEmbeds, [rehypeBasePath, { base: basePath }]],
+    rehypePlugins: [rehypeVideoEmbeds, rehypeAudioPlayer, [rehypeBasePath, { base: basePath }]],
   },
 });

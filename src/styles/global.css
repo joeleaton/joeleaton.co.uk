@@ -426,6 +426,36 @@ h3 { font-size: var(--text-h3); }
   border: none;
 }
 
+/* --- Audio Player --- */
+.prose .audio-player {
+  background: linear-gradient(135deg, rgba(27, 36, 68, 0.4), rgba(27, 36, 68, 0.2));
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.prose .audio-player-label {
+  font-size: 0.9rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.prose .audio-player audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+}
+
+/* Dark-themed audio controls where supported */
+.prose .audio-player audio::-webkit-media-controls-panel {
+  background: rgba(0, 8, 20, 0.6);
+}
+
 .prose hr {
   border: none;
   height: 1px;

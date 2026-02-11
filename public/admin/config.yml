@@ -55,7 +55,7 @@ collections:
           - { label: "Video", name: "video", widget: "string", required: false }
           - { label: "GitHub", name: "github", widget: "string", required: false }
       - { label: "Published Date", name: "publishedDate", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown", hint: "Paste a YouTube/Vimeo URL on its own line to auto-embed a video player" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Videos: paste a YouTube/Vimeo URL on its own line. Audio: insert an uploaded .mp3/.wav file link on its own line." }
 
   # BLOG POSTS
   - name: "blog"
@@ -91,7 +91,7 @@ collections:
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
       - { label: "Read Time", name: "readTime", widget: "number", required: false }
-      - { label: "Body", name: "body", widget: "markdown", hint: "Paste a YouTube/Vimeo URL on its own line to auto-embed a video player" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Videos: paste a YouTube/Vimeo URL on its own line. Audio: insert an uploaded .mp3/.wav file link on its own line." }
 
   # PAGES (appear under About in navigation)
   - name: "pages"
@@ -107,4 +107,4 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Menu Order", name: "menuOrder", widget: "number", default: 99, hint: "Lower numbers appear first in the About dropdown menu" }
       - { label: "Show in Menu", name: "showInMenu", widget: "boolean", default: true }
-      - { label: "Body", name: "body", widget: "markdown", hint: "Paste a YouTube/Vimeo URL on its own line to auto-embed a video player" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Videos: paste a YouTube/Vimeo URL on its own line. Audio: insert an uploaded .mp3/.wav file link on its own line." }
