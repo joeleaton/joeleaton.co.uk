@@ -31,7 +31,7 @@ relatedProjects:
 
 Elysium is a software synthesiser based on additive synthesis that allows you to build textured harmonic layers of drone-based bliss from scratch.
 
-Build chords of sine waves, control the movement between chords playing, layer chords, apply effects, sit back and bliss-out.
+Build chords of sine waves, control movement, add layers, apply distortion and reverb, sit back and bliss-out.
 
 ## Technical Implementation
 
@@ -39,4 +39,4 @@ Elysium is built using the free/open source [Plugdata](https://plugdata.org/) en
 
 ## Download
 
-Download Elysium (including instructions).
+Download Elysium for FREE! (includes  installation instructions).
