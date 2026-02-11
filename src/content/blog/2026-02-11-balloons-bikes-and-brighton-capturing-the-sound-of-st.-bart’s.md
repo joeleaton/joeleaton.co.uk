@@ -2,7 +2,7 @@
 title: 'Balloons, Bikes, and Brighton: Capturing the Sound of St. Bart’s'
 slug: balloons-bikes-brighton-st-barts-reverb
 draft: false
-description: From prayers to VST - how I built the St Barts reverb plugin
+description: From prayers to VST - how I built the St Barts reverb plugin.
 category: music
 tags:
   - case-study
