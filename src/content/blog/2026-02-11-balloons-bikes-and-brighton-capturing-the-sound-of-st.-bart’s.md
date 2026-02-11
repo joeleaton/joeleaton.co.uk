@@ -42,6 +42,14 @@ I couldn't let that rich, early reflection go to waste, so I decided to attempt 
 
 First, I used **iZotope RX** to manually attenuate the frequency spikes of the engine. However, cleaning out the noise left me with a "stunted" reverb. The measured $RT_{60}$ (the time it takes for a sound to decay by 60dB) was only \~4.2 seconds, way too short for a space of St. Bart's magnitude.
 
+### Before spectral repair
+
+![spectrogram before repair](/images/uploads/Screenshot%202026-02-10%20at%2020.15.53.png)
+
+### After spectral repair
+
+![spectrogram after spectral repair](/images/uploads/Screenshot%202026-02-10%20at%2020.14.18.png)
+
 **The Goal:** Extend that $RT_{60}$ to a more realistic 6.5 seconds.
 
 To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting:
@@ -52,3 +60,27 @@ Step,Process,Goal
 2. Spectral Extension,Generating filtered noise matched to the IR’s late reflections.,"Creating a seamless ""ghost"" of the original sound."
 3. Crossfade Blending,Smoothing the transition from real data to synthesized tail.,"Avoiding any audible ""seams"" or jumps."
 4. Exponential Envelope,Applying a natural decay curve targeting 6.5s.,Mimicking the physics of a massive stone room.
+
+***
+
+***
+
+### Building the Plugin
+
+To actually _use_ this restored IR, I built a plugin using a **partitioned overlap-add FFT convolution** algorithm. This is the gold standard for real-time reverb because it allows the computer to process long audio files without catching fire.
+
+#### The Technical Specs:
+
+- **FFT Size:** $2^{12}$ (4096 samples) — A sweet spot for balancing CPU load and latency.
+- **Partition Size:** 2048 samples.
+- **Total IR Length:** 7.5 seconds (\~360,000 samples).
+- **Gain Normalization:** The IR is peaked at -12dB. This ensures that when you crank the "Wet" knob to 100%, you don't accidentally blow your speakers.
+
+The final result is an IR that preserves the authentic, dark, early character of St. Bartholomew’s while offering a smooth, natural tail that (thankfully) is free of motorbikes.
+
+## Experience the St. Bart’s Sound
+
+I’ve uploaded everything to the official project page so you can put the restoration to the test.
+
+- **Listen to some Audio Demos.**
+- **Download the Plugin:** Grab the VST/AU version for your own sessions and bring a piece of Brighton's architectural history into your DAW.
