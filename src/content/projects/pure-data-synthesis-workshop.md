@@ -35,7 +35,9 @@ Build chords of sine waves, control movement, add layers, apply distortion and r
 
 ## Technical Implementation
 
-Elysium is built using the free/open source [Plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. To run Elysium, you need to download and install [Plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
+Elysium is built using the free/open source [Plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. 
+
+To run Elysium, you need to download and install [Plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
 
 ## Download
 
