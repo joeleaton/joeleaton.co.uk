@@ -41,6 +41,6 @@ I even kept a recording of her playing the first controlled musical system I bui
 
 /images/uploads/Patient-Playing.mp3
 
-Photo of Rosie playing the brain-music instrument:
+_Photo of Rosie playing the system:_
 
 ![](/images/uploads/PatientM.jpg)
