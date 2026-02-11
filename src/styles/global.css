@@ -428,8 +428,8 @@ h3 { font-size: var(--text-h3); }
 
 /* --- Audio Player --- */
 .prose .audio-player {
-  background: linear-gradient(135deg, rgba(27, 36, 68, 0.4), rgba(27, 36, 68, 0.2));
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, rgba(60, 75, 130, 0.3), rgba(45, 60, 110, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-md) 0;
@@ -441,7 +441,7 @@ h3 { font-size: var(--text-h3); }
 .prose .audio-player-label {
   font-size: 0.9rem;
   font-weight: var(--weight-semibold);
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-transform: capitalize;
 }
 
@@ -453,7 +453,7 @@ h3 { font-size: var(--text-h3); }
 
 /* Dark-themed audio controls where supported */
 .prose .audio-player audio::-webkit-media-controls-panel {
-  background: rgba(0, 8, 20, 0.6);
+  background: rgba(20, 30, 60, 0.8);
 }
 
 .prose hr {
