@@ -50,7 +50,7 @@ First, I used **iZotope RX** to manually attenuate the frequency spikes of the e
 
 ![spectrogram after spectral repair](/images/uploads/Screenshot%202026-02-10%20at%2020.14.18.png)
 
-**The Goal:** Extend that _RT\~60\~_ to a more realistic 6.5 seconds.
+**The Goal:** Extend that _RT \~60\~_ to a more realistic 6.5 seconds.
 
 To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting. Specifically:
 
