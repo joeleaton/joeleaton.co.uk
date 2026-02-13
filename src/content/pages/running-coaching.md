@@ -34,13 +34,9 @@ Prices start from £30 a month.
 
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
 
-[Contact me about coaching](../../contact)
-   <div class="hero-actions">
-        <a href={url('/projects')} class="btn btn-primary">View Projects</a>
-        <a href={url('/about')} class="btn btn-outline">About Me</a>
-      </div>
-    </div>
-
+:::buttons
+Contact me | /contact
+:::
 
 > “I’ve been a runner for over 10 years. Since working with Joel, over the last 5 months I’ve achieved PBs at 5K, 1/2 marathon, and 50K distances, staying injury free and fitting in training around my busy work and family life”
 > >
