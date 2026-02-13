@@ -57,3 +57,5 @@ A significant part of my recovery was down to having my own running coach. I wor
 :::buttons
 Contact me about coaching | /contact | outline
 :::
+
+![running track with seaford striders](/images/uploads/striders-track.jpg "Coaching track sessions with Seaford Striders")
