@@ -30,7 +30,7 @@ I offer 121 training that is individualised to your level, your life and time co
 - Feedback on your training, and program adjustments to accommodate your needs.
 - Additional support and session suggestions outside of running for injury prevention (e.g. plyometrics, agility, strength and conditioning).
 
-Prices start from £30 a month. Discounted rates are available for low-income clients, no questions asked.
+Prices start **from £30 a month**. Discounted rates are available for low-income clients, no questions asked.
 
 :::buttons
 Contact me about coaching | /contact | outline
