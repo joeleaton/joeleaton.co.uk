@@ -30,11 +30,11 @@ We did get some very confused looks from the worshippers (the priest insisted th
 
 ### The Unwanted Passerby
 
-I recently dug up these old recordings from a dusty hard drive. Most were great, but one "outtake" stood out. The initial balloon pop was perfect, but about six seconds into the decaying tail, a car or motorbike roared past the church.
+I recently found one of the recordings from the day on an old hard drive. The initial balloon pop was perfect, but about six seconds into the decaying tail, a car or motorbike roared past the church.
 
 The result was a textbook case of the **Doppler Effect**. As the vehicle sped by, it created a rasping, filtered "zing" that rose in frequency and fluctuated in volume, completely masking the natural decay of the church. It was a beautiful recording ruined by a 50cc engine.
 
-![doppler effect diagram](/images/uploads/doppler-effect.jpeg)
+![doppler effect diagram](/images/uploads/doppler-effect.jpeg "The Doppler Effect on how we perceive sound")
 
 ### The Restoration: Spectral Surgery
 
@@ -69,7 +69,7 @@ To actually _use_ this restored IR, I built a plugin in C++ using a **partitione
 
 #### The Technical Specs:
 
-- **FFT Size:** $2^{12}$ (4096 samples) — A sweet spot for balancing CPU load and latency.
+- **FFT Size:** 2^2**^**  (4096 samples) — A sweet spot for balancing CPU load and latency.
 - **Partition Size:** 2048 samples.
 - **Total IR Length:** 7.5 seconds (\~360,000 samples).
 - **Gain Normalization:** The IR is peaked at -12dB. This ensures that when you crank the "Wet" knob to 100%, you don't accidentally blow your speakers.
