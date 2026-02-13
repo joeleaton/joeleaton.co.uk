@@ -33,7 +33,19 @@ I offer 121 training that is individualised to your level, your life and time co
 Prices start **from £30 a month**. Discounted rates are available for low-income clients, no questions asked.
 
 :::buttons
+
+
 Contact me about coaching | /contact | outline
+
+
+:::
+
+:::buttons
+
+Label | /url
+
+Another Label | https://example.com | outline
+
 :::
 
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
