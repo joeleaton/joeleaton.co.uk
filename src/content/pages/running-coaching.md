@@ -24,13 +24,17 @@ I am a fully insured England Athletics qualified Coach in Running Fitness (Level
 
 I offer 121 training that is individualised to your level, your life and time commitments, and the goals that we establish together. Each program includes:
 
-- Initial in-person introductory profiling and analysis session (£50).
+- Initial in-person introductory profiling and analysis session (there is a £50 fee for this).
 - Coaching plan customised to your goals, lifestyle, and ability; delivered every two weeks. No generic plans!
 - Plan delivered to you via my own custom app. No spreadsheets or document to wade through!
 - Feedback on your training, and program adjustments to accommodate your needs.
 - Additional support and session suggestions outside of running for injury prevention (e.g. plyometrics, agility, strength and conditioning).
 
-Prices start from £30 a month.
+Prices start from £30 a month. Discounted rates are available for low-income clients, no questions asked.
+
+:::buttons
+Contact me about coaching | /contact | outline
+:::
 
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
 
@@ -53,9 +57,5 @@ A significant part of my recovery was down to having my own running coach. I wor
 > “Joel set up a training plan for me, initially over 8 weeks in order for me to start running again. He has taken into account my health conditions and listened to what I was seeking to achieve. He has been extremely supportive and provided encouragement, particularly when I’ve been struggling and without this I could have given up. I provide feedback after each run which he uses to adjust my plan accordingly. Joel’s coaching technique has suited me completely because he listened and emphasised how important it was for me to listen to my body, and it’s ok to adjust a plan when life gets in the way. I would definitely recommend Joel as a training coach.”
 > >
 > Sarah, 2024
-
-:::buttons
-Contact me about coaching | /contact | outline
-:::
 
 ![running track with seaford striders](/images/uploads/striders-track.jpg "Coaching track sessions with Seaford Striders")
