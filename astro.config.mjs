@@ -7,6 +7,7 @@ import remarkColumns from './src/plugins/remark-columns.mjs';
 import remarkAccordion from './src/plugins/remark-accordion.mjs';
 import remarkButtons from './src/plugins/remark-buttons.mjs';
 import rehypeImageFigure from './src/plugins/rehype-image-figure.mjs';
+import rehypeSubSuper from './src/plugins/rehype-sub-super.mjs';
 
 const basePath = '/joeleaton.co.uk';
 
@@ -17,6 +18,6 @@ export default defineConfig({
   output: 'static',
   markdown: {
     remarkPlugins: [remarkColumns, remarkAccordion, [remarkButtons, { base: basePath }]],
-    rehypePlugins: [rehypeMediaEmbeds, rehypeImageFigure, [rehypeBasePath, { base: basePath }]],
+    rehypePlugins: [rehypeMediaEmbeds, rehypeImageFigure, rehypeSubSuper, [rehypeBasePath, { base: basePath }]],
   },
 });
