@@ -59,7 +59,7 @@ To bridge the gap between "real" audio and "synthetic" tail, I worked with some 
 | **1. Decay Analysis** | Measuring the slope of the cleaned audio. | Ensure the new tail matches the original's "vibe." |
 | **2. Spectral Extension** | Generating filtered noise matched to the IR’s late reflections. | Creating a seamless "ghost" of the original sound. |
 | **3. Crossfade Blending** | Smoothing the transition from real data to synthesized tail. | Avoiding any audible "seams" or jumps. |
-| **4. Exponential Envelope** | Applying a natural decay curve targeting 6.5s *RT\~60\~*. | Mimicking the physics of a massive stone room. |
+| **4. Exponential Envelope** | Applying a natural decay curve targeting 6.5s *RT \~60\~*. | Mimicking the physics of a massive stone room. |
 
 ***
 
