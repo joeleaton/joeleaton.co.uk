@@ -69,7 +69,7 @@ To actually _use_ this restored IR, I built a plugin in C++ using a **partitione
 
 #### The Technical Specs:
 
-- **FFT Size:** 2^2**^**  (4096 samples) — A sweet spot for balancing CPU load and latency.
+- **FFT Size:** 2 ^12^  (4096 samples) — A sweet spot for balancing CPU load and latency.
 - **Partition Size:** 2048 samples.
 - **Total IR Length:** 7.5 seconds (\~360,000 samples).
 - **Gain Normalization:** The IR is peaked at -12dB. This ensures that when you crank the "Wet" knob to 100%, you don't accidentally blow your speakers.
