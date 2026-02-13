@@ -5,6 +5,8 @@ import rehypeMediaEmbeds from './src/plugins/rehype-video-embeds.mjs';
 import rehypeBasePath from './src/plugins/rehype-base-path.mjs';
 import remarkColumns from './src/plugins/remark-columns.mjs';
 import remarkAccordion from './src/plugins/remark-accordion.mjs';
+import remarkButtons from './src/plugins/remark-buttons.mjs';
+import rehypeImageFigure from './src/plugins/rehype-image-figure.mjs';
 
 const basePath = '/joeleaton.co.uk';
 
@@ -14,7 +16,7 @@ export default defineConfig({
   integrations: [sitemap()],
   output: 'static',
   markdown: {
-    remarkPlugins: [remarkColumns, remarkAccordion],
-    rehypePlugins: [rehypeMediaEmbeds, [rehypeBasePath, { base: basePath }]],
+    remarkPlugins: [remarkColumns, remarkAccordion, [remarkButtons, { base: basePath }]],
+    rehypePlugins: [rehypeMediaEmbeds, rehypeImageFigure, [rehypeBasePath, { base: basePath }]],
   },
 });

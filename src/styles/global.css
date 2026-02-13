@@ -577,6 +577,35 @@ h3 { font-size: var(--text-h3); }
   margin-bottom: 0;
 }
 
+/* --- Markdown Buttons --- */
+.prose .md-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+}
+
+.prose .md-buttons .btn {
+  font-size: 0.95rem;
+}
+
+/* --- Image Figures --- */
+.prose .md-figure {
+  margin: var(--space-lg) 0;
+  text-align: center;
+}
+
+.prose .md-figure img {
+  margin-bottom: var(--space-xs);
+}
+
+.prose .md-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.4;
+}
+
 /* --- Section spacing --- */
 .section {
   padding: var(--space-3xl) 0;
