@@ -35,7 +35,7 @@ Prices start from £30 a month.
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
 
 :::buttons
-Contact me | /contact
+Contact me about coaching | /contact | outline
 :::
 
 > “I’ve been a runner for over 10 years. Since working with Joel, over the last 5 months I’ve achieved PBs at 5K, 1/2 marathon, and 50K distances, staying injury free and fitting in training around my busy work and family life”
@@ -53,3 +53,7 @@ A significant part of my recovery was down to having my own running coach. I wor
 > “Joel set up a training plan for me, initially over 8 weeks in order for me to start running again. He has taken into account my health conditions and listened to what I was seeking to achieve. He has been extremely supportive and provided encouragement, particularly when I’ve been struggling and without this I could have given up. I provide feedback after each run which he uses to adjust my plan accordingly. Joel’s coaching technique has suited me completely because he listened and emphasised how important it was for me to listen to my body, and it’s ok to adjust a plan when life gets in the way. I would definitely recommend Joel as a training coach.”
 > >
 > Sarah, 2024
+
+:::buttons
+Contact me about coaching | /contact | outline
+:::
