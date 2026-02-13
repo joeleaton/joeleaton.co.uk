@@ -34,9 +34,7 @@ Prices start **from £30 a month**. Discounted rates are available for low-incom
 
 :::buttons
 
-
 Contact me about coaching | /contact | outline
-
 
 :::
 
@@ -49,6 +47,8 @@ Another Label | https://example.com | outline
 :::
 
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
+
+Test
 
 :::buttons
 Contact me about coaching | /contact | outline
