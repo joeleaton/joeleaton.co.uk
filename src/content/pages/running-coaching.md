@@ -6,7 +6,7 @@ menuOrder: 2
 showInMenu: true
 ---
 
-I offer bespoke coaching for endurance runners. I provide support and an individualised training program to help you train around your life, stay injury free, and achieve your goals. The programs I create are tailored to you as an individual. I can also include elements of [Strength Training](https://joeleaton.co.uk/strength-training-for-runners/), depending on your needs.
+I offer bespoke coaching for endurance runners. I provide support and an individualised training program to help you train around your life, stay injury free, and achieve your goals. The programs I create are tailored to you as an individual. I can also include elements of [Strength Training](../../projects/strength-training-for-runners/), depending on your needs.
 
 I specialise in working with people to help manage illness or injury, or who are facing other difficulties in their life.
 
@@ -14,29 +14,36 @@ I specialise in working with people to help manage illness or injury, or who are
 
 My approach is centred around positive encouragement. Running and training should be fun, and it should complement a wide range of interests that combine to enrich our lives. I aim to help runners stay injury free and above all enjoy their running. No pressure, no shaming, no negativity!
 
-Training is all about quality, not quantity. You don’t need to run high-milage weeks to see improvements in your running fitness. I build programs that maximize the time you can give so you’re not running junk miles just for the sake of it. Don’t get me wrong, there are no short cuts to getting fitter and faster, you need to put the effort in. 
+Training is all about quality, not quantity. You don’t need to run high-milage weeks to see improvements in your running fitness. I build programs that maximize the time you can give so you’re not running junk miles just for the sake of it. Don’t get me wrong, there are no short cuts to getting fitter and faster, you need to put the effort in.
 
 ## My experience
 
 I am a fully insured England Athletics qualified Coach in Running Fitness (Level 3), and as the Track Coaching Lead, I have been delivering and overseeing the track programme for my local club, Seaford Striders, for over 3 years. Since 2022 I’ve been providing 121 coaching to a range of runners in the South East and London.
 
-Delivering a training session with Seaford Striders
-
 ## What I offer
 
 I offer 121 training that is individualised to your level, your life and time commitments, and the goals that we establish together. Each program includes:
 
-- Initial in-person introductory profiling and analysis session.
+- Initial in-person introductory profiling and analysis session (£50).
 - Coaching plan customised to your goals, lifestyle, and ability; delivered every two weeks. No generic plans!
+- Plan delivered to you via my own custom app. No spreadsheets or document to wade through!
 - Feedback on your training, and program adjustments to accommodate your needs.
 - Additional support and session suggestions outside of running for injury prevention (e.g. plyometrics, agility, strength and conditioning).
+
+Prices start from £30 a month.
 
 Due to working with runners on an individual basis, spaces are very limited. As such, I occasionally have room to take on new 121 athletes.
 
 [Contact me about coaching](../../contact)
+   <div class="hero-actions">
+        <a href={url('/projects')} class="btn btn-primary">View Projects</a>
+        <a href={url('/about')} class="btn btn-outline">About Me</a>
+      </div>
+    </div>
+
 
 > “I’ve been a runner for over 10 years. Since working with Joel, over the last 5 months I’ve achieved PBs at 5K, 1/2 marathon, and 50K distances, staying injury free and fitting in training around my busy work and family life”
-> 
+> >
 > Lucy, 2025
 
 ## My running background
@@ -47,7 +54,6 @@ In 2017 I was injured and was eventually unable to run for over 2.5 years. I was
 
 A significant part of my recovery was down to having my own running coach. I worked with the brilliant Coach Jeff Pryah for over two years to build my fitness back up, and to fine-tune my training. Since 2019 I’ve been injury free and have bettered my personal bests across all distances. I fell in love with the training and have since started coaching others.
 
-
 > “Joel set up a training plan for me, initially over 8 weeks in order for me to start running again. He has taken into account my health conditions and listened to what I was seeking to achieve. He has been extremely supportive and provided encouragement, particularly when I’ve been struggling and without this I could have given up. I provide feedback after each run which he uses to adjust my plan accordingly. Joel’s coaching technique has suited me completely because he listened and emphasised how important it was for me to listen to my body, and it’s ok to adjust a plan when life gets in the way. I would definitely recommend Joel as a training coach.”
-> 
+> >
 > Sarah, 2024
