@@ -6,9 +6,9 @@ menuOrder: 2
 showInMenu: true
 ---
 
-I offer bespoke coaching for endurance runners. I provide support and an individualised training program to help you train around your life, stay injury free, and achieve your goals. The programs I create are tailored to you as an individual. I can also include elements of [Strength Training](../../projects/strength-training-for-runners/), depending on your needs.
+I offer bespoke coaching for endurance runners. I specialise in supporting people to train effectively and reach their goals while navigating illness, injury, or major life challenges.
 
-I specialise in working with people to help manage illness or injury, or who are facing other difficulties in their life.
+I provide support and an individualised training program to help you train around your life, stay injury free, and achieve your goals. The programs I create are tailored to you as an individual. I can also include elements of [Strength Training](../../projects/strength-training-for-runners/), depending on your needs.
 
 ## My approach
 
