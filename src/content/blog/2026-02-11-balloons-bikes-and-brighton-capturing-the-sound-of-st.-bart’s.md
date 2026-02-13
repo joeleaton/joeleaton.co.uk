@@ -40,7 +40,7 @@ The result was a textbook case of the **Doppler Effect**. As the vehicle sped by
 
 I couldn't let that rich, early reflection go to waste, so I decided to attempt a digital restoration.
 
-First, I used **iZotope RX** to manually attenuate the frequency spikes of the engine. However, cleaning out the noise left me with a "stunted" reverb. The measured $RT_{60}$ (the time it takes for a sound to decay by 60dB) was only \~4.2 seconds, way too short for a space of St. Bart's magnitude.
+First, I used **iZotope RX** to manually attenuate the frequency spikes of the engine. However, cleaning out the noise left me with a "stunted" reverb. The measured _RT\~60\~_ (the time it takes for a sound to decay by 60dB) was only \~4.2 seconds, way too short for a space of St. Bart's magnitude.
 
 ### Before spectral repair
 
@@ -50,7 +50,7 @@ First, I used **iZotope RX** to manually attenuate the frequency spikes of the e
 
 ![spectrogram after spectral repair](/images/uploads/Screenshot%202026-02-10%20at%2020.14.18.png)
 
-**The Goal:** Extend that $RT_{60}$ to a more realistic 6.5 seconds.
+**The Goal:** Extend that _RT\~60\~_ to a more realistic 6.5 seconds.
 
 To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting. Specifically:
 
@@ -59,7 +59,7 @@ To bridge the gap between "real" audio and "synthetic" tail, I worked with some 
 | **1. Decay Analysis** | Measuring the slope of the cleaned audio. | Ensure the new tail matches the original's "vibe." |
 | **2. Spectral Extension** | Generating filtered noise matched to the IR’s late reflections. | Creating a seamless "ghost" of the original sound. |
 | **3. Crossfade Blending** | Smoothing the transition from real data to synthesized tail. | Avoiding any audible "seams" or jumps. |
-| **4. Exponential Envelope** | Applying a natural decay curve targeting 6.5s $RT_{60}$. | Mimicking the physics of a massive stone room. |
+| **4. Exponential Envelope** | Applying a natural decay curve targeting 6.5s *RT\~60\~*. | Mimicking the physics of a massive stone room. |
 
 ***
 
