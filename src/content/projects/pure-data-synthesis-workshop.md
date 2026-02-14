@@ -16,7 +16,6 @@ technologies:
   - Plugdata
   - DSP
   - Audio Synthesis
-  - Audio Programming
   - VST plugin
 links:
   paper: ''
