@@ -2,7 +2,7 @@
 title: Tanka - Patterns Break EP
 slug: tanka
 draft: false
-description: Sounds from the cold
+description: Sounds from the cold hills.
 categories:
   - music
 tags: []
@@ -20,5 +20,7 @@ publishedDate: 2026-02-14T10:11:00
 ---
 
 Processed sounds from my guitar, some synths, some field recordings, and some drums.
+
+I performed at shows with Max Tundra, Rashad Becker and Mira Calix in the UK and Germany.
 
 <iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=3842284248/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://tanka.bandcamp.com/album/patterns-break-ep">Patterns Break EP by Tanka</a></iframe>
