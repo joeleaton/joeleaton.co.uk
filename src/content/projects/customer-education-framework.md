@@ -65,7 +65,7 @@ Different docs require different "brains." I built in specific logic for our thr
 - **Reference Material:** Concise, data-heavy, and easily searchable. Also accounts for conceptual information.
 - **How-To Guides:** Action-oriented and persona-led instructions.
 
-![content harmony app](/images/uploads/Screenshot%202026-02-14%20at%2019.26.59.png "The editor view for optimizing learning content")
+![content harmony app](/images/uploads/Screenshot%202026-02-14%20at%2020.10.39.png "The editor view for optimizing learning content")
 
 ***
 
