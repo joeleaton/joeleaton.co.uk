@@ -14,9 +14,10 @@ featured: true
 featuredImage: /images/uploads/Screenshot 2026-02-14 at 19.26.59.png
 videoUrl: ''
 technologies:
-  - Instructional Design
-  - LMS
-  - Video Production
+  - Learning Design
+  - Technical Documentation
+  - Customer Enablement
+  - AI
 links:
   paper: ''
   video: ''
