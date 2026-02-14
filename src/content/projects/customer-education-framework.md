@@ -11,7 +11,7 @@ tags:
 year: 2026
 location: Hornbill, UK
 featured: true
-featuredImage: /images/uploads/Screenshot 2026-02-14 at 19.40.09.png
+featuredImage: /images/uploads/Screenshot 2026-02-14 at 19.26.59.png
 videoUrl: ''
 technologies:
   - Instructional Design
@@ -21,7 +21,7 @@ links:
   paper: ''
   video: ''
   github: ''
-publishedDate: 2024-01-15
+publishedDate: 2026-02-14T19:44:00
 relatedProjects:
   - pure-data-synthesis-workshop
 ---
