@@ -1,44 +1,85 @@
 ---
-title: "Customer Education Framework"
-slug: "customer-education-framework"
-description: "Scalable education programme design for technology companies"
-categories: ["education"]
-tags: ["speaking", "workshops"]
-year: 2024
-location: "Remote"
+title: Content Harmony
+slug: content-harmony
+description: Turning Style into a Living, Breathing AI Editor
+categories:
+  - education
+tags:
+  - speaking
+  - workshops
+  - tools
+year: 2026
+location: Remote
 featured: true
-featuredImage: ""
-videoUrl: ""
-technologies: ["Instructional Design", "LMS", "Video Production"]
+featuredImage: /images/uploads/Screenshot 2026-02-14 at 19.26.59.png
+videoUrl: ''
+technologies:
+  - Instructional Design
+  - LMS
+  - Video Production
 links:
-  paper: ""
-  video: ""
-  github: ""
-relatedProjects: ["pure-data-synthesis-workshop"]
+  paper: ''
+  video: ''
+  github: ''
 publishedDate: 2024-01-15
+relatedProjects:
+  - pure-data-synthesis-workshop
 ---
 
-# Customer Education Framework
+I have always believed that Customer Enablement shouldn't just be about managing content. It should be about engineering better ways to create it.
 
-A comprehensive approach to designing and delivering customer education programmes for technology companies, combining instructional design principles with scalable delivery methods.
+I built **Content Harmony** because I wanted to kill the "Consistency Tax." You know the one: that endless cycle of back and forth where a brilliant Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
 
-## Framework Components
+I wanted my team to spend their brainpower on teaching, not on policing commas or re-reading brand guidelines for the thousandth time.
 
-### Needs Analysis
-Understanding what customers need to learn, when they need it, and how they prefer to consume content.
+***
 
-### Content Architecture
-Structuring learning paths that progress from onboarding through to advanced usage, with clear milestones and outcomes.
+## The One-Week Sprint
 
-### Delivery Methods
-- Self-paced video courses
-- Live workshops and webinars
-- Interactive documentation
-- Community-driven learning
+I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week.
 
-### Measurement
-Tracking engagement, completion rates, and the impact of education on product adoption and customer satisfaction.
+The goal was simple: Create a workspace where the AI isn't just writing. It’s acting as a senior editor who has memorized every persona and style rule we have. After a few days of prompt tuning and testing, the team started using it for real production work.
 
-## Results
+***
 
-This framework has been applied across multiple organisations, consistently improving customer onboarding time and reducing support ticket volume.
+## How It Works (The Editor View)
+
+The app is designed to match exactly how we deliver value to our customers. When someone enters their source material, such as raw notes, course outline and product information, or a recording transcript, Content Harmony doesn't just give them a wall of text. It outputs content ready for deployment.
+
+### 1. For Learning Content
+
+Our educational content follows a strict hierarchy. The editor uses a tabbed interface so the team can see and optimise for the full flow at a glance:
+
+- **Course Level:** High-level objectives and certification paths.
+- **Section Level:** The narrative arc of the module.
+- **Lesson Level:** The granular information for the learner.
+
+Our learning style uses relatable examples, use cases, and has a pedagogical framework that Content Harmony is easily able to apply. It even identifies when diagrams and imagery can help aid understanding, and goes as far as producing video scripts and visual cuses where appropriate. 
+
+### 2. For Technical Documentation
+
+Different docs require different "brains." I built in specific logic for our three core pillars:
+
+- **Configuration Guides:** Deeply technical, focused on setup and logic.
+- **Reference Material:** Concise, data-heavy, and easily searchable. Also accounts for conceptual information.
+- **How-To Guides:** Action-oriented and persona-led instructions.
+
+![content harmony app](/images/uploads/Screenshot%202026-02-14%20at%2019.26.59.png "The editor view for optimizing learning content")
+
+***
+
+## Why This Matters for Education Leadership
+
+Building this wasn't just about speed, though we are significantly faster now. It was about psychological safety and quality.
+
+Now, when a team member hits "Optimize Content," they know the output is already 90% aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
+
+One aspect of the tool that is helping the team, is the feedback it provides upon every generation. It explains the changes it's made and why - just like having a mentor or senior learning/writing colleague provide constructive feedback on their work, reinforcing the framework at stages of content design.
+
+We’ve moving from being a team that simply writes content to a team that orchestrates learning experiences.
+
+***
+
+## What’s Next?
+
+Content Harmony is currently live and being used by the team daily. My next step is to integrate it even more deeply into our publishing stack to automate the final upload process.
