@@ -38,7 +38,7 @@ I wanted my team to spend their brainpower on teaching, not on policing commas o
 
 I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week (I actually started in Claude Code but threw the first few iterations away, but that's a different story).
 
-The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After a few days of prompt tuning and testing, the team started using it for real production work.
+The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After a few days of model and prompt tuning and testing, the team started using it for real production work.
 
 ***
 
