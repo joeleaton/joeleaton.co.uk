@@ -23,7 +23,7 @@ This system allows you to control music and visuals with simple hand and arm ges
 
 I developed a demo for ARM's outreach at STEM events including the Big Bang Fair.
 
-The demo is based around a [Myo](http://www.myo.com) armband, which detects hand gestures through muscle tension in the arm (a method known as electro_Myo_graphy). By performing hand gestures, a user controls a musical sound track and associated visuals displayed on a monitor. As well as showcasing how new technologies can be used for creative applications, the demo also highlights how alternative control interfaces can be useful for people with limited motor functions.
+The demo is based around a [Myo](http://www.myo.com) armband, which detects hand gestures through muscle tension in the arm (a method known as electromyography). By performing hand gestures, a user controls a musical sound track and associated visuals displayed on a monitor. As well as showcasing how new technologies can be used for creative applications, the demo also highlights how alternative control interfaces can be useful for people with limited motor functions.
 
 Inside the Myo is a Kinetis K20 MCU from NXP, which includes an ARM Cortex-M4 processor. Using the Myo API, which provides both raw sensor data from the armband and control data from detecting hand gestures, control signals are mapped to audio and visuals by transforming data from Myo using the Open Sound Control (OSC) protocol.
 
