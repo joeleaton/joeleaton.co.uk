@@ -28,7 +28,7 @@ relatedProjects:
 
 I have always believed that Customer Enablement shouldn't just be about managing content. It should be about engineering better ways to create it.
 
-I built **Content Harmony** because I wanted to kill the "Consistency Tax." You know the one: that endless cycle of back and forth where a brilliant Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
+I built **Content Harmony** in my current job role at Hornbill because I wanted to kill the "Consistency Tax." You know the one: that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
 
 I wanted my team to spend their brainpower on teaching, not on policing commas or re-reading brand guidelines for the thousandth time.
 
@@ -36,9 +36,9 @@ I wanted my team to spend their brainpower on teaching, not on policing commas o
 
 ## The One-Week Sprint
 
-I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week.
+I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week (I actually started in Claude Code but threw the first few iterations away, but that's a different story).
 
-The goal was simple: Create a workspace where the AI isn't just writing. It’s acting as a senior editor who has memorized every persona and style rule we have. After a few days of prompt tuning and testing, the team started using it for real production work.
+The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After a few days of prompt tuning and testing, the team started using it for real production work.
 
 ***
 
@@ -54,7 +54,7 @@ Our educational content follows a strict hierarchy. The editor uses a tabbed int
 - **Section Level:** The narrative arc of the module.
 - **Lesson Level:** The granular information for the learner.
 
-Our learning style uses relatable examples, use cases, and has a pedagogical framework that Content Harmony is easily able to apply. It even identifies when diagrams and imagery can help aid understanding, and goes as far as producing video scripts and visual cuses where appropriate. 
+Our learning style uses relatable examples, use cases, knowledge checks, and has a pedagogical framework that Content Harmony is easily able to apply. It even identifies when diagrams and imagery can help aid understanding, and goes as far as producing video scripts and visual cuses where appropriate.
 
 ### 2. For Technical Documentation
 
@@ -74,7 +74,7 @@ Building this wasn't just about speed, though we are significantly faster now. I
 
 Now, when a team member hits "Optimize Content," they know the output is already 90% aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
 
-One aspect of the tool that is helping the team, is the feedback it provides upon every generation. It explains the changes it's made and why - just like having a mentor or senior learning/writing colleague provide constructive feedback on their work, reinforcing the framework at stages of content design.
+One aspect of the tool that is helping the team, is the feedback it provides upon every generation. It explains the changes it's made and why - just like having a mentor or senior learning/writing colleague provide constructive feedback on their work, reinforcing the framework at stages of content design and continually upskilling the team.
 
 We’ve moving from being a team that simply writes content to a team that orchestrates learning experiences.
 
@@ -82,4 +82,4 @@ We’ve moving from being a team that simply writes content to a team that orche
 
 ## What’s Next?
 
-Content Harmony is currently live and being used by the team daily. My next step is to integrate it even more deeply into our publishing stack to automate the final upload process.
+Content Harmony is currently live and being used by the team daily. My next step is to integrate it even more deeply into our publishing stack to automate the final upload process and produce new types of content.
