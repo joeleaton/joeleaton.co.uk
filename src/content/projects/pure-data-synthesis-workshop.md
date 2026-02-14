@@ -13,10 +13,10 @@ featured: true
 featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.01.51.png
 videoUrl: ''
 technologies:
-  - Pure Data
-  - Synthesis
-  - Audio Programming
   - Plugdata
+  - DSP
+  - Audio Synthesis
+  - Audio Programming
   - VST plugin
 links:
   paper: ''
