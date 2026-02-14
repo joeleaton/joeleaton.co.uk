@@ -28,7 +28,7 @@ relatedProjects:
 
 I have always believed that Customer Enablement shouldn't just be about managing content. It should be about engineering better ways to create it.
 
-I built **Content Harmony** in my current job role at Hornbill because I wanted to kill the "Consistency Tax." You know the one: that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
+I built **Content Harmony** in my current role at Hornbill because I wanted to kill the "Consistency Tax." You know the one, that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
 
 I wanted my team to spend their brainpower on teaching, not on policing commas or re-reading brand guidelines for the thousandth time.
 
@@ -36,7 +36,7 @@ I wanted my team to spend their brainpower on teaching, not on policing commas o
 
 ## The One-Week Sprint
 
-I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week (I actually started in Claude Code but threw the first few iterations away, but that's a different story).
+I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week (I actually started in Claude Code but threw the first few iterations away, but that's a separate story).
 
 The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After a few days of model and prompt tuning and testing, the team started using it for real production work.
 
