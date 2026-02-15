@@ -38,6 +38,8 @@ As one runner I coach kept saying, there had to be a better way to deliver coach
 
 I built Elevate as a full-stack web application focused on making the athlete experience as clean and frictionless as possible while giving coaches the tools they actually need. Yes, I built it as a multi-tenant app, just to learn what's involved. I'm using it for my runners but in theory it's available for other coaches to use with their runners.
 
+![UI of Elevate](/images/uploads/WhatsApp%20Image%202026-02-15%20at%2019.04.02.jpeg "Athlete views of program and workout")
+
 **The Stack:**
 
 - React (via CDN) for the frontend, keeping it simple -no build complexity
