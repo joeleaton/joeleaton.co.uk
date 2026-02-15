@@ -40,7 +40,11 @@ const hasDropdown = menuPages.length > 0;
             About
           </a>
           {hasDropdown && (
-            <button class="dropdown-arrow" aria-label="Toggle About submenu" aria-expanded="false">▾</button>
+            <button class="dropdown-arrow" aria-label="Toggle About submenu" aria-expanded="false">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           )}
           {hasDropdown && (
             <ul class="dropdown" role="menu">
@@ -277,13 +281,19 @@ const hasDropdown = menuPages.length > 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
-      font-size: 0.85em;
-      opacity: 0.7;
+      width: 48px;
+      height: 48px;
+      opacity: 0.8;
+      border-left: 1px solid var(--border-color);
     }
 
-    .dropdown-arrow.rotated {
+    .dropdown-arrow svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.25s ease;
+    }
+
+    .dropdown-arrow.rotated svg {
       transform: rotate(180deg);
     }
 
@@ -345,17 +355,31 @@ const hasDropdown = menuPages.length > 0;
     });
   }
 
-  // Mobile: toggle About sub-menu via arrow button
+  // Mobile: toggle About sub-menu via arrow button or About link
   const arrowBtn = document.querySelector('.dropdown-arrow') as HTMLButtonElement | null;
+  const aboutLink = document.querySelector('.about-link') as HTMLAnchorElement | null;
   const dropdown = document.querySelector('.dropdown');
+  const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+
+  function toggleDropdown(e: Event) {
+    if (!dropdown || !arrowBtn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+    arrowBtn.classList.toggle('rotated');
+    arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
+  }
 
   if (arrowBtn && dropdown) {
-    arrowBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropdown.classList.toggle('open');
-      arrowBtn.classList.toggle('rotated');
-      arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
+    arrowBtn.addEventListener('click', toggleDropdown);
+  }
+
+  // On mobile, tapping "About" text toggles the submenu instead of navigating
+  if (aboutLink && dropdown) {
+    aboutLink.addEventListener('click', (e) => {
+      if (isMobile()) {
+        toggleDropdown(e);
+      }
     });
   }
 </script>
