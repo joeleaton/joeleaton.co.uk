@@ -2,7 +2,7 @@
 title: Elevate - Coaching App
 slug: elevate-coaching-app
 draft: false
-description: A multi-tenant app designed for runners.
+description: A multi-tenant app designed for coaches and runners.
 categories:
   - running
 tags:
