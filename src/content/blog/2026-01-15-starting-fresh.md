@@ -1,14 +1,15 @@
 ---
-title: "Starting Fresh: A New Digital Home"
-slug: "starting-fresh"
-description: "Launching a new website to better represent my multi-disciplinary work"
-category: "general"
-tags: ["opinion"]
+title: 'Starting Fresh: A New Digital Home'
+slug: starting-fresh
+description: Launching a new website to better represent my multi-disciplinary work
+category: general
+tags:
+  - opinion
 publishedDate: 2026-01-15
 featured: true
-featuredImage: ""
-author: "Joel Eaton"
+featuredImage: ''
 readTime: 3
+author: Joel Eaton
 ---
 
 # Starting Fresh
@@ -17,7 +18,7 @@ Welcome to my new digital home. After years of scattered content across differen
 
 ## Why Start Again?
 
-My previous website served its purpose, but it didn't reflect the breadth of what I do. Research papers sat next to running tips next to workshop announcements — without any real structure or coherence.
+My previous website served its purpose, but it didn't reflect the breadth of what I do. Research papers sat next to running tips next to workshop announcements, without any real structure or coherence.
 
 This new site is designed from the ground up to embrace the multi-disciplinary nature of my work, with clear sections for each domain while also highlighting the connections between them.
 
@@ -26,7 +27,7 @@ This new site is designed from the ground up to embrace the multi-disciplinary n
 I'll be sharing:
 
 - **Project deep-dives** into BCMI research and performances
-- **Running insights** from coaching ultramarathon athletes
+- **Running insights** from coaching  athletes
 - **Technical tutorials** on Pure Data and music technology
 - **Thoughts on education** and how we help people learn complex things
 
