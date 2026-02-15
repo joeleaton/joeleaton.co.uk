@@ -323,9 +323,7 @@ const hasDropdown = menuPages.length > 0;
       box-shadow: none;
     }
 
-    .dropdown.open {
-      display: flex;
-    }
+    /* .open state is set via inline style in JS for specificity */
 
     .dropdown::before {
       display: none;
@@ -368,11 +366,13 @@ const hasDropdown = menuPages.length > 0;
   const dropdown = document.querySelector('.dropdown');
   const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
+  let aboutOpen = false;
   function toggleAboutMenu() {
     if (!dropdown || !arrowBtn) return;
-    dropdown.classList.toggle('open');
-    arrowBtn.classList.toggle('rotated');
-    arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
+    aboutOpen = !aboutOpen;
+    (dropdown as HTMLElement).style.display = aboutOpen ? 'flex' : 'none';
+    arrowBtn.classList.toggle('rotated', aboutOpen);
+    arrowBtn.setAttribute('aria-expanded', String(aboutOpen));
   }
 
   if (aboutItem && dropdown) {
