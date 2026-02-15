@@ -1,14 +1,16 @@
 ---
-title: "The Future of Brain-Computer Music Interfaces"
-slug: "future-of-bcmi"
-description: "Exploring emerging trends in non-invasive EEG technology and what they mean for musical expression"
-category: "bcmi"
-tags: ["research"]
+title: The Future of Brain-Computer Music Interfaces
+slug: future-of-bcmi
+draft: true
+description: Exploring emerging trends in non-invasive EEG technology and what they mean for musical expression
+category: bcmi
+tags:
+  - research
 publishedDate: 2026-02-01
 featured: false
-featuredImage: ""
-author: "Joel Eaton"
+featuredImage: ''
 readTime: 5
+author: Joel Eaton
 ---
 
 # The Future of Brain-Computer Music Interfaces
