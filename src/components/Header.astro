@@ -284,7 +284,6 @@ const hasDropdown = menuPages.length > 0;
       width: 48px;
       height: 48px;
       opacity: 0.8;
-      border-left: 1px solid var(--border-color);
     }
 
     .dropdown-arrow svg {
@@ -355,13 +354,13 @@ const hasDropdown = menuPages.length > 0;
     });
   }
 
-  // Mobile: toggle About sub-menu via arrow button or About link
+  // Mobile: toggle About sub-menu via arrow OR About link
   const arrowBtn = document.querySelector('.dropdown-arrow') as HTMLButtonElement | null;
   const aboutLink = document.querySelector('.about-link') as HTMLAnchorElement | null;
   const dropdown = document.querySelector('.dropdown');
   const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
-  function toggleDropdown(e: Event) {
+  function toggleAboutMenu(e: Event) {
     if (!dropdown || !arrowBtn) return;
     e.preventDefault();
     e.stopPropagation();
@@ -370,16 +369,13 @@ const hasDropdown = menuPages.length > 0;
     arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
   }
 
-  if (arrowBtn && dropdown) {
-    arrowBtn.addEventListener('click', toggleDropdown);
+  if (arrowBtn) {
+    arrowBtn.addEventListener('click', toggleAboutMenu);
   }
 
-  // On mobile, tapping "About" text toggles the submenu instead of navigating
-  if (aboutLink && dropdown) {
+  if (aboutLink) {
     aboutLink.addEventListener('click', (e) => {
-      if (isMobile()) {
-        toggleDropdown(e);
-      }
+      if (isMobile()) toggleAboutMenu(e);
     });
   }
 </script>
