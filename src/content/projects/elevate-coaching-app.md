@@ -32,7 +32,7 @@ Every running coach has probably done this; you craft the perfect training plan 
 
 Athletes open it on their phones. They pinch, zoom, scroll sideways through columns, squint at tiny cells. The workout description that looked perfect on your laptop is now a nightmare to read mid-run. Comments get lost. Feedback comes via WhatsApp messages, Strava comments, Garmin Connect. You update the sheet, they don't notice until tomorrow.
 
-As one runner I coach kept saying, there had to be a better way to deliver coaching. And there is, there's apps but nothing specific for running, and nothing for free.
+As one runner I coach kept saying, there had to be a better way to deliver coaching. And there is, there's apps available but nothing specific for running, and nothing for free.
 
 ## The Build
 
@@ -54,7 +54,7 @@ The terrain visualization feature was particularly fun to build, using Three.js 
 
 **[SCREENSHOT: Athlete view showing upcoming workouts in grid layout]**
 
-**[SCREENSHOT: Athlete workout detail with pace interpolation and terrain visualization]**
+![terrain view](/images/uploads/interval-session.png "Images representing workouts are created for uploading to Strava or other platforms.")
 
 ## The Result
 
@@ -65,3 +65,5 @@ The app launched in production with real athletes training for marathons, and th
 Built with attention to the details that matter — proper pace formatting (8:30 /mile, not 8.5), notifications that work, and a UX that doesn't get in the way of the training.
 
 \*\*Tech:\*\* React, Supabase, PostgreSQL, Three.js, Netlify, PWA
+
+![coach view of elevate app](/images/uploads/Screenshot%202026-02-15%20at%2014.16.26.png "Coach view - building and editing a progam for an athlete")
