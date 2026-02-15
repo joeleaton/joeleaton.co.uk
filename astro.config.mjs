@@ -9,11 +9,10 @@ import remarkButtons from './src/plugins/remark-buttons.mjs';
 import rehypeImageFigure from './src/plugins/rehype-image-figure.mjs';
 import rehypeSubSuper from './src/plugins/rehype-sub-super.mjs';
 
-const basePath = '/joeleaton.co.uk';
+const basePath = '';
 
 export default defineConfig({
-  site: 'https://joeleaton.github.io',
-  base: basePath,
+  site: 'https://www.joeleaton.co.uk',
   integrations: [sitemap()],
   output: 'static',
   markdown: {
