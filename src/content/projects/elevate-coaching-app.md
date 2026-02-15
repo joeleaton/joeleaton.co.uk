@@ -11,7 +11,7 @@ tags:
 year: 2026
 location: UK
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/WhatsApp Image 2026-02-15 at 16.28.52.jpeg
 videoUrl: ''
 technologies:
   - React
