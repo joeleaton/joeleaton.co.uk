@@ -64,8 +64,8 @@ Athletes now get their training plans in an interface that actually works on the
 
 The app launched in production with real athletes training for marathons, and the feedback has been exactly what I hoped: "I actually look forward to checking my workouts now."
 
-Built with attention to the details that matter — proper pace formatting (8:30 /mile, not 8.5), notifications that work, and a UX that doesn't get in the way of the training.
+Built with attention to the details that matter, proper pace formatting (8:30 /mile, not 8.5), notifications that work, and a UX that doesn't get in the way of the training.
 
-**Tech:** React, Supabase, PostgreSQL, Three.js, Netlify, PWA
+\*\*Tech:\*\* React, Supabase, PostgreSQL, Three.js, Netlify, PWA
 
 ![coach view of elevate app](/images/uploads/Screenshot%202026-02-15%20at%2014.16.26.png "Coach view - building and editing a progam for an athlete")
