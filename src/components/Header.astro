@@ -152,12 +152,13 @@ const hasDropdown = menuPages.length > 0;
     border: none;
     padding: 0;
     cursor: pointer;
-    font-size: 0.7em;
-    opacity: 0.6;
-    transition: transform 0.2s;
     color: var(--text-secondary);
     line-height: 1;
     display: none; /* hidden on desktop — dropdown uses hover */
+  }
+
+  .dropdown-arrow svg {
+    pointer-events: none;
   }
 
   /* Dropdown panel */
@@ -281,15 +282,21 @@ const hasDropdown = menuPages.length > 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 48px;
-      height: 48px;
-      opacity: 0.8;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 0 var(--space-sm);
+      opacity: 1;
+      color: var(--text-secondary);
+      /* Ensure tappable on mobile */
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+      touch-action: manipulation;
     }
 
     .dropdown-arrow svg {
       width: 16px;
       height: 16px;
       transition: transform 0.25s ease;
+      pointer-events: none;
     }
 
     .dropdown-arrow.rotated svg {
@@ -354,28 +361,33 @@ const hasDropdown = menuPages.length > 0;
     });
   }
 
-  // Mobile: toggle About sub-menu via arrow OR About link
+  // Mobile: toggle About sub-menu
+  // Tap anywhere on the About row (link, arrow, or gap) to toggle
+  const aboutItem = document.querySelector('.nav-item-about') as HTMLElement | null;
   const arrowBtn = document.querySelector('.dropdown-arrow') as HTMLButtonElement | null;
-  const aboutLink = document.querySelector('.about-link') as HTMLAnchorElement | null;
   const dropdown = document.querySelector('.dropdown');
   const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
-  function toggleAboutMenu(e: Event) {
+  function toggleAboutMenu() {
     if (!dropdown || !arrowBtn) return;
-    e.preventDefault();
-    e.stopPropagation();
     dropdown.classList.toggle('open');
     arrowBtn.classList.toggle('rotated');
     arrowBtn.setAttribute('aria-expanded', String(dropdown.classList.contains('open')));
   }
 
-  if (arrowBtn) {
-    arrowBtn.addEventListener('click', toggleAboutMenu);
-  }
+  if (aboutItem && dropdown) {
+    // Use event delegation on the <li> — catches taps on the link,
+    // the button, the SVG, and any gap between them
+    aboutItem.addEventListener('click', (e) => {
+      if (!isMobile()) return;
 
-  if (aboutLink) {
-    aboutLink.addEventListener('click', (e) => {
-      if (isMobile()) toggleAboutMenu(e);
+      const target = e.target as HTMLElement;
+
+      // Don't intercept taps on dropdown sub-links
+      if (target.closest('.dropdown')) return;
+
+      e.preventDefault();
+      toggleAboutMenu();
     });
   }
 </script>
