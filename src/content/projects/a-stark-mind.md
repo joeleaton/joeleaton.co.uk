@@ -10,7 +10,7 @@ tags:
   - research
 year: 2015
 location: University of Plymouth, UK
-featured: true
+featured: false
 featuredImage: /images/uploads/QVZqNTc4QzB0bjBnajA5a1FWQXZTNGZQ.jpeg
 videoUrl: https://vimeo.com/134393784
 technologies:
@@ -31,7 +31,7 @@ relatedProjects:
 
 # A Stark Mind
 
-An audiovisual performance where the graphic score is controlled entirely by brainwaves. Musicians respond to visual cues generated in real-time by me, the "composer's" brain activity patterns.  
+An audiovisual performance where the graphic score is controlled entirely by brainwaves. Musicians respond to visual cues generated in real-time by me, the "composer's" brain activity patterns.
 
 ## Technical Approach
 
