@@ -14,7 +14,7 @@ readTime: null
 
 ### The Church of Massive Volume
 
-St. Bartholomew’s in Brighton is an absolute beast of a building. It’s a neo-gothic giant, widely considered the tallest parish church in Britain. Because of its unique, non-standard shape, it possesses a staggering internal volume. In short: it is a reverb enthusiast’s dream and I had it in my sights for a long time.
+St. Bartholomew’s in Brighton is an absolute beast of a building. It’s a neo-gothic giant, widely considered the tallest parish church in Britain. Because of its unique, non-standard shape, it possesses a staggering internal volume. In short, it is a reverb enthusiast’s dream and I had it in my sights for a long time.
 
 ### Capturing the "Sonic Fingerprint"
 
