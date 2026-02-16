@@ -1,5 +1,5 @@
 ---
-title: Elevate - Coaching App
+title: 'Elevate: Running Coach App'
 slug: elevate-coaching-app
 draft: false
 description: A multi-tenant app designed for coaches and runners.
@@ -24,7 +24,8 @@ links:
 publishedDate: 2026-02-15T08:08:00
 ---
 
-# Elevate: Running Coach Platform
+# Elevate: Running Coach App
+
 
 ## The Problem
 
