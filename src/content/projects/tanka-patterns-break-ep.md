@@ -24,3 +24,13 @@ Songs made from processed sounds from my guitar, some synths, some field recordi
 Around this time, I performed some shows with Max Tundra, Rashad Becker, Pure, and Mira Calix in the UK and Germany.
 
 <iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=3842284248/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://tanka.bandcamp.com/album/patterns-break-ep">Patterns Break EP by Tanka</a></iframe>
+
+![tanka flyer](/images/uploads/tanka1.jpg)
+
+![me playing live as Tanka](/images/uploads/tanka5.jpg)
+
+![another Tanka flyer](/images/uploads/tanka4.gif)
+
+![Live shot of Tanka](/images/uploads/tanka2.jpg)
+
+![Tanka poster](/images/uploads/tanks2.jpg)
