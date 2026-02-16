@@ -10,7 +10,7 @@ tags:
   - research
 year: 2017
 location: Berlin, Germany
-featured: true
+featured: false
 featuredImage: ''
 videoUrl: https://vimeo.com/116013316
 technologies:
