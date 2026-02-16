@@ -1,5 +1,5 @@
 ---
-title: Tanka - Patterns Break EP
+title: 'Tanka: Patterns Break EP'
 slug: tanka
 draft: false
 description: Sounds from the cold hills.
