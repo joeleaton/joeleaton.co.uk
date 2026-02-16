@@ -13,7 +13,7 @@ year: 2015
 location: Shropshire, UK
 featured: false
 featuredImage: ''
-videoUrl: https://vimeo.com/manage/videos/121147846
+videoUrl: https://vimeo.com/121147846
 technologies:
   - EEG
   - Emotional response
