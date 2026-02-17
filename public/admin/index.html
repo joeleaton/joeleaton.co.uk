@@ -8,5 +8,16 @@
 </head>
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    (function() {
+      var link = document.createElement('a');
+      link.href = 'analytics.html';
+      link.textContent = 'Analytics';
+      link.style.cssText = 'position:fixed;bottom:1rem;right:1rem;z-index:99999;background:linear-gradient(135deg,#FF3366,#00E5FF);color:#fff;padding:0.5rem 1rem;border-radius:8px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:0.85rem;font-weight:600;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:transform 0.2s,box-shadow 0.2s;';
+      link.onmouseenter = function() { this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(255,51,102,0.4)'; };
+      link.onmouseleave = function() { this.style.transform=''; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)'; };
+      document.body.appendChild(link);
+    })();
+  </script>
 </body>
 </html>
