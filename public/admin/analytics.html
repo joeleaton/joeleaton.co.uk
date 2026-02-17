@@ -449,9 +449,54 @@
 
   const SCOPES = 'https://www.googleapis.com/auth/analytics.readonly';
   const API_BASE = 'https://analyticsdata.googleapis.com/v1beta';
+  const TOKEN_KEY = 'ga_dashboard_token';
 
   let accessToken = null;
   let tokenClient = null;
+  let refreshTimer = null;
+
+  // Token persistence
+  function saveToken(token, expiresIn) {
+    const data = {
+      token: token,
+      expiresAt: Date.now() + (expiresIn * 1000) - 60000, // 1 min buffer
+    };
+    localStorage.setItem(TOKEN_KEY, JSON.stringify(data));
+  }
+
+  function loadToken() {
+    try {
+      const raw = localStorage.getItem(TOKEN_KEY);
+      if (!raw) return null;
+      const data = JSON.parse(raw);
+      if (Date.now() > data.expiresAt) {
+        localStorage.removeItem(TOKEN_KEY);
+        return null;
+      }
+      return data;
+    } catch {
+      localStorage.removeItem(TOKEN_KEY);
+      return null;
+    }
+  }
+
+  function clearToken() {
+    localStorage.removeItem(TOKEN_KEY);
+    if (refreshTimer) clearTimeout(refreshTimer);
+  }
+
+  function scheduleRefresh(expiresAt) {
+    if (refreshTimer) clearTimeout(refreshTimer);
+    const delay = expiresAt - Date.now() - 120000; // refresh 2 min before expiry
+    if (delay > 0) {
+      refreshTimer = setTimeout(() => silentRefresh(), delay);
+    }
+  }
+
+  function silentRefresh() {
+    if (!tokenClient) initTokenClient();
+    tokenClient.requestAccessToken({ prompt: '' }); // empty prompt = silent
+  }
 
   // Date helpers
   function formatDate(d) {
@@ -486,6 +531,25 @@
   }
 
   // Auth
+  function initTokenClient() {
+    tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: CONFIG.CLIENT_ID,
+      scope: SCOPES,
+      callback: (resp) => {
+        if (resp.error) {
+          showError('Auth failed: ' + resp.error);
+          return;
+        }
+        accessToken = resp.access_token;
+        const expiresIn = resp.expires_in || 3600;
+        saveToken(accessToken, expiresIn);
+        const stored = loadToken();
+        if (stored) scheduleRefresh(stored.expiresAt);
+        showDashboard();
+      },
+    });
+  }
+
   function handleSignIn() {
     if (CONFIG.CLIENT_ID === 'YOUR_GOOGLE_CLIENT_ID') {
       document.getElementById('configNotice').style.display = 'block';
@@ -494,20 +558,7 @@
       return;
     }
 
-    if (!tokenClient) {
-      tokenClient = google.accounts.oauth2.initTokenClient({
-        client_id: CONFIG.CLIENT_ID,
-        scope: SCOPES,
-        callback: (resp) => {
-          if (resp.error) {
-            showError('Auth failed: ' + resp.error);
-            return;
-          }
-          accessToken = resp.access_token;
-          showDashboard();
-        },
-      });
-    }
+    if (!tokenClient) initTokenClient();
     tokenClient.requestAccessToken();
   }
 
@@ -516,6 +567,7 @@
       google.accounts.oauth2.revoke(accessToken);
     }
     accessToken = null;
+    clearToken();
     document.getElementById('authScreen').style.display = 'flex';
     document.getElementById('dashboard').style.display = 'none';
     document.getElementById('signOutBtn').style.display = 'none';
@@ -528,6 +580,25 @@
     initDates();
     fetchAll();
   }
+
+  // Auto-login on page load if token is still valid
+  function tryAutoLogin() {
+    const stored = loadToken();
+    if (stored) {
+      accessToken = stored.token;
+      scheduleRefresh(stored.expiresAt);
+      showDashboard();
+    }
+  }
+
+  // Wait for Google Identity Services to load, then try auto-login
+  window.addEventListener('load', () => {
+    // Small delay to ensure gsi library is ready
+    setTimeout(() => {
+      if (typeof google !== 'undefined') initTokenClient();
+      tryAutoLogin();
+    }, 500);
+  });
 
   function showError(msg) {
     const box = document.getElementById('errorBox');
@@ -550,6 +621,16 @@
       },
       body: JSON.stringify(body),
     });
+
+    // If token expired, clear it and prompt re-auth
+    if (res.status === 401) {
+      clearToken();
+      accessToken = null;
+      document.getElementById('authScreen').style.display = 'flex';
+      document.getElementById('dashboard').style.display = 'none';
+      document.getElementById('signOutBtn').style.display = 'none';
+      throw new Error('Session expired. Please sign in again.');
+    }
 
     if (!res.ok) {
       const err = await res.json();
