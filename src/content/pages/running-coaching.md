@@ -26,7 +26,7 @@ I offer 121 training that is individualised to your level, your life and time co
 
 - Initial in-person introductory profiling and analysis session (there is a £50 fee for this).
 - Coaching plan customised to your goals, lifestyle, and ability; delivered every two weeks. No generic plans!
-- Plan delivered to you via my own custom app. No spreadsheets or document to wade through!
+- Plan delivered to you via [my own custom app](../../projects/elevate-coaching-app). No spreadsheets or document to wade through!
 - Feedback on your training, and program adjustments to accommodate your needs.
 - Additional support and session suggestions outside of running for injury prevention (e.g. plyometrics, agility, strength and conditioning).
 
