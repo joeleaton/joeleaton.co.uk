@@ -40,7 +40,7 @@ I built Elevate as a full-stack web application focused on making the athlete ex
 
 ![screenshots of Elevate](/images/uploads/elevate-1.png "Light mode and dark mode in the main athlete view")
 
-![workout view](/images/uploads/elevate-2.1.png "Athlete workout view")
+![workout view](/images/uploads/elevate-2.1.png "Athlete workout view ")
 
 **The Stack:**
 
@@ -55,8 +55,6 @@ The athlete interface prioritizes mobile-first design. Workouts are displayed as
 Coaches get a calendar view where they can drag, drop, and edit workouts in bulk. Pre-built templates let them save common workouts to their library. Weekly labels ("Build Week", "Peak") provide context at a glance. Comments and status updates flow both ways with real-time notifications.
 
 The terrain visualization feature was particularly fun to build, using Three.js to generate effort-based 3D landscapes from workout structure (warmup → intervals → cooldown). These render to 2048x2048 PNGs optimized for Strava uploads, giving athletes something visually striking to share.
-
-**[SCREENSHOT: Athlete view showing upcoming workouts in grid layout]**
 
 ![terrain view](/images/uploads/interval-session.png "Images representing workouts are created for uploading to Strava or other platforms.")
 
