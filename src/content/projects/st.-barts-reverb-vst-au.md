@@ -53,7 +53,7 @@ Imogen Heap's Lost & Found (the best ever vocal recording to demo reverb?!):
 
 ### Vocal ensemble
 
-Northern Lights by Voces8. Funnily enough, it's not easy finding a totally dry choral recording!:
+Northern Lights by Voces8. Funnily enough, it's not easy finding a totally dry choral recording. Best heard on headphones:
 
 /images/uploads/Vocal Ensemble Dry.mp3
 
