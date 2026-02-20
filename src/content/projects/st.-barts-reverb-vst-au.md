@@ -39,9 +39,11 @@ Piano
 
 From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (yes, you can hear his voice gesticulating in the background - incredible):
 
+/images/uploads/Piano Dry.mp3
+
 Vocals
 
-Imogen Heap's Lost & Found - the best every recording to demo reverb?!
+Imogen Heap's Lost & Found - the best every recording to demo reverb?!:
 
 Vocal ensemble
 
