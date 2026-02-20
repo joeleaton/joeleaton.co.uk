@@ -46,6 +46,8 @@ Due to working with runners on an individual basis, spaces are very limited. As 
 > >
 > Lucy, 2025
 
+![elevate-coaching app](/images/uploads/elevate-1.png "All runners get their plans delivered through my app - designed for you to access workouts easily and give feedback")
+
 ## My running background
 
 I have been running for fun since 2012 when I reluctantly took part in a parkrun and realised how unfit I’d become. Since then I’ve participated in a range of events, from 1-mile track races to 100-mile ultramarathons across the world, and I’ve even ended up on the podium a few times along the way. I trained with Plymouth University Athletics Club during my PhD studies and now love running over the South Downs where I live, on the South Coast of the UK.
