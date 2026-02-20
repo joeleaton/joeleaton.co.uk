@@ -26,7 +26,6 @@ publishedDate: 2026-02-15T08:08:00
 
 # Elevate: Running Coach App
 
-
 ## The Problem
 
 Every running coach has probably done this; you craft the perfect training plan for your athletes, then you paste it into a Spreadsheet.
@@ -39,7 +38,9 @@ As one runner I coach kept saying, there had to be a better way to deliver coach
 
 I built Elevate as a full-stack web application focused on making the athlete experience as clean and frictionless as possible while giving coaches the tools they actually need. Yes, I built it as a multi-tenant app, just to learn what's involved. I'm using it for my runners but in theory it's available for other coaches to use with their runners.
 
-![UI of Elevate](/images/uploads/WhatsApp%20Image%202026-02-15%20at%2019.04.02.jpeg "Athlete views of program and workout")
+![screenshots of Elevate ](/images/uploads/elevate-1.png "Light mode and dark mode in the main athlete view")
+
+![workout view](/images/uploads/elevate-2.png "Athlete workout view")
 
 **The Stack:**
 
