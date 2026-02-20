@@ -45,7 +45,7 @@ From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (ye
 
 ### Vocals
 
-Imogen Heap's Lost & Found - the best every recording to demo reverb?!:
+Imogen Heap's Lost & Found (the best ever vocal recording to demo reverb?!):
 
 /images/uploads/Vocals Dry.mp3
 
@@ -66,7 +66,6 @@ What happens when you put Adele in St. Barts?:
 /images/uploads/Adele Dry.mp3
 
 /images/uploads/Adele Wet (St Barts).mp3
-
 
 ## Download
 
