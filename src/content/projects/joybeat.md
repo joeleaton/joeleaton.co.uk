@@ -12,7 +12,7 @@ year: 2014
 location: Plymouth, UK
 featured: false
 featuredImage: ''
-videoUrl: ''
+videoUrl: https://www.youtube.com/watch?v=pEIIBcWWlDQ
 technologies:
   - SSVEP
   - Pure Data
