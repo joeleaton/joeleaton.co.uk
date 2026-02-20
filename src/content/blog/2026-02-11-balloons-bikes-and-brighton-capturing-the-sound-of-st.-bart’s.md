@@ -78,4 +78,4 @@ The final result is an IR that preserves the authentic, dark, early character of
 
 ## Experience the St. Bart’s Sound
 
-I’ve uploaded everything to [the official project page](../../projects/st-barts-reverb) so you can put the restoration to the test. Listen to some demos and download the Plugin to bring a piece of Brighton's gothic history into your DAW.
+I’ve uploaded everything to [the official project page](../../projects/st-barts-reverb-plugin) so you can put the restoration to the test. Listen to some demos and download the Plugin to bring a piece of Brighton's gothic history into your DAW.
