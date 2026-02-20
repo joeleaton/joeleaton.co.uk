@@ -33,7 +33,19 @@ Take a listen here, download it, and use it in your own music - it's free!
 
 ## Audio demos
 
-Coming!
+Here are some examples of St Barts reverb applied to some recordings:
+
+Piano
+
+From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (yes, you can hear his voice gesticulating in the background - incredible):
+
+Vocals
+
+Imogen Heap's Lost & Found - the best every recording to demo reverb?!
+
+Vocal ensemble
+
+Northern Lights by Voces8. Funnily enough, it's not easy finding a totally dry choral recording!
 
 ## Download
 
