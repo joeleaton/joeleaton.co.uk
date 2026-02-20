@@ -15,6 +15,7 @@ featuredImage: ''
 videoUrl: https://www.youtube.com/watch?v=pEIIBcWWlDQ
 technologies:
   - SSVEP
+  - Emotion detection
   - Pure Data
   - FM synthesis
 links: null
