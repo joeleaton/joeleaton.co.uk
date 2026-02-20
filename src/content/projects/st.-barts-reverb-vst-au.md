@@ -33,9 +33,9 @@ Take a listen here, download it, and use it in your own music - it's free!
 
 ## Audio demos
 
-Here are some examples of St Barts reverb applied to some recordings:
+Here are some examples of St Barts reverb applied to some recordings (no other processing took place):
 
-Piano
+### Piano
 
 From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (yes, you can hear his voice gesticulating in the background - incredible):
 
@@ -43,7 +43,7 @@ From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (ye
 
 /images/uploads/Piano Wet (St Barts).mp3
 
-Vocals
+### Vocals
 
 Imogen Heap's Lost & Found - the best every recording to demo reverb?!:
 
@@ -51,13 +51,22 @@ Imogen Heap's Lost & Found - the best every recording to demo reverb?!:
 
 /images/uploads/Vocals Wet (St Barts).mp3
 
-Vocal ensemble
+###Vocal ensemble
 
 Northern Lights by Voces8. Funnily enough, it's not easy finding a totally dry choral recording!:
 
 /images/uploads/Vocal Ensemble Dry.mp3
 
 /images/uploads/Vocal Ensemble Wet (St Barts).mp3
+
+### Music
+
+What happens when you put Adele in St. Barts?:
+
+/images/uploads/Adele Dry.mp3
+
+/images/uploads/Adele Wet (St Barts).mp3
+
 
 ## Download
 
