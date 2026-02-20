@@ -30,7 +30,7 @@ We did get some very confused looks from the worshippers (the priest insisted th
 
 ### The Unwanted Passerby
 
-I recently found one of the recordings from the day on an old hard drive. The initial balloon pop was perfect, but about six seconds into the decaying tail, a car or motorbike roared past the church.
+I recently found one of the recordings from the day on an old hard drive. The initial balloon pop was perfect, but a few seconds into the decaying tail, a car or motorbike roared past the church.
 
 The result was a textbook case of the **Doppler Effect**. As the vehicle sped by, it created a rasping, filtered "zing" that rose in frequency and fluctuated in volume, completely masking the natural decay of the church. It was a beautiful recording ruined by a 50cc engine.
 
