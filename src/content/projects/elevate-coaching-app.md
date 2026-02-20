@@ -40,7 +40,7 @@ I built Elevate as a full-stack web application focused on making the athlete ex
 
 ![screenshots of Elevate](/images/uploads/elevate-1.png "Light mode and dark mode in the main athlete view")
 
-![workout view](/images/uploads/elevate-2.1.png "Athlete workout view ")
+![workout view](/images/uploads/elevate-workout.png "Athlete workout view")
 
 **The Stack:**
 
