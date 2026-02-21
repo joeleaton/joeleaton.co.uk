@@ -45,19 +45,19 @@ From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (ye
 
 ### Vocals
 
-Imogen Heap's Lost & Found (the best ever vocal recording to demo reverb?!):
+Imogen Heap's Lost & Found:
 
 /images/uploads/Vocals Dry.mp3
 
 /images/uploads/Vocals Wet (St Barts).mp3
 
-### Vocal ensemble
+### Chamber Ensemble
 
-Northern Lights by Voces8. Funnily enough, it's not easy finding a totally dry choral recording. Best heard on headphones:
+Piano Quintet in F-Sharp Minor by Kaleidoscope Chamber Collective:
 
-/images/uploads/Vocal Ensemble Dry.mp3
+/images/uploads/Chamber Ensemble Dry.mp3
 
-/images/uploads/Vocal Ensemble Wet (St Barts).mp3
+/images/uploads/Chamber Ensemble Wet (St Barts).mp3
 
 ### Music
 
