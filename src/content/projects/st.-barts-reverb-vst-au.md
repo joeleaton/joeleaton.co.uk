@@ -37,7 +37,7 @@ Here are some examples of St Barts reverb applied to some recordings (no other p
 
 ### Piano
 
-From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould (yes, you're not mistaken. You can hear his voice humming along in the background - incredible):
+From the seminal 1981 recordings of Bach's Goldberg variations by Glen Gould:
 
 /images/uploads/Piano Dry.mp3
 
