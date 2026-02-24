@@ -13,7 +13,7 @@ featured: false
 featuredImage: /images/uploads/st.barts-UI.png
 videoUrl: ''
 technologies:
-  - c++
+  - C++
   - JUCE
   - Impulse response
   - Convolution reverb
