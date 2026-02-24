@@ -49,7 +49,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       rel="stylesheet"
     />
 
+    <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
+    <link rel="icon" type="image/png" sizes="32x32" href={url('/favicon-32x32.png')} />
+    <link rel="icon" type="image/png" sizes="16x16" href={url('/favicon-16x16.png')} />
+    <link rel="apple-touch-icon" sizes="180x180" href={url('/apple-touch-icon.png')} />
+    <meta name="theme-color" content="#000814" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Google Analytics 4 -->
