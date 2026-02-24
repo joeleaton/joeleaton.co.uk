@@ -1,7 +1,7 @@
 ---
 title: St. Barts Reverb Plugin
 slug: st-barts-reverb-plugin
-description: A plug-in that captures the reverb of a neo-gothic church that you can apply to your music.
+description: AA plug-in that captures the reverb of a neo-gothic church that you can apply to your music.
 categories:
   - music
 tags:
