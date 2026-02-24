@@ -10,7 +10,7 @@ tags:
 year: 2026
 location: ''
 featured: false
-featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.09.10.png
+featuredImage: /images/uploads/st.barts-UI.png
 videoUrl: ''
 technologies:
   - c++
