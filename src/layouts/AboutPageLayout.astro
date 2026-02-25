@@ -1,0 +1,136 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import DomainCard from '../components/DomainCard.astro';
+import { url } from '../utils/paths';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+}
+
+const { page } = Astro.props;
+const { title, description, titlePrefix } = page.data;
+const gradientTitle = titlePrefix ? title.slice(titlePrefix.length + 1) : title;
+---
+
+<BaseLayout title={title} description={description || title}>
+  <article class="about-page">
+    <section class="page-hero">
+      <div class="container">
+        <h1>
+          {titlePrefix && <span class="title-prefix">{titlePrefix} </span>}<span class="gradient-text">{gradientTitle}</span>
+        </h1>
+        <p class="about-tagline">Technologist. Researcher. Coach.</p>
+      </div>
+    </section>
+
+    <section class="section page-content">
+      <div class="container content-wrapper">
+        <div class="prose">
+          <slot />
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise-areas">
+      <div class="container">
+        <h2 class="section-title">Areas of Expertise</h2>
+        <div class="domain-grid">
+          <DomainCard
+            title="BCMI Research"
+            description="Brain-Computer Music Interfacing. PhD research exploring neurotechnology and musical expression."
+            highlights={['15+ Projects', '40+ Publications', 'Worldwide performances']}
+            href={url('/projects?filter=bcmi')}
+            domain="bcmi"
+          />
+          <DomainCard
+            title="Education Leadership"
+            description="Workshops, speaking, and customer education. Building learning experiences at scale."
+            highlights={['Workshops', 'Speaking', 'Customer education']}
+            href={url('/projects?filter=education')}
+            domain="education"
+          />
+          <DomainCard
+            title="Music Technology"
+            description="Pure Data, synthesis, drone music. Creative coding and experimental sound design."
+            highlights={['Pure Data', 'Synthesis', 'Drone music']}
+            href={url('/projects?filter=music')}
+            domain="music"
+          />
+          <DomainCard
+            title="Running Coaching"
+            description="Ultramarathon and distance running coaching. Personalised training programs for athletes."
+            highlights={['Ultramarathons', 'Distance running', 'Personalised plans']}
+            href={url('/projects?filter=running')}
+            domain="running"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section credentials">
+      <div class="container content-wrapper">
+        <h2 class="section-title">Credentials</h2>
+        <div class="prose">
+          <ul>
+            <li><strong>PhD</strong> — Brain-Computer Music Interfacing, University of Plymouth</li>
+            <li><strong>Research</strong> — 15+ publications in neurotechnology and music</li>
+            <li><strong>Coaching</strong> — England Athletics Level 3 Coach in Running Fitness</li>
+            <li><strong>Education</strong> — Workshop facilitator and speaker on tech learning and enablement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container" style="text-align: center;">
+        <h2>Get in Touch</h2>
+        <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">
+          Interested in collaboration, coaching, or speaking?
+        </p>
+        <div class="cta-buttons">
+          <a href={url('/projects')} class="btn btn-primary">View Projects</a>
+          <a href={url('/blog')} class="btn btn-outline">Read Blog</a>
+          <a href={url('/contact')} class="btn btn-outline">Contact</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: var(--space-3xl) 0 var(--space-xl);
+  }
+
+  .page-hero h1 {
+    font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .title-prefix {
+    color: var(--text-primary);
+  }
+
+  .about-tagline {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+  }
+
+  .page-content {
+    padding-bottom: 0;
+  }
+
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import AboutPageLayout from '../../layouts/AboutPageLayout.astro';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -17,8 +18,15 @@ interface Props {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
+const isAboutPage = page.data.slug === 'about';
 ---
 
-<PageLayout page={page}>
-  <Content />
-</PageLayout>
+{isAboutPage ? (
+  <AboutPageLayout page={page}>
+    <Content />
+  </AboutPageLayout>
+) : (
+  <PageLayout page={page}>
+    <Content />
+  </PageLayout>
+)}
