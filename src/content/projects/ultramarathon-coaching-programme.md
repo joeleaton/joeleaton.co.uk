@@ -22,7 +22,7 @@ publishedDate: 2023-01-01
 relatedProjects: []
 ---
 
-As [a running coach](../../about/coaching/), I often emphasise the benefits of strength training and how it can elevate your performance. This article brings together much of the advice I give to long-distance runners, offering guidance and exercises to seamlessly integrate strength training into your routine.
+As [a running coach](/coaching/), I often emphasise the benefits of strength training and how it can elevate your performance. This article brings together much of the advice I give to long-distance runners, offering guidance and exercises to seamlessly integrate strength training into your routine.
 
 ## 1. Introduction
 

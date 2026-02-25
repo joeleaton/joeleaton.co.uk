@@ -12,7 +12,13 @@ const menuPages = allPages
 
 // Dynamically resolve the "About Me" link from whichever page has showAboutSections
 const aboutMePage = allPages.find((p) => p.data.showAboutSections);
-const aboutMeHref = aboutMePage ? url(`/about/${aboutMePage.data.slug}`) : null;
+const aboutMeHref = aboutMePage ? url(`/${aboutMePage.data.slug}`) : null;
+
+// Active state: highlight About when viewing any CMS page
+const allPageSlugs = allPages.map((p) => p.data.slug);
+const isAboutActive = allPageSlugs.some(
+  (slug) => currentPath === url(`/${slug}`) || currentPath.startsWith(url(`/${slug}/`))
+);
 
 const navLinks = [
   { href: url('/projects'), label: 'Projects' },
@@ -38,7 +44,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
         </li>
         <li class:list={['nav-item-about', { 'has-dropdown': hasDropdown }]}>
           <span
-            class:list={['about-link', { active: currentPath.startsWith(url('/about')) }]}
+            class:list={['about-link', { active: isAboutActive }]}
             role="button"
             tabindex="0"
             aria-haspopup="true"
@@ -62,7 +68,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
               )}
               {menuPages.map((page) => (
                 <li role="menuitem">
-                  <a href={url(`/about/${page.data.slug}`)}>{page.data.title}</a>
+                  <a href={url(`/${page.data.slug}`)}>{page.data.title}</a>
                 </li>
               ))}
             </ul>

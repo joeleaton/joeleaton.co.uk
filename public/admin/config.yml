@@ -103,7 +103,7 @@ collections:
     description: "Static pages that appear under About in the navigation menu (e.g. Publications, CV)"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL Slug", name: "slug", widget: "string", hint: "URL path: /about/your-slug" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "URL path: /your-slug (e.g. 'coaching' → joeleaton.co.uk/coaching)" }
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Menu Order", name: "menuOrder", widget: "number", default: 99, hint: "Lower numbers appear first in the About dropdown menu" }
       - { label: "Show in Menu", name: "showInMenu", widget: "boolean", default: true }
