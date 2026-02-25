@@ -19,7 +19,7 @@ links: null
 publishedDate: 2026-02-14T10:11:00
 ---
 
-Songs made from processed sounds from my guitar, some synths, some field recordings, and some drums. Recorded and produced in 2010 in the misty, dreamy Mendip Hills in Somerset.
+Songs made from processed sounds from my guitar, some synths, some field recordings, and some drums played by my friend John. Recorded and produced in 2010 in the misty, dreamy Mendip Hills in Somerset.
 
 Around this time I performed some shows with Max Tundra, Rashad Becker, Pure, and Mira Calix in the UK and Germany.
 
