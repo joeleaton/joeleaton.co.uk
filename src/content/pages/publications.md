@@ -4,6 +4,7 @@ slug: publications
 description: Academic publications, conference papers, and research outputs.
 menuOrder: 3
 showInMenu: true
+titlePrefix: ''
 ---
 
 ![photo of books](/images/uploads/PXL_20260208_161256174.MP.jpg "Books of publications")
@@ -14,7 +15,7 @@ At some point I'll add PDF links but in the meantime please [contact me](../con
 
 Miranda, E., Eaton, J. 2018. _Music Neurotechnology: a natural progression_. The Routledge Research Companion to Electronic Music: Reaching out with Technology. Routledge, UK. Edited by Prof. Simon Emmerson.
 
-Eaton, J., Miranda, E. 2014._ On Mapping EEG Information into Music. _in_ _Guide to Brain-Computer Music Interfacing. Springer, XVIII, 313 p. 103 illus. Miranda, Eduardo Reck, Castet, Julien (Eds.).
+Eaton, J., Miranda, E. 2014. _On Mapping EEG Information into Music._ Guide to Brain-Computer Music Interfacing. Springer, XVIII, 313 p. 103 illus. Miranda, Eduardo Reck, Castet, Julien (Eds.).
 
 ## Journal articles
 
