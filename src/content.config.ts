@@ -55,6 +55,7 @@ const pages = defineCollection({
     menuOrder: z.number().optional().default(99),
     showInMenu: z.boolean().optional().default(true),
     titlePrefix: z.string().optional(),
+    showAboutSections: z.boolean().optional().default(false),
   }),
 });
 

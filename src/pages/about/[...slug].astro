@@ -18,10 +18,9 @@ interface Props {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
-const isAboutPage = page.data.slug === 'about';
 ---
 
-{isAboutPage ? (
+{page.data.showAboutSections ? (
   <AboutPageLayout page={page}>
     <Content />
   </AboutPageLayout>

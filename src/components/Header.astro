@@ -10,13 +10,17 @@ const menuPages = allPages
   .filter((p) => p.data.showInMenu !== false)
   .sort((a, b) => (a.data.menuOrder ?? 99) - (b.data.menuOrder ?? 99));
 
+// Dynamically resolve the "About Me" link from whichever page has showAboutSections
+const aboutMePage = allPages.find((p) => p.data.showAboutSections);
+const aboutMeHref = aboutMePage ? url(`/about/${aboutMePage.data.slug}`) : null;
+
 const navLinks = [
   { href: url('/projects'), label: 'Projects' },
   { href: url('/blog'), label: 'Blog' },
   { href: url('/contact'), label: 'Contact' },
 ];
 
-const hasDropdown = menuPages.length > 0;
+const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
 ---
 
 <header class="site-header">
@@ -51,9 +55,11 @@ const hasDropdown = menuPages.length > 0;
           )}
           {hasDropdown && (
             <ul class="dropdown" role="menu">
-              <li role="menuitem">
-                <a href={url('/about/about')}>About Me</a>
-              </li>
+              {aboutMeHref && (
+                <li role="menuitem">
+                  <a href={aboutMeHref}>About Me</a>
+                </li>
+              )}
               {menuPages.map((page) => (
                 <li role="menuitem">
                   <a href={url(`/about/${page.data.slug}`)}>{page.data.title}</a>
