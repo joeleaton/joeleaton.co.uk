@@ -54,6 +54,7 @@ const pages = defineCollection({
     description: z.string().optional().default(''),
     menuOrder: z.number().optional().default(99),
     showInMenu: z.boolean().optional().default(true),
+    titlePrefix: z.string().optional(),
   }),
 });
 

@@ -107,4 +107,5 @@ collections:
       - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Menu Order", name: "menuOrder", widget: "number", default: 99, hint: "Lower numbers appear first in the About dropdown menu" }
       - { label: "Show in Menu", name: "showInMenu", widget: "boolean", default: true }
+      - { label: "Title Prefix (white)", name: "titlePrefix", widget: "string", required: false, hint: "Optional: text shown before the gradient title in white (e.g. 'About' renders as white 'About' + gradient 'Joel Eaton')" }
       - { label: "Body", name: "body", widget: "markdown", hint: "Videos: paste a YouTube/Vimeo URL on its own line. Audio: insert an uploaded .mp3/.wav file link on its own line. Buttons: :::buttons / Label | /url | outline / :::" }

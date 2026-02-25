@@ -7,14 +7,17 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const { title, description } = page.data;
+const { title, description, titlePrefix } = page.data;
+const gradientTitle = titlePrefix ? title.slice(titlePrefix.length + 1) : title;
 ---
 
 <BaseLayout title={title} description={description || title}>
   <article class="static-page">
     <section class="page-hero">
       <div class="container">
-        <h1><span class="gradient-text">{title}</span></h1>
+        <h1>
+          {titlePrefix && <span class="title-prefix">{titlePrefix} </span>}<span class="gradient-text">{gradientTitle}</span>
+        </h1>
       </div>
     </section>
 
@@ -35,6 +38,10 @@ const { title, description } = page.data;
 
   .page-hero h1 {
     font-size: var(--text-h1);
+  }
+
+  .title-prefix {
+    color: var(--text-primary);
   }
 
   .page-content {

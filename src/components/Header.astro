@@ -33,12 +33,15 @@ const hasDropdown = menuPages.length > 0;
           </a>
         </li>
         <li class:list={['nav-item-about', { 'has-dropdown': hasDropdown }]}>
-          <a
-            href={url('/about')}
+          <span
             class:list={['about-link', { active: currentPath.startsWith(url('/about')) }]}
+            role="button"
+            tabindex="0"
+            aria-haspopup="true"
+            aria-expanded="false"
           >
             About
-          </a>
+          </span>
           {hasDropdown && (
             <button class="dropdown-arrow" aria-label="Toggle About submenu" aria-expanded="false">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +52,7 @@ const hasDropdown = menuPages.length > 0;
           {hasDropdown && (
             <ul class="dropdown" role="menu">
               <li role="menuitem">
-                <a href={url('/about')}>About Me</a>
+                <a href={url('/about/about-me')}>About Me</a>
               </li>
               {menuPages.map((page) => (
                 <li role="menuitem">
@@ -145,6 +148,38 @@ const hasDropdown = menuPages.length > 0;
     display: flex;
     align-items: center;
     gap: 0.15rem;
+  }
+
+  /* "About" label — styled like a nav link but not navigable */
+  .about-link {
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: default;
+    user-select: none;
+    transition: color 0.3s;
+  }
+
+  .about-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s;
+  }
+
+  .nav-item-about:hover .about-link,
+  .about-link.active {
+    color: var(--text-primary);
+  }
+
+  .nav-item-about:hover .about-link::after,
+  .about-link.active::after {
+    width: 100%;
   }
 
   .dropdown-arrow {
@@ -276,6 +311,8 @@ const hasDropdown = menuPages.length > 0;
 
     .nav-item-about > .about-link {
       flex: 1;
+      display: block;
+      padding: var(--space-sm) 0;
     }
 
     .dropdown-arrow {
@@ -360,9 +397,10 @@ const hasDropdown = menuPages.length > 0;
   }
 
   // Mobile: toggle About sub-menu
-  // Tap anywhere on the About row (link, arrow, or gap) to toggle
+  // Tap anywhere on the About row (label, arrow, or gap) to toggle
   const aboutItem = document.querySelector('.nav-item-about') as HTMLElement | null;
   const arrowBtn = document.querySelector('.dropdown-arrow') as HTMLButtonElement | null;
+  const aboutLabel = document.querySelector('.about-link') as HTMLElement | null;
   const dropdown = document.querySelector('.dropdown');
   const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
 
@@ -373,10 +411,11 @@ const hasDropdown = menuPages.length > 0;
     (dropdown as HTMLElement).style.display = aboutOpen ? 'flex' : 'none';
     arrowBtn.classList.toggle('rotated', aboutOpen);
     arrowBtn.setAttribute('aria-expanded', String(aboutOpen));
+    if (aboutLabel) aboutLabel.setAttribute('aria-expanded', String(aboutOpen));
   }
 
   if (aboutItem && dropdown) {
-    // Use event delegation on the <li> — catches taps on the link,
+    // Use event delegation on the <li> — catches taps on the label,
     // the button, the SVG, and any gap between them
     aboutItem.addEventListener('click', (e) => {
       if (!isMobile()) return;
@@ -386,7 +425,6 @@ const hasDropdown = menuPages.length > 0;
       // Don't intercept taps on dropdown sub-links
       if (target.closest('.dropdown')) return;
 
-      e.preventDefault();
       toggleAboutMenu();
     });
   }
