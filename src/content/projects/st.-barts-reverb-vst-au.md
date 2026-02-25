@@ -7,13 +7,13 @@ categories:
 tags:
   - tools
   - composition
-year: 2026
+year: 2025
 location: ''
 featured: false
-featuredImage: /images/uploads/st.barts-UI.png
+featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.09.10.png
 videoUrl: ''
 technologies:
-  - C++
+  - c++
   - JUCE
   - Impulse response
   - Convolution reverb
@@ -69,4 +69,4 @@ What happens when you put Adele in St. Barts?:
 
 ## Download
 
-[Download St Barts reverb Plug-In (Standalone, VST3, and AU formats)](https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link)
+[Download St Barts reverb Plug-In (Standalone, VST3, AU)](https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link)
