@@ -5,6 +5,7 @@ description: Multi-disciplinary researcher, coach, and technologist.
 menuOrder: 0
 showInMenu: false
 titlePrefix: About
+showAboutSections: true
 ---
 
 My work spans across technology, creativity, and education. I have over [over 18 years of experience](https://www.linkedin.com/in/joel-eaton-uk/) in learning and research consultancy, interactive technology development, and educational leadership.
