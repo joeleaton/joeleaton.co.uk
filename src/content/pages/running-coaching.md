@@ -1,9 +1,10 @@
 ---
 title: Running Coaching
 slug: coaching
-description: I support runners coming back from injury or going through challenging time to achieve their goals and grow in confidence.
+description: Encouraging, Positive Coaching Support for Runners.
 menuOrder: 2
 showInMenu: true
+titlePrefix: ''
 ---
 
 I offer bespoke coaching for endurance runners. I specialise in supporting people to train effectively and reach their goals while navigating illness, injury, or major life challenges.
