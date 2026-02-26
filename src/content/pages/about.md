@@ -1,7 +1,7 @@
 ---
 title: About Joel Eaton
 slug: about
-description: Researcher, coach, and technologist.
+description: Technologist. Researcher. Coach.
 menuOrder: 0
 showInMenu: false
 titlePrefix: About
