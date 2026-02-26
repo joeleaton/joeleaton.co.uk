@@ -1,7 +1,7 @@
 ---
 title: About Joel Eaton
 slug: about
-description: Multi-disciplinary researcher, coach, and technologist.
+description: Researcher, coach, and technologist.
 menuOrder: 0
 showInMenu: false
 titlePrefix: About
