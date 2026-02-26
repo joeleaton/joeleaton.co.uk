@@ -1,7 +1,7 @@
 ---
 title: Publications
 slug: publications
-description: Academic publications, conference papers, and research outputs.
+description: Book Chapters, Journal Articles, and Conference Papers
 menuOrder: 3
 showInMenu: true
 titlePrefix: ''
