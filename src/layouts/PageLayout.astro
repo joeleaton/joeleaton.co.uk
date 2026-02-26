@@ -18,6 +18,7 @@ const gradientTitle = titlePrefix ? title.slice(titlePrefix.length + 1) : title;
         <h1>
           {titlePrefix && <span class="title-prefix">{titlePrefix} </span>}<span class="gradient-text">{gradientTitle}</span>
         </h1>
+        {description && <p class="page-tagline">{description}</p>}
       </div>
     </section>
 
@@ -38,6 +39,12 @@ const gradientTitle = titlePrefix ? title.slice(titlePrefix.length + 1) : title;
 
   .page-hero h1 {
     font-size: var(--text-h1);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-tagline {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
   }
 
   .title-prefix {
