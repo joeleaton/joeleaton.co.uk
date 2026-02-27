@@ -8,7 +8,7 @@ tags:
   - coaching
 year: 2024
 location: UK
-featured: true
+featured: false
 featuredImage: ''
 videoUrl: ''
 technologies:
