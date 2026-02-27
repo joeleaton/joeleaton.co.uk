@@ -8,7 +8,7 @@ tags:
   - tools
   - composition
 year: 2025
-location: ''
+location: Brighton, UK
 featured: false
 featuredImage: /images/uploads/st.barts-UI.png
 videoUrl: ''
