@@ -1,6 +1,6 @@
 ---
 title: Elysium
-slug: pure-data-synthesis-workshop
+slug: elysium
 draft: false
 description: A software instrument for creating drone-based textured soundscapes.
 categories:
