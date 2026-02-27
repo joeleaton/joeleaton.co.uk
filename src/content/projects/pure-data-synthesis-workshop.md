@@ -39,12 +39,10 @@ Elysium is built using the free/open source [plugdata](https://plugdata.org/) en
 
 I refactored the patches from the (now defunct) pd-extended library, to run in pd-vanilla. This will allows me to compile it in Heavy for C++/native VST development but the UI layer for that is a different (and very time consuming) prospect. I'll save that mini-project for another day.
 
-To run Elysium, you need to download and install [plugdata](https://plugdata.org/). plugdata runs as standalone application or as a VST3, LV2, CLAP or AU plugin, meaning you can host Elysium in a DAW as a plugin to record, perform, and edit it's sounds.
-
 ## Download
 
 [Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!)
 
-**Requirements:** plugdata (Win, macOS, Linux).
+**Requirements:** To run Elysium, you need to download and install [plugdata](https://plugdata.org/)  (Win, macOS, Linux). plugdata runs as standalone application or as a VST3, LV2, CLAP or AU plugin, meaning you can host Elysium in a DAW as a plugin to record, perform, and edit it's sounds..
 
-\*\*Outstanding Tech Tasks in v1: \*\*Add DAW parameter controls for automation.
+**Outstanding Tech Tasks in v1**: Add DAW parameter controls for automation.
