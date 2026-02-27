@@ -1,7 +1,7 @@
 ---
 title: Elysium
 slug: pure-data-synthesis-workshop
-draft: true
+draft: false
 description: A software instrument for creating drone-based textured soundscapes.
 categories:
   - music
@@ -9,10 +9,10 @@ tags:
   - tools
   - performance
 year: 2026
-location: ''
+location: Outer Space
 featured: true
 featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.01.51.png
-videoUrl: ''
+videoUrl: https://youtu.be/oT42MKLJvkA
 technologies:
   - Plugdata
   - DSP
@@ -35,10 +35,16 @@ Using additive synthesis, construct chords of sine waves, control movement, add 
 
 ## Technical Implementation
 
-Elysium is built using the free/open source [Plugdata](https://plugdata.org/) environment for the Pure Data visual programming language.
+Elysium is built using the free/open source [plugdata](https://plugdata.org/) environment for the Pure Data visual programming language.
 
-To run Elysium, you need to download and install [Plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
+To run Elysium, you need to download and install [plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
+
+(One day  I'd like to compile it as a standalone plugin but time, life, and UI build for all those controls...)
 
 ## Download
 
-Download Elysium for FREE! (includes  installation instructions).
+[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!) 
+
+**Requirements:** plugdata (Win, macOS, Linux).
+
+**Outstanding Tech Tasks in v1: **Add DAW parameter controls for automation.
