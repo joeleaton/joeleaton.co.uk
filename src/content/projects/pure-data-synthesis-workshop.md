@@ -35,16 +35,16 @@ Using additive synthesis, construct chords of sine waves, control movement, add 
 
 ## Technical Implementation
 
-Elysium is built using the free/open source [plugdata](https://plugdata.org/) environment for the Pure Data visual programming language.
+Elysium is built using the free/open source [plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. This started life in a different guise years ago as an iPhone app, but I recently rewrote it for the modern world as a plugin directly for the DAW.
+
+I refactored the patches from the now defunct pd-extended library, to run in pd-vanilla. This will allows me to compile it in Heavy for C++/native VST development but the UI layer for that is a different (and very time consuming) prospect. I'll save that mini-project for another day.
 
 To run Elysium, you need to download and install [plugdata](https://plugdata.org/). Plugdata runs as standalone app or , or as a VST3, LV2, CLAP or AU plugin, meaning you can run Elysium in a DAW as a plugin to record and edit it's sounds.
 
-(One day  I'd like to compile it as a standalone plugin but time, life, and UI build for all those controls...)
-
 ## Download
 
-[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!) 
+[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!)
 
 **Requirements:** plugdata (Win, macOS, Linux).
 
-**Outstanding Tech Tasks in v1: **Add DAW parameter controls for automation.
+\*\*Outstanding Tech Tasks in v1: \*\*Add DAW parameter controls for automation.
