@@ -12,7 +12,7 @@ year: 2026
 location: Outer Space
 featured: true
 featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.01.51.png
-videoUrl: https://youtu.be/zpt_eG8MEqc
+videoUrl: https://youtu.be/gBaBZgYGAqQ
 technologies:
   - Plugdata
   - DSP
