@@ -41,7 +41,9 @@ I refactored the patches from the (now defunct) pd-extended library, to run in p
 
 ## Download
 
-[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!)
+[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!).
+
+The patch is editable, so you can open it up and explore under the hood. You can even modify and extend it to do new things.
 
 **Requirements:** To run Elysium, you need to download and install [plugdata](https://plugdata.org/)  (Win, macOS, Linux). plugdata runs as standalone application or as a VST3, LV2, CLAP or AU plugin, meaning you can host Elysium in a DAW as a plugin to record, perform, and edit it's sounds..
 
