@@ -28,6 +28,6 @@ I also remain active in the research community as a reviewer for the _BCI Journa
 
 ### Performance and Practice
 
-When I am not working on software or strategy, I am usually outdoors. I am an **England Athletics Level 3 Coach** and a dedicated long-distance runner. There is a clear crossover between coaching a runner through an endurance event and leading a product team. Both require patience, discipline, and a solid understanding of how to overcome a challenge.
+When I am not working on software or strategy, I am usually outdoors. I am an **England Athletics Level 3 Coach** and a dedicated long-distance runner. There is a clear crossover between coaching a runner towards an endurance event and leading a product team. Both require patience, discipline, and a solid understanding of how to overcome a challenge.
 
 I still get hooked by music technology and making tools and bits of music. It's a reminder that technology is at its best when it is used to make something and get lost in the process.
