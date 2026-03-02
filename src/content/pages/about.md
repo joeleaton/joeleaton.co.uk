@@ -8,16 +8,26 @@ titlePrefix: About
 showAboutSections: true
 ---
 
-My work spans across technology, creativity, and education. I have over [over 18 years of experience](https://www.linkedin.com/in/joel-eaton-uk/) in learning and research consultancy, interactive technology development, and educational leadership.
+# About
 
-My career began in academia, but I now lead products, teams, and services in the software industry, working with global leaders such as [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com). I have spoken at industry events, such as Pulse Europe, on topics around Customer Education and Enablement in the SaaS sector.
+I’ve spent my career exploring the space where technology, creativity, and human performance intersect. My work is driven by a simple question: **How do we build systems that align with the way humans actually learn and perform?**
 
-In my spare time, I'm a long distance runner and continue to dabble in music technology for fun. I'm an England Athletics Level 3 Coach in Running Fitness, and love supporting and coaching other runners through injury towards endurance events.
+### Professional Path
+
+My career began in academia, where I earned a PhD in **Brain-Computer Music Interfacing**. This work focused on neurotechnology and human-computer interaction, and it shaped how I think about user experience and complex data systems today.
+
+Since then, I’ve moved from the lab to the software industry. I now lead products and teams for global technology leaders like  [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com), specifically focusing on Customer Education and Enablement within the SaaS sector. Whether I’m speaking at events like Pulse Europe or advising Higher Education institutions, my goal is the same: bridging the gap between technical complexity and practical application.
 
 ![portrait photo of Joel](/images/uploads/joel_effected.jpg "Joel")
 
-As a freelance consultant and developer, I have successfully delivered projects for diverse organizations, including Volvo, Barclays Wealth, The National Library of Scotland, and Smirnoff. My expertise spans customer education leadership, designing bio-engineering systems for research, managing undergraduate programs, and advising bodies and institutions across the Higher Education and Cultural Heritage sectors.
+### Consulting and Research
 
-I hold a doctorate in Brain-Computer Music Interfacing from the [Interdisciplinary Centre for Computer Music Research](http://cmr.soc.plymouth.ac.uk/) at the University of Plymouth, UK, where I explored cutting-edge neurotechnology.
+Outside of my primary roles, I have acted as a freelance consultant. I’ve delivered projects for a broad range of organizations, including **The National Library of Scotland, Barclays Wealth, and Volvo**.
 
-In addition to my professional work, I am an active reviewer for the [BCI Journal](http://www.tandfonline.com/loi/tbci20), the [Computer Music Multidisciplinary Research Conference](https://link.springer.com/conference/cmmr), and the [Leonardo Music Journal](https://www.mitpressjournals.org/loi/lmj), which recognized me as an [outstanding peer reviewer in 2020](https://www.leonardo.info/blog/2020/04/09/recognition-of-leonardos-outstanding-peer-reviewers). I also had the privilege of chairing the [1st International Workshop on Brain-Computer Music Interfacing](https://www.leonardo.info/blog/2020/04/09/recognition-of-leonardos-outstanding-peer-reviewers) and the [CMMR 2015](http://cmr.soc.plymouth.ac.uk/cmmr2015/).
+I also remain active in the research community as a reviewer for the _BCI Journal_ and the _Leonardo Music Journal_, where I was named an outstanding peer reviewer in 2020. I’ve also chaired international workshops on Brain-Computer Music Interfacing, always keeping my eyes on the future of technology in the field.
+
+### Performance and Practice
+
+When I am not working on software or strategy, I am usually outdoors. I am an **England Athletics Level 3 Coach** and a dedicated long-distance runner. There is a clear crossover between coaching a runner through an endurance event and leading a product team. Both require patience, discipline, and a solid understanding of how to overcome a challenge.
+
+I still get hooked by music technology and making tools and bits of music. It's a reminder that technology is at its best when it is used to make something and get lost in the process.
