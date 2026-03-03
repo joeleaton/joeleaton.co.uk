@@ -10,7 +10,7 @@ tags:
 year: 2025
 location: Hornbill, UK
 featured: false
-featuredImage: /images/uploads/Screenshot 2026-03-03 at 12.14.13.png
+featuredImage: /images/uploads/certs-banner.png
 videoUrl: ''
 technologies: []
 links: null
@@ -38,7 +38,6 @@ To set the passing score, I adapted well-trodden theories into a simplified fram
 **The Outcome: Almost One Year On** We are now nearly a year into the program, running sessions every three months with a consistent 78 percent pass rate. Because the questions are mapped so tightly to competencies, maintenance has become remarkably easy. Instead of rewriting questions, we look at how items performed against how SMEs rated them. If a "difficult" question has a 100 percent success rate, we don't change the question; we re-rate it. This allows us to maintain a robust, defensible standard with minimal effort.
 
 ![Learn Certification framework diagram](/images/uploads/lean-cert.png "Learn Certification Framework")
-
 
 ## The 60-Second Proctoring Hack
 
