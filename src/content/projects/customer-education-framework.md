@@ -29,17 +29,17 @@ relatedProjects:
 
 I have always believed that Customer Enablement shouldn't just be about managing content. It should be about engineering better ways to create it.
 
-I built **Content Harmony** in my current role at Hornbill because I wanted to kill the "Consistency Tax." You know the one, that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from our 50-page style guide.
+I built **Content Harmony** in my current role at Hornbill because I wanted to kill the red-pen review cycle. You know the one, that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from the 50-page style guide.
 
-I wanted my team to spend their brainpower on teaching, not on policing commas or re-reading brand guidelines for the thousandth time.
+I wanted my team to spend their brainpower on teaching, not on policing commas or re-inventing style guidelines for the thousandth time.
 
 ***
 
 ## The One-Week Sprint
 
-I didn't wait for a roadmap or a massive budget. Using **Google AI Studio**, I built the first functional version of Content Harmony in less than a week (I actually started in Claude Code but threw the first few iterations away, but that's a separate story).
+I didn't wait for a roadmap or a massive budget. I built the first functional version of Content Harmony in less than a week. I actually started in Claude Code but threw the first implementation away before switching tools entirely, but that's a separate story for another post.
 
-The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After a few days of model and prompt tuning and testing, the team started using it for real production work.
+The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After spending some crucial time on model and prompt tuning and testing, the team started using it for real production work.
 
 ***
 
@@ -55,11 +55,11 @@ Our educational content follows a strict hierarchy. The editor uses a tabbed int
 - **Section Level:** The narrative arc of the module.
 - **Lesson Level:** The granular information for the learner.
 
-Our learning style uses relatable examples, use cases, knowledge checks, and has a pedagogical framework that Content Harmony is easily able to apply. It even identifies when diagrams and imagery can help aid understanding, and goes as far as producing video scripts and visual cuses where appropriate.
+Our learning style uses relatable examples, use cases, knowledge checks, and has a pedagogical framework that Content Harmony is easily able to apply. It even identifies when diagrams and imagery can help aid understanding, and goes as far as producing video scripts and visual cues where appropriate.
 
 ### 2. For Technical Documentation
 
-Different docs require different "brains." I built in specific logic for our three core pillars:
+Different docs require different brains. I built in specific logic for our three core pillars:
 
 - **Configuration Guides:** Deeply technical, focused on setup and logic.
 - **Reference Material:** Concise, data-heavy, and easily searchable. Also accounts for conceptual information.
@@ -73,7 +73,7 @@ Different docs require different "brains." I built in specific logic for our thr
 
 Building this wasn't just about speed, though we are significantly faster now. It was about psychological safety and quality.
 
-Now, when a team member hits "Optimize Content," they know the output is already 90% aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
+Now, when a team member hits "Optimize Content", they know the output is already aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
 
 One aspect of the tool that is helping the team, is the feedback it provides upon every generation. It explains the changes it's made and why - just like having a mentor or senior learning/writing colleague provide constructive feedback on their work, reinforcing the framework at stages of content design and continually upskilling the team.
 
