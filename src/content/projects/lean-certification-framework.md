@@ -1,7 +1,7 @@
 ---
 title: Lean Certification Framework
 slug: lean-certification-framwork
-draft: true
+draft: false
 description: Building a Lean, Robust, SaaS Certification Program from Scratch
 categories:
   - education
@@ -36,6 +36,9 @@ By involving experts in the JTA and question writing, I ensured the exam was a m
 To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold. By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my **Lean Certification Framework**.
 
 **The Outcome: Almost One Year On** We are now nearly a year into the program, running sessions every three months with a consistent 78 percent pass rate. Because the questions are mapped so tightly to competencies, maintenance has become remarkably easy. Instead of rewriting questions, we look at how items performed against how SMEs rated them. If a "difficult" question has a 100 percent success rate, we don't change the question; we re-rate it. This allows us to maintain a robust, defensible standard with minimal effort.
+
+![Learn Certification framework diagram](/images/uploads/lean-cert.png "Learn Certification Framework")
+
 
 ## The 60-Second Proctoring Hack
 
