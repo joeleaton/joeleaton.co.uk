@@ -37,7 +37,7 @@ I wanted my team to spend their brainpower on teaching, not on policing commas o
 
 ## The One-Week Sprint
 
-I didn't wait for a roadmap or a massive budget. I built the first functional version of Content Harmony in less than a week. I actually started in Claude Code but threw the first implementation away before switching tools entirely, but that's a separate story for another post.
+I didn't wait for a roadmap or a massive budget. I built the first functional version of Content Harmony in less than a week. I actually started in Claude Code but threw the first implementation away before switching tools entirely (my initial cloud architecture was all wrong for the use case), but that's a separate story.
 
 The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After spending some crucial time on model and prompt tuning and testing, the team started using it for real production work.
 
