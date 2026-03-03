@@ -33,29 +33,29 @@ By involving experts in the JTA and question writing, I ensured the exam was a m
 
 ## A Defensible Methodology
 
-To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold. By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my **Lean Certification Framework**.
-
-**The Outcome: Almost One Year On** We are now nearly a year into the program, running sessions every three months with a consistent 78 percent pass rate. Because the questions are mapped so tightly to competencies, maintenance has become remarkably easy. Instead of rewriting questions, we look at how items performed against how SMEs rated them. If a "difficult" question has a 100 percent success rate, we don't change the question; we re-rate it. This allows us to maintain a robust, defensible standard with minimal effort.
+To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold. By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my **Lean Certification Framework **(download link further down this page 👇🏼).
 
 ![Learn Certification framework diagram](/images/uploads/lean-cert.png "Learn Certification Framework")
 
 ## The 60-Second Proctoring Hack
 
-One of the biggest costs in certification is proctoring. To bypass this, we delivered the exam live during virtual sessions via our existing LMS. The instructor would set the scene and explain the process at the start of the hour.
+One of the biggest costs in certification is proctoring (supervising exams to ensure candidates don't cheat). To bypass this, we delivered the exam live during virtual sessions via our existing LMS. The instructor would set the scene and explain the process at the start of the hour.
 
-We told candidates we would randomly join their sessions to watch them answer a question and ask for their thinking. In reality, we were only on the call for about one minute of their hour. This "proctoring on the cheap" maintained the integrity of the exam and discouraged cheating without the need for intrusive, expensive software. For a small incentive, we awarded a branded mug to those who passed. It was a tangible, low-cost trophy that drove higher engagement than a digital badge.
+We told candidates we would randomly join their sessions to watch them answer a question and ask for their thinking. In reality, we were only on the call for about one minute of their hour. This cheap approach to proctoring maintained the integrity of the exam and discouraged cheating without the need for intrusive, expensive software. 
+
+For a small incentive, we awarded a branded mug to those who passed. It was a tangible, low-cost trophy that drove higher engagement than a digital badge and added a nice personal touch.
 
 ## The Outcome: Almost One Year On
 
 At the time of writing this, we are now nearly a year into the program, running sessions every three months. The uptake has been consistently strong, proving that there is a significant appetite for formal validation when the curriculum is aligned with real-world utility.
 
-##v The Data: A 78% Pass Rate
+## The Data: A 78% Pass Rate
 
-Our pass rate currently sits at approximately **78%**. In the world of psychometrics, this is a "Goldilocks" number. It is high enough to show that our training effectively prepares candidates for the MQC (Minimum Qualifying Candidate) benchmark, but rigorous enough to ensure that the "Hornbill Certified" title retains its value. It isn't a "participation trophy" it is a hard-earned badge of competency.
+Our pass rate currently sits at approximately **78%**. In the world of psychometrics, this is a "Goldilocks" number. It is high enough to show that our training effectively tests candidates at our MQC (Minimum Qualifying Candidate) benchmark (as much as we can be sure the majority of exam takers meet the threshold), whilst rigorous enough to ensure that the "Hornbill Certified" title retains its value. It isn't a "participation trophy" it is a hard-earned badge of competency.
 
 ## Maintenance Without the Churn
 
-One of the most powerful outcomes of this methodology is how easy it is to maintain. Because every question is mapped to a specific competency, we don't have to guess why an item is performing a certain way. If a question we rated as "Hard" has a 100% success rate, we don't change the question; we re-rate it. We trust the questions because they speak to the job, not just the interface. This allows us to maintain a robust, defensible standard with minimal effort..=
+One of the most powerful outcomes of this methodology is how easy it is to maintain. Because every question is mapped to a specific competency, we don't have to guess why an item is performing a certain way. If a question we rated as "Hard" has a 100% success rate, we don't change the question; we re-rate it. We trust the questions because they speak to the job, not just the interface. This allows us to maintain a robust, defensible standard with minimal effort.
 
 ## The Human Element
 
@@ -71,7 +71,9 @@ By keeping the process human, having an instructor "set the scene" and engage wi
 
 This project started with a zero-dollar budget and a spreadsheet. It grew through deep collaboration with customer-facing teams and business leaders to define what a customer actually needs to do to be successful.
 
-Today, it stands as a core part of our customer education strategy. If you are waiting for a massive budget to start your certification journey, my advice is simple: stop waiting. Map your competencies, engage your SMEs, and start building.
+Today, it stands as a core part of our customer education strategy and we are now building out specialised credentials based on this foundational-level exam. 
+
+If you are waiting for a massive budget to start your certification journey, my advice is simple: Stop waiting. Map your competencies, engage your SMEs, and start building!
 
 ***
 
