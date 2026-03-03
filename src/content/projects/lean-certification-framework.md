@@ -1,6 +1,6 @@
 ---
 title: Lean Certification Framework
-slug: lean-certification-framwork
+slug: lean-certification-framework
 draft: false
 description: Building a Lean, Robust, SaaS Certification Program from Scratch.
 categories:
