@@ -87,4 +87,8 @@ If you are waiting for a massive budget to start your certification journey, my 
 
 Ready to build your own defensible certification program without the huge price tag? I  documented my **Lean Certification**  I used, from Job Task Analysis to the "60-second proctoring" hack into a repeatable toolkit.
 
-**[Download the Lean Certification Framework PDF]**
+:::buttons
+
+Download PDF | ../../projects/strength-training-for-runners  | outline
+
+:::
