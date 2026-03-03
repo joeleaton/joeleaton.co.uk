@@ -27,13 +27,19 @@ This project, and the toolkit available at the end of it, gives an overview of t
 
 ## The Battle for the MQC: Product Knowledge vs. Job Performance
 
-Building a certification is not simply a trivial task of writing questions across a set of product features. It is also not a way to train users on how to use a product or help them overcome common challenges. It is a strategic exercise in defining what "competence" actually looks like, and testing whether someone has the knowledge and skills to apply those competencies at a specific level in their job. When developing customer certifications, one of the biggest challenges isn't the technology, but the "Expert Blindspot." Internal teams often believe customers need to know every toggle and sub-menu in the product. However, customer education is about people, not product. It requires understanding their roles and what they need to be able to do to get their job done to an acceptable level. This is where Job Task Analysis (JTA) comes into play. Creating a JTA is a collaborative exercise, and I've partnered with customer-facing teams, business leaders, and actual customers to build a JTA and define the Minimum Qualifying Candidate (MQC) for an exam.
+Building a certification is not simply a trivial task of writing questions across a set of product features. It is also not a way to train users on how to use a product or help them overcome common challenges. It is a strategic exercise in defining what "competence" actually looks like, and testing whether someone has the knowledge and skills to apply those competencies at a specific level in their job. 
+
+When developing customer certifications, one of the biggest challenges isn't the technology, but the "Expert Blindspot." Internal teams often believe customers need to know every toggle and sub-menu in the product. However, customer education is about people, not product. It requires understanding their roles and what they need to be able to do to get their job done to an acceptable level. This is where Job Task Analysis (JTA) comes into play. 
+
+Creating a JTA is a collaborative exercise, and I've partnered with customer-facing teams, business leaders, and actual customers to build a JTA and define the Minimum Qualifying Candidate (MQC) for an exam.
 
 By involving experts in the JTA and question writing, I ensured the exam was a measure of professional utility, not just product trivia.
 
 ## A Defensible Methodology
 
-To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold. By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my \*\*Lean Certification Framework \*\*(download link further down this page 👇🏼).
+To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold. 
+
+By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my **Lean Certification Framework **(download link further down this page 👇🏼).
 
 ![Learn Certification framework diagram](/images/uploads/lean-cert.png "Learn Certification Framework")
 
