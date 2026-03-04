@@ -41,10 +41,20 @@ I refactored the patches from the (now defunct) pd-extended library, to run in p
 
 ## Download
 
-[Download Elysium ](https://drive.google.com/file/d/1oEUDJAa42QjhsWTCELIa487aWOojcaLD/view?usp=sharing)(it's free!).
+The patch is free and fully editable, so you can open it up and explore under the hood. You can even modify and extend it to do new things.
 
-The patch is editable, so you can open it up and explore under the hood. You can even modify and extend it to do new things.
+**Requirements:** To run Elysium, you need to download and install [plugdata](https://plugdata.org/)  (Win, macOS, Linux). plugdata runs as standalone application or as a VST3, LV2, CLAP or AU plugin, meaning you can host Elysium in a DAW as a plugin to record, perform, and edit it's sounds.
 
-**Requirements:** To run Elysium, you need to download and install [plugdata](https://plugdata.org/)  (Win, macOS, Linux). plugdata runs as standalone application or as a VST3, LV2, CLAP or AU plugin, meaning you can host Elysium in a DAW as a plugin to record, perform, and edit it's sounds..
+:::buttons
+
+Download Elysium | https://drive.google.com/drive/folders/1XcE3oPNnAbdeZBCo7WURzrYtQHAW0qkt?usp=drive_link | outline
+
+:::
 
 **Outstanding Tech Tasks in v1**: Add DAW parameter controls for automation.
+
+Here's some screenshots of what's under the hood:
+
+![Elysium organs](/images/uploads/elysium-organs.png "Organ banks")
+
+![Elysium DSP](/images/uploads/elysium-dsp.png "Core DSP subpatch for the 3 voices. Note the Distortion, Modulation, and Chorus subpatches for each voice and the global reverb unit (uses rev3~)")
