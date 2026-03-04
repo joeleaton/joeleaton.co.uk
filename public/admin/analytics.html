@@ -571,6 +571,35 @@
   };
   // ===================================================================
 
+  // Bot traffic filter — excludes known bot locations from all analytics data.
+  // These locations produce consistent bot traffic patterns.
+  const BOT_FILTER = {
+    andGroup: {
+      expressions: [
+        {
+          notExpression: {
+            andGroup: {
+              expressions: [
+                { filter: { fieldName: 'city', stringFilter: { value: 'Lanzhou', matchType: 'EXACT' } } },
+                { filter: { fieldName: 'region', stringFilter: { value: 'Gansu', matchType: 'EXACT' } } },
+              ]
+            }
+          }
+        },
+        {
+          notExpression: {
+            andGroup: {
+              expressions: [
+                { filter: { fieldName: 'city', stringFilter: { value: 'Singapore', matchType: 'EXACT' } } },
+                { filter: { fieldName: 'region', stringFilter: { value: '(not set)', matchType: 'EXACT' } } },
+              ]
+            }
+          }
+        },
+      ]
+    }
+  };
+
   const SCOPES = 'https://www.googleapis.com/auth/analytics.readonly';
   const API_BASE = 'https://analyticsdata.googleapis.com/v1beta';
   const TOKEN_KEY = 'ga_dashboard_token';
@@ -737,6 +766,13 @@
 
   // GA4 Data API calls
   async function gaReport(body) {
+    // Inject bot traffic filter into every report request
+    if (body.dimensionFilter) {
+      body.dimensionFilter = { andGroup: { expressions: [body.dimensionFilter, BOT_FILTER] } };
+    } else {
+      body.dimensionFilter = BOT_FILTER;
+    }
+
     const url = `${API_BASE}/properties/${CONFIG.PROPERTY_ID}:runReport`;
     const res = await fetch(url, {
       method: 'POST',
@@ -823,6 +859,13 @@
   let realtimeInterval = null;
 
   async function gaRealtimeReport(body) {
+    // Inject bot traffic filter into every realtime request
+    if (body.dimensionFilter) {
+      body.dimensionFilter = { andGroup: { expressions: [body.dimensionFilter, BOT_FILTER] } };
+    } else {
+      body.dimensionFilter = BOT_FILTER;
+    }
+
     const url = `${API_BASE}/properties/${CONFIG.PROPERTY_ID}:runRealtimeReport`;
     const res = await fetch(url, {
       method: 'POST',
