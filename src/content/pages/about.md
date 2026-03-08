@@ -22,7 +22,7 @@ Since then, I’ve moved from the lab to the software industry. I now lead teams
 
 ### Consulting and Research
 
-Outside of my primary roles, I have acted as a freelance consultant. I’ve delivered projects for a broad range of organizations, including **The National Library of Scotland, Barclays Wealth, and Volvo**.
+Outside of my primary roles, I have acted as a freelance consultant. I’ve delivered projects for a  range of organizations, including **The National Library of Scotland, Barclays Wealth, and Volvo**.
 
 I also remain active in the research community as a reviewer for the _BCI Journal_ and the _Leonardo Music Journal_, where I was named an outstanding peer reviewer in 2020. I’ve also chaired international workshops on Brain-Computer Music Interfacing, always keeping my eyes on the future of technology in the field.
 
