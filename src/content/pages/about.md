@@ -10,13 +10,13 @@ showAboutSections: true
 
 # About
 
-I’ve spent my career exploring the space where technology, creativity, and human performance intersect. My work is driven by a simple question: **How do we build systems that align with the way humans actually learn and perform?**
+I’ve spent my career exploring the space where technology, creativity, and human performance intersect. My work is driven by a simple question, how do we build systems that align with the way humans actually learn and perform?
 
 ### Professional Path
 
 My career began in academia, where I earned a PhD in **Brain-Computer Music Interfacing**. This work focused on neurotechnology and human-computer interaction, and it shaped how I think about user experience and complex data systems today.
 
-Since then, I’ve moved from the lab to the software industry. I now lead products and teams for global technology leaders like  [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com), specifically focusing on Customer Education and Enablement within the SaaS sector. Whether I’m speaking at events like Pulse Europe or advising Higher Education institutions, my goal is the same: bridging the gap between technical complexity and practical application.
+Since then, I’ve moved from the lab to the software industry. I now lead products and teams for global technology leaders like  [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com), specifically focusing on Customer Education and Enablement within the SaaS sector. Whether I’m speaking at events like Pulse Europe or advising Higher Education institutions, my goals are always around bridging the gap between technical complexity and practical application.
 
 ![portrait photo of Joel](/images/uploads/joel_effected.jpg "Joel")
 
@@ -28,6 +28,6 @@ I also remain active in the research community as a reviewer for the _BCI Journa
 
 ### Performance and Practice
 
-When I am not working on software or strategy, I am usually outdoors. I am an **England Athletics Level 3 Coach** and a dedicated long-distance runner. There is a clear crossover between coaching a runner towards an endurance event and leading a product team. Both require patience, discipline, and a solid understanding of how to overcome a challenge.
+When I am not working on software or strategy, I am usually outdoors. I am an **England Athletics Level 3 Coach** and a dedicated long-distance runner. There is a clear crossover between coaching a runner towards an endurance event and leading a product team. Both require patience, discipline, and constantly working in new ways to overcome challenges.
 
 I still get hooked by music technology and making tools and bits of music. It's a reminder that technology is at its best when it is used to make something and get lost in the process.
