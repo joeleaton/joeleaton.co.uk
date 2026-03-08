@@ -29,7 +29,7 @@ Kirke, A., Davies, G., Eaton, J. 2020._&#160;Application of Optimization and Sim
 
 ## Conference proceedings
 
-Eaton, J., Miranda, E. 2016. _The Hybrid BCMI - Integrating Brainwave Detection Methods for Extended Control in Musical Systems. _Springer_. _Proceedings of 11th International Symposium on Computer Music Multidisciplinary Research (CMMR): Music, Mind, Embodiment - Revised selected papers.
+Eaton, J., Miranda, E. 2016. _The Hybrid BCMI - Integrating Brainwave Detection Methods for Extended Control in Musical Systems_. _Springer_. Proceedings of 11th International Symposium on Computer Music Multidisciplinary Research (CMMR): Music, Mind, Embodiment - Revised selected papers.
 
 Daly, I., Williams, D., Kirke, A., Weaver, J., Malik, A., Hwang, F., Eaton, J., Miranda E.R., Nasuto, S.J., (2016). _An affective brain-computer music interface_. International Brain-Computer Interface (BCI) Meeting, California, USA, May 30–June 3 2016
 
