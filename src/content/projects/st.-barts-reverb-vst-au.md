@@ -69,4 +69,9 @@ What happens when you put Adele in St. Barts?:
 
 ## Download
 
-[Download St Barts reverb Plug-In (Standalone, VST3, AU)](https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link)
+Get it free! 
+
+Download includes standalone, VST3, and AU versions.
+
+:::buttons / Download St Barts | https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link | outline /
+:::
