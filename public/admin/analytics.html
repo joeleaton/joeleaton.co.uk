@@ -576,24 +576,27 @@
   const BOT_FILTER = {
     andGroup: {
       expressions: [
+        // Exclude visitors with both city and region unset
         {
           notExpression: {
             andGroup: {
               expressions: [
-                { filter: { fieldName: 'city', stringFilter: { value: 'Lanzhou', matchType: 'EXACT' } } },
-                { filter: { fieldName: 'region', stringFilter: { value: 'Gansu', matchType: 'EXACT' } } },
+                { filter: { fieldName: 'city', stringFilter: { value: '(not set)', matchType: 'EXACT' } } },
+                { filter: { fieldName: 'region', stringFilter: { value: '(not set)', matchType: 'EXACT' } } },
               ]
             }
           }
         },
+        // Exclude all traffic from Singapore
         {
           notExpression: {
-            andGroup: {
-              expressions: [
-                { filter: { fieldName: 'city', stringFilter: { value: 'Singapore', matchType: 'EXACT' } } },
-                { filter: { fieldName: 'region', stringFilter: { value: '(not set)', matchType: 'EXACT' } } },
-              ]
-            }
+            filter: { fieldName: 'country', stringFilter: { value: 'Singapore', matchType: 'EXACT' } }
+          }
+        },
+        // Exclude all traffic from China
+        {
+          notExpression: {
+            filter: { fieldName: 'country', stringFilter: { value: 'China', matchType: 'EXACT' } }
           }
         },
       ]
