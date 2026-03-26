@@ -12,7 +12,7 @@ import rehypeSubSuper from './src/plugins/rehype-sub-super.mjs';
 const basePath = '';
 
 export default defineConfig({
-  site: 'https://www.joeleaton.co.uk',
+  site: 'https://joeleaton.co.uk',
   integrations: [sitemap()],
   output: 'static',
   markdown: {
