@@ -12,13 +12,13 @@ showAboutSections: true
 
 I’ve spent my career exploring the space where technology, creativity, and human performance intersect. My work is driven by a simple question, how do we build systems that align with the way humans actually learn and perform?
 
+![portrait photo of Joel](/images/uploads/joel-headshot.jpg "Joel")
+
 ### Professional Path
 
 My career began in academia; I worked for Universities and UK government bodies advising the sector on digital media across areas such as archiving and learning innovation, before moving to being a course leader on a BA (Hons) course in Creative Music Prodiction. During this time, I earned a PhD in **Brain-Computer Music Interfacing**. This work focused on neurotechnology and human-computer interaction, and it shaped how I think about user experience and complex data systems today.
 
 Since then, I’ve moved from the lab to the software industry. I now lead teams and products for global technology leaders like  [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com), focusing on Customer Education and Enablement within the SaaS sector. Whether I’m speaking at events like Pulse Europe or launching new programs and tools, my goals are always based on bridging the gap between technical complexity and practical application.
-
-![portrait photo of Joel](/images/uploads/joel-headshot.jpg "Joel")
 
 ### Consulting and Research
 
