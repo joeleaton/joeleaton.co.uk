@@ -18,7 +18,7 @@ My career began in academia; I worked for Universities and UK government bodies 
 
 Since then, I’ve moved from the lab to the software industry. I now lead teams and products for global technology leaders like  [Arm](http://arm.com), [Unity](https://unity.com), and [Amazon](http://amazon.com), focusing on Customer Education and Enablement within the SaaS sector. Whether I’m speaking at events like Pulse Europe or launching new programs and tools, my goals are always based on bridging the gap between technical complexity and practical application.
 
-![portrait photo of Joel](/images/uploads/joel_effected.jpg "Joel")
+![portrait photo of Joel](/images/uploads/joel-headshot.jpg "Joel")
 
 ### Consulting and Research
 
