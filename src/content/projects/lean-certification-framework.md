@@ -89,6 +89,6 @@ Ready to build your own defensible certification program without the huge price 
 
 :::buttons
 
-Download PDF | ../../projects/strength-training-for-runners  | outline
+Download | https://docs.google.com/document/d/196IFhPMBtPk_w10gypoQS6oPR2bopnSJ/edit?usp=sharing&ouid=104360329525808301904&rtpof=true&sd=true | outline
 
 :::
