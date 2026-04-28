@@ -32,4 +32,4 @@ One day, I'll write a blog article on some of the techniques I learnt, adapted, 
 
 Inspired by Henry Vaughans _Silex Scintillans_, Blake's _Songs of Innocence and Experience,_ and more recent writing about microhistory - landscapes formed form muted interwoven lives across centuries - these songs are my pictures of landscapes alive with the gravity of accumulated human experience, beyond just the scenery.
 
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=264554360/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://dyingtides.bandcamp.com/album/beyond-the-beyond">Beyond the Beyond by Dying Tides</a></iframe>
+<iframe style="border: 0; width: 350px; height: 621px;" src="https://bandcamp.com/EmbeddedPlayer/album=264554360/size=large/bgcol=333333/linkcol=4ec5ec/transparent=true/" seamless><a href="https://dyingtides.bandcamp.com/album/beyond-the-beyond">Beyond the Beyond by Dying Tides</a></iframe>
