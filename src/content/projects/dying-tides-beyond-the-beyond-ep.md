@@ -24,12 +24,12 @@ links: null
 publishedDate: 2026-04-28T15:10:00
 ---
 
-The sounds of internalising everything on the outside.
+The sounds of internalising the outside.
 
 I made this over winter and spring 2025-2026 during a weird time of change. This was mostly an experiment in perseverance and learning - putting final shapes onto ideas that have been to-ing and fro-ing over recent years, lying on hard drive after hard drive.
 
 One day, I'll write a blog article on some of the techniques I learnt, adapted, as well as and heavily borrowed. Before the winter started, I spent about 6 months learning and adapting some systems to build the basis of these tracks. I even created some new tools when I hit creative dead ends of how to get sounds from inside my head and out of my speakers. 
 
-Inspired by works including Henry Vaughans _Silex Scintillans_, Blake's _Songs of Innocence and Experience,_ and more recent writing about microhistory - landscapes formed form muted interwoven lives across centuries - these songs are my pictures of landscapes alive with accumulated human experience, not just scenery.
+Inspired by Henry Vaughans _Silex Scintillans_, Blake's _Songs of Innocence and Experience,_ and more recent writing about microhistory - landscapes formed form muted interwoven lives across centuries - these songs are my pictures of landscapes alive with the gravity of accumulated human experience, beyond just the scenery.
 
 <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=264554360/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://dyingtides.bandcamp.com/album/beyond-the-beyond">Beyond the Beyond by Dying Tides</a></iframe>
