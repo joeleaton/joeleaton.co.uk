@@ -10,7 +10,7 @@ tags:
   - performance
 year: 2026
 location: Outer Space
-featured: true
+featured: false
 featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.01.51.png
 videoUrl: https://youtu.be/gBaBZgYGAqQ
 technologies:
