@@ -1,5 +1,5 @@
 ---
-title: Dying Tides - Beyond the Beyond EP
+title: 'Dying Tides: Beyond the Beyond EP'
 slug: dying-tides-beyond-the-beyond
 draft: false
 description: New basic from the outer limits
