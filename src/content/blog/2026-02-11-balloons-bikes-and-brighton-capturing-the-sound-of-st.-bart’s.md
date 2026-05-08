@@ -18,11 +18,11 @@ St. Bartholomew’s in Brighton is an absolute beast of a building. It’s a neo
 
 ### Capturing the "Sonic Fingerprint"
 
-Years ago, while I was teaching, I managed to convince a local priest to let me and a group of undergraduate students into the nave for an afternoon of acoustic archaeology. Our mission? To capture the "Impulse Response" (IR) of the space.
+Years ago, while I was teaching, I managed to convince a local priest to let me and a group of undergraduate students into the nave for an afternoon of acoustic archaeology. Our mission? To capture the Impulse Response (IR) of the space.
 
-Armed with a bag of balloons, pins, a pair of stereo microphones, and a laptop, we took turns triggering the room. A popped balloon is a low-tech but highly effective way to stimulate a room's acoustics. It provides a sharp "impulse" that covers a wide frequency range in a single point in time.
+Armed with a bag of balloons, pins, a pair of stereo microphones, and a laptop, we took turns triggering the room. A popped balloon is a low-tech but highly effective way to stimulate a room's acoustics. It provides a sharp impulse that covers a wide frequency range in a single point in time.
 
-> **The Method:** By recording this pop and using a process called **convolution**, you can essentially "invert" the recording. This allows you to play any clean audio, like a dry vocal or a synth, through that recorded space. The result? Instant "goth-church" atmosphere.
+> **The Method:** By recording this pop and using a process called **convolution**, you can essentially invert the recording. This allows you to play any clean audio, like a dry vocal or a synth, through that recorded space. The result? Instant goth-church atmosphere.
 
 We did get some very confused looks from the worshippers (the priest insisted the church stay open for silent prayer), but the students were floored when we got back to the studio and heard their own tracks suddenly sounding like they were performed in a Victorian cathedral.
 
@@ -32,7 +32,7 @@ We did get some very confused looks from the worshippers (the priest insisted th
 
 I recently found one of the recordings from the day on an old hard drive. The initial balloon pop was perfect, but a few seconds into the decaying tail, a car or motorbike roared past the church.
 
-The result was a textbook case of the **Doppler Effect**. As the vehicle sped by, it created a rasping, filtered "zing" that rose in frequency and fluctuated in volume, completely masking the natural decay of the church. It was a beautiful recording ruined by a 50cc engine.
+The result was a textbook case of the **Doppler Effect**. As the vehicle sped by, it created a rasping, filtered zing that rose in frequency and fluctuated in volume, completely masking the natural decay of the church. It was a beautiful recording ruined by a 50cc engine.
 
 ![doppler effect diagram](/images/uploads/doppler-effect.jpeg "The Doppler Effect on how we perceive sound")
 
@@ -40,7 +40,7 @@ The result was a textbook case of the **Doppler Effect**. As the vehicle sped by
 
 I couldn't let that rich, early reflection go to waste, so I decided to attempt a digital restoration.
 
-First, I used **iZotope RX** to manually attenuate the frequency spikes of the engine. However, cleaning out the noise left me with a "stunted" reverb. The measured _RT\~60\~_ (the time it takes for a sound to decay by 60dB) was only \~4.2 seconds, way too short for a space of St. Bart's magnitude.
+First, I used **iZotope RX** to manually attenuate the frequency spikes of the engine. However, cleaning out the noise left me with a stunted reverb. The measured _RT\~60\~_ (the time it takes for a sound to decay by 60dB) was only \~4.2 seconds, way too short for a space of St. Bart's magnitude.
 
 ### Before spectral repair
 
@@ -52,7 +52,7 @@ First, I used **iZotope RX** to manually attenuate the frequency spikes of the e
 
 **The Goal:** Extend that _RT \~60\~_ to a more realistic 6.5 seconds.
 
-To bridge the gap between "real" audio and "synthetic" tail, I worked with some custom code to handle the heavy lifting. Specifically:
+To bridge the gap between real audio and synthetic tail, I worked with some custom code to handle the heavy lifting. Specifically:
 
 | Step | Process | Goal |
 | --- | --- | --- |
@@ -72,7 +72,7 @@ To actually _use_ this restored IR, I built a plugin in C++ using a **partitione
 - **FFT Size:** 2 ^12^  (4096 samples) — A sweet spot for balancing CPU load and latency.
 - **Partition Size:** 2048 samples.
 - **Total IR Length:** 7.5 seconds (\~360,000 samples).
-- **Gain Normalization:** The IR is peaked at -12dB. This ensures that when you crank the "Wet" knob to 100%, you don't accidentally blow your speakers.
+- **Gain Normalization:** The IR is peaked at -12dB. This ensures that when you crank the Wet knob to 100%, you don't accidentally blow your speakers. Saying that, is is loud so gain staging is needed!
 
 The final result is an IR that preserves the authentic, dark, early character of St. Bartholomew’s while offering a smooth, natural tail that (thankfully) is free of motorbikes.
 
