@@ -77,4 +77,4 @@ Global controls: Cross-feedback (0–0.98), dry/wet mix, and master gain (−60 
 
 VST3 + AU. macOS. Built with JUCE 8 / C++17.
 
-Free download coming!
+:::buttons / Download for free! | https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT-TMSEwHW?usp=drive_link :::
