@@ -11,7 +11,7 @@ tags:
 year: 2026
 location: Parallel Universes
 featured: false
-featuredImage: /images/uploads/Screenshot 2026-05-10 at 19.32.06.png
+featuredImage: /images/uploads/orbit-main.png
 videoUrl: ''
 technologies:
   - C++
@@ -57,6 +57,10 @@ The central visualization doesn't just represent the engines orbiting, it's a co
 - **Drag the playhead** (the dot orbiting the ring) to adjust modulation frequency with logarithmic scaling, so small movements at low frequencies give fine control, the same gesture at high frequencies jumps octaves
 
 Beyond these, I wanted a way to add some additional stochastic movement through the interface. **Gravity wells** let you place up to four spatial attractors on the canvas. These warp the orbit paths toward them using a smoothstep falloff, visually distorting the rings and influencing how the engines interact spatially.
+
+![orbit's gravity wells](/images/uploads/gravity-wells.png "Orbit with 4 gravity wells placed on the canvas")
+
+
 
 And if you look closely (well, very closely as I ended up burring it deep so it wasn't a distraction) a spectrogram runs behind the orbits shows the real-time frequency content of the output.
 
