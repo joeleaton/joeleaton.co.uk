@@ -73,12 +73,12 @@ Global controls: Cross-feedback (0–0.98), dry/wet mix, and master gain (−60 
 
 8 factory presets ship with the plugin — from "Init" (neutral starting point) to "Gravity Field" (4 gravity wells demonstrating spatial warping) to "Industrial Metallic" (audio-rate FM with high jitter).
 
-### Format
-
-VST3 + AU + Standalone for macOS. Built with JUCE 8 / C++17.
+### Get Orbit for free!
 
 :::buttons 
 
 Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT-TMSEwHW?usp=drive_link | outline
 
 :::
+
+VST3 + AU + Standalone for macOS. Built with JUCE 8 / C++17.
