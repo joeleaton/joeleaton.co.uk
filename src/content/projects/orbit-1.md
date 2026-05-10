@@ -12,7 +12,7 @@ year: 2026
 location: Parallel Universes
 featured: false
 featuredImage: /images/uploads/Screenshot 2026-05-10 at 19.32.06.png
-videoUrl: Dual-engine granular modulator
+videoUrl: ''
 technologies:
   - C++
   - JUCE
