@@ -75,7 +75,7 @@ Each engine exposes: Mod frequency (0.01–2000 Hz, log-skewed), mod depth, wave
 
 Global controls: Cross-feedback (0–0.98), dry/wet mix, and master gain (−60 to +6 dB).
 
-8 factory presets ship with the plugin — from "Init" (neutral starting point) to "Gravity Field" (4 gravity wells demonstrating spatial warping) to "Industrial Metallic" (audio-rate FM with high jitter).
+8 factory presets ship with the plugin,  including _Gravity Field_ (4 gravity wells demonstrating spatial warping) and _Industrial Metallic_ (audio-rate FM with high jitter).
 
 ## Get Orbit for free!
 
