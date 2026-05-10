@@ -20,15 +20,19 @@ links: null
 publishedDate: 2026-05-10T20:04:00
 ---
 
-I made Orbit during the making of the tracks that turned into Beyond the Beyond. I struggled to find a tool that could do what I wanted for processing vocals and synths in a rhythmic way but also in a way that smudged rhythmic layers of a signal to create something less polished and precise as what's often available. I also wanted to see what was I doing to incoming sounds, not just hear them - to help guide the way I was processing them.
+I made Orbit during the making of the tracks that turned into [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/). I struggled to find a tool that could do what I wanted for processing vocals and synths, in a rhythmic way but also in a way that blurred rhythmic layers together to create something less rigid and more celestial otherworldly. 
+
+I also wanted to _see_ what was I doing to incoming sounds as I was affecting them, getting visual feedback as well as new ways of interaction control to help guide the way I can affect the sonic characteristics.
 
 The first version didn't have the interactive canvas layer, that came later as I wanted to bring the visual representation, of what was happening sonically, to life. 
 
 I'll upload some audio examples and a video demo soon, but you can download it and use it for free.
 
+## So what is Orbit?
+
 Orbit takes incoming audio and feeds it into a 10-second stereo ring buffer. Two independent engines  (A and B) read from that buffer simultaneously, each extracting overlapping grains at different positions, sizes, and densities. The result is everything from subtle textural doubling to full-blown granular destruction, depending on how far you push it.
 
-### What it does
+## What it does
 
 Feed Orbit any audio source,  vocals, synths, drums, field recordings, and it splits processing across two parallel engines. Each engine has three stages:
 
@@ -40,11 +44,11 @@ The **granular engine** reads from the shared ring buffer using Brownian-motio
 
 The **probability gate** is a rhythmic chopper synced to a DAW's tempo. At each beat subdivision (1/2 through 1/32), it rolls a random number against the probability threshold level and if it passes, audio flows; if not, it outputs silence. Each gate event also randomizes stereo placement, creating spatial movement locked to the rhythm.
 
-### The cross-feedback matrix
+## The cross-feedback matrix
 
 This is where Orbit gets interesting and goes beyond other modulation tools. Engine A's output feeds back into Engine B's grain input, and vice versa. At low feedback (0.1–0.3), this adds subtle harmonic interaction between the two engines. At high feedback (0.6+), the engines start building on each other recursively, textures evolve, timbres shift, and the output becomes something neither engine could produce alone. A `tanh` soft-clipper on the feedback path prevents runaway distortion while preserving the organic buildup.
 
-### The orbit canvas
+## The Orbit canvas
 
 The central visualization doesn't just represent the engines orbiting, it's a control surface. Each engine is represented as a ring whose position and size map directly to parameters:
 
@@ -56,7 +60,7 @@ Beyond these, I wanted a way to add some additional stochastic movement through 
 
 And if you look closely (well, very closely as I ended up burring it deep so it wasn't a distraction) a spectrogram runs behind the orbits shows the real-time frequency content of the output.
 
-### Under the hood
+## Under the hood
 
 - **Zero latency. N**o look-ahead or pre-buffering is a big deal for CPU load. Input hits the ring buffer and is immediately available for grain extraction.
 - **Lock-free audio thread.** All parameter reads use atomics via JUCE's AudioProcessorValueTreeState. No mutexes, no priority inversion, no glitches.
@@ -65,7 +69,7 @@ And if you look closely (well, very closely as I ended up burring it deep so it 
 - **Pink noise via Voss–McCartney** — 16 octave rows updated per sample based on trailing-zero counting, producing proper 1/f spectral rolloff for the jitter layer
 - **Constant-power panning** on both the per-grain spatial placement and the gate's stereo randomization (`cos/sin` split).
 
-### Parameters at a glance
+## Parameters at a glance
 
 Each engine exposes: Mod frequency (0.01–2000 Hz, log-skewed), mod depth, waveshape, AM/FM mode, jitter, FM depth (0–96 semitones), grain position, grain size (skew 0.5), density (1–64), spray, chop division, chop probability, and pan modulation (±1).
 
@@ -73,7 +77,7 @@ Global controls: Cross-feedback (0–0.98), dry/wet mix, and master gain (−60 
 
 8 factory presets ship with the plugin — from "Init" (neutral starting point) to "Gravity Field" (4 gravity wells demonstrating spatial warping) to "Industrial Metallic" (audio-rate FM with high jitter).
 
-### Get Orbit for free!
+## Get Orbit for free!
 
 VST3 + AU + Standalone for macOS. Built with JUCE 8 / C++17.
 
