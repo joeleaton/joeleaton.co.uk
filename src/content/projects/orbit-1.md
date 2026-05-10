@@ -20,7 +20,7 @@ links: null
 publishedDate: 2026-05-10T20:04:00
 ---
 
-I made Orbit during the making of the tracks that turned into [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/). I struggled to find a tool that could do what I wanted for processing vocals and synths, in a rhythmic way but also in a way that blurred rhythmic layers together to create something less rigid and more celestial and otherworldly sounding. 
+I made Orbit during the making of the tracks that turned into [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/). I struggled to find a tool that could do what I wanted for processing vocals and synths, in a rhythmic way but also in a way that blurred rhythmic layers together to create something less rigid and clean to become more celestial and otherworldly sounding. 
 
 I also wanted to _see_ what was I doing to incoming sounds as I was affecting them, getting visual feedback as well as new ways of interaction control to help guide the way I can affect the sonic characteristics.
 
