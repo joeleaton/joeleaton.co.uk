@@ -2,7 +2,7 @@
 title: Orbit
 slug: orbit
 draft: false
-description: Dual-engine granular modulator with stochastic control and cross-feedback
+description: Dual-engine granular modulator with stochastic controls and cross-feedback
 categories:
   - music
 tags:
