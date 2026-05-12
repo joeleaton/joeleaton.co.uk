@@ -24,7 +24,7 @@ links: null
 publishedDate: 2026-04-28T15:10:00
 ---
 
-The sounds of internalising the outside.
+The internalised sounds of the outside.
 
 I made this over winter and spring 2025-2026 during a weird time of change. This was mostly an experiment in perseverance and learning - putting final shapes onto ideas that have been to-ing and fro-ing over recent years, lying on hard drive after hard drive.
 
