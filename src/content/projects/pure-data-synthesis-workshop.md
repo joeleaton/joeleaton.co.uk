@@ -39,6 +39,10 @@ Elysium is built using the free/open source [plugdata](https://plugdata.org/) en
 
 I refactored the patches from the (now defunct) pd-extended library, to run in pd-vanilla. This is to allow me to compile it in Heavy for C++/native VST development.
 
+The synth consists of 3 banks of oscillators. Pure sine waves, Harmonic notes, and Organ notes (both the Harmonic and Organ notes are additive sine functions). Each bank two sets of 8 notes of identical pitches. You adjust the volume levels of the pitches to build chords that cross-fade from one to the other. You can set the base pitch of note 1, the the octave, and the scale which determines the relative pitches across the bank.
+
+Each bank has a set of controllable effects, including chorus, distortion, and modulation (both AM and FM for wilder effects), and they all finally pass through a global reverb unit "Space" that has controllable characteristics. The modulation unit is based on an old analogue Throbbing Gristle device, but it's my own interpretation of it.
+
 ## Download
 
 The download file is a .pd patch. It's free and fully editable, so you can open it up and explore under the hood. You can even modify and extend it to do new things.
