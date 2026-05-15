@@ -11,7 +11,7 @@ tags:
 year: 2026
 location: Parallel Universes
 featured: false
-featuredImage: /images/uploads/orbit-1.gif
+featuredImage: /images/uploads/orbit.gif
 videoUrl: ''
 technologies:
   - C++
