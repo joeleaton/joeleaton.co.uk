@@ -5,7 +5,7 @@ import FilterBar from '../../components/FilterBar.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects', ({ data }) => !data.draft);
-const sortedProjects = allProjects.sort((a, b) => b.data.year - a.data.year);
+const sortedProjects = allProjects.sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
 
 const filters = [
   { label: 'All Projects', value: 'all' },
