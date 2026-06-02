@@ -75,3 +75,5 @@ Get it free! Download includes standalone, VST3, and AU versions.
 
 Download St Barts | https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link | outline
 :::
+
+> _macOS will warn that Tides is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised. Open System Settings → Privacy & Security and click "Open Anyway" once, and you're good._
