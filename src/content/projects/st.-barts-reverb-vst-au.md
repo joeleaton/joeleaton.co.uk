@@ -9,7 +9,7 @@ tags:
   - composition
 year: 2025
 location: Brighton, UK
-featured: false
+featured: true
 featuredImage: /images/uploads/st.barts-UI.png
 videoUrl: ''
 technologies:
