@@ -11,7 +11,7 @@ tags:
 year: 2026
 location: The depths of the ocean
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/tides-ui.png
 videoUrl: ''
 technologies:
   - '- C++'
