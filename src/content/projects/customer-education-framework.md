@@ -1,7 +1,7 @@
 ---
 title: Content Harmony
 slug: content-harmony
-description: Turning Style into a Living, Breathing AI Editor
+description: Turning style into a living, breathing AI editor
 categories:
   - education
 tags:
