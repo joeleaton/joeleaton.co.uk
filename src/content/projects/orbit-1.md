@@ -88,3 +88,5 @@ VST3 + AU + Standalone for macOS. Built with JUCE 8 / C++17.
 Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT-TMSEwHW?usp=drive_link | outline
 
 :::
+
+> _macOS will warn that Orbit is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised. Open System Settings → Privacy & Security and click "Open Anyway" once, and you're good._
