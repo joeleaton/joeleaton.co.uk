@@ -10,7 +10,7 @@ tags:
   - performance
 year: 2026
 location: The depths of the ocean
-featured: false
+featured: true
 featuredImage: /images/uploads/tides-ui.png
 videoUrl: ''
 technologies:
