@@ -31,6 +31,8 @@ Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into them
 
 Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, you can hear the results on [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/).
 
+Walk-through videos and audio demos coming!
+
 ![Tides main editor](/images/uploads/tides-ui.png "The Tides editor — exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
 
 ## The premise
@@ -42,7 +44,7 @@ Take that delay-line behaviour, set the loop length to a musical pitch, feed it 
 That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
-      ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
+     ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
 MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ MASTER │ → out
        └───────────┘   └───────────┘   └───────────┘   └────────┘
               ▲              ▲                ▲
@@ -52,6 +54,7 @@ MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ M
 ## How it works
 
 ### 
+
 The exciter
 
 The exciter is where the energy comes from. A continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. A short, plucky envelope gives you Karplus-Strong-style strings; a long sustained envelope into the loop gives you a bowed pad. The exciter is also routable to an external audio input, so you can run guitars, vocals, anything you fancy through the resonator.
@@ -74,7 +77,7 @@ Modulation is the bit that makes a synth feel like an instrument rather than a c
 
 Tides has nine sources (four LFOs, the envelope, velocity, key-follow, aftertouch, mod wheel) and every continuous parameter can be a destination, including the preset morph slider. Each source has a master macro so you can sweep everything that source is driving from a single knob.
 
-I built a click-to-assign workflow so you can patch without ever leaving the panel. Tap a source tile to arm it, then click any knob on the synth — a connection lights up at +50% depth. Click the same knob again and it bumps to +100%, then back down through zero to -100%. A little triangle-wave traversal of the whole range from one gesture. Every modulated knob shows a coloured arc around its bezel for the modulation's excursion, and an animated dot riding along where the live value currently is.
+I built a click-to-assign workflow so you can patch without ever leaving the panel. Tap a source tile to arm it, then click any knob on the synth. A connection lights up at +50% depth. Click the same knob again and it bumps to +100%, then back down through zero to -100%. A little triangle-wave traversal of the whole range from one gesture. Every modulated knob shows a coloured arc around its bezel for the modulation's excursion, and an animated dot riding along where the live value currently is.
 
 ![Quad LFO and modulation matrix](/images/uploads/tides-ui-mod.png "Quad LFO panel on the left, modulation matrix on the right. Tiles light when active; the W↔RND knob crossfades each LFO between periodic waves and sample-and-hold.")
 
