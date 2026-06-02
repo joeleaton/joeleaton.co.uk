@@ -27,13 +27,11 @@ publishedDate: 2026-06-02T10:21:00
 
 I've always had a soft spot for instruments that aren't quite filters and aren't quite synths, the ones that _sing_. 
 
-Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into themselves until they tune. There's a particular character to a resonator being _excited_ rather than a waveform being _filtered_, and after the [St. Barts Reverb plugin](../../projects/st-barts-reverb-plugin) I wanted to spend some time chasing it.
+Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into themselves until they tune. There's a particular character to a resonator being _excited_ rather than a waveform being filtered, and after the [St. Barts Reverb plugin](../../projects/st-barts-reverb-plugin) I wanted to spend some time chasing it.
 
-Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, you can hear the results on [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/).
+Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, and you can hear the results all over my [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/) EP.
 
-Walk-through videos and audio demos coming!
-
-![Tides main editor](/images/uploads/tides-ui.png "The Tides editor — exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
+I'm working on some walk-through videos and audio demos, but for now here's the lowdown (keep reading for the download link):![Tides main editor](/images/uploads/tides-ui.png "The Tides editor — exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
 
 ## The premise
 
@@ -44,7 +42,7 @@ Take that delay-line behaviour, set the loop length to a musical pitch, feed it 
 That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
-    ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
+   ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
 MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ MASTER │ → out
        └───────────┘   └───────────┘   └───────────┘   └────────┘
               ▲              ▲                ▲
