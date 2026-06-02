@@ -10,7 +10,7 @@ tags:
   - composition
 year: 2026
 location: Parallel Universes
-featured: false
+featured: true
 featuredImage: /images/uploads/orbit.gif
 videoUrl: ''
 technologies:
