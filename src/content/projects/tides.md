@@ -44,7 +44,7 @@ Take that delay-line behaviour, set the loop length to a musical pitch, feed it 
 That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
-     ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
+    ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
 MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ MASTER │ → out
        └───────────┘   └───────────┘   └───────────┘   └────────┘
               ▲              ▲                ▲
@@ -55,19 +55,23 @@ MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ M
 
 ### 
 
-The exciter
+### The exciter
 
-The exciter is where the energy comes from. A continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. A short, plucky envelope gives you Karplus-Strong-style strings; a long sustained envelope into the loop gives you a bowed pad. The exciter is also routable to an external audio input, so you can run guitars, vocals, anything you fancy through the resonator.
+The exciter is where the energy comes from. Turn the knob for a continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. 
+
+A short, plucky envelope gives you Karplus-Strong-style strings; a long sustained envelope into the loop gives you a bowed pad. 
+
+The exciter is also routable to an external audio input, so you can run guitars, vocals, anything you fancy through the resonator. Seriously, try singing into it!
 
 ### The BBD resonator
 
-The heart of the instrument. A delay line tuned to the note's frequency, with three controls:
+This is the heart of the instrument. A delay line tuned to the note's frequency, with three controls:
 
-- **Input filter -** how much of the exciter actually reaches the loop. Pull it down to keep bright sources from screaming.
-- **Feedback** - how resonant the loop is. At 0, you hear a single tap. Around 0.5, you've got a tuned reverb. Past about 0.85, the loop self-oscillates indefinitely; the exciter becomes optional.
-- **Feedback filter** - a tilt in the feedback path. Higher = brighter, longer rings; lower = the energy decays into softer overtones each pass.
+- **Input filter -** How much of the exciter actually reaches the loop. Pull it down to keep bright sources from screaming.
+- **Feedback** - How resonant the loop is. At 0, you hear a single tap. Around 0.5, you've got a tuned reverb. Past about 0.85, the loop self-oscillates indefinitely; the exciter becomes optional.
+- **Feedback filter** - A tilt in the feedback path. Higher = brighter, longer rings; lower = the energy decays into softer overtones each pass.
 
-There's also a **Wild/Tame** macro that modulates the loop's internal noise floor, drift, per-voice detune and soft-clip drive. Fully tame, you get a clean precise model. Pushed to wild, you get something that breathes, drifts and occasionally overshoots — closer to a piece of analogue hardware that's been around a while.
+There's also a **Wild/Tame** macro that modulates the loop's internal noise floor, drift, per-voice detune and soft-clip drive. Fully tame, you get a clean precise model. Pushed to wild, you get something that breathes, drifts and occasionally overshoots, emulating a piece of analogue hardware that's been around for a while.
 
 ![Engine: exciter, resonator and output](/images/uploads/tides-ui-engine.png "The exciter feeds the resonator, the resonator feeds the output. Three panes for the entire DSP path.")
 
@@ -83,9 +87,11 @@ I built a click-to-assign workflow so you can patch without ever leaving the pan
 
 ### Voice groups
 
-A voice group in Tides is a complete synth - its own patch, its own MIDI channel, its own polyphony. There are six of them. You can layer all six on channel 1 for an absurdly thick stack, split them across channels for a multi-timbral rig, or focus down to just one and use the others as silent variation slots.
+A voice group in Tides is a complete synth - its own patch, its own MIDI channel, its own polyphony. 
 
-There's a preset morph slider that takes any two factory presets as endpoints and crossfades the focused voice between them - all 20 continuous parameters, all LFO settings, all macros interpolate at sample-block rate. Mod connections survive the morph, so you can build a patch where the modulation routing is fixed and the entire underlying sound morphs around it.
+There are six of them. You can layer all six on channel 1 for an absurdly thick stack, split them across channels for a multi-timbral rig, or focus down to just one and use the others as silent variation slots.
+
+There's a preset morph slider that takes any two factory presets as endpoints and crossfades the focused voice between them meaning that all 20 continuous parameters, all LFO settings, all macros interpolate at sample-block rate. Mod connections survive the morph, so you can build a patch where the modulation routing is fixed and the entire underlying sound morphs around it.
 
 ### Quality switch
 
@@ -93,11 +99,11 @@ Resonators are nasty to oversample naively. Feed them aliasing and they ring it 
 
 ### MPE
 
-Lower-zone MPE is in there. Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. Channel-mode MIDI works fine if you don't have an MPE controller.
+Lower-zone MPE is in there. Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. Channel-mode MIDI works fine if, like me, you don't have an MPE controller.
 
 ## Design notes
 
-The whole editor is a single procedurally-drawn interface — no PNG assets, no fixed pixel layouts, everything resolves from a colour-token system and font helpers at runtime. That made the iteration loop on the UI extremely fast, but it also means the entire visual style is in version control as readable code. The two-wave icon you see in the top bar (and now on the app itself) is literally rendered by the same function in the plug-in and in a Python script that generates the `.icns`.
+The whole editor is a single procedurally-drawn interface. No PNG assets, no fixed pixel layouts, everything resolves from a colour-token system and font helpers at runtime. That made the iteration loop on the UI extremely fast, but it also means the entire visual style is in version control as readable code. The two-wave icon you see in the top bar (and now on the app itself) is literally rendered by the same function in the plug-in and in a Python script that generates the `.icns`.
 
 There are 33 factory presets across eight categories: plucks, pads, self-oscillating tones, basses, bell/metallic textures, strings, glitchy random things, and multi-voice layered stacks. Each one ships with designer notes explaining what technique it's showing off.
 
