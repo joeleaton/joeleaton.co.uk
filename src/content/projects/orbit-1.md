@@ -85,7 +85,7 @@ VST3 + AU + Standalone for macOS. Built with JUCE 8 / C++17.
 
 :::buttons 
 
-Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT-TMSEwHW?usp=drive_link | outline
+Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT-TMSEwHW?usp=sharing | outline
 
 :::
 
