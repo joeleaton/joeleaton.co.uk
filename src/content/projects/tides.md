@@ -42,7 +42,7 @@ Take that delay-line behaviour, set the loop length to a musical pitch, feed it 
 That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
-   ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
+  ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
 MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ MASTER │ → out
        └───────────┘   └───────────┘   └───────────┘   └────────┘
               ▲              ▲                ▲
@@ -113,7 +113,7 @@ The download includes a quick-start README and two PDFs — a friendly user guid
 
 :::buttons
 
-Download Tides v1.0 | https://drive.google.com/drive/folders/14Ep0xOujQhGEusdxb-kggNDaMHdMCfhx?usp=sharing | outline
+Download Tides v1.0 | https://drive.google.com/drive/folders/1rbB22Wj1RZzJs4ZlznkfXhX__LBrjibC?usp=sharing | outline
 :::
 
 > _macOS will warn that Tides is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised. Open System Settings → Privacy & Security and click "Open Anyway" once, and you're good._
