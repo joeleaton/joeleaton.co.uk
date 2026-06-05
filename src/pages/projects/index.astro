@@ -3,9 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { getCollection } from 'astro:content';
+import { sortProjects } from '../../utils/projects';
 
 const allProjects = await getCollection('projects', ({ data }) => !data.draft);
-const sortedProjects = allProjects.sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime());
+const sortedProjects = sortProjects(allProjects);
 
 const filters = [
   { label: 'All Projects', value: 'all' },

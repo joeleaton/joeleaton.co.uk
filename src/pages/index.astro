@@ -6,11 +6,11 @@ import BlogCard from '../components/BlogCard.astro';
 import FilterBar from '../components/FilterBar.astro';
 import { getCollection } from 'astro:content';
 import { url } from '../utils/paths';
+import { sortProjects } from '../utils/projects';
 
 const allProjects = await getCollection('projects', ({ data }) => !data.draft);
-const featuredProjects = allProjects
+const featuredProjects = sortProjects(allProjects)
   .filter((p) => p.data.featured)
-  .sort((a, b) => b.data.publishedDate.getTime() - a.data.publishedDate.getTime())
   .slice(0, 6);
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
