@@ -2,7 +2,7 @@
 title: Elysium
 slug: elysium
 draft: false
-description: A software instrument for creating drone-based textured soundscapes.
+description: An additive synthesiser for creating chordal drone-based textured soundscapes.
 categories:
   - music
 tags:
@@ -29,7 +29,7 @@ relatedProjects:
 
 # Elysium
 
-Elysium is a software synthesizer where you can build and evolve textured harmonic layers of drone-based bliss from scratch.
+Elysium is a synthesiser where you can build and evolve textured harmonic layers of drone-based bliss from scratch.
 
 Using additive synthesis, construct chords of sine waves, control movement, add layers, apply distortion and reverb, sit back and bliss-out.
 
@@ -37,7 +37,7 @@ Using additive synthesis, construct chords of sine waves, control movement, add 
 
 Elysium is built using the free/open source [plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. This started life in a different guise years ago as an iPhone app, but I recently rewrote it for the modern world as a plugin directly for the DAW.
 
-I refactored the patches from the (now defunct) pd-extended library, to run in pd-vanilla. This is to allow me to compile it in Heavy for C++/native VST development.
+I refactored the patches from the (now defunct) pd-extended library, to run in pd-vanilla. This was to allow me to compile it in Heavy for C++/native VST development but I quite liked working through plugdata in a DAW.
 
 The synth consists of 3 banks of oscillators. Pure sine waves, Harmonic notes, and Organ notes (both the Harmonic and Organ notes are additive sine functions). Each bank two sets of 8 notes of identical pitches. You adjust the volume levels of the pitches to build chords that cross-fade from one to the other. You can set the base pitch of note 1, the the octave, and the scale which determines the relative pitches across the bank.
 
@@ -54,9 +54,3 @@ The download file is a .pd patch. It's free and fully editable, so you can open 
 Download Elysium | https://drive.google.com/drive/folders/1XcE3oPNnAbdeZBCo7WURzrYtQHAW0qkt?usp=drive_link | outline
 
 :::
-
-Here's some screenshots of what's under the hood:
-
-![Elysium organs](/images/uploads/elysium-organs.png "Organ banks")
-
-![Elysium DSP](/images/uploads/elysium-dsp.png "Core DSP subpatch for the 3 voices. Note the Distortion, Modulation, and Chorus subpatches for each voice and the global reverb unit (uses rev3~)")
