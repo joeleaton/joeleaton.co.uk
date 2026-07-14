@@ -120,6 +120,6 @@ If I take one thing from this project into the next one, it is that. The most va
 
 The engine is built and verified. The interface is built. Life is about to go to a very small number of people as a private alpha, with no factory presets at all, because I want to spend real time playing it before I decide what a preset should even sound like. And in all honesty, I started putting together something amazing sounding, didn't save it then I couldn't recreate it. V. annoying.
 
-I will put up a full project page when it is finished, with demos and downloads. In the meantime, it makes noises I did not expect, which is the entire point. And I'm learning to play it, like an actual instrument. It really is breathing Life.
+I will put up a full project page when it is finished, with demos and downloads. In the meantime, it makes noises and dare I say music I did not expect, which is the entire point. And I'm learning to play it, like an actual instrument. It really is breathing Life.
 
-(And if you read this far, yes the title is an intentional Manics steal.)
+(And if you read this far, then yes the title is an intentional Manics steal.)
