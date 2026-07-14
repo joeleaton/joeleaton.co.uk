@@ -7,7 +7,7 @@ category: music
 tags:
   - research
   - case-study
-publishedDate: 2026-07-14T20:24
+publishedDate: 2026-07-14T21:22
 featured: false
 featuredImage: /images/uploads/life-web.png
 readTime: 7
@@ -83,7 +83,7 @@ Adding LFO rate as a modulation destination is a small change. Getting it to _fe
 
 The naive implementation adds an offset in Hz. Modulate rate by, say, one unit, and every LFO gets one more Hz. Which means a slow LFO at 0.2 Hz barely twitches, and a fast one at 8 Hz lurches violently. The same control does two completely different things depending on where you happened to set it.
 
-![screenshot GIF of the LFO modulation](/images/uploads/life-lfo.gif "The depth of LFO 1  being modulated by LFO 2. ")
+![screenshot GIF of the LFO modulation](/images/uploads/life-lfo.gif "The depth of LFO 1  being modulated by LFO 2.")
 
 Rate is perceptually multiplicative. Doubling is what matters, not adding. So the modulation has to be applied in log space, in octaves, and then exponentiated: rate x 2^offset. Do that and one control means one thing everywhere, an accelerando feels like an accelerando, and a slow LFO and a fast one respond in the same musical way.
 This is the same reason we tune instruments in semitones instead of Hz, and it is exactly the sort of thing that is invisible when you get it right and unusable when you get it wrong.
