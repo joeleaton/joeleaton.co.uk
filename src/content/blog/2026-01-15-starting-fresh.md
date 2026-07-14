@@ -7,7 +7,7 @@ tags:
   - opinion
 publishedDate: 2026-01-15
 featured: true
-featuredImage: ''
+featuredImage: /images/uploads/tanka2.jpg
 readTime: 3
 author: Joel Eaton
 ---
