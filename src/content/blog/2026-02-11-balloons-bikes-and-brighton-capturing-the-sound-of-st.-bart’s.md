@@ -8,7 +8,7 @@ tags:
   - case-study
 publishedDate: 2026-02-12T20:07:00
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/Screenshot 2026-02-11 at 11.09.10.png
 readTime: null
 ---
 
