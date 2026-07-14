@@ -122,4 +122,4 @@ The engine is built and verified. The interface is built. Life is about to go to
 
 I will put up a full project page when it is finished, with demos and downloads. In the meantime, it makes noises and dare I say music I did not expect, which is the entire point. And I'm learning to play it, like an actual instrument. It really is breathing Life.
 
-(And if you read this far, then yes the title is an intentional Manics steal.)
+(And if you read this far, then yes the title of this post is an intentional Manics steal.)
