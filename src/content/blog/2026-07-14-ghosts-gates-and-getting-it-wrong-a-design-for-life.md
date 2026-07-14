@@ -10,7 +10,7 @@ tags:
 publishedDate: 2026-07-14T21:22
 featured: false
 featuredImage: /images/uploads/life-web.png
-readTime: 7
+readTime: 15
 ---
 
 ![screenshot of Life's modulation web](/images/uploads/life-web.png "The modulation web. Sources sit in the ring, modulators on the perimeter, and every coral line is one thing driving another.")
