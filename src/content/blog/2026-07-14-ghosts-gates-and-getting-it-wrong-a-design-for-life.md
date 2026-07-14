@@ -8,7 +8,7 @@ tags:
   - research
   - case-study
 publishedDate: 2026-07-14T21:22
-featured: false
+featured: true
 featuredImage: /images/uploads/life-web.png
 readTime: 15
 ---
@@ -69,7 +69,7 @@ The rule is well established and every serious modulation environment lands on i
 
 ![screenshot of the mod ring](/images/uploads/life-mod-ring-knob.png "The pointer holds the value you set. The arc shows what the modulation is doing to it. The harder the modulation pushes, the more the arc asks for your attention.")
 
-What is new in Life is the sheer scale. [Tides](../projects/tides-bbd-resonator-synth/) has a handful of modulated destinations. Life has around forty per voice, across eight voices, plus the effects and the master chain, and the whole point of the instrument is that a lot of them are moving at once. Apply the solved rule naively and you get a screen where every control is writhing simultaneously. That is not information. That is noise, and it is arguably less legible than showing nothing at all.
+What is new in Life is the sheer scale. [Tides](../projects/tides-bbd-resonator-synth/) has a handful of modulated destinations. Life has around forty per voice, across eight voices, plus the effects and the master chain, and the whole point of the instrument is that a lot of them are moving at once. Apply the solved rule naively and you get a screen where every control is writhing simultaneously. That is not information. That's visual noise (and processing overhead!), and it is arguably less legible than showing nothing at all.
 
 So the actual design decision was not how to draw one ring. It was how to draw forty without the page turning to jitter. Two choices did most of the work. The prominence of each arc scales with how hard that parameter is actually being pushed, so a barely-touched control stays almost invisible and only meaningful movement earns your eye. And the arcs are drawn only for what is on screen, rather than animating hundreds of controls you are not looking at.
 
