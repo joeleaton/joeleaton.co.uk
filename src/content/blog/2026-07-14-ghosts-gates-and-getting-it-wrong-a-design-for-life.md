@@ -55,7 +55,7 @@ You can do this in other tools, but it's fiddly and it's an after thought - not 
 
 The obvious way to build this is a ghost button. I did not, and this took me a while to see clearly. Ghost is not a mode you enter. It is what naturally happens when a source is quiet and its routes are live. It is an _emergent state_, not a switch, and it emerges from controls that already exist.
 
-![screenshot of a channel strip in ghost mode](/images/uploads/life-ghost.png "A source at the floor, inaudible, and still driving half the patch. There is no ghost button. There is only a condition the instrument recognises.")
+![screenshot of a channel strip in ghost mode](/images/uploads/life-ghost.png "A source with fader at the floor and still driving half the patch (although audible as it's level is being modulated by something!). There is no ghost button. There is only a condition the instrument recognises.")
 
 So there is no ghost parameter in Life. The interface simply recognises the condition and shows you that it is happening. The difference sounds pedantic and is not: a ghost button would have implied there is a special mode you have to be in, when in fact the instrument has been capable of this the entire time and I merely needed to point at it.
 
