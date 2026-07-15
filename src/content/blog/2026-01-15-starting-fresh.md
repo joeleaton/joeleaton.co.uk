@@ -1,7 +1,7 @@
 ---
 title: 'Starting Fresh: A New Digital Home'
 slug: starting-fresh
-description: Launching a new website to better represent my multi-disciplinary work
+description: Launching my new website to better represent my multi-disciplinary work.
 category: general
 tags:
   - opinion
@@ -14,7 +14,7 @@ author: Joel Eaton
 
 # Starting Fresh
 
-Welcome to my new digital home. After years of scattered content across different platforms, I've built this site as a single place to share my work across brain-computer interfaces, running coaching, music technology, and education.
+Welcome to my new digital home. After years of scattered content across different platforms and a Wordpress site that was becoming perilously outdated, I've built this site as a single place to share my work across brain-computer interfaces, running coaching, music tech, and education.
 
 ## Why Start Again?
 
