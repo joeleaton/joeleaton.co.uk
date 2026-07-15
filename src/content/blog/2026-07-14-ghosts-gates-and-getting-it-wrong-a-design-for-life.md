@@ -13,8 +13,6 @@ featuredImage: /images/uploads/life-web.png
 readTime: 15
 ---
 
-![screenshot of Life's modulation web](/images/uploads/life-web.png "The modulation web. Sources sit in the ring, modulators on the perimeter, and every coral line is one thing driving another.")
-
 An instrument that doesn't sit still!
 
 Life is an experimental modulation instrument I have been building over the past few months. 
@@ -28,6 +26,8 @@ It is aimed squarely at the kind of music that just moves: Minimal techno, class
 The engine has been built and verified for a while now. What I have actually spent my time on, and what I this article is about, is something less glamorous and far more interesting. Deciding what each control should actually mean.
 
 Because here is the thing nobody warns you about. When you have seven hundred parameters and a modulation matrix that can route almost anything to almost anything, the DSP stops being the difficult bit. The difficult bit is that every control now carries a claim about how the instrument thinks.
+
+![screenshot of Life's modulation web](/images/uploads/life-web.png "The modulation web. Sources sit in the ring, modulators on the perimeter, and every coral line is one thing driving another.")
 
 # The circle, not the square
 
@@ -98,11 +98,11 @@ I specified the boring version of a feature without realsiing till it was too la
 
 And I forgot one of the most important buttons under the hood. Rebuilding the interface, I lost the toggle that switches the morph engine on. Everything underneath it still worked perfectly: the blend was being computed every single block, correctly, continuously. But the flag that enables it no longer had any control attached to it, and it defaults to off. So the centrepiece of the instrument did precisely nothing when you dragged it, while the scene recall buttons sitting right next to it worked fine. It took a proper trace through four layers of the signal path to find, and it was days away from going to testers.
 
-### The fix was a document
+### The fix was documentation
 
 The thing that finally caught these was not a better testing regime. It was writing down, in one place, every single control the instrument needs to expose, bound to the actual parameter it drives. Funnily enough, I've said this so many times over the years in my day-jobs - documentation _is_ the product.
 
-I had a full architecture spec. I had ten work packages with complete parameter tables. I had a UI design brief. Each of those documents was complete and correct within its own remit, and _none of them_ was a list of what the interface must contain. So things fell through the gaps between them, silently, because no document was responsible for noticing.
+I had a full architecture spec. I had ten work packages with complete parameter tables. I had a UI design brief. Each of those documents was complete and correct within its own remit, and _none of them_ was a list of what the interface must contain. So things fell through the gaps between them, silently, because no document was responsible for noticing. And frankly, this this was getting to big it was mentally exhausting trying to remember it all.
 
 | The document | What it is complete on | What it cannot tell you |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ I had a full architecture spec. I had ten work packages with complete parameter 
 
 Building that map, and then checking it against what the plugin had actually registered rather than what I thought it had, is what surfaced the phantom modulation targets, the wrong effect parameters, and eventually the morph gate that I'd forgotten about. It is now the contract that everything else gets checked against.
 
-If I take one thing from this project into the next one, it is that. The most valuable document I wrote was the one whose entire purpose was to be _wrong_ in a way I could see.
+If I take one thing from this project into the next one, it is that. The most valuable document I wrote was the one whose entire purpose was to be wrong in a way I could see.
 
 ***
 
