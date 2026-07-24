@@ -33,6 +33,12 @@ Decisions of speed
 - Stick with an idea
 - Build around 'mistakes'
 
-Creating some new tools
+New sounds need new tools
+
+- Orbit
 
 Continuing on
+
+- Inspiration for Life and Tides. Other tracks that _might_ see the light of day. Especially some of a similar vibe from over the years (Cakobau - add here, not finished)
+
+End on a point about finishing. Having an end point, a goal. Closure. Progression
