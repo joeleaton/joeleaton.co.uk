@@ -74,6 +74,17 @@ Get it free! Download includes standalone, VST3, and AU versions.
 :::buttons
 
 Download St Barts | https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link | outline
+
+
+## Installing
+
+
 :::
 
-> _macOS will warn that Tides is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised. Open System Settings → Privacy & Security and click "Open Anyway" once, and you're good._
+> _macOS will warn that Orbit is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised._ 
+> 
+> _Copy the files to your plug-in folders then clear the download quarantine. Open Terminal and run, adjusting paths if needed:_
+> 
+>    xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/Components/St\ Barts\ Reverb.component xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/VST3/St\ Barts\ Reverb.vst3 xattr -dr com.apple.quarantine /Applications/St\ Barts\ Reverb.app
+> 
+> _First launch of the standalone: if macOS still warns of an unidentified developer, open System Settings → Privacy & Security and click "Open Anyway" once and you're good._
