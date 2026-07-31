@@ -89,4 +89,11 @@ Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT
 
 :::
 
-> _macOS will warn that Orbit is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised. Open System Settings → Privacy & Security and click "Open Anyway" once, and you're good._
+> _macOS will warn that Orbit is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised._ 
+> 
+> _Copy the files to your plug-in folders then clear the download quarantine. Open Terminal and run, adjusting paths if needed:_
+>    _xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/Components/Life.component_
+>    _xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/VST3/Life.vst3_
+>    _xattr -dr com.apple.quarantine /Applications/Life.app_
+> 
+> _First launch of the standalone: if macOS still warns of an unidentified developer, open System Settings → Privacy & Security and click "Open Anyway" once and you're good._
