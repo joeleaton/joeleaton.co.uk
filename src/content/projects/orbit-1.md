@@ -89,11 +89,21 @@ Download Orbit| https://drive.google.com/drive/folders/10ilgpJ4laTgBp1uZQcEHLcLT
 
 :::
 
-> _macOS will warn that Orbit is from an unidentified developer the first time you open it — that's because it's ad-hoc signed rather than notarised._ 
-> 
-> _Copy the files to your plug-in folders then clear the download quarantine. Open Terminal and run, adjusting paths if needed:_
->    _xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/Components/Life.component_
->    _xattr -dr com.apple.quarantine \~/Library/Audio/Plug-Ins/VST3/Life.vst3_
->    _xattr -dr com.apple.quarantine /Applications/Life.app_
-> 
-> _First launch of the standalone: if macOS still warns of an unidentified developer, open System Settings → Privacy & Security and click "Open Anyway" once and you're good._
+## Installing on macOS
+
+The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.
+
+1. Unzip and copy the components to:
+    - AU → `~/Library/Audio/Plug-Ins/Components/Orbit.component`
+    - VST3 → `~/Library/Audio/Plug-Ins/VST3/Orbit.vst3`
+    - Standalone → wherever you like (e.g. `/Applications`)
+2. Clear the download quarantine. Open Terminal and run, adjusting paths if needed:
+
+```plain
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Orbit.component
+   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/Orbit.vst3
+   xattr -dr com.apple.quarantine /Applications/Orbit.app
+```
+
+3. First launch of the standalone: if macOS still warns of an unidentified developer, open System Settings → Privacy & Security and click Open Anyway in the note near the bottom. You only do this once.
+4. In your DAW, rescan the plug-in list if Orbit doesn't appear.
