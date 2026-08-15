@@ -42,7 +42,7 @@ Take that delay-line behaviour, set the loop length to a musical pitch, feed it 
 That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
- ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
+┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
 MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ MASTER │ → out
        └───────────┘   └───────────┘   └───────────┘   └────────┘
               ▲              ▲                ▲
@@ -113,22 +113,23 @@ The download includes a quick-start README and two PDFs — a friendly user guid
 
 :::buttons
 
-Download Tides v1.0 | https://drive.google.com/drive/folders/1rbB22Wj1RZzJs4ZlznkfXhX__LBrjibC?usp=sharing | outline
+Download Tides v1.1 | [https://drive.google.com/drive/folders/1rbB22Wj1RZzJs4ZlznkfXhX__LBrjibC?usp=sharing](https://github.com/joeleaton/tides) | outline
 :::
 
 # Installing on macOS
 
-
 The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.
 
 1. Unzip and copy the components to:
+
     - AU → `~/Library/Audio/Plug-Ins/Components/Tides.component`
     - VST3 → `~/Library/Audio/Plug-Ins/VST3/Tides.vst3`
     - Standalone → wherever you like (e.g. `/Applications`)
+
 2. Clear the download quarantine. Open Terminal and run, adjusting paths if needed:
 
 ```plain
-   xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Tides.component
+  xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Tides.component
    xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/Tides.vst3
    xattr -dr com.apple.quarantine /Applications/Tides.app
 ```
