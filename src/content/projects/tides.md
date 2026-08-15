@@ -113,7 +113,7 @@ The download includes a quick-start README and two PDFs — a friendly user guid
 
 :::buttons
 
-Download Tides v1.1 | [https://drive.google.com/drive/folders/1rbB22Wj1RZzJs4ZlznkfXhX__LBrjibC?usp=sharing](https://github.com/joeleaton/tides) | outline
+Download Tides v1.1 | [https://github.com/joeleaton/tides](https://github.com/joeleaton/tides) | outline
 :::
 
 # Installing on macOS
@@ -129,7 +129,7 @@ The build is ad-hoc signed, not notarised, and the files pick up macOS's downloa
 2. Clear the download quarantine. Open Terminal and run, adjusting paths if needed:
 
 ```plain
-  xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Tides.component
+ xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/Tides.component
    xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/Tides.vst3
    xattr -dr com.apple.quarantine /Applications/Tides.app
 ```
