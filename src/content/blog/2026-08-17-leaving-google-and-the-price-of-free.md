@@ -1,5 +1,5 @@
 ---
-title: Leaving Google and the Price of "Free"
+title: Leaving Google and the Real Price of Free
 slug: leaving-google
 draft: false
 description: You've been stolen. Fight back.
@@ -34,7 +34,7 @@ I actually thought, going in, that Proton would be a fairly clean one stop shop.
 
 ## The moment it stopped being simple
 
-The first crack was small. Proton's free tier doesn't do custom domains at all, fair enough, that's how paid tiers work. Then came the real one. My Google Photos library was quietly bigger than Google had ever told me it was, because for years photos backed up in "compressed" quality didn't count against my storage quota at all. The number on the account page and the number of actual photos I owned had never been the same thing. I'd been living inside a slightly fictional account of my own data the whole time.
+The first crack was small. Proton's free tier doesn't do custom domains at all, fair enough, that's how paid tiers work. Then came the real one. My Google Photos library was quietly bigger than Google had ever told me it was, because for years photos backed up in compressed quality didn't count against my storage quota at all. The number on the account page and the number of actual photos I owned had never been the same thing. I'd been living inside a slightly fictional account of my own data the whole time.
 
 Migrating it wasn't a button press either. Google Takeout doesn't hand you a clean folder of photos - funny how they don't make it straightforward to leave. It hands you a bunch of zip files where every photo that's ever touched an album gets duplicated into that album's folder too, alongside the same photo sitting in its year folder. Multiply that across a decade of albums and the export ends up considerably larger than the library ever felt like it was.
 
@@ -44,7 +44,7 @@ That's when the actual lesson of this whole project landed, somewhere around my 
 
 ## Down the self-hosting rabbit hole
 
-Once I understood that trade, the decision got more interesting than "which paid service is cheapest." If I was going to lose the Google magic either way, because no privacy respecting company scans your content the way an ad company does, then paying a subscription for a worse version of the same trade-off started to feel like the wrong move. So I went further. Self-hosting, on a Synology NAS I already had running Plex.
+Once I understood that trade, the decision got more interesting than which paid service is cheapest. If I was going to lose the Google magic either way, because no privacy respecting company scans your content the way an ad company does, then paying a subscription for a worse version of the same trade-off started to feel like the wrong move. So I went further. Self-hosting, on a Synology NAS I already had running Plex.
 
 ### Round one: Immich, the closest thing to a Google Photos clone
 
@@ -66,7 +66,7 @@ The reason it can be smaller is the actual interesting bit, not just a resource 
 
 That trade cuts both ways in practice. Face grouping and content search on a large library are noticeably slower and lighter than Google's, because they're now running on consumer phone hardware doing it locally rather than on a Google data centre doing it at scale. But it's genuinely usable, and it meant the actual limiting factor for me stopped being CPU instruction sets and went back to being plain memory, which is a problem you can fix by buying a stick of RAM rather than a new NAS.
 
-Google Photos has a specific feature called partner sharing, where your library and your partner's continuously merge into one shared pool with no manual step. Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers "our holiday photos" well and "literally everything either of us shoots, automatically" not at all. If that continuous merge is the actual thing you rely on day to day, be honest with yourself that no privacy-respecting option currently matches it.
+Google Photos has a specific feature called partner sharing, where your library and your partner's continuously merge into one shared pool with no manual step. Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers "our holiday photos" well and " every photo we take, automatically" not at all. If that continuous merge is the actual thing you enjoy day to day, be honest that no privacy-respecting option currently matches it - with good reason too (coercive control anyone?).
 
 ### The part the marketing skips entirely
 
