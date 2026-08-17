@@ -24,8 +24,8 @@ I have been building loads of modulation ideas over the years into little nugget
 
 Starting places
 
-- New workflow
-- Max utilities
+- New workflow. Scapeshift
+- Max utilities for MIDI
 
 Decisions of speed
 
