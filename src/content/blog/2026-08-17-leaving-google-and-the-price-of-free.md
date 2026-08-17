@@ -87,4 +87,4 @@ Convenience is a feature Google built on top of surveillance, not a separate thi
 
 Self-hosting is genuinely rewarding, and genuinely not something you set up in an afternoon. If you've got the patience for troubleshooting as a hobby in itself, it's worth it. If you just want your photos to work, paying a privacy respecting company for the finished product is a completely reasonable choice, and probably the saner one for most people.
 
-But hey, I did it. My email, my photos, and my files now live somewhere that isn't quietly building an advertising profile out of them. I actually came out the other side with a lot more respect for how much invisible, genuinely excellent engineering Google gives away in exchange for the thing it actually charges for, which was never money at all.
+But hey, I did it. My email, my photos, and my files now live somewhere that isn't quietly building an advertising profile out of them. I actually came out the other side with a lot more respect for how much invisible, genuinely excellent engineering Google gives away in exchange for the thing it takes from you, which was never really money at all.
