@@ -2,7 +2,7 @@
 title: Leaving Google and the Price of "Free"
 slug: leaving-google
 draft: false
-description: Fight back against the theft of you.
+description: You've been stolen. Fight back.
 category: general
 tags:
   - case-study
