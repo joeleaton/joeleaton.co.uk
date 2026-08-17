@@ -8,7 +8,7 @@ tags:
   - case-study
 publishedDate: 2026-08-17T11:03
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/blog-ente.png
 readTime: 15
 ---
 
