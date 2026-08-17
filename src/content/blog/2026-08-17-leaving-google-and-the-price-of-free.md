@@ -24,7 +24,7 @@ It's only when you step back and look around do you realise how much big tech ha
 
 The starting motivation was simple enough. Privacy and ethics. I'm done with a company quietly indexing every email, every photo, every search, and building an advertising profile out of the exhaust, and this while I was already paying Google for the privilege, via their 100GB storage plan. 
 
-So the plan was equally simple (on paper). Move email to Proton (privacy first platform), move photos to Proton, move files to Proton. One company, paid honestly through a subscription instead of through my data. Job done.
+So the plan was equally simple (on paper). Move email to Proton (privacy first platform), move photos to Proton, move files to Proton. One company, paid honestly through a subscription instead of through my data. Job done. Well, that and backup/cold storage - but that's a separate blog article.
 
 There was a nice surprise early on, cost wise. I was also paying separately for Surfshark VPN, purely for the privacy and security side of things, unrelated to Google at all. Once I was moving to Proton anyway, it made sense to switch to Proton VPN instead, bundled into the same subscription I now needed for storage rather than a second, unrelated line item. So this wasn't purely an added cost stacked on top of what I was already paying Google. Some of it was consolidation, not pure addition. I have a custom email domain anyway, so the aim is to shift the focus to that one (as I can use that with any service), and slowly drop the use of the Gmail one over time.
 
