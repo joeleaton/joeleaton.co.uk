@@ -12,11 +12,11 @@ featuredImage: /images/uploads/blog-ente.png
 readTime: 15
 ---
 
-I didn't set out to spend a weekend fighting Docker networking configs on a Synology NAS. I set out to stop using Gmail and start moving away from Google.
+So I simply set out to stop using Gmail and start moving away from Google, and I ended up spend a day fighting Docker networking configs on a Synology NAS. 
 
-That's the thing about deciding to leave Google, once you actually mean it rather than just grumbling about it. It never stays a one line decision. You think you're switching an email address. You end up rethinking your photo library, your password manager, your cloud storage, and, if you're the type who owns a NAS and can't resist a good technical rabbit hole, eventually your own home network too.
+That's the thing about deciding to leave Google (once you actually mean it rather than just grumbling about it). You think you're switching an email address. You end up rethinking your photo library, your password manager, your cloud storage, and, if you're the type who owns a NAS and can't resist a good technical rabbit hole, eventually your own home network too.
 
-Leaving Meta was easy (minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups). I say easy, switching to Signal has its frustrations. For example, imge compression can't be turned off when sending/receiving photos.
+Leaving Meta was easy (minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups). I say easy, switching to Signal has its frustrations. For example, image compression can't be turned off when sending/receiving photos.
 
 It's only when you step back and look around do you realise how much big tech has a claim on every aspect of your information. And the fact that the best tools are "free" says enough about what the product really is (you!). When it's your kids' information, enough's enough. Convenience is such a hook, and it's not easy moving out of the big ecosystems (Apple, Google, Meta etc.). But, well. Be the change you want to see, right?
 
