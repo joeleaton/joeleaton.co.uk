@@ -6,7 +6,7 @@ description: You've been stolen. Fight back.
 category: general
 tags:
   - case-study
-publishedDate: 2026-08-17T11:03
+publishedDate: 2026-08-18T11:59
 featured: false
 featuredImage: /images/uploads/blog-ente.png
 readTime: 15
@@ -44,7 +44,7 @@ That's when the actual lesson of this whole project landed, somewhere around my 
 
 ## Down the self-hosting rabbit hole
 
-Once I understood that trade, the decision got more interesting than which paid service is cheapest. If I was going to lose the Google magic either way, because no privacy respecting company scans your content the way an ad company does, then paying a subscription for a worse version of the same trade-off started to feel like the wrong move. So I went further. Self-hosting, on a Synology NAS I already had running Plex.
+Once I understood that trade, the decision got more interesting than which paid service is cheapest. If I was going to lose the Google magic either way, because no privacy respecting company scans your content the way an ad company does, then paying a subscription for a worse version of the same trade-off started to feel like the wrong move. So I went further. Self-hosting, on a NAS I already had running Plex and some other smaller stuff.
 
 ### Round one: Immich, the closest thing to a Google Photos clone
 
@@ -60,24 +60,26 @@ You can strip the ML container out of Immich entirely and still keep backup, alb
 
 ### Round two: Ente, lighter by design
 
-Ente's architecture is smaller. No Redis. No always-on machine learning service sitting on the server. Museum, the API server, Postgres, and MinIO for the actual encrypted object storage. That's the whole stack.
+Ente's architecture is smaller. No Redis. No always-on machine learning service sitting on the server. It's just Museum, the API server, Postgres, and MinIO for the actual encrypted object storage. That's the whole stack.
 
-The reason it can be smaller is the actual interesting bit, not just a resource optimisation. Ente end to end encrypts everything before it leaves your device, which means the server never sees an unencrypted photo. It literally cannot run face recognition or content search on your library even if it wanted to, because it has no readable content to run it on. So Ente moved that entire workload somewhere else: onto your phone and your laptop, using their own on-device models, syncing back only an encrypted search index. The NAS's underpowered CPU stopped being the bottleneck for that feature, because the NAS was never doing that job in the first place.
+The reason it can be smaller is the actual interesting bit, not just a resource optimisation. Ente end-to-end encrypts everything before it leaves your device, which means the server never sees an unencrypted photo. It literally cannot run face recognition or content search on your library even if it wanted to, because it has no readable content to run it on. 
+
+So Ente moved that entire ML workload on-device. Onto your phone and your laptop, using their own on-device models, syncing back only an encrypted search index. The NAS's underpowered CPU stopped being the bottleneck for that feature, because the NAS was never doing that job in the first place.
 
 That trade cuts both ways in practice. Face grouping and content search on a large library are noticeably slower and lighter than Google's, because they're now running on consumer phone hardware doing it locally rather than on a Google data centre doing it at scale. But it's genuinely usable, and it meant the actual limiting factor for me stopped being CPU instruction sets and went back to being plain memory, which is a problem you can fix by buying a stick of RAM rather than a new NAS.
 
-Google Photos has a specific feature called partner sharing, where your library and your partner's continuously merge into one shared pool with no manual step. Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers "our holiday photos" well and " every photo we take, automatically" not at all. If that continuous merge is the actual thing you enjoy day to day, be honest that no privacy-respecting option currently matches it - with good reason too (coercive control anyone?).
+Google Photos has a specific feature called partner sharing, where your library and someone else's continuously merge into one shared pool with no manual step (or you can just tap to view theirs if you don't want the muddle of the two). Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers things like holiday photos well but things like sharing every photo we take not at all. No privacy-respecting option currently matches it - and on second thought with good reason too (coercive control anyone?).
 
 ### The part the marketing skips entirely
 
-Getting Ente stable on this hardware was still a real project, separate from the architecture decision. Some of what I ran into, condensed:
+Getting Ente stable on this hardware was still a real pain, separate from the architecture decision. Some of what I ran into, condensed:
 
-- **A genuine hairpin networking bug.** Once I set up Tailscale for remote access, the server itself started intermittently failing to reach its own storage, because it was dialling its own Tailscale IP address, a pattern that's unreliable across most VPN implementations when a machine talks to itself through its own tunnel interface rather than to another device. The fix was giving the server direct access to the NAS's real network stack and routing remote devices back to the plain local address via Tailscale's subnet routing feature, rather than ever making the server talk to itself over VPN.
+- **A hairpin networking bug.** For accessing ente outside of my LAN, I set up Tailscale for remote access, but the server itself started intermittently failing to reach its own storage. This is because it was dialling its own Tailscale IP address, a pattern that's unreliable across most VPN implementations when a machine talks to itself through its own tunnel interface rather than to another device. The fix was giving the server direct access to the NAS's real network stack and routing remote devices back to the plain local address via Tailscale's subnet routing feature, rather than ever making the server talk to itself over VPN.
 - **A container losing DNS resolution as a side effect of that same fix.** Moving the server onto the host's own network took it off Docker's internal network too, which meant it could no longer find the database by its container name, only by address.
 - **A completely unrelated system service already squatting on Postgres's default port**, discovered only by SSHing in and checking what was actually listening, since Docker's own container list showed nothing running there at all. This one was annoying!
-- **Small, repeated YAML formatting mistakes** of the kind that are invisible until a parser rejects them outright, usually from pasting a new block in at the wrong indentation level. Not a fan of YAML TBH - why are indents so important?!
+- **Small, repeated YAML formatting mistakes** of the kind that are invisible until a parser rejects them outright, usually from pasting a new block in at the wrong indentation level. Not a fan of YAML, TBH.
 
-None of this was a flaw in Ente specifically. It was just the standard cost of running my own multi-container infrastructure (for the first time) instead of trusting someone else's already-solved version of it. I knew that self-hosting wouldn't be a docker-compose-up-and-done click-through wizard-type project, but it really made me realise how convenience has been so well monetised as a disguise for collecting my data.
+None of this was a flaw in Ente. It was just the standard cost of setting up my own multi-container infrastructure for the first time instead of trusting someone else's already-solved version of it. I knew that self-hosting wouldn't be a click-through wizard-type breeze, but it made me realise how convenience has been so well monetised as a disguise for collecting my data.
 
 ## Take back your data (but not your time)
 
@@ -85,6 +87,6 @@ The free version of anything is never actually free. With Google, you're paying 
 
 Convenience is a feature Google built on top of surveillance, not a separate thing you can keep while opting out of the surveillance part. Losing the AI magic isn't a bug in the privacy focused alternatives. It's the actual cost of the thing you're trying to buy.
 
-Self-hosting is genuinely rewarding, and genuinely not something you set up in an afternoon. If you've got the patience for troubleshooting as a hobby in itself, it's worth it. If you just want your photos to work, paying a privacy respecting company for the finished product is a completely reasonable choice, and probably the saner one for most people.
+Self-hosting is both rewarding, and also not something you set up easily in a couple of hours. If you've got the patience for troubleshooting, it's worth it. 
 
 But hey, I did it. My email, my photos, and my files now live somewhere that isn't quietly building an advertising profile out of them. I actually came out the other side with a lot more respect for how much invisible, genuinely excellent engineering Google gives away in exchange for the thing it takes from you, which was never really money at all.
