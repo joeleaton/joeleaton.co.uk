@@ -16,7 +16,7 @@ So I simply set out to stop using Gmail and start moving away from Google, and I
 
 That's the thing about deciding to leave Google (once you actually mean it rather than just grumbling about it). You think you're switching an email address. You end up rethinking your photo library, your password manager, your cloud storage, and, if you're the type who owns a NAS and can't resist a good technical rabbit hole, eventually your own home network too.
 
-Leaving Meta was easy (minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups). I say easy, switching to Signal has its frustrations. For example, image compression can't be turned off when sending/receiving photos.
+Leaving Meta was easy, minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups. I say easy, switching to Signal has its frustrations. For example, image compression can't be turned off when sending/receiving photos.
 
 It's only when you step back and look around do you realise how much big tech has a claim on every aspect of your information. And the fact that the best tools are "free" says enough about what the product really is (you!). When it's your kids' information, enough's enough. Convenience is such a hook, and it's not easy moving out of the big ecosystems (Apple, Google, Meta etc.). But, well. Be the change you want to see, right?
 
@@ -60,21 +60,21 @@ You can strip the ML container out of Immich entirely and still keep backup, alb
 
 ### Round two: Ente, lighter by design
 
-Ente's architecture is smaller. No Redis. No always-on machine learning service sitting on the server. It's just Museum, the API server, Postgres, and MinIO for the actual encrypted object storage. That's the whole stack.
+Ente's architecture is smaller. No Redis and no always-on machine learning service sitting on the server. Instead, it's just Museum, the API server, Postgres, and MinIO for the actual encrypted object storage. 
 
-The reason it can be smaller is the actual interesting bit, not just a resource optimisation. Ente end-to-end encrypts everything before it leaves your device, which means the server never sees an unencrypted photo. It literally can't run face recognition or content search on your library even if it wanted to, because it has no readable content to run it on. 
+The reason it's smaller is that Ente end-to-end encrypts everything before it leaves your device, which means the server never sees an unencrypted photo. It literally can't run face recognition or content search on your library even if it wanted to, because it has no readable content to run it on. 
 
-So Ente moved that entire ML workload on-device. Onto your phone and your laptop, using their own on-device models, syncing back only an encrypted search index. The NAS's underpowered CPU stopped being the bottleneck for that feature, because the NAS was never doing that job in the first place.
+So Ente moved the entire ML workload on-device. Onto your phone and your laptop, using their own on-device models, syncing back only an encrypted search index. The NAS's underpowered CPU stopped being the bottleneck for that feature, because the NAS was never doing that job in the first place.
 
 That trade cuts both ways. Face grouping and content search on a large library are noticeably slower and lighter than Google's, because they're now running on consumer phone hardware doing it locally rather than on a Google data centre doing it at scale. But it's actually usable, and it meant the limiting factor for me stopped being CPU instruction sets and went back to being plain memory, which is a problem you can fix by buying a stick of RAM rather than a new NAS.
 
-Google Photos has a specific feature called partner sharing, where your library and someone else's continuously merge into one shared pool with no manual step (or you can just tap to view theirs if you don't want the muddle of the two). Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers things like holiday photos well but things like sharing every photo we take not at all. No privacy-respecting option currently matches it - and on second thought with good reason too (coercive control anyone?).
+Google Photos has a specific feature called partner sharing, where your library and someone else's continuously merge into one shared pool with no manual step (or you can just tap to view theirs if you don't want the muddle of the two interweaving as one feed). Neither Immich nor Ente replicate that exactly. Ente's answer is shared albums, curated collections you explicitly create and invite someone into, which covers things like holiday photos well but things like sharing every photo we take not at all. No privacy-respecting option currently matches it - and on second thought with good reason too (coercive control anyone?).
 
 ### The part the marketing skips entirely
 
-Getting Ente stable on this hardware was still a real pain, separate from the architecture decision. Some of what I ran into, condensed:
+Getting Ente stable was still a real pain. Some of what I ran into, condensed:
 
-- **A hairpin networking bug.** For accessing ente outside of my LAN, I set up Tailscale for remote access, but the server itself started intermittently failing to reach its own storage. This is because it was dialling its own Tailscale IP address, a pattern that's unreliable across most VPN implementations when a machine talks to itself through its own tunnel interface rather than to another device. The fix was giving the server direct access to the NAS's real network stack and routing remote devices back to the plain local address via Tailscale's subnet routing feature, rather than ever making the server talk to itself over VPN.
+- **A hairpin networking bug.** For accessing Ente outside of my LAN, I set up Tailscale for remote access, but the server itself started intermittently failing to reach its own storage. This is because it was dialling its own Tailscale IP address, a pattern that's unreliable across most VPN implementations when a machine talks to itself through its own tunnel interface rather than to another device. The fix was giving the server direct access to the NAS's real network stack and routing remote devices back to the plain local address via Tailscale's subnet routing feature, rather than ever making the server talk to itself over VPN.
 - **A container losing DNS resolution as a side effect of that same fix.** Moving the server onto the host's own network took it off Docker's internal network too, which meant it could no longer find the database by its container name, only by address.
 - **A completely unrelated system service already squatting on Postgres's default port**, discovered only by SSHing in and checking what was actually listening, since Docker's own container list showed nothing running there at all. This one was annoying!
 - **Small, repeated YAML formatting mistakes** of the kind that are invisible until a parser rejects them outright, usually from pasting a new block in at the wrong indentation level. Not a fan of YAML, TBH.
@@ -87,6 +87,6 @@ The free version of anything is never actually free. With Google, you're paying 
 
 Convenience is a feature Google built on top of surveillance, not a separate thing you can keep while opting out of the surveillance part. Losing the AI magic isn't a bug in the privacy focused alternatives. It's the actual cost of the thing you're trying to buy.
 
-Self-hosting is both rewarding, and also not something you set up easily in a couple of hours. If you've got the patience for troubleshooting, it's worth it. 
+Self-hosting is rewarding, but also not something you set up easily in a couple of hours via a nice wizard. But if you've got the patience for troubleshooting and digging around some Reddit/Github comments, it's worth it when it works. 
 
-But hey, I did it. My email, my photos, and my files now live somewhere that isn't quietly building an advertising profile out of them. I actually came out the other side with a lot more respect for how much invisible, genuinely excellent engineering Google gives away in exchange for the thing it takes from you, which was never really money at all.
+But hey, I did it. Email, photos, and files now live somewhere (well in multiple places) that isn't quietly building an advertising profile out of them. I actually have a lot more respect for how much invisible, genuinely excellent engineering Google gives away in exchange for the thing it takes from you, which was never really money at all.
