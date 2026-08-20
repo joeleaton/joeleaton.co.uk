@@ -13,19 +13,17 @@ featuredImage: /images/uploads/life-web.png
 readTime: 15
 ---
 
-An instrument that doesn't sit still!
-
 Life is an experimental modulation instrument I have been building over the past few months. 
 
-Eight source voices, each one a sampler, a granular engine or a live input, each split into three frequency bands with its own envelope follower. Sixteen LFOs. Sixteen envelopes. A pattern engine that generates polymetric rhythm from rules rather than steps. A circular morph pad that blends whole scenes into each other. Around seven hundred parameters, most of which can modulate most of the others.
+Eight source voices, each one a sampler, a granular engine or a live input, each split into three frequency bands with its own envelope follower. There are sixteen LFOs. Sixteen envelopes. And a pattern engine that generates polymetric rhythm from rules rather than steps. On top of that, there's a a circular morph pad that blends whole scenes into each other. Around seven hundred parameters, most of which can modulate most of the others. And a full mastering chain plus effects to glue things together neatly.
 
-I called it Life quite simply because it breathes life across a set of sounds. Not only that, it gives a totally different approach to making music. There's no audio file editing, no timeline arrangement. You don't record sound on top of each other - you create Life through blending existing and incoming sounds and shaping how they interact.
+I called it _Life_ quite simply because it breathes life across a set of sounds. Not only that, it gives a totally different approach to making music. There's no audio file editing, no timeline arrangement. You don't record sound on top of each other - you create Life through blending existing and incoming sounds and shaping how they interact.
 
-It is aimed squarely at the kind of music that just moves: Minimal techno, classical electro-acoustic, experimental electronica, the more complex corners of ambient. Which means the failure mode I have been most afraid of is not a crash or a click. It's sterility. Clean, clinical, technically-correct DSP that sounds like a lab instrument.
+It is aimed squarely at the kind of music that just moves. Weird techno, classical electro-acoustic, experimental electronica, the more complex corners of ambient. Which means the failure mode I have been most afraid of is not a crash or a click. It's sterility. Clean, clinical, technically-correct DSP that sounds like a lab instrument. The reason I download so many plugins, play with 20 minutes then discard.
 
 The engine has been built and verified for a while now. What I have actually spent my time on, and what I this article is about, is something less glamorous and far more interesting. Deciding what each control should actually mean.
 
-Because here is the thing nobody warns you about. When you have seven hundred parameters and a modulation matrix that can route almost anything to almost anything, the DSP stops being the difficult bit. The difficult bit is that every control now carries a claim about how the instrument thinks.
+When you have seven hundred parameters and a modulation matrix that can route almost anything to almost anything, the DSP stops being the difficult bit. The difficult bit is that every control now carries a claim about how the instrument thinks.
 
 ![screenshot of Life's modulation web](/images/uploads/life-web.png "The modulation web. Sources sit in the ring, modulators on the perimeter, and every coral line is one thing driving another.")
 
