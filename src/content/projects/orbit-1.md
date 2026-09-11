@@ -20,7 +20,7 @@ links: null
 publishedDate: 2026-05-10T20:04:00
 ---
 
-I made Orbit during the making of the tracks that turned into [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/). I struggled to find a tool that could do what I wanted for processing vocals and synths,  in a rhythmic way and also in a way that blurred rhythmic layers together to create something less rigid and clean, something that could sound almost celestial and otherworldly. 
+I made Orbit during the making of the tracks that turned into [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/). I struggled to find a tool that could do what I wanted for processing vocals and synths,  in a rhythmic way and also in a way that blurred rhythms together to create something less rigid and clean, something that could sound almost celestial and otherworldly. 
 
 I also wanted to _see_ what was I doing to incoming sounds as I was affecting them, getting visual feedback and a novel interactive layer of control beyond knobs and sliders, to help guide the way I can affect the sonic characteristics. Thus, Orbit was born.
 
@@ -30,7 +30,9 @@ I'll upload some audio examples and a video demo soon!
 
 ## So what is Orbit?
 
-Orbit takes incoming audio and feeds it into a 10-second stereo ring buffer. Two independent engines  (A and B) read from that buffer simultaneously, each extracting overlapping grains at different positions, sizes, and densities. The result is everything from subtle textural doubling to full-blown granular destruction, depending on how far you push it.
+Orbit takes incoming audio and feeds it into a 10-second stereo ring buffer. Two independent engines (A and B) read from that buffer simultaneously, each extracting overlapping grains at different positions, sizes, and densities. 
+
+The result is everything from subtle textural doubling to full-blown granular destruction, depending on how far you push it.
 
 ## What it does
 
@@ -38,11 +40,11 @@ Feed Orbit any audio source,  vocals, synths, drums, field recordings, and it sp
 
 **Modulation → Granular → Gate**
 
-The **modulation core** (GristleOsc) generates LFO or audio-rate modulation from 0.01 Hz to 2 kHz across five waveshapes: sine, triangle, saw, square, and _gristle_ (inspired by Chris Carter's analogue machine _The Gristlizer_) _-_ a sample-and-hold variant that's been soft-clipped through `tanh` for a blown-circuit character. This modulation drives either amplitude (tremolo/chopping) or frequency (metallic, FM-synthesis textures). A pink-noise jitter layer built on the Voss–McCartney algorithm adds organic frequency drift, the kind of instability that makes things feel alive rather than robotic. This is actually a reuse/extension of the modulator I built in [Elysium](https://joeleaton.co.uk/projects/elysium), but in Orbit it's designed for an incoming audio signal not a drone synth.
+The **modulation core** (GristleOsc) generates LFO or audio-rate modulation from 0.01 Hz to 2 kHz across five waveshapes: sine, triangle, saw, square, and gristle (inspired by Chris Carter's analogue machine _The Gristlizer_) _-_ a sample-and-hold variant that's been soft-clipped through `tanh` for a blown-circuit character. This modulation drives either amplitude (tremolo/chopping) or frequency (metallic, FM-synthesis textures). A pink-noise jitter layer built on the Voss–McCartney algorithm adds organic frequency drift, the kind of instability that makes things feel alive rather than robotic. This is actually a reuse/extension of the modulator I built in [Elysium](https://joeleaton.co.uk/projects/elysium), but in Orbit it's designed for an incoming audio signal not a drone synth.
 
-The **granular engine** reads from the shared ring buffer using Brownian-motion scanning. Rather than looping a fixed region, the read position drifts stochastically - each grain starts from a slightly different spot, governed by the spray parameter. Up to 64 grains can overlap simultaneously, each with a Hann-window envelope, independent pitch ratio via linear interpolation, and Gaussian-distributed stereo panning. Density compensation (`1/√n` normalization) keeps levels stable whether you're running 2 grains or 48.
+The **granular engine** reads from the shared ring buffer using Brownian-motion scanning. Rather than looping a fixed region, the read position drifts stochastically - each grain starts from a slightly different spot, governed by the spray parameter. Up to 64 grains can overlap simultaneously, each with a Hann-window envelope, independent pitch ratio via linear interpolation, and Gaussian-distributed stereo panning. Density compensation (`1/√n` normalisation) keeps levels stable whether you're running 2 grains or 48.
 
-The **probability gate** is a rhythmic chopper synced to a DAW's tempo. At each beat subdivision (1/2 through 1/32), it rolls a random number against the probability threshold level and if it passes, audio flows; if not, it outputs silence. Each gate event also randomizes stereo placement, creating spatial movement locked to the rhythm.
+The **probability gate** is a rhythmic chopper synced to a DAW's tempo. At each beat subdivision (1/2 through 1/32), it rolls a random number against the probability threshold level and if it passes, audio flows; if not, it outputs silence. Each gate event also randomises stereo placement, creating spatial movement locked to the rhythm.
 
 ## The cross-feedback matrix
 
@@ -50,7 +52,7 @@ This is where Orbit gets interesting and goes beyond other modulation tools. Eng
 
 ## The Orbit canvas
 
-The central visualization doesn't just represent the engines orbiting, it's a control surface. Each engine is represented as a ring whose position and size map directly to parameters:
+The central visualisation doesn't just represent the engines orbiting, it's a control surface. Each engine is represented as a ring whose position and size map directly to parameters:
 
 - **Drag the ring body** to scrub grain position (X axis) and jitter amount (Y axis — up means more chaos)
 - **Drag the radius handle** to resize the grain window (exponential feel via skew mapping)
@@ -69,7 +71,7 @@ And if you look closely (well, very closely as I ended up burring it deep so it 
 - **10-second stereo ring buffer** (\~1 MB) shared between both engines. The older audio is naturally overwritten as new input arrives
 - **One-pole parameter smoothing** (\~5 ms) on all continuous parameters prevents clicks during automation
 - **Pink noise via Voss–McCartney** — 16 octave rows updated per sample based on trailing-zero counting, producing proper 1/f spectral rolloff for the jitter layer
-- **Constant-power panning** on both the per-grain spatial placement and the gate's stereo randomization (`cos/sin` split).
+- **Constant-power panning** on both the per-grain spatial placement and the gate's stereo randomisation (`cos/sin` split).
 
 ## Parameters at a glance
 
