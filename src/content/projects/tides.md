@@ -25,21 +25,21 @@ publishedDate: 2026-06-02T10:21:00
 
 # Tides
 
-I've always had a soft spot for instruments that aren't quite filters and aren't quite synths, the ones that _sing_. 
+I've always had a soft spot for instruments that aren't quite filters and aren't quite synths, the ones that resonate and sing. 
 
-Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into themselves until they tune. There's a particular character to a resonator being _excited_ rather than a waveform being filtered, and after the [St. Barts Reverb plugin](../../projects/st-barts-reverb-plugin) I wanted to spend some time chasing it.
+Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into themselves until they tune. There's a particular character to a resonator being excited rather than a waveform being filtered, and after the [St. Barts Reverb plugin](../../projects/st-barts-reverb-plugin) I wanted to spend some time chasing it.
 
-Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, and you can hear the results all over my [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/) EP.
+Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, and you can hear the results all over my [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/) EP. 
 
 I'm working on some walk-through videos and audio demos, but for now here's the lowdown (keep reading for the download link):![Tides main editor](/images/uploads/tides-ui.png "The Tides editor — exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
 
-## The premise
+## BBD
 
-A BBD (bucket-brigade device) is an analogue chip that shuttles a sample of audio along a chain of capacitor "buckets" once per clock cycle. It was the secret behind those gorgeous late-70s chorus, flanger and analogue delay pedals: short, lossy, warm, with a soft top end that took on a life of its own when you fed it back into itself.
+A BBD (bucket-brigade device) is an analogue chip that shuttles a sample of audio along a chain of capacitor "buckets" once per clock cycle. It was the secret behind a lot of late-70s chorus, flanger and analogue delay pedals that are short, lossy, warm, with a soft top end that took on a life of its own when you fed it back into itself.
 
-Take that delay-line behaviour, set the loop length to a musical pitch, feed it a short burst of energy from an oscillator or noise source, and you've built something that rings like a string and decays like a hall. Crank the feedback up another notch and the resonator self-oscillates — it stops needing the input at all, and you've got a polyphonic singing voice that follows the keyboard.
+Take that delay-line behaviour, set the loop length to a musical pitch, feed it a short burst of energy from an oscillator or noise source, and you've built something that rings like a string and decays like a hall. Crank the feedback up another notch and the resonator self-oscillates and it stops needing the input at all, and you've got a polyphonic singing voice that follows the keyboard.
 
-That's the whole instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
+That's the instrument. An exciter, a feedback loop, and the dance between them. Everything else in Tides is in service of making that path expressive and playable.
 
 ```plain
 ┌───────────┐   ┌───────────┐   ┌───────────┐   ┌────────┐
@@ -57,7 +57,7 @@ MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ M
 
 The exciter is where the energy comes from. Turn the knob for a continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. 
 
-A short, plucky envelope gives you Karplus-Strong-style strings; a long sustained envelope into the loop gives you a bowed pad. 
+A short, plucky envelope gives you Karplus-Strong-style strings whereas a long sustained envelope into the loop gives you a bowed pad. 
 
 The exciter is also routable to an external audio input, so you can run guitars, vocals, anything you fancy through the resonator. Seriously, try singing into it!
 
@@ -69,7 +69,7 @@ This is the heart of the instrument. A delay line tuned to the note's frequency,
 - **Feedback** - How resonant the loop is. At 0, you hear a single tap. Around 0.5, you've got a tuned reverb. Past about 0.85, the loop self-oscillates indefinitely; the exciter becomes optional.
 - **Feedback filter** - A tilt in the feedback path. Higher = brighter, longer rings; lower = the energy decays into softer overtones each pass.
 
-There's also a **Wild/Tame** macro that modulates the loop's internal noise floor, drift, per-voice detune and soft-clip drive. Fully tame, you get a clean precise model. Pushed to wild, you get something that breathes, drifts and occasionally overshoots, emulating a piece of analogue hardware that's been around for a while.
+There's also a **Wild/Tame** dial that modulates the loop's internal noise floor, drift, per-voice detune and soft-clip drive. Set to fully tame, you get a clean precise model. Pushed all the way to wild, you get something that breathes, drifts and occasionally overshoots, emulating a piece of analogue hardware that's been around for a while.
 
 ![Engine: exciter, resonator and output](/images/uploads/tides-ui-engine.png "The exciter feeds the resonator, the resonator feeds the output. Three panes for the entire DSP path.")
 
@@ -93,17 +93,17 @@ There's a preset morph slider that takes any two factory presets as endpoints an
 
 ### Quality switch
 
-Resonators are nasty to oversample naively. Feed them aliasing and they ring it back at you forever. There's an Eco / Std / HQ quality switch on the group bar: 1× / 2× / 4× internal upsampling around the feedback loop. Eco is great for live work; HQ is for mixing and gives you noticeably cleaner top-octave behaviour. Switching is live; the engine crossfades the new sample-rate state over a few milliseconds.
+Resonators are nasty to oversample naively. Feed them aliasing and they ring it back at you forever. There's an Eco / Std / HQ quality switch on the group bar: 1× / 2× / 4× internal upsampling around the feedback loop. Eco is great for live work whereas HQ is for mixing and gives you noticeably cleaner top-octave behaviour. Switching is live; the engine crossfades the new sample-rate state over a few milliseconds.
 
 ### MPE
 
-Lower-zone MPE is in there. Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. Channel-mode MIDI works fine if, like me, you don't have an MPE controller.
+Lower-zone MPE is in there (though not tested properly). Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. Channel-mode MIDI works fine if, like me, you don't have an MPE controller.
 
-## Design notes
-
-The whole editor is a single procedurally-drawn interface. No PNG assets, no fixed pixel layouts, everything resolves from a colour-token system and font helpers at runtime. That made the iteration loop on the UI extremely fast, but it also means the entire visual style is in version control as readable code. The two-wave icon you see in the top bar (and now on the app itself) is literally rendered by the same function in the plug-in and in a Python script that generates the `.icns`.
+## Design notes.
 
 There are 33 factory presets across eight categories: plucks, pads, self-oscillating tones, basses, bell/metallic textures, strings, glitchy random things, and multi-voice layered stacks. Each one ships with designer notes explaining what technique it's showing off.
+
+The next iteration will focus on some better presets as these were a bit rushed. You can get some amazing sounds with some interesting modulation settings and I keep meaning to replace some of he more stale presets. As always, time...
 
 ## Download
 
@@ -121,11 +121,9 @@ Download Tides v1.1 | [https://github.com/joeleaton/tides](https://github.com/jo
 The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.
 
 1. Unzip and copy the components to:
-
     - AU → `~/Library/Audio/Plug-Ins/Components/Tides.component`
     - VST3 → `~/Library/Audio/Plug-Ins/VST3/Tides.vst3`
     - Standalone → wherever you like (e.g. `/Applications`)
-
 2. Clear the download quarantine. Open Terminal and run, adjusting paths if needed:
 
 ```plain
