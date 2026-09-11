@@ -1,6 +1,7 @@
 ---
 title: Content Harmony
 slug: content-harmony
+draft: false
 description: Turning style into a living, breathing AI editor
 categories:
   - education
@@ -29,11 +30,11 @@ relatedProjects:
 
 I have always believed that Customer Enablement shouldn't just be about managing content. It should be about engineering better ways to create it.
 
-I built **Content Harmony** in my current role at Hornbill because I wanted to kill the red-pen review cycle. You know the one, that endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from the 50-page style guide.
+I built **Content Harmony** in my current role at Hornbill because I wanted to kill the red-pen review cycle. The endless cycle of back and forth where a Technical Writer or Instructional Designer turns in a draft, only for it to be sent back because the tone didn't hit the right persona or the formatting strayed from the 50-page style guide.
 
 I wanted my team to spend their brainpower on teaching, not on policing commas or re-inventing style guidelines for the thousandth time. 
 
-Also, everyone is using AI at work. Who'd have guessed. This isn't a problem in itself, but when everyone is promoting different, using different models, and not passing any consistent rule set, well, no wonder it's a mess (and I can only imagine how much worse the impact of this can be on code development).
+Also, everyone is using AI at work. Who'd have guessed. This isn't a problem in itself, but when everyone is prompting differently, using different models, and not passing any consistent rule set, well, no wonder it's a mess (and I can only imagine how much worse the impact of this can be on code development). Creating a solution gave my teams consistency and addressed the challenges that shadow-AI in the workplace causes. Who's checking that people aren't actually training models with sensitive data?
 
 ***
 
@@ -41,7 +42,7 @@ Also, everyone is using AI at work. Who'd have guessed. This isn't a problem in 
 
 I didn't wait for a roadmap or a budget. I built the first functional version of Content Harmony in less than a week. I actually started in Claude Code but threw the first implementation away before switching tools entirely (my initial cloud architecture was all wrong for the use case), but that's a separate story.
 
-The goal was simple, to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After spending some crucial time on model and prompt tuning and testing, the team started using it for real production work.
+The goal to create a workspace where the AI isn't just writing. It’s acting as a senior editor/learning designer who has memorised every persona and style rule we have. After spending time on model and prompt tuning and testing, the team started using it for real production work.
 
 ***
 
@@ -75,7 +76,7 @@ Different docs require different brains. I built in specific logic for our three
 
 Building this wasn't just about speed, though we are significantly faster now. It was about psychological safety and quality.
 
-Now, when a team member hits "Optimize Content", they know the output is already aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
+Now, when a team member hits "Optimise Content", they know the output is already aligned with our brand and voice. They aren't worried about being wrong on style. They are focused on making the content impactful and technically accurate.
 
 One aspect of the tool that is helping the team, is the feedback it provides upon every generation. It explains the changes it's made and why - just like having a mentor or senior learning/writing colleague provide constructive feedback on their work, reinforcing the framework at stages of content design and continually upskilling the team.
 
