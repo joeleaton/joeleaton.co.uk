@@ -20,15 +20,11 @@ And in a way, reading that article helped me justify how I felt about exploring 
 
 Finishing something to share with our demands an entirely different approach. When you're exploring for fun, you're not saying anything to anyone. You're not considering a listener or an interpretation of what you're doing. 
 
-Granted some great music comes from this introspective position, but what kicked me into gear was not a desire to perform, or have music really heard but I actually wanted some music to accompany a growing number of family movies I'd been intending to create from hours of footage; holidays, anniversaries, day trips. I wanted to make something special for something special. But it turned from just finishing some ideas into a "well, if I'm going to finish some tracks, let's see what I can really do". It had been years since I put anything online (beyond a few sporadic Soundcloud tracks), so I went to town. 
+I'd been building loads of modulation ideas in Max for Live and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
 
-I have been building loads of modulation ideas over the years into little nuggets of music but for this project I also wanted to create some tools that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
-
- [Orbit](https://www.joeleaton.co.uk/projects/orbit) was made for processing Fiona's vocals on The Sun and Her Worlds. For that, I wanted a grittier version of Output's Movement plugin. Tides was the result of emulating BBD-style resonant synth techniques in Max that underpin the synths in Anchoress and other tracks, and Life was born out of wanting to make a tool that could manage for all of the inter-track modulation chaos and brainstorms that came with making _Forward Motion Love_. 
+So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, even some rules on the fly just to keep moving and not get stuck. 
 
 The overall feel was heavily inspired by what I was reading at the time. Henry Vaughans _Silex Scintillans_, Blake's _Songs of Innocence and Experience,_ and more recent writing about microhistory including the brilliant _The Rising Down_ by Alexandra Harris - landscapes formed form muted interwoven lives across centuries underpinned by doctrine and ritual. These songs are my pictures of landscapes and place alive with the gravity of accumulated human experience, beyond just the scenery. 
-
-I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, even some rules on the fly just to keep moving and not get stuck. 
 
 ## Starting point
 
@@ -70,7 +66,6 @@ I did the same for _While Yet in Dust._ Recordings of my kids playing a the swim
 
 {image of neurobloom]
 
-
 Starting places
 
 - New workflow. Scapeshift
@@ -84,7 +79,7 @@ Decisions of speed
 
 New sounds need new tools
 
-- Orbit
+-  [Orbit](https://www.joeleaton.co.uk/projects/orbit) was made for processing Fiona's vocals on The Sun and Her Worlds. For that, I wanted a grittier version of Output's Movement plugin. Tides was the result of emulating BBD-style resonant synth techniques in Max that underpin the synths in Anchoress and other tracks, and Life was born out of wanting to make a tool that could manage for all of the inter-track modulation chaos and brainstorms that came with making _Forward Motion Love_. 
 
 Continuing on
 
