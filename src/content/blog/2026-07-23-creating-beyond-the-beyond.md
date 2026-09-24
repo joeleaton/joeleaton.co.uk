@@ -60,11 +60,11 @@ I used tracks that had no sonic semblance to mine but this was a total game chan
 
 While I did this (and had so much success in progressing my tracks) it did occur to me if this approach could be automated or scaled. I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. For £8 a stencil, I missed a trick there.
 
-# The edit-mix
+## The edit-mix
 
-Once the general arrangements were laid out, I things got pretty deep on the editing side of things. Anchoress was a pig, but I ended up mixing/mastering as I automated so there wasn't really a final mixing stage per se - probably a side effect from going so deep with all of the side-chain compression, OTT compression and teasing out sounds to avoid the mud of chaos. 
+Once the general arrangements were laid out, I things got pretty deep on the editing side of things - sooo much automation. Anchoress was a pig, but I ended up mixing/mastering as I automated so there wasn't really a final mixing stage per se - probably a side effect from going so deep with all of the side-chain compression, OTT compression and teasing out sounds to avoid the mud of chaos. 
 
-# Vocals
+## Vocals
 
 Early on, I had earmarked both _Marks of Weakness_ and _The Sun and Her Worlds_ for some recorded vocals, as opposed to the samples I used in _Anchoress_.
 
