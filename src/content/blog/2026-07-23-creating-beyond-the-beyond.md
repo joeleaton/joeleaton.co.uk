@@ -54,7 +54,7 @@ For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_
 
 ## Getting over the arrangement hump
 
-I'll be honest, I love spending time on finding a sonic essence but then I lose interest on turning a couple of ideas into an arrangement. It's a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). This was the biggest barrier to finishing the tracks on Beyond, so I came up with another hack - lift and shift the arrangements of other people's tracks and build mine around them. 
+I'll be honest, I love spending hours on finding an "essence" or a feel with some music, but I lose interest on turning a couple of ideas into an arrangement. It's hard work and a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). I knew that this aspect would be the biggest barrier to finishing the tracks on Beyond, so I came up with a bit of a hack - lift and shift the arrangements of other people's tracks and build mine around them. Easier that magicking an arrangment from thin air, but it was still hard work. 
 
 I used tracks that had no sonic semblance to mine but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to get tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
 
@@ -66,13 +66,13 @@ Once the general arrangements were laid out, I things got pretty deep on the edi
 
 # Vocals
 
-Early on, I had earmarked both _Marks of Weakness_ and _The Sun and Her Worlds_ for some real vocals, as opposed to the samples in Anchoress.
+Early on, I had earmarked both _Marks of Weakness_ and _The Sun and Her Worlds_ for some recorded vocals, as opposed to the samples I used in _Anchoress_.
 
-I'm fortunate to have a pretty sweet vintage mic to get a good source recording but that didn't mean I didn't make mistakes. 
+I'm fortunate to have a pretty sweet vintage mic to get a good source recording but that didn't mean I didn't make mistakes. I'm also fortunate to have a Fiona Miller on hand to knock out some amazing vocals over an evening. But I wasn't prepared for manageing her 84 tracks of vocal layers after simply asking for "a few lines here and there for me to process". But she never does things by halves.
 
-Giving Fiona my open-back headphones for monitoring her soft voice while they were cranked up gave me so much bleed to contend with, which is never fun to work with. One happy accident from that session though was the sound of my wife screaming at the family from outside the room - I pushed it up a little in the mix just to add a little subtle something at a point that could have otherwise gone stale.
+Giving Fiona my open-back headphones for monitoring her soft voice while they were cranked up gave me so much bleed to contend with, which is never fun to work with. One happy accident from that session though was the sound of my wife screaming at the whole family from outside the room - I pushed it up a little in the mix just to add a little subtle something at a point that could have otherwise gone stale. Can you find it?!
 
-And in light of not having anyone else to record, I sang the vocals for _Marks of Weakness._ Clearly, I'm no singer but without the awesome Voxcraft VST for tuning my vocals would never have made the cut.
+And in light of not having anyone else to record, I sang the vocals for _Marks of Weakness._ I'm no singer (outside of my mind) but without the awesome Voxcraft plugin for tuning my vocals would never have made the cut.
 
 [voxcraft plugin screenshot]
 
