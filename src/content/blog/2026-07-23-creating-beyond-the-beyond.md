@@ -72,11 +72,21 @@ I think it might have been the another (or the same) interview with Kieran Hebde
 
 I was really struggling with the sterile nature of _Before I Knew this place_ so I dug into my hard drive of field recordings that I've captured over the years. Adding some ambience from the forest gave that track the touch it was really missed, and connected what I wanted it to convey with the real world. 
 
-I did the same for _While Yet in Dust._ Recordings of my kids playing a the swimming pool balanced life to a track that was primarily about death.
+I did the same for _While Yet in Dust._ Recordings of my kids playing a the swimming pool breathed life into a track that is primarily about the death of ideas.
 
 ## New sounds need new tools
 
--  [Orbit](https://www.joeleaton.co.uk/projects/orbit) was made for processing Fiona's vocals on The Sun and Her Worlds. For that, I wanted a grittier version of Output's Movement plugin. Tides was the result of emulating BBD-style resonant synth techniques in Max that underpin the synths in Anchoress and other tracks, and Life was born out of wanting to make a tool that could manage for all of the inter-track modulation chaos and brainstorms that came with making _Forward Motion Love_. 
+##  
+
+One aspect of creating this record that propelled me in new directions was getting stuck whilst teasing some of the ideas out of my head and then taking a step away to build a new tool to realise this. Totally in contrast to the "pick a preset and move on" approach, but some things just needed much more attention.
+
+There was a specific texture to Fiona's vocals on _The Sun and Her Worlds_ that I just couldn't create with my existing plugins or any new ones I tested out. Output's Movement was close in concept, and I suppose I could have combined it with some other tools, but when I spent some time thinking about it I had the design for the processing come together in my mind. Out of this came [Orbit](https://www.joeleaton.co.uk/projects/orbit), a granular-tremelo type effect that moved and blurred the vocals together at the same time.
+
+In contrast, sometimes new sounds need old tools. For the vocals in the second part of _The Sun and Her Worlds,_ I went old school; mapping regions of Fiona's vocals to keys in Logic's basic sampler and then playing them on my keyboard. The arrangement of the second half was recorded in one take - me playing along on my MIDI keyboard triggering samples of her voice as it passed through Orbit.
+
+Other new tools were born from this record. [Tides](https://joeleaton.co.uk/projects/tides-bbd-resonator-synth/) came from my attempts at emulating BBD-style resonant synth techniques in Max. Such synth sounds underpin some of the key synth parts in _Beyond._ So after I finished the record I went all out and built a standalone BBD emulator, _Tides_.
+
+_Life_ was born out of wanting to make a tool that could all of the inter-track modulation chaos and brainstorms that came with making _Forward Motion Love_. 
 
 Continuing on
 
