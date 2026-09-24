@@ -50,6 +50,14 @@ For example, the sounds for the main drum beat in _Marks of Weakness, Marks of W
 
 [vsico screenshot]
 
+## Getting over the arrangement hump
+
+I'll be honest, I love spending time on finding a sonic essence but then I lose interest on turning a couple of ideas into an arrangement. It's a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). This was the biggest barrier to finishing the tracks on Beyond, so I came up with another hack - lift and shift the arrangements of other people's tracks and build mine around them. 
+
+I used tracks that had no sonic semblance to mine but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to get tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
+
+While I did this (and had so much success in progressing my tracks) it did occur to me if this approach could be automated or scaled. I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. For £8 a stencil, I missed a trick there.
+
 # The edit-mix
 
 Once the general arrangements were laid out, I things got pretty deep on the editing side of things. Anchoress was a pig, but I ended up mixing/mastering as I automated so there wasn't really a final mixing stage per se - probably a side effect from going so deep with all of the side-chain compression, OTT compression and teasing out sounds to avoid the mud of chaos. 
@@ -75,8 +83,6 @@ I was really struggling with the sterile nature of _Before I Knew this place_ so
 I did the same for _While Yet in Dust._ Recordings of my kids playing a the swimming pool breathed life into a track that is primarily about the death of ideas.
 
 ## New sounds need new tools
-
-##  
 
 One aspect of creating this record that propelled me in new directions was getting stuck whilst teasing some of the ideas out of my head and then taking a step away to build a new tool to realise this. Totally in contrast to the "pick a preset and move on" approach, but some things just needed much more attention.
 
