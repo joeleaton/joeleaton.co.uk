@@ -26,13 +26,15 @@ I wanted these tracks to hang together. Not to tell a story or build on each oth
 
 I'd been building loads of modulation ideas in Max for Live and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
 
-So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, even some rules on the fly just to keep moving and not get stuck. 
+So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, I even made up some rules on the fly just to keep moving and not get stuck. 
 
-Three of the tracks were born in a customised version of Tim Exile's Scapeshift. Scapeshift is a rules based pattern engine that generates ideas and allows you to manipulate them in some pretty deep ways. I got under the hood and made some changes towards getting shapes of patterns and phrases that really spoke to me (yeah, I changed the UI and the name to Neurobloom for fun too but hey - credit to Tim for actually building it).
+The tracks were born in a customised version of Tim Exile's [Scapeshift](https://www.timexile.com/scapeshift). _Scapeshift_ is a rules based pattern engine that generates ideas and allows you to manipulate them in some pretty deep ways. I got under the hood and made changes towards getting shapes of patterns and phrases that really spoke to me (yeah, I changed the UI and the name to _Neurobloom_ just for fun so it felt like it was more me, but hey - credit to Tim for actually building it, I just hacked and hacked).
 
 [Nuerobloom image]
 
-As much as the pattern generators in Neurobloom are good, the synthesis engines just make everything sound like Tim's music. Don't get me wrong, they're really good - especially the bass synth, but it sounded like I was making his music from the off. Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out midi that can be used easily in a DAW (in fact the first version didn't do MIDI out at all). To separate midi across channels in Ableton Live, I built a M4L device that extracted the MIDI signals and made it easy to split them across channels in Live. The device even allows you to route the resulting audio from other plugins (or synths) back into Neurobloom for it's mastering chain, which adds some real dynamic life and overall glue to the patterns. 
+As much as the pattern generators in Neurobloom are good, the synthesis engines just make everything sound well just like the music of Tim Exlie. Don't get me wrong, they're good - especially the bass synth, but it sounded like I was making his music from the off but I could feel the potential. 
+
+Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out MIDI that can be used easily in a DAW (in fact the first version didn't do MIDI out at all). To separate midi across channels in Ableton Live, I built a M4L device that extracted the MIDI signals and made it easy to split them across channels in Live. The device even allows you to route the resulting audio from other plugins (or synths) back into Neurobloom for it's mastering chain, which adds some real dynamic life and overall glue to the patterns. 
 
 [Max patch screenshots]
 
