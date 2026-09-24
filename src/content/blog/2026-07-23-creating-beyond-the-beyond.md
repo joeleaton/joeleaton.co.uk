@@ -54,15 +54,15 @@ For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_
 
 ## Getting over the arrangement hump
 
-I'll be honest, I love spending hours on finding an "essence" or a feel with some music, but I lose interest on turning a couple of ideas into an arrangement. It's hard work and a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). I knew that this aspect would be the biggest barrier to finishing the tracks on Beyond, so I came up with a bit of a hack - lift and shift the arrangements of other people's tracks and build mine around them. Easier that magicking an arrangment from thin air, but it was still hard work. 
+I'll be honest, I love spending hours on finding an "essence" or a feel with some music, but I lose interest on turning a couple of ideas into an arrangement. It's hard work and a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). I knew that this aspect would be the biggest barrier to finishing the tracks on Beyond, so I came up with a bit of a hack - lift and shift the arrangements of other people's tracks and build mine around them. Easier than magicking an arrangement from thin air, but it was still hard work. 
 
-I used tracks that had no sonic semblance to mine but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to get tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
+I used reference tracks that had no sonic semblance to mine as arrangement templates but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to getting tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
 
-While I did this (and had so much success in progressing my tracks) it did occur to me if this approach could be automated or scaled. I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. For £8 a stencil, I missed a trick there.
+While I did this (and had so much success 0 it did occur to me if this approach could be automated or scaled. I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. They sell templates for £8 each minimum - I missed a trick.
 
 ## The edit-mix
 
-Once the general arrangements were laid out, I things got pretty deep on the editing side of things - sooo much automation. Anchoress was a pig, but I ended up mixing/mastering as I automated so there wasn't really a final mixing stage per se - probably a side effect from going so deep with all of the side-chain compression, OTT compression and teasing out sounds to avoid the mud of chaos. 
+Once the general arrangements were laid out, I things got pretty deep on the editing side of things - sooo much automation. For example, Anchoress was a pig, but I ended up mixing/mastering as I automated so there wasn't really a final mixing stage per se - probably a side effect from going so deep with all of the side-chain compression, OTT compression and teasing out sounds to avoid the mud of chaos. 
 
 ## Vocals
 
@@ -116,4 +116,4 @@ Having an end point gives all the tinkering somewhere to go. It creates a bit of
 
 And then you can start again.
 
-So I don't think I've become any less interested in tinkering or exploring. If anything, making this record has given me more things to tinker with than I had before. But now I know that every so often it's probably worth picking a point, calling it done, and seeing what happens next.
+So I don't think I've become any less interested in tinkering or exploring. If anything, making this record has given me more things to tinker with than I had before. But every so often it's probably worth picking a point, calling it done, and seeing what happens next.
