@@ -38,7 +38,7 @@ Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out MIDI t
 
 [Max patch screenshots]
 
-I loved this idea of everything in one plugin - generate an idea at the click of a button, edit the hell out of it, arrange variations of it, and master it - all in one place. So much so that I used this approach for **Life** - an app/plugin I made for crafting music through modulation.
+I loved this idea of everything in one plugin - generate an idea at the click of a button, edit the hell out of it, arrange variations of it, and master it - all in one place. So much so that I used this approach for _Life_ - an app/plugin I'm making for crafting music through modulation.
 
 ## Pick a preset, move on
 
