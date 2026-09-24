@@ -98,7 +98,20 @@ Having these directions that sprung from making _Beyond_ actually gave me more i
 
 ## There's no such thing as finished
 
-- I leanred that finishing isn;t finishing and this is great. I'm still working on Life. Life opened the door to explore BCMI control. That got me into writing new brainwave mapping software (watch this space), and in a way its all just a continuation of tinkerling and exploring.
-- Other tracks that _might_ see the light of day. Especially some of a similar vibe from over the years (Cakobau - add here, not finished)
+Finishing isn't really finishing, and actually, I think that's the point.
 
-End on a point about finishing. Having an end point, a goal. Closure. Progression
+_Beyond the Beyond_ has an end point now. It exists as a record, rather than a collection of things I've been meaning to get back to (see my hard drives for years of this). But the process of making it didn't really end there. I'm still working on Life. Life opened the door to exploring BCMI control again, an area I hadn't touched for around eight years, which has in turn got me writing new brainwave mapping software. So now there's another rabbit hole to disappear down. Watch this space.
+
+There are other tracks too. Things I've made over the years that might still see the light of day, particularly some of the stuff that sits somewhere around the same territory as this record. It's funny looking back. Stuff that never felt finished at the time, feels finished listening back now. Sometimes the essence does outwiegh a flashy arrangement. Or does it? 
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A263667755&color=%235609c6&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/corsica-music" title="Corsica" target="_blank" style="color: #cccccc; text-decoration: none;">Corsica</a> · <a href="https://soundcloud.com/corsica-music/bakaya" title="Bakaya" target="_blank" style="color: #cccccc; text-decoration: none;">Bakaya</a></div>
+
+And maybe that's what I got wrong about finishing in the first place. I don't think finishing something means deciding that you've exhausted it, or that there is nothing left to explore. You can't really do that. There will always be another sound to try, another arrangement to pull apart, another idea that sends you off in a completely different direction.
+
+Finishing is just choosing an end point.
+
+Having an end point gives all the tinkering somewhere to go. It creates a bit of pressure, a bit of closure, and, importantly, a sense that you're actually moving forward rather than endlessly circling around the same ideas. It turns something that could exist indefinitely into something that exists.
+
+And then you can start again.
+
+So I don't think I've become any less interested in tinkering or exploring. If anything, making this record has given me more things to tinker with than I had before. But now I know that every so often it's probably worth picking a point, calling it done, and seeing what happens next.
