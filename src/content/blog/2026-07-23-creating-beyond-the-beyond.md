@@ -2,7 +2,7 @@
 title: Creating Beyond the Beyond
 slug: creating-beyond-the-beyond
 draft: true
-description: New workflows and tools for unlocking a path to finishing
+description: New workflows and tools for unlocking a path to finishing.
 category: music
 tags:
   - case-study
