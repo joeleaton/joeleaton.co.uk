@@ -86,10 +86,13 @@ In contrast, sometimes new sounds need old tools. For the vocals in the second p
 
 Other new tools were born from this record. [Tides](https://joeleaton.co.uk/projects/tides-bbd-resonator-synth/) came from my attempts at emulating BBD-style resonant synth techniques in Max. Such synth sounds underpin some of the key synth parts in _Beyond._ So after I finished the record I went all out and built a standalone BBD emulator, _Tides_.
 
-_Life_ was born out of wanting to make a tool that could all of the inter-track modulation chaos and brainstorms that came with making _Forward Motion Love_. 
+_Life_ was an idea I had when making _Forward Motion Love_. I spent a lot of time automating the inter-track modulation chaos and brainstorms and at one point thought, "why isn't there a tool that centres a creative workflow on this?". Turns out, because it's nuts. And _Life_ became a monster of a project to get into a good state - as of right now I'm still working on it!
+
+Having these directions that sprung from making _Beyond_ actually gave me more impetus to finish the record. I had other stuff to dive into and just wanted it done. And I found out new ways of pushing things forward - memories of selecting a friend for some early feedback of a track who simply "too much". I fully understood this and spent that night completely rearranging it in an Albanian hotel room late at night. Throwing away the entire vocals for _Marks of Weakness_ after too many iterations on the mix and then laying down the final take in about 10 minutes the next day.
 
 Continuing on
 
-- Inspiration for Life and Tides. Other tracks that _might_ see the light of day. Especially some of a similar vibe from over the years (Cakobau - add here, not finished)
+- I leanred that finishing isn;t finishing and this is great. I'm still working on Life. Life opened the door to explore BCMI control. That got me into writing new brainwave mapping software (watch this space), and in a way its all just a continuation of tinkerling and exploring.
+- Other tracks that _might_ see the light of day. Especially some of a similar vibe from over the years (Cakobau - add here, not finished)
 
 End on a point about finishing. Having an end point, a goal. Closure. Progression
