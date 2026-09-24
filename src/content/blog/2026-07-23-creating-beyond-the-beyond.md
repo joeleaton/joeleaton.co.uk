@@ -12,7 +12,7 @@ featuredImage: ''
 readTime: 10
 ---
 
-Producing [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/) was a labour of love. But finishing it was the hardest part. I've been tinkering away for years, making half-finished tracks, quarter-finished tracks, well nothing was ever actually finished. 
+Producing [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/) was a labour of love. But finishing it was actually the hardest part. I can't quite remember why I decided to make a record - it might have been the realisation of how long it had been since I "finished" my last record or seeing the last time I uploaded something to Soundcloud. I've been tinkering away for years, making half-finished tracks, quarter-finished tracks, well nothing was ever actually finished. 
 
 I read an [article on a music production blog](https://www.musicradar.com/tutorials/music-theory-songwriting/why-do-we-have-such-a-need-to-finish-songs-in-a-word-capitalism-is-it-ok-to-never-actually-complete-your-tracks) that argued that finishing electronic music, and more specifically the tension between what you gain by playing and creating music through the art of exploring, vs the need to finish was simply a pull being driven by capitalism.
 
@@ -90,7 +90,7 @@ _Life_ was an idea I had when making _Forward Motion Love_. I spent a lot of tim
 
 Having these directions that sprung from making _Beyond_ actually gave me more impetus to finish the record. I had other stuff to dive into and just wanted it done. And I found out new ways of pushing things forward - memories of selecting a friend for some early feedback of a track who simply "too much". I fully understood this and spent that night completely rearranging it in an Albanian hotel room late at night. Throwing away the entire vocals for _Marks of Weakness_ after too many iterations on the mix and then laying down the final take in about 10 minutes the next day.
 
-Continuing on
+## There's no such thing as finished
 
 - I leanred that finishing isn;t finishing and this is great. I'm still working on Life. Life opened the door to explore BCMI control. That got me into writing new brainwave mapping software (watch this space), and in a way its all just a continuation of tinkerling and exploring.
 - Other tracks that _might_ see the light of day. Especially some of a similar vibe from over the years (Cakobau - add here, not finished)
