@@ -31,6 +31,8 @@ Flex investigates the playful side of electronic music performance, toying with 
 
 Flex prescribes the mind as muscle, using thought to replace the physical embodiment of performance. As a result mappings are key to providing the feel, direction and nature of accuracy within the piece, from the micro up to macro parameters, replacing traditional, physical controllers to manipulate, arrange, synthesize and diffuse combinations of recorded and computer generated sound. 
 
+Here's a recording of Flex being performed:
+
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A122716851&color=%235609c6&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/corsica-music" title="Corsica" target="_blank" style="color: #cccccc; text-decoration: none;">Corsica</a> · <a href="https://soundcloud.com/corsica-music/flex-stereo-mix" title="Flex Stereo Mix" target="_blank" style="color: #cccccc; text-decoration: none;">Flex Stereo Mix</a></div>
 
 ## Technical Implementation
