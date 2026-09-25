@@ -53,9 +53,9 @@ Once I had the MIDI coming into Ableton, I stayed in the box for the rest of the
 
 I captured patterns, edited the hell out of the MIDI patterns, started applying different plug-ins for the sounds, and then got lost in automation madness (see Anchoress for this!).
 
-I'm one for being guilty for spending forever in a plugin, tweaking endlessly for the perfect sound (and never often finding it) so I took a leaf from an interview with Four Tet I read, about his approach to production. I remember the revelation of him saying how he just doesn't have the time (or interest) to spend dicking around tweaking synth parameters to the _n_-th degree, and in fact how he very often just scrolls through the presets and settles on the first one that fits. Well, I do like dicking around to the _n_-th degree but being on the lookout for new ways to finish things and not procrastinate I adopted this method quite a lot.
+I'm one being guilty for spending forever in a plugin, tweaking endlessly for thr perfect sound (and never often finding it) so I took a leaf from an interview with Four Tet I read, about his approach to production. I remember the revelation of him saying how he just doesn't have the time (or interest) to spend dicking around tweaking synth parameters to the _n_-th degree, and in fact how he very often just scrolls through the presets and settles on the first one that fits. Well, I do like dicking around to the _n-_th degree but being on the lookout for new ways to finish things and not procrastinate I adopted this method quite a lot.
 
-For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_ is a preset from the awesome [Visco](https://forever89.studio/) plugin (no relation to _Nisko!_. From memory, it was the first one I selected and it just worked. I extended the find once and stick with it approach to the drum pattern on that track too. Aside from the ending part, I wanted a consistent drum pattern throughout - a total contrast to _Anchoress_ or _Before I knew this Place_ where the evolution of the drums is the driving force of the overall arrangements.
+For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_ is a preset from the awesome [Visco](https://forever89.studio/) plugin (no relation to _Nisko!)_. From memory, it was the first one I selected and it just worked. I extended the find once and stick with it approach to the drum pattern on that track too. Aside from the ending part, I wanted a consistent drum pattern throughout - a total contrast to _Anchoress_ or _Before I knew this Place_ where the evolution of the drums is the driving force of the overall arrangements.
 
 ![Visco drum preset](/images/uploads/visco.png "Visco drum preset")
 
@@ -123,4 +123,4 @@ Having an end point gives all the tinkering somewhere to go. It creates a bit of
 
 And then you can start again.
 
-So I don't think I've become any less interested in tinkering or exploring. If anything, making this record has given me more things to tinker with than I had before. But every so often it's probably worth picking a point, calling it done, and seeing what happens next.
+I haven't become any less interested in tinkering or exploring. If anything, making this record has given me more things to tinker with than I had before. But that's why every so often it's probably worth picking a point, calling it done, and seeing what happens next.
