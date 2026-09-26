@@ -7,7 +7,7 @@ category: music
 tags:
   - case-study
   - opinion
-publishedDate: 2026-09-26T08:37:00
+publishedDate: 2026-09-18T08:37:00
 featured: false
 featuredImage: /images/uploads/neurobloom-screenshot.png
 readTime: 15
