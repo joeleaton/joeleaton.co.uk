@@ -13,7 +13,7 @@ featuredImage: /images/uploads/neurobloom-screenshot.png
 readTime: 15
 ---
 
-Producing [Beyond the Beyond](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/) was a labour of love. But finishing it was actually the hardest part. I can't quite remember why I decided to make a record - it might have been the realisation of how long it had been since I "finished" my last record or seeing the last time I uploaded something to Soundcloud. I've been tinkering away for years, making half-finished tracks, quarter-finished tracks, well nothing was ever actually finished. 
+Producing [_Beyond the Beyond_](https://joeleaton.co.uk/projects/dying-tides-beyond-the-beyond/) was a labour of love. But finishing it was actually the hardest part. I can't quite remember why I decided to make a record - it might have been the realisation of how long it had been since I "finished" my last record or seeing the last time I uploaded something to Soundcloud. I've been tinkering away for years, making half-finished tracks, quarter-finished tracks, well nothing was ever actually finished. 
 
 I read an [article on a music production blog](https://www.musicradar.com/tutorials/music-theory-songwriting/why-do-we-have-such-a-need-to-finish-songs-in-a-word-capitalism-is-it-ok-to-never-actually-complete-your-tracks) that argued that finishing electronic music, and more specifically the tension between what you gain by playing and creating music through the art of exploring, vs the need to finish was simply a pull being driven by capitalism.
 
@@ -29,7 +29,7 @@ I'd been building loads of modulation ideas in Max for Live and Ableton over the
 
 So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, I even made up some rules on the fly just to keep moving and not get stuck. 
 
-The tracks were born in a customised version of Tim Exile's [Scapeshift](https://www.timexile.com/scapeshift). _Scapeshift_ is a rules based pattern engine that generates ideas and allows you to manipulate them in some pretty deep ways. I got under the hood and made changes towards getting shapes of patterns and phrases that really spoke to me (yeah, I changed the UI and the name to _Neurobloom_ just for fun so it felt like it was more me, but hey - credit to Tim for actually building it, I just hacked and hacked).
+The tracks were born in a customised version of Tim Exile's [Scapeshift](https://www.timexile.com/scapeshift). Scapeshift is a rules based pattern engine that generates ideas and allows you to manipulate them in some pretty deep ways. I got under the hood and made changes towards getting shapes of patterns and phrases that really spoke to me (yeah, I changed the UI and the name to 'Neurobloom' just for fun so it felt like it was more me, but hey - credit to Tim for actually building it, I just hacked it up to do some different things).
 
 ![](/images/uploads/neurobloom-screenshot.png "Neurobloom pattern creator")
 
@@ -41,7 +41,7 @@ Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out MIDI t
 
 ![Channel Max patch for MIDI routing in Live](/images/uploads/max-screenshot2.png "Channel Max patch for MIDI routing in Live")
 
-I loved this idea of everything in one plugin - generate an idea at the click of a button, edit the hell out of it, arrange variations of it, and master it - all in one place. So much so that I used this approach for _Life_ - an app/plugin I'm making for crafting music through modulation.
+I loved this idea of everything in one plugin - generate an idea at the click of a button, edit the hell out of it, arrange variations of it, and master it - all in one place. So much so that I used this approach for Life - an app/plugin I'm making for crafting music through modulation.
 
 An early version of _Forward Motion Love,_ before the real sound design began and before I fell down the editing and automation well. The essence is here at least:
 
@@ -65,7 +65,7 @@ I'll be honest, I love spending hours on finding an "essence" or a feel with som
 
 I used reference tracks that had no sonic semblance to mine as arrangement templates but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to getting tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
 
-While I did this (and had so much success 0 it did occur to me if this approach could be automated or scaled. I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. They sell templates for £8 each minimum - I missed a trick.
+It momentarily occured to me during this templating approach that this might be a candidate for automating and/or scaling, but at first the whole thing  felt like a real cheat. So I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. They sell templates for £8 each minimum - I missed a trick.
 
 ## The edit-mix
 
@@ -75,13 +75,11 @@ Once the general arrangements were laid out, I things got pretty deep on the edi
 
 Early on, I had earmarked both _Marks of Weakness_ and _The Sun and Her Worlds_ for some recorded vocals, as opposed to the samples I used in _Anchoress_.
 
-I'm fortunate to have a pretty sweet vintage mic to get a good source recording but that didn't mean I didn't make mistakes. I'm also fortunate to have a Fiona Miller on hand to knock out some amazing vocals over an evening. But I wasn't prepared for manageing her 84 tracks of vocal layers after simply asking for "a few lines here and there for me to process". But she never does things by halves.
+I'm fortunate to have a pretty sweet vintage mic to get a good source recording but that didn't mean I didn't make mistakes. I'm also fortunate to have a Fiona Miller on hand to knock out some amazing vocals over an evening. But I wasn't prepared for managing her 84 tracks of vocal layers after simply asking for "a few lines here and there for me to process". But she never does anything by halves.
 
 Giving Fiona my open-back headphones for monitoring her soft voice while they were cranked up gave me so much bleed to contend with, which is never fun to work with. One happy accident from that session though was the sound of my wife screaming at the whole family from outside the room - I pushed it up a little in the mix just to add a little subtle something at a point that could have otherwise gone stale. Can you find it?!
 
 And in light of not having anyone else to record, I sang the vocals for _Marks of Weakness._ I'm no singer (outside of my mind) but without the awesome Voxcraft plugin for tuning my vocals would never have made the cut.
-
-![Voxcraft on Marks of Weakness vocals (yes, it's in C!)](/images/uploads/voxcraft-screenshot.png "Voxcraft on Marks of Weakness vocals (yes, it's in C!)")
 
 ## Hidden bits of life
 
@@ -95,7 +93,7 @@ I did the same for _While Yet in Dust._ Recordings of my kids playing a the swim
 
 One aspect of creating this record that propelled me in new directions was getting stuck whilst teasing some of the ideas out of my head and then taking a step away to build a new tool to realise this. Totally in contrast to the "pick a preset and move on" approach, but some things just needed much more attention.
 
-There was a specific texture to Fiona's vocals on _The Sun and Her Worlds_ that I just couldn't create with my existing plugins or any new ones I tested out. Output's Movement was close in concept, and I suppose I could have combined it with some other tools, but when I spent some time thinking about it I had the design for the processing come together in my mind. Out of this came [Orbit](https://www.joeleaton.co.uk/projects/orbit), a granular-tremelo type effect that moved and blurred the vocals together at the same time.
+There was a specific texture to Fiona's vocals on _The Sun and Her Worlds_ that I just couldn't create with my existing plugins or any new ones I tested out. Output's Movement was close in concept, and I suppose I could have combined it with some other tools, but when I spent some time thinking about it I had the design for the processing come together in my mind. Out of this came [Orbit](https://www.joeleaton.co.uk/projects/orbit), a granular-tremolo type effect that moved and blurred the vocals together at the same time.
 
 In contrast, sometimes new sounds need old tools. For the vocals in the second part of _The Sun and Her Worlds,_ I went old school; mapping regions of Fiona's vocals to keys in Logic's basic sampler and then playing them on my keyboard. The arrangement of the second half was recorded in one take - me playing along on my MIDI keyboard triggering samples of her voice as it passed through Orbit.
 
@@ -111,7 +109,7 @@ Finishing isn't really finishing, and actually, I think that's the point.
 
 _Beyond the Beyond_ has an end point now. It exists as a record, rather than a collection of things I've been meaning to get back to (see my hard drives for years of this). But the process of making it didn't really end there. I'm still working on Life. Life opened the door to exploring BCMI control again, an area I hadn't touched for around eight years, which has in turn got me writing new brainwave mapping software. So now there's another rabbit hole to disappear down. Watch this space.
 
-There are other tracks too. Things I've made over the years that might still see the light of day, particularly some of the stuff that sits somewhere around the same territory as this record. It's funny looking back. Stuff that never felt finished at the time, feels finished listening back now. Sometimes finding the essence does outweigh a flashy arrangement - actually sometimes that's just what music is. I remember spending forever making this, but caring very little for the final arrangement:
+There are other tracks too. Things I've made over the years that might still see the light of day, particularly some of the stuff that sits somewhere around the same territory as this record. It's funny looking back. Stuff that never felt finished at the time, feels finished listening back now. Sometimes finding the essence does outweigh a flashy arrangement - actually sometimes that's just what music is. I remember spending forever making this, crafting an essence but caring very little for the final arrangement:
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A263667755&color=%235609c6&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/corsica-music" title="Corsica" target="_blank" style="color: #cccccc; text-decoration: none;">Corsica</a> · <a href="https://soundcloud.com/corsica-music/bakaya" title="Bakaya" target="_blank" style="color: #cccccc; text-decoration: none;">Bakaya</a></div>
 
