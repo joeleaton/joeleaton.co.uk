@@ -25,7 +25,7 @@ I wanted these tracks to hang together. Not to tell a story or build on each oth
 
 ## Starting point
 
-I'd been building loads of modulation ideas in Max for Live and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
+I'd been building loads of modulation ideas in Max for Live (M4L) and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
 
 So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, I even made up some rules on the fly just to keep moving and not get stuck. 
 
