@@ -17,7 +17,7 @@ Producing [_Beyond the Beyond_](https://joeleaton.co.uk/projects/dying-tides-bey
 
 I read an [article on a music production blog](https://www.musicradar.com/tutorials/music-theory-songwriting/why-do-we-have-such-a-need-to-finish-songs-in-a-word-capitalism-is-it-ok-to-never-actually-complete-your-tracks) that argued that finishing electronic music, and more specifically the tension between what you gain by playing and creating music through the art of exploring, vs the need to finish was simply a pull being driven by capitalism.
 
-And in a way, reading that article helped me justify how I felt about exploring and playing with music. Find something of interest, get lost in pushing it around and shaping it in different ways for a while. Then put it down and move on to something else - either in life or come back next week and tinker with a new thing. 
+And in a way, reading that article helped me justify how I felt about exploring and playing with music. Find something of interest, get lost in pushing it around and shaping it in different ways for a while. Then put it down and move on to something else - either in life or come back next week and tinker with a new thing. Why does a hobby need gratification from anyone else?
 
 Finishing something to a level of completeness demands an entirely different approach. When you're exploring for fun, you're not saying anything to anyone. You're not considering a listener or an interpretation of what you're doing. This stuff occupies an entirely different part of the brain to simply getting lost and making that fun 24 bar groove or the 1 minute render of droning interpolated textures. It becomes a form of work.
 
@@ -25,7 +25,7 @@ I wanted these tracks to hang together. Not to tell a story or build on each oth
 
 ## Starting point
 
-I'd been building loads of modulation ideas in Max for Live (M4L) and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
+I'd been crafting loads of modulation ideas in Max for Live (M4L) and Ableton over the years into little nuggets of music, but for this project I was on the look out for some ideas that could help me move from idea to track much faster than I was used to, as like many people I've been hampered by the weight of the speed of getting ideas into finished music.
 
 So I spent a lot of time crafting a workflow to put these tracks together. I created a lot of rules to help move things along fast, I even made up some rules on the fly just to keep moving and not get stuck. 
 
@@ -33,9 +33,9 @@ The tracks were born in a customised version of Tim Exile's [Scapeshift](https:/
 
 ![](/images/uploads/neurobloom-screenshot.png "Neurobloom pattern creator")
 
-As much as the pattern generators in Neurobloom are great, the synthesis engines just make everything sound, well, just like the music of Tim Exlie. Don't get me wrong, they're good - especially the bass synth, but it sounded like I was making his music but I could feel the potential in the patterns, I just needed to map them to my own sounds. 
+As much as the pattern generators in Neurobloom are great, the synthesis engines just make everything sound, well, just like the music of Tim Exlie. Don't get me wrong, they're good - especially the bass synth, but it sounded like I was making someone else's music. Even so, I could feel the potential in the patterns. I just needed to map them to my own sounds. 
 
-Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out MIDI that can be used easily in a DAW (in fact the first version didn't do MIDI out at all). To separate midi across channels in Ableton Live, I built a M4L device that extracted the MIDI signals and made it easy to split them across channels in Live. The device even allows you to route the resulting audio from other plugins (or synths) back into Neurobloom for it's mastering chain, which adds some real dynamic life and overall glue to the patterns. 
+Neurobloom is a a Reaktor instrument, and as such doesn't simply stream out MIDI that can be used easily in a DAW (in fact the first version didn't do MIDI out at all). To separate midi across channels in Ableton Live, I built some M4L tools that extracted the MIDI signals and made it easy to split them across channels in Live. The devices even allow you to route the resulting audio from other plugins (or HW synths) back into Neurobloom for it's mastering chain, which adds some real dynamic life and overall glue to the patterns. 
 
 ![Main routing Max patch](/images/uploads/max-screenshot1.png "Main routing Max patch")
 
@@ -43,7 +43,7 @@ Neurobloom is a a Reaktor instrument, and as such doesn't simply spit out MIDI t
 
 I loved this idea of everything in one plugin - generate an idea at the click of a button, edit the hell out of it, arrange variations of it, and master it - all in one place. So much so that I used this approach for Life - an app/plugin I'm making for crafting music through modulation.
 
-An early version of _Forward Motion Love,_ before the real sound design began and before I fell down the editing and automation well. The essence is here at least:
+An early version of _Forward Motion Love,_ before the real sound design began and before I fell down the editing and automation well. The essence is here:
 
 /images/uploads/Forward-Motion-Love-demo.mp3
 
@@ -53,19 +53,19 @@ Once I had the MIDI coming into Ableton, I stayed in the box for the rest of the
 
 I captured patterns, edited the hell out of the MIDI patterns, started applying different plug-ins for the sounds, and then got lost in automation madness (see Anchoress for this!).
 
-I'm one for being guilty for spending forever in a plugin, tweaking endlessly for the perfect sound (and never often finding it) so I took a leaf from an interview with Four Tet I read, about his approach to production. I remember the revelation of him saying how he just doesn't have the time (or interest) to spend dicking around tweaking synth parameters to the _n_-th degree, and in fact how he very often just scrolls through the presets and settles on the first one that fits. Well, I do like dicking around to the _n-_th degree but being on the lookout for new ways to finish things and not procrastinate I adopted this method quite a lot.
+I'm one for being guilty for spending forever in a plugin, tweaking endlessly for the perfect sound (and never often finding it) so I took a leaf from an interview with Four Tet I read, about his approach to production. I remember the revelation of him saying how he just doesn't have the time (or interest) to spend dicking around tweaking synth parameters to the _n_-th degree, and in fact how he very often just scrolls through the presets and settles on the first one that fits. Well, I do like dicking around to the _n_-th degree but being on the lookout for new ways to finish things and not procrastinate I adopted this method quite a lot.
 
-For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_ is a preset from the awesome [Visco](https://forever89.studio/) plugin (no relation to _Nisko!)_. From memory, it was the first one I selected and it just worked. I extended the find once and stick with it approach to the drum pattern on that track too. Aside from the ending part, I wanted a consistent drum pattern throughout - a total contrast to _Anchoress_ or _Before I knew this Place_ where the evolution of the drums is the driving force of the overall arrangements.
+For example, the kit for the main drum beat in _Marks of Weakness, Marks of Woe_ is a preset from the awesome [Visco](https://forever89.studio/) plugin (no relation to _Nisko!)_. From memory, it was the first one I selected and it just worked. I extended the 'find once and stick with it' approach to the drum pattern on that track too. Aside from the ending part, I wanted a consistent drum pattern throughout - a total contrast to _Anchoress_ or _Before I knew this Place_ where the evolution of the drums is the driving force of the overall arrangements.
 
 ![Visco drum preset](/images/uploads/visco.png "Visco drum preset")
 
 ## Getting over the arrangement hump
 
-I'll be honest, I love spending hours on finding an "essence" or a feel with some music, but I lose interest on turning a couple of ideas into an arrangement. It's hard work and a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). I knew that this aspect would be the biggest barrier to finishing the tracks on Beyond, so I came up with a bit of a hack - lift and shift the arrangements of other people's tracks and build mine around them. Easier than magicking an arrangement from thin air, but it was still hard work. 
+I get lost spending hours on finding an "essence" or a feel with a piece of music, but I lose interest on turning a couple of ideas into an arrangement. It's really hard work and a separate skill that doesn't come naturally (but funnily enough it find it easy when I'm doing it with someone else). I knew that this aspect would be the biggest barrier to finishing the tracks on _Beyond_, so I came up with a bit of a hack - lift and shift the arrangements of other people's tracks and build mine around them. Easier than magicking an arrangement from thin air, but it was still hard work. 
 
-I used reference tracks that had no sonic semblance to mine as arrangement templates but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to getting tracks done, and I ended up tweaking things so much anyway that they became totally different in the end as each track needed its own nuances. 
+I used reference tracks that had no sonic semblance to mine as arrangement templates, but this was a total game changer to help me finish (and improve) what I started with. Can you steal an arrangement? Yep. Should you? Well, I'm pretty sure an arrangement (and by arrangement I mean '12 bar intro, '8 bar verse' etc.) isn't copyright protected (and neither should it be), and if you can tell which ones I based my tracks on then maybe I need to think again. But this was so liberating - it gave me a painting by numbers approach to getting tracks done, and I ended up adapting and extending things so much anyway that the arrangement changed shape so much by the end as each track cried out for its own nuances. 
 
-It momentarily occured to me during this templating approach that this might be a candidate for automating and/or scaling, but at first the whole thing  felt like a real cheat. So I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. They sell templates for £8 each minimum - I missed a trick.
+It momentarily occurred to me during this templating approach that this might be a candidate for automating and/or scaling, but at first the whole thing  felt like a real cheat. So I didn't give it too much thought, but four months on from the release of _Beyond_ I discovered [Color with Live](https://colorwithlive.com/) - a tool that offers arrangement _Stencils_ - color codes templates for Ableton  based on real artists tracks. They sell templates for £8 each minimum - I missed a trick.
 
 ## The edit-mix
 
@@ -77,7 +77,7 @@ Early on, I had earmarked both _Marks of Weakness_ and _The Sun and Her Worlds_ 
 
 I'm fortunate to have a pretty sweet vintage mic to get a good source recording but that didn't mean I didn't make mistakes. I'm also fortunate to have a Fiona Miller on hand to knock out some amazing vocals over an evening. But I wasn't prepared for managing her 84 tracks of vocal layers after simply asking for "a few lines here and there for me to process". But she never does anything by halves.
 
-Giving Fiona my open-back headphones for monitoring her soft voice while they were cranked up gave me so much bleed to contend with, which is never fun to work with. One happy accident from that session though was the sound of my wife screaming at the whole family from outside the room - I pushed it up a little in the mix just to add a little subtle something at a point that could have otherwise gone stale. Can you find it?!
+Giving Fiona my open-back headphones for monitoring her soft voice while they were cranked up gave me so much bleed to contend with, which is never fun to work with. One happy accident from that session though was the sound of my wife screaming at the whole family from outside the room - I pushed it up a little in the mix just to add a little subtle something at a point that could have otherwise gone stale. See if you can hear it.
 
 And in light of not having anyone else to record, I sang the vocals for _Marks of Weakness._ I'm no singer (outside of my mind) but without the awesome Voxcraft plugin for tuning my vocals would never have made the cut.
 
@@ -85,7 +85,7 @@ And in light of not having anyone else to record, I sang the vocals for _Marks o
 
 ## Hidden bits of life
 
-I think it might have been the another (or the same) interview with Kieran Hebden where I heard him talking about producing the track _Skater_. On it there's a swooshing sounds on this were from an iphone recording of his daughter skating on a frozen lake. He says how he often interweaves unprocessed field recordings into his music just to give it a human worldly quality. 
+I think it might have been the same interview with Kieran Hebden where I heard him talking about producing the track _Skater_. On it, there's a swooshing sounds on this were from an iphone recording of his daughter skating on a frozen lake. He says how he often interweaves unprocessed field recordings into his music just to give it a human worldly quality. 
 
 I was really struggling with the sterile nature of _Before I Knew this place_ so I dug into my hard drive of field recordings that I've captured over the years. Adding some ambience from the forest gave that track the touch it was really missed, and connected what I wanted it to convey with the real world. 
 
@@ -99,9 +99,9 @@ There was a specific texture to Fiona's vocals on _The Sun and Her Worlds_ that 
 
 In contrast, sometimes new sounds need old tools. For the vocals in the second part of _The Sun and Her Worlds,_ I went old school; mapping regions of Fiona's vocals to keys in Logic's basic sampler and then playing them on my keyboard. The arrangement of the second half was recorded in one take - me playing along on my MIDI keyboard triggering samples of her voice as it passed through Orbit.
 
-Other new tools were born from this record. [Tides](https://joeleaton.co.uk/projects/tides-bbd-resonator-synth/) came from my attempts at emulating BBD-style resonant synth techniques in Max. Such synth sounds underpin some of the key synth parts in _Beyond._ So after I finished the record I went all out and built a standalone BBD emulator, _Tides_.
+Other new tools were born from this record. [Tides](https://joeleaton.co.uk/projects/tides-bbd-resonator-synth/) came from my attempts at emulating BBD-style resonant synth techniques in Max. Such synth sounds underpin some of the key synth parts in _Beyond._ So after I finished the record I went all out and built a standalone BBD emulator, AKA Tides.
 
-_Life_ was an idea I had when making _Forward Motion Love_. I spent a lot of time automating the inter-track modulation chaos and brainstorms and at one point thought, "why isn't there a tool that centres a creative workflow on this?". Turns out, because it's nuts. And _Life_ became a monster of a project to get into a good state - as of right now I'm still working on it!
+_Life_ came from an idea I had when making _Forward Motion Love_. I spent a lot of time automating the inter-track modulation chaos and at one point thought, "why isn't there a tool that centres a creative workflow on this?". Turns out, because it's kind of nuts. And _Life_ became a monster of a project to get into a good state - as of right now I'm still working on it.
 
 Having these directions that sprung from making _Beyond_ actually gave me more impetus to finish the record. I had other stuff to dive into and just wanted it done. And I found out new ways of pushing things forward - memories of selecting a friend for some early feedback of a track who simply "too much". I fully understood this and spent that night completely rearranging it in an Albanian hotel room late at night. Throwing away the entire vocals for _Marks of Weakness_ after too many iterations on the mix and then laying down the final take in about 10 minutes the next day.
 
