@@ -81,6 +81,8 @@ Giving Fiona my open-back headphones for monitoring her soft voice while they we
 
 And in light of not having anyone else to record, I sang the vocals for _Marks of Weakness._ I'm no singer (outside of my mind) but without the awesome Voxcraft plugin for tuning my vocals would never have made the cut.
 
+![voxcraft plugin screenshot](/images/uploads/voxcraft-screenshot.png "Voxcraft plugin")
+
 ## Hidden bits of life
 
 I think it might have been the another (or the same) interview with Kieran Hebden where I heard him talking about producing the track _Skater_. On it there's a swooshing sounds on this were from an iphone recording of his daughter skating on a frozen lake. He says how he often interweaves unprocessed field recordings into his music just to give it a human worldly quality. 
