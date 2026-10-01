@@ -12,25 +12,25 @@ featuredImage: /images/uploads/blog-ente.png
 readTime: 15
 ---
 
-Recently I set out to stop using Gmail and start moving away from Google, but then I ended up spend a day fighting Docker networking configs on a Synology NAS. 
+Recently I set out to stop using Gmail as part of a wider move away from Google, but what started as a small thing turned into a day fighting Docker networking configs on my NAS. 
 
-That's the thing about deciding to leave Google (once you actually mean it rather than just grumbling about it). You think you're switching an email address. You end up rethinking your photo library, your password manager, your cloud storage, and, if you're the type who owns a NAS and can't resist a good technical rabbit hole, eventually your own home network too.
+That's the thing about deciding to leave Google (once you actually mean it rather than just grumbling about it). You think you're switching an email address. You end up rethinking your photo library, your password manager, your cloud storage, and, if you're the type who owns a NAS and can't resist a good technical rabbit hole, eventually your own home network too. 
 
-Leaving Meta was easy, minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups. I say easy, switching to Signal has its frustrations. For example, image compression can't be turned off when sending/receiving photos.
+As enhittified as big tech software is, they've done a cracking job at making it painstaking to leave them (a classic element of enshittification). Convenience rules. If it's hard to leave, if you lose connections with people by leaving, then they're doing a great job as far as they're concerned. 
 
-It's only when you step back and look around do you realise how much big tech has a claim on every aspect of your information. And the fact that the best tools are "free" says enough about what the product really is (you!). When it's your kids' information, enough's enough. Convenience is such a hook, and it's not easy moving out of the big ecosystems (Apple, Google, Meta etc.). But, well. Be the change you want to see, right?
+Leaving Meta was actually pretty easy, minus the annoyance from family, but ah - the relief from leaving all those WhatsApp groups. I say easy, not without inconveniencies and trade-offs. Switching from WhatsApp exclusively to Signal has its frustrations. For example, image compression can't be turned off when sending/receiving photos. And messaging iPhone users who aren't on Signal via SMS is really a giant security no-no.
+
+It's only when you step back and look around do you realise how much big tech has a claim on every aspect of your information. And the fact that the best tools are "free" says enough about what the product really is (you), even when you're paying for it you're still getting screwed over. When it's your kids' information, enough's enough. Convenience is such a hook, and it's not easy moving out of the big ecosystems (Apple, Google, Meta etc.). But, well. Be the change you want to see, right?
 
 ## A simple plan
 
-The starting motivation was simple enough. Privacy and ethics. I'm done with a company quietly indexing every email, every photo, every search, and building an advertising profile out of the exhaust, and this while I was already paying Google for the privilege, via their 100GB storage plan. 
+The starting motivation was simple enough. Privacy and ethics. If someone walked up to you now and offered you a free email, search engine, limited storage account but where they indexed every email, every photo, every search, and built an advertising profile out of the exhaust, would you say "yeah, sure"?. So why are we all OK doing this? And yeah - this while I was paying Google for the privilege, via their upgraded storage plan. 
 
-My plan was equally simple (on paper). Move email to Proton (privacy first platform), move photos to Proton, move files to Proton. One company, paid with cash instead of through my data. Well, that and adding backup/cold storage - but that's a separate blog article.
+I still wanted some form of convenience - I wasn't going to build my own email server (yet) so the plan was switch from one ecosystem to another for an easy life - to move email to Proton (privacy first platform), move photos to Proton, move files to Proton. One company, paid with money instead of subsidising through my data. Well, that and adding backup/cold storage - but that's a separate blog article.
 
-There was a nice surprise early on, cost wise. I was also paying separately for Surfshark VPN, purely for the privacy and security side of things, unrelated to Google. Once I was moving to Proton anyway, it made sense to switch to Proton VPN instead, bundled into the same subscription I now needed for storage rather than a second, unrelated line item. I also have a custom email domain anyway, so the aim is to shift the focus to that one (as I can use that with any service), and slowly drop the use of the Gmail one over time.
+There was even an added benefit early on, cost wise. I was also paying separately for Surfshark VPN, purely for the privacy and security side of things, unrelated to Google. Once I was moving to Proton anyway, it made sense to ditch Surfshark, as Proton VPN's bundled into the same subscription. I also have a custom email domain anyway, so the aim is to shift the focus to that one (as I can use that with any service), and slowly drop the use of the Gmail one over time.
 
-It's not a completely clean trade though. Proton VPN has its own quirks. Most annoyingly, connecting via a location's server doesn't reliably get you that places content the way other VPNs are specifically optimised to. In fact, most sites barely recognise a change in location with Proton VPN.
-
-I actually thought, going in, that Proton would be a fairly clean one stop shop. Mail, drive, photos, all under one roof, the way Google's bundle works. It mostly is, for mail (albeit with crappy search). It is very much not, for photos, once you actually push on it.
+I actually thought, going in, that Proton would be a fairly clean one stop shop. Mail, drive, photos, all under one roof, the way Google's bundle works. It mostly is, for mail (albeit with crappy search - but hey that's the privacy trade-off). It is very much not, for photos, once you actually push on it.
 
 ## The moment it stopped being simple
 
