@@ -59,9 +59,9 @@ When I was performing with a BCMI, the hardware I used cost approximately £18K 
 
 At Plymouth, we were fortunate to have a commercial partner, [g.tec](https://www.gtec.at/), who sponsored our research, covering the cost of EEG hardware. All the software was custom stuff I wrote myself beyond some Matlab libraries for processing.
 
-Cheaper "pro-sumer" and open-source "research" BCI kits available. But for reliable EEG and for performing at concert venues that have a lot of electrical noise and interference they're really not suitable for actual brainwave control (trust me, I tried 'em).
+Cheaper "prosumer" and open-source "research" BCI kits available. But for reliable EEG readings and for performing at concert venues that have a lot of electrical noise and interference they're really not suitable for actual brainwave control (trust me, I've tried them).
 
-Fast-foward to today, and the more established medical-grade research gear companies are starting to step down in the top-end of "pro-sumer" research setups. 
+Fast-forward to today, and the more established medical-grade research gear companies are starting to step down in the top-end of "prosumer" research setups. 
 
 The [g.tec Unicorn Hybrid](https://www.gtec.at/product/unicorn-hybrid-black-bci-platform/) isn't quite the robust and accurate £18K suite of products I was used to, but a potentially usable platform at a £1.2K price point was tempting me for quite a while.
 
@@ -73,7 +73,7 @@ I had one of the best experiences of my life during my PhD.
 
 Having the space and support to self-study and focus on a specific area within a field opened my mind in ways previously unimaginable. It instilled in me a practice of real discipline and critical rigour. It gave me confidence and a safe pace to fail. Furthermore, being part of a thriving research group of likeminded music nerds gave me lasting friendships and a community with others as we shared something unique together in that lab in Devon that we called home.
 
-Romtasicm aside, I loved making those systems and putting the compositions and the software and all the interconnected things together. The magic when something finally works is amazing. No one shares that with you (and they don't need to), it's a solitary sense of achievement and fullfilment.
+Romantisicm aside, I loved making those systems and putting the compositions and the software and all the interconnected things together. The magic when something finally works is amazing. No one shares that with you (and they don't need to), it's a solitary sense of achievement and fulfilment.
 
 So fast forward to today. I bit the bullet and bought the Unicorn system. This really is starting again, from scratch - but this time for pleasure. To explore what's possible and what's not. I have some ideas of exploration, and who knows what will come from it - watch this space. 
 
