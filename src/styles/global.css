@@ -426,6 +426,14 @@ h3 { font-size: var(--text-h3); }
   border: none;
 }
 
+.prose .video-file {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  margin: var(--space-lg) 0;
+  background: var(--bg-secondary);
+}
+
 /* --- Audio Player --- */
 .prose .audio-player {
   background: linear-gradient(135deg, rgba(60, 75, 130, 0.3), rgba(45, 60, 110, 0.2));

@@ -12,6 +12,7 @@
  *  - https://vimeo.com/VIDEO_ID
  *  - https://player.vimeo.com/video/VIDEO_ID
  *  - /images/uploads/recording.mp3  (or any audio extension)
+ *  - /images/uploads/clip.mp4  (.mp4/.m4v/.mov become <video> players)
  *
  * Only converts bare auto-linked URLs (text matches href) or
  * plain text paths on their own line.
@@ -95,6 +96,27 @@ function createAudioNode(src, label) {
   };
 }
 
+// ---- Video file helpers ----
+
+const VIDEO_FILE_EXT = /\.(mp4|m4v|mov)(\?.*)?$/i;
+
+function createVideoFileNode(src) {
+  return {
+    type: 'element',
+    tagName: 'video',
+    properties: {
+      className: ['video-file'],
+      src,
+      controls: true,
+      playsinline: true,
+      preload: 'metadata',
+    },
+    children: [
+      { type: 'text', value: 'Your browser does not support the video element.' },
+    ],
+  };
+}
+
 // ---- Plugin ----
 
 export default function rehypeMediaEmbeds() {
@@ -118,6 +140,12 @@ export default function rehypeMediaEmbeds() {
           .trim();
 
         const isBare = textContent === href || textContent === href.replace(/\/$/, '');
+
+        // Video file link
+        if (VIDEO_FILE_EXT.test(href)) {
+          parent.children[index] = createVideoFileNode(href);
+          return;
+        }
 
         // Audio file link
         if (AUDIO_EXT.test(href)) {
@@ -159,6 +187,11 @@ export default function rehypeMediaEmbeds() {
         const img = node.children[0];
         const src = img.properties?.src || '';
 
+        if (VIDEO_FILE_EXT.test(src)) {
+          parent.children[index] = createVideoFileNode(src);
+          return;
+        }
+
         if (AUDIO_EXT.test(src)) {
           const alt = img.properties?.alt || '';
           parent.children[index] = createAudioNode(src, alt);
@@ -174,6 +207,13 @@ export default function rehypeMediaEmbeds() {
           .map((c) => c.value)
           .join('')
           .trim();
+
+        const isSingleText = node.children.length === 1 && node.children[0].type === 'text';
+
+        if (textParts && isSingleText && VIDEO_FILE_EXT.test(textParts)) {
+          parent.children[index] = createVideoFileNode(textParts);
+          return;
+        }
 
         // Only match if entire paragraph is a file path to audio
         if (

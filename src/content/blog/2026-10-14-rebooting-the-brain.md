@@ -49,7 +49,7 @@ That final concert at the hospital gave me a real sense of closure with my studi
 
 Here's a clip from a rehearsal of our brain-quartet performance:
 
-/images/uploads/bcmi-quartet.mov
+/images/uploads/bcmi-quartet.mp4
 
 When I left academia, BCI in industry wasn't really a thing. Since then Vice President Musk's [Neuralink](https://neuralink.com/) venture took off, and [even Meta joined the fold](https://www.neurosurgical.tv/background-on-metas-brain-computer-interface-bci-advancements/). But I've actually seen very little in the way of developments in BCI for music control.
 
