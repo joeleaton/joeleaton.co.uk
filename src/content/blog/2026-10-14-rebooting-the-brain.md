@@ -20,7 +20,11 @@ I always stayed in touch with progress in BCMI. I'm a reviewer for BCI Journal a
 
 # Hearing the past
 
-Recently, a friend told me they stumbled across a radio show I produced for American station WFMU. I'd almost forgotten about this so gave it a spin. Having over 10 years of separation from it gave me a fresh perspective hearing it back. I clearly put some effort into it as it covers not only my research but the whole field and history of brain-computer-music interfacing. 
+Recently, a friend told me they stumbled across a radio show I produced for American station WFMU. 
+
+I'd almost forgotten about this so I gave it a spin as I had no real memory of what it was about. 
+
+Having over 10 years of separation gave me a completely fresh perspective upon hearing it back. I clearly put some effort into it as it covers not only my research but the whole field and history of brain-computer-music interfacing. It was like looking back into my world from about 3 versions of me ago.
 
 You can check it out here:
 
@@ -39,7 +43,7 @@ You can check it out here:
 
 # The point of closure
 
-When I finished my studies I felt like I'd achieved all I set out to do (and more!). I stared so much as flashing SSVEP stimuli I think my eyesight took a permanent hit, I experimented with different BCI paradigms (motor imagery, affective response) to mixed results, and I performed pieces I composed around the world. 
+When I finished my studies I felt like I'd achieved all I set out to do, and more. I stared so much at the flashing SSVEP stimuli I was using and constantly experimenting I think my eyesight took a permanent hit. By the end I was able to precisely control sounds and music with that technique and I went further and experimented with different BCI paradigms (including motor imagery, affective response) to mixed. I performed and presented my work around the world - from California to Stockholm, from Marseille to Berlin and beyond.
 
 What's more I tested my systems with patients from the Royal Hospital of Neurodisability - they performed concerts for their friends, family and hospital staff behind closed doors. 
 
