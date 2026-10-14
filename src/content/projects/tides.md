@@ -1,5 +1,5 @@
 ---
-title: Tides
+title: Tides synth plugin
 slug: tides-bbd-resonator-synth
 draft: false
 description: A polyphonic synthesiser built around a BBD-style resonator. Karplus-Strong pluck meets self-oscillating filter meets tuned reverb.
