@@ -47,6 +47,8 @@ Seeing the impact of what was really a proof-of-concept from the reception these
 
 That final concert at the hospital gave me a real sense of closure with my studies in this area. With big life changes looming, I felt like I was ready to see others come and take what little I'd started into new and innovative directions. 
 
+Here's a clip from a rehearsal of our brain-quartet performance:
+
 When I left academia, BCI in industry wasn't really a thing. Since then Vice President Musk's [Neuralink](https://neuralink.com/) venture took off, and [even Meta joined the fold](https://www.neurosurgical.tv/background-on-metas-brain-computer-interface-bci-advancements/). But I've actually seen very little in the way of developments in BCI for music control.
 
 # The price of entry
@@ -59,4 +61,20 @@ Cheaper "pro-sumer" and open-source "research" BCI kits available. But for relia
 
 Fast-foward to today, and the more established medical-grade research gear companies are starting to step down in the top-end of "pro-sumer" research setups. 
 
-The [g.tec Unicorn Hybrid](https://www.gtec.at/product/unicorn-hybrid-black-bci-platform/) isn't quite the robust and accurate £18K suite of products I was used to, but a potentially usable platform at a £1.2K price point was tempting me for quite a while
+The [g.tec Unicorn Hybrid](https://www.gtec.at/product/unicorn-hybrid-black-bci-platform/) isn't quite the robust and accurate £18K suite of products I was used to, but a potentially usable platform at a £1.2K price point was tempting me for quite a while.
+
+# A fresh perspective
+
+Well I'm not studying to pass a doctoral submission and viva these days, so why dig up something I left behind long ago? 
+
+I had one of the best experiences of my life during my PhD. 
+
+Having the space and support to self-study and focus on a specific area within a field opened my mind in ways previously unimaginable. It instilled in me a practice of real discipline and critical rigour. It gave me confidence and a safe pace to fail. Furthermore, being part of a thriving research group of likeminded music nerds gave me lasting friendships and a community with others as we shared something unique together in that lab in Devon that we called home.
+
+Romtasicm aside, I loved making those systems and putting the compositions and the software and all the interconnected things together. The magic when something finally works is amazing. No one shares that with you (and they don't need to), it's a solitary sense of achievement and fullfilment.
+
+So fast forward to today. I bit the bullet and bought the Unicorn system. This really is starting again, from scratch - but this time for pleasure. To explore what's possible and what's not. I have some ideas of exploration, and who knows what will come from it - watch this space. 
+
+The Unicorn has no software for macOS. And I'm not in the running for spinning up a Windows WM, so it's back to build/hack your own software time. The data acquisition, the signal processing, the feature extraction, the mapping systems, the music connectors, then the music itself. It's going to be long and slow, but boy it's going to be fun.
+
+Having typed all of this out, I'm not really sure what this blog post is saying, but like all of them really it's a note to a future self to reflect back on.
