@@ -1,5 +1,5 @@
 ---
-title: Rebooting the brain
+title: Rebooting the Brain
 slug: rebooting-the-brain
 draft: false
 description: Revisiting Brain-Computer Music Interfacing, Ten-Plus Years On
@@ -77,7 +77,7 @@ Romantisicm aside, I loved making those systems and putting the compositions and
 
 So fast forward to today. I bit the bullet and bought the Unicorn system. This really is starting again, from scratch - but this time for pleasure. To explore what's possible and what's not. I have some ideas of exploration, and who knows what will come from it - watch this space. 
 
-The Unicorn has no software for macOS. And I'm not in the running for spinning up a Windows WM, so it's back to build/hack your own software time. The data acquisition, the signal processing, the feature extraction, the mapping systems, the music connectors, then the music itself. It's going to be long and slow, but boy it's going to be fun.
+The Unicorn has no software for macOS. And I'm not in the running for spinning up a Windows WM, so it's back to build/hack your own software time. The data acquisition, the signal processing, the feature extraction, the stimuli and feedback interface, the mapping systems, the music connectors, then the music itself. It's going to be long and slow, but boy it's going to be fun.
 
 Having typed all of this out, I'm not really sure what this blog post is saying, but like all of them really it's a note to a future self to reflect back on.
 
