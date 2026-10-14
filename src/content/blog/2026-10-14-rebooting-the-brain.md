@@ -1,7 +1,7 @@
 ---
 title: Rebooting the brain
 slug: rebooting-the-brain
-draft: true
+draft: false
 description: Revisiting Brain-Computer Music Interfacing, Ten-Plus Years On
 category: bcmi
 tags:
