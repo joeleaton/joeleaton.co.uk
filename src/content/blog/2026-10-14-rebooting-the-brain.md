@@ -14,7 +14,7 @@ readTime: null
 
 It's been 11 years since I graduated from the Plymouth University with a [PhD in Brain-Computer Music Interfacing](https://pearl.plymouth.ac.uk/cgi/viewcontent.cgi?article=1341&context=foahb-theses-other).
 
-I left academia at the end of my studies. About to become a parent for the first time, I joined Arm in Cambridge to explore the corporate world of tech. 
+I left academia at the end of my studies. About to become a parent for the first time, I joined Arm in Cambridge to explore the world of corporate tech. 
 
 I always stayed in touch with progress in BCMI. I'm a reviewer for BCI Journal and for Leonardo Music Journal (MIT Press) on things brain-control and music related. But I've not touched the actual tech-side of things since 2015.
 
