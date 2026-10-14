@@ -81,4 +81,4 @@ The Unicorn has no software for macOS. And I'm not in the running for spinning u
 
 Having typed all of this out, I'm not really sure what this blog post is saying, but like all of them really it's a note to a future self to reflect back on.
 
-/uploads/images/unicorn-headset.jpg
+![photo of the unicorn headset](/images/uploads/unicorn-headset.jpg "The g.tec unicorn headset")
