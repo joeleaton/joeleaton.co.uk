@@ -43,7 +43,11 @@ You can check it out here:
 
 # The point of closure
 
-When I finished my studies I felt like I'd achieved all I set out to do, and more. I stared so much at the flashing SSVEP stimuli I was using and constantly experimenting I think my eyesight took a permanent hit. By the end I was able to precisely control sounds and music with that technique and I went further and experimented with different BCI paradigms (including motor imagery, affective response) to mixed. I performed and presented my work around the world - from California to Stockholm, from Marseille to Berlin and beyond.
+When I finished my studies I felt like I'd achieved all I set out to do, and more. 
+
+I stared so much at the flashing SSVEP stimuli I was using and constantly experimenting I think my eyesight took a permanent hit. By the end I was able to precisely control sounds and music with that technique and I went further and experimented with different BCI paradigms (including motor imagery, affective response) to mixed. 
+
+I performed and presented my work around the world - from California to Stockholm, from Marseille to Berlin and beyond.
 
 What's more I tested my systems with patients from the Royal Hospital of Neurodisability - they performed concerts for their friends, family and hospital staff behind closed doors. 
 
@@ -59,7 +63,7 @@ When I left academia, BCI in industry wasn't really a thing. Since then Vice Pre
 
 # The price of entry
 
-When I was performing with a BCMI, the hardware I used cost approximately £18K for one performer (minus. With the hospital brain quartet, this can be almost quadrupled. 
+When I was performing with a BCMI, the hardware I used cost approximately £18K for one performer. With the hospital brain quartet, that cost can be almost quadrupled. 
 
 At Plymouth, we were fortunate to have a commercial partner, [g.tec](https://www.gtec.at/), who sponsored our research, covering the cost of EEG hardware. All the software was custom stuff I wrote myself beyond some Matlab libraries for processing.
 
@@ -75,9 +79,11 @@ Well I'm not studying to pass a doctoral submission and viva these days, so why 
 
 I had one of the best experiences of my life during my PhD. 
 
-Having the space and support to self-study and focus on a specific area within a field opened my mind in ways previously unimaginable. It instilled in me a practice of real discipline and critical rigour. It gave me confidence and a safe pace to fail. Furthermore, being part of a thriving research group of likeminded music nerds gave me lasting friendships and a community with others as we shared something unique together in that lab in Devon that we called home.
+Having the space and support to self-study and focus on a specific area within a field opened my mind in ways previously unimaginable. It instilled in me a practice of real discipline and critical rigour. And it gave me confidence in myself from having a safe pace to fail. 
 
-Romantisicm aside, I loved making those systems and putting the compositions and the software and all the interconnected things together. The magic when something finally works is amazing. No one shares that with you (and they don't need to), it's a solitary sense of achievement and fulfilment.
+Furthermore, being part of a thriving research group of likeminded music nerds gave me lasting friendships and a community with others as we shared something unique together in that lab in Devon that we called home. 
+
+So why go back (cerebrally, not geographically)? Romantisicm aside, I loved making those systems. The whole process of putting the compositions and the software and all the interconnected things together. The magic when something finally works is amazing. No one shares that with you (and they don't need to), it's a solitary sense of achievement and fulfilment.
 
 So fast forward to today. I bit the bullet and bought the Unicorn system. This really is starting again, from scratch - but this time for pleasure. To explore what's possible and what's not. I have some ideas of exploration, and who knows what will come from it - watch this space. 
 
