@@ -1,5 +1,5 @@
 ---
-title: Orbit
+title: Orbit FX plugin
 slug: orbit
 draft: false
 description: Dual-engine granular modulator with stochastic controls and cross-feedback
