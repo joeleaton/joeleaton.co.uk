@@ -8,7 +8,7 @@ tags:
   - opinion
 publishedDate: 2026-10-14T10:35:00
 featured: false
-featuredImage: ''
+featuredImage: /images/uploads/unicorn-headset.jpg
 readTime: null
 ---
 
@@ -49,6 +49,8 @@ That final concert at the hospital gave me a real sense of closure with my studi
 
 Here's a clip from a rehearsal of our brain-quartet performance:
 
+/images/uploads/bcmi-quartet.mov
+
 When I left academia, BCI in industry wasn't really a thing. Since then Vice President Musk's [Neuralink](https://neuralink.com/) venture took off, and [even Meta joined the fold](https://www.neurosurgical.tv/background-on-metas-brain-computer-interface-bci-advancements/). But I've actually seen very little in the way of developments in BCI for music control.
 
 # The price of entry
@@ -78,3 +80,5 @@ So fast forward to today. I bit the bullet and bought the Unicorn system. This r
 The Unicorn has no software for macOS. And I'm not in the running for spinning up a Windows WM, so it's back to build/hack your own software time. The data acquisition, the signal processing, the feature extraction, the mapping systems, the music connectors, then the music itself. It's going to be long and slow, but boy it's going to be fun.
 
 Having typed all of this out, I'm not really sure what this blog post is saying, but like all of them really it's a note to a future self to reflect back on.
+
+/uploads/images/unicorn-headset.jpg
