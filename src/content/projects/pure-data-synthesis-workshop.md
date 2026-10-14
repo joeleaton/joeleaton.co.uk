@@ -1,5 +1,5 @@
 ---
-title: Elysium
+title: Elysium synth plugin
 slug: elysium
 draft: false
 description: An additive synthesiser for creating chordal drone-based textured soundscapes.
