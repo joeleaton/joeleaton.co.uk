@@ -12,7 +12,7 @@ year: 2026
 location: The depths of the ocean
 featured: true
 featuredImage: /images/uploads/tides-ui.png
-videoUrl: ''
+videoUrl: https://youtu.be/WaDlOtqikvY
 technologies:
   - '- C++'
   - '- JUCE'
@@ -31,7 +31,7 @@ Karplus-Strong plucks, self-oscillating ladders, comb filters fed back into them
 
 Tides is the result. A free polyphonic synthesiser (Standalone, VST3, AU) built around a bucket-brigade-style resonator, with six voice groups, a fully patchable modulation matrix, MPE support, and 33 designed factory presets. I built some early prototypes in Max, and you can hear the results all over my [Beyond the Beyond](../../projects/dying-tides-beyond-the-beyond/) EP. 
 
-I'm working on some walk-through videos and audio demos, but for now here's the lowdown (keep reading for the download link):![Tides main editor](/images/uploads/tides-ui.png "The Tides editor — exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
+I'm working on some walk-through videos and audio demos, but for now here's the lowdown (keep reading for the download link):![Tides main editor](/images/uploads/%20tides-ui-new.png "The Tides editor - exciter, envelope, BBD resonator, output, quad LFO, modulation matrix, and a live viz strip")
 
 ## BBD
 
@@ -71,7 +71,7 @@ The resonator is the heart of the instrument. It's a delay line tuned to the not
 
 There's also a **Wild/Tame** dial that modulates the loop's internal noise floor, drift, per-voice detune and soft-clip drive. Set to fully tame, you get a clean precise model. Pushed all the way to wild, you get something that breathes, drifts and occasionally overshoots, emulating a piece of analogue hardware that's been around for a while.
 
-![Engine: exciter, resonator and output](/images/uploads/tides-ui-engine.png "The exciter feeds the resonator, the resonator feeds the output. Three panes for the entire DSP path.")
+![Engine: exciter, resonator and output](/images/uploads/tides-ui-engine-new.png "The exciter feeds the resonator, the resonator feeds the output. Three panes for the entire DSP path.")
 
 ### Modulation, properly
 
@@ -85,7 +85,7 @@ Tap a source tile to arm it, then click any knob on the synth. A connection ligh
 
 Every modulated knob shows a coloured arc around its bezel for the modulation's excursion, and an animated dot riding along where the live value currently is.
 
-![Quad LFO and modulation matrix](/images/uploads/tides-ui-mod.png "Quad LFO panel on the left, modulation matrix on the right. Tiles light when active; the W↔RND knob crossfades each LFO between periodic waves and sample-and-hold.")
+![Quad LFO and modulation matrix](/images/uploads/tides-ui-mod-new.png "Quad LFO panel on the left, modulation matrix on the right. Tiles light when active; the W↔RND knob crossfades each LFO between periodic waves and sample-and-hold.")
 
 ### Voice groups
 
