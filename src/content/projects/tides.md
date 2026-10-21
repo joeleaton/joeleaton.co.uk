@@ -103,7 +103,7 @@ Resonators are nasty to oversample naively. Feed them aliasing and they ring it 
 
 ### MPE
 
-Admittedly untested with a real MPE controller, but lower-zone MPE is in there (though not tested properly). Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. 
+Admittedly untested with a real MPE controller, but lower-zone MPE is in there. Per-note pitch follows the slide. Per-note pressure routes to the AT modulation source so you can map it to anything, including feedback amount, Wild/Tame, resonator pitch, dry/wet, whatever you need. 
 
 Channel-mode MIDI works fine if, like me, you don't have an MPE controller.
 
