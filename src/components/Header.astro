@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { url } from '../utils/paths';
+import ThemeToggle from './ThemeToggle.astro';
 
 const currentPath = Astro.url.pathname;
 
@@ -86,9 +87,12 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
         ))}
       </ul>
     </nav>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span class="menu-icon">&#9776;</span>
-    </button>
+    <div class="header-actions">
+      <ThemeToggle />
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="menu-icon">&#9776;</span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -97,7 +101,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(0, 8, 20, 0.9);
+    background: var(--header-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
@@ -109,6 +113,19 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
     align-items: center;
     justify-content: space-between;
     height: 80px;
+  }
+
+  @media (min-width: 768px) {
+    .main-nav {
+      margin-left: auto;
+      margin-right: var(--space-lg);
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
   }
 
   .logo {
@@ -216,7 +233,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
     left: 50%;
     transform: translateX(-50%);
     min-width: 180px;
-    background: rgba(0, 8, 20, 0.98);
+    background: var(--overlay-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
@@ -224,7 +241,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
     padding: 0.5rem 0;
     flex-direction: column;
     gap: 0;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 40px var(--shadow-color);
     list-style: none;
   }
 
@@ -262,7 +279,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
 
   .dropdown a:hover {
     color: var(--text-primary);
-    background: rgba(255, 51, 102, 0.08);
+    background: color-mix(in srgb, var(--accent-primary) 8%, transparent);
   }
 
   /* Hamburger button */
@@ -288,7 +305,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
       top: 80px;
       left: 0;
       right: 0;
-      background: rgba(0, 8, 20, 0.98);
+      background: var(--overlay-bg);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-color);
       padding: var(--space-md);
@@ -337,7 +354,7 @@ const hasDropdown = menuPages.length > 0 || !!aboutMeHref;
       opacity: 1;
       color: var(--text-secondary);
       /* Ensure tappable on mobile */
-      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+      -webkit-tap-highlight-color: var(--tap-highlight);
       touch-action: manipulation;
     }
 

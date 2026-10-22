@@ -24,9 +24,34 @@
   --accent-music: #9D4EDD;
   --accent-education: #06FFA5;
 
+  /* Deeper domain shades (icon gradients) */
+  --accent-bcmi-deep: #0091A3;
+  --accent-running-deep: #A34422;
+  --accent-music-deep: #6A2FA0;
+  --accent-education-deep: #04A36A;
+
   /* Borders & effects */
   --border-color: rgba(255, 51, 102, 0.1);
   --hover-glow: rgba(255, 51, 102, 0.15);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --grid-line: rgba(27, 36, 68, 0.03);
+
+  /* Surfaces */
+  --header-bg: rgba(0, 8, 20, 0.9);
+  --overlay-bg: rgba(0, 8, 20, 0.98);
+  --filter-bg: rgba(0, 8, 20, 0.95);
+  --chip-bg: rgba(0, 0, 0, 0.3);
+  --chip-border: rgba(255, 255, 255, 0.05);
+  --subtle-bg: rgba(0, 0, 0, 0.2);
+  --input-bg: rgba(27, 36, 68, 0.3);
+  --code-bg: rgba(27, 36, 68, 0.5);
+  --pre-bg: rgba(27, 36, 68, 0.8);
+  --project-card-bg: linear-gradient(135deg, rgba(27, 36, 68, 0.4), rgba(27, 36, 68, 0.2));
+  --audio-bg: linear-gradient(135deg, rgba(60, 75, 130, 0.3), rgba(45, 60, 110, 0.2));
+  --audio-border: rgba(255, 255, 255, 0.1);
+  --audio-controls-bg: rgba(20, 30, 60, 0.8);
+  --tap-highlight: rgba(255, 255, 255, 0.1);
+  --on-accent: #FFFFFF;
 
   /* Typography */
   --font-display: 'Fraunces', serif;
@@ -60,6 +85,63 @@
 
   --container-max: 1400px;
   --content-max: 800px;
+
+  color-scheme: dark;
+}
+
+/* --- Light Theme ---
+   Same design, daylight palette. Accents are deepened versions of the
+   dark-mode hues so text and links keep WCAG AA contrast on pale surfaces.
+   Applied via <html data-theme="light"> (see ThemeToggle + BaseLayout). */
+:root[data-theme='light'] {
+  --bg-primary: #F4F5FA;
+  --bg-secondary: #E4E7F2;
+  --card-bg: rgba(255, 255, 255, 0.75);
+
+  --text-primary: #0E1530;
+  --text-secondary: #525A74;
+
+  --accent-primary: #D1124A;
+  --accent-secondary: #007891;
+
+  --accent-bcmi: #007891;
+  --accent-running: #C2410C;
+  --accent-music: #7B2CBF;
+  --accent-education: #047857;
+
+  --accent-bcmi-deep: #00B8D4;
+  --accent-running-deep: #F97316;
+  --accent-music-deep: #A855F7;
+  --accent-education-deep: #10B981;
+
+  --border-color: rgba(209, 18, 74, 0.16);
+  --hover-glow: rgba(209, 18, 74, 0.12);
+  --shadow-color: rgba(14, 21, 48, 0.12);
+  --grid-line: rgba(27, 36, 68, 0.05);
+
+  --header-bg: rgba(244, 245, 250, 0.9);
+  --overlay-bg: rgba(255, 255, 255, 0.98);
+  --filter-bg: rgba(244, 245, 250, 0.95);
+  --chip-bg: rgba(14, 21, 48, 0.04);
+  --chip-border: rgba(14, 21, 48, 0.08);
+  --subtle-bg: rgba(14, 21, 48, 0.05);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --code-bg: rgba(27, 36, 68, 0.07);
+  --pre-bg: rgba(27, 36, 68, 0.06);
+  --project-card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.55));
+  --audio-bg: linear-gradient(135deg, rgba(60, 75, 130, 0.08), rgba(45, 60, 110, 0.04));
+  --audio-border: rgba(14, 21, 48, 0.1);
+  --audio-controls-bg: rgba(228, 231, 242, 0.9);
+  --tap-highlight: rgba(14, 21, 48, 0.08);
+
+  color-scheme: light;
+}
+
+/* Third-party embeds pasted via the CMS (e.g. SoundCloud attribution lines)
+   ship hard-coded light-grey text; keep it readable on the light theme. */
+:root[data-theme='light'] .prose [style*='color: #cccccc'],
+:root[data-theme='light'] .prose [style*='color:#cccccc'] {
+  color: var(--text-secondary) !important;
 }
 
 /* --- Reset --- */
@@ -86,6 +168,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 img,
@@ -139,7 +222,7 @@ h3 { font-size: var(--text-h3); }
   top: -100%;
   left: var(--space-sm);
   background: var(--accent-primary);
-  color: white;
+  color: var(--on-accent);
   padding: var(--space-xs) var(--space-sm);
   border-radius: 4px;
   z-index: 9999;
@@ -179,8 +262,8 @@ h3 { font-size: var(--text-h3); }
   width: 100%;
   height: 100%;
   background:
-    linear-gradient(90deg, rgba(27, 36, 68, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(27, 36, 68, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(var(--grid-line) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: 0;
   pointer-events: none;
@@ -234,13 +317,13 @@ h3 { font-size: var(--text-h3); }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  color: white;
+  color: var(--on-accent);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 51, 102, 0.4);
-  color: white;
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-primary) 40%, transparent);
+  color: var(--on-accent);
 }
 
 .btn-outline {
@@ -250,7 +333,7 @@ h3 { font-size: var(--text-h3); }
 }
 
 .btn-outline:hover {
-  background: rgba(255, 51, 102, 0.1);
+  background: color-mix(in srgb, var(--accent-primary) 10%, transparent);
   transform: translateY(-2px);
   color: var(--accent-primary);
 }
@@ -267,33 +350,33 @@ h3 { font-size: var(--text-h3); }
 }
 
 .tag-bcmi {
-  background: rgba(0, 229, 255, 0.1);
-  color: #00E5FF;
-  border: 1px solid rgba(0, 229, 255, 0.3);
+  background: color-mix(in srgb, var(--accent-bcmi) 10%, transparent);
+  color: var(--accent-bcmi);
+  border: 1px solid color-mix(in srgb, var(--accent-bcmi) 30%, transparent);
 }
 
 .tag-running {
-  background: rgba(255, 107, 53, 0.1);
-  color: #FF6B35;
-  border: 1px solid rgba(255, 107, 53, 0.3);
+  background: color-mix(in srgb, var(--accent-running) 10%, transparent);
+  color: var(--accent-running);
+  border: 1px solid color-mix(in srgb, var(--accent-running) 30%, transparent);
 }
 
 .tag-music {
-  background: rgba(157, 78, 221, 0.1);
-  color: #9D4EDD;
-  border: 1px solid rgba(157, 78, 221, 0.3);
+  background: color-mix(in srgb, var(--accent-music) 10%, transparent);
+  color: var(--accent-music);
+  border: 1px solid color-mix(in srgb, var(--accent-music) 30%, transparent);
 }
 
 .tag-education {
-  background: rgba(6, 255, 165, 0.1);
-  color: #06FFA5;
-  border: 1px solid rgba(6, 255, 165, 0.3);
+  background: color-mix(in srgb, var(--accent-education) 10%, transparent);
+  color: var(--accent-education);
+  border: 1px solid color-mix(in srgb, var(--accent-education) 30%, transparent);
 }
 
 .tag-general {
-  background: rgba(255, 51, 102, 0.1);
-  color: #FF3366;
-  border: 1px solid rgba(255, 51, 102, 0.3);
+  background: color-mix(in srgb, var(--accent-primary) 10%, transparent);
+  color: var(--accent-primary);
+  border: 1px solid color-mix(in srgb, var(--accent-primary) 30%, transparent);
 }
 
 /* --- Card Base --- */
@@ -347,7 +430,7 @@ h3 { font-size: var(--text-h3); }
 .prose a {
   color: var(--accent-primary);
   text-decoration: underline;
-  text-decoration-color: rgba(255, 51, 102, 0.3);
+  text-decoration-color: color-mix(in srgb, var(--accent-primary) 30%, transparent);
 }
 
 .prose a:hover {
@@ -374,14 +457,14 @@ h3 { font-size: var(--text-h3); }
 }
 
 .prose code {
-  background: rgba(27, 36, 68, 0.5);
+  background: var(--code-bg);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   font-size: 0.9em;
 }
 
 .prose pre {
-  background: rgba(27, 36, 68, 0.8);
+  background: var(--pre-bg);
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
@@ -436,8 +519,8 @@ h3 { font-size: var(--text-h3); }
 
 /* --- Audio Player --- */
 .prose .audio-player {
-  background: linear-gradient(135deg, rgba(60, 75, 130, 0.3), rgba(45, 60, 110, 0.2));
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--audio-bg);
+  border: 1px solid var(--audio-border);
   border-radius: 10px;
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-md) 0;
@@ -459,15 +542,15 @@ h3 { font-size: var(--text-h3); }
   border-radius: 6px;
 }
 
-/* Dark-themed audio controls where supported */
+/* Theme-matched audio controls where supported */
 .prose .audio-player audio::-webkit-media-controls-panel {
-  background: rgba(20, 30, 60, 0.8);
+  background: var(--audio-controls-bg);
 }
 
 .prose hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 51, 102, 0.4), rgba(0, 229, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent-primary) 40%, transparent), color-mix(in srgb, var(--accent-secondary) 40%, transparent), transparent);
   margin: var(--space-xl) 0;
 }
 
@@ -570,7 +653,7 @@ h3 { font-size: var(--text-h3); }
 }
 
 .prose .md-accordion summary:hover {
-  background: rgba(255, 51, 102, 0.05);
+  background: color-mix(in srgb, var(--accent-primary) 5%, transparent);
 }
 
 .prose .md-accordion .md-accordion-body {

@@ -24,6 +24,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Theme: apply the saved choice before first paint to avoid a flash -->
+    <script is:inline>
+      (function () {
+        var theme = 'dark';
+        try {
+          if (localStorage.getItem('theme') === 'light') theme = 'light';
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme;
+        window.__initialThemeColor = theme === 'light' ? '#F4F5FA' : '#000814';
+      })();
+    </script>
     <title>{title} | Joel Eaton</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
@@ -55,6 +67,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" sizes="16x16" href={url('/favicon-16x16.png')} />
     <link rel="apple-touch-icon" sizes="180x180" href={url('/apple-touch-icon.png')} />
     <meta name="theme-color" content="#000814" />
+    <script is:inline>
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', window.__initialThemeColor);
+    </script>
     <meta name="generator" content={Astro.generator} />
 
     <!-- Google Analytics 4 -->
