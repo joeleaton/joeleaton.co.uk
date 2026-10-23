@@ -1,6 +1,7 @@
 ---
-title: St. Barts Reverb Plugin
+title: St. Bartholomew's Reverb Plugin
 slug: st-barts-reverb-plugin
+draft: false
 description: A plug-in that captures the reverb of a neo-gothic church that you can apply to your music.
 categories:
   - music
@@ -10,7 +11,7 @@ tags:
 year: 2025
 location: Brighton, UK
 featured: true
-featuredImage: /images/uploads/st.barts-UI.png
+featuredImage: /images/uploads/St-Barts-gif.gif
 videoUrl: ''
 technologies:
   - C++
