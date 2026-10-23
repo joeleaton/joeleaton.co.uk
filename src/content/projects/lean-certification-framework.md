@@ -17,13 +17,17 @@ links: null
 publishedDate: 2026-03-03T12:13:00
 ---
 
-In the world of Customer Education, we often view professional certification as the "final boss" for validating our products and our customers themselves. It can involve six-figure partnerships with testing agencies, the grueling psychometric validations, and the expensive proctoring platforms. Having led education teams at companies like Amazon and Unity, I have seen that high-budget world firsthand. At Unity, we partnered with third partners for developing certification exams at a cost well exceeding $150,000 a year.
+In the world of Customer Education, we often view professional certification as the rubber stamp for validating our products and our customers themselves. 
+
+It can involve six-figure partnerships with testing agencies, the grueling psychometric validations, and the expensive proctoring platforms. 
+
+Having led education teams at companies like Amazon and Unity, I have seen that high-budget world firsthand. At Unity, we partnered with external providers for developing certification exams at a cost well exceeding $150,000 a year.
 
 But what happens when you are in a lean SaaS environment and you need that same level of rigor without the budget?
 
 In one of my roles, I saw an opportunity for a medium-stakes certification exam to aid retention and advocacy with customers, as well as increase brand credibility in the market place. I started from scratch, using existing tools, and only my time alongside leading a learning team.
 
-This project, and the toolkit available at the end of it, gives an overview of the project.
+This project, and the toolkit available at the end of it, gives a condensed overview of all of the work involved.
 
 ## The Battle for the MQC: Product Knowledge vs. Job Performance
 
@@ -35,13 +39,17 @@ Creating a JTA is a collaborative exercise, and I've partnered with customer-fac
 
 By involving experts in the JTA and question writing, I ensured the exam was a measure of professional utility, not just product trivia.
 
+With a well-written JTA, the exam items (questions and answers) almost write themselves. You're not writing questions to try and test the intelligence of someone, or to try and outwit them - you're simply testing the tasks and knowledge that form the competencies to do someone's job.
+
 ## A Defensible Methodology
 
-To set the passing score, I adapted well-trodden theories into a simplified framework. I used a combination of the Ebel method for question selection and a simplified Angoff process for setting the threshold.
+To set the passing score, I adapted well-trodden theories into a simplified framework. 
+
+I used a combination of the Ebel method for question categorisation and a simplified Angoff process for setting the threshold for the pass mark.
 
 By asking SMEs to predict the performance of an MQC, we moved away from arbitrary pass marks and toward a defensible, data-backed standard. Coupled with the JTA, I call this my \*\*Lean Certification Framework \*\*(download link further down this page 👇🏼).
 
-![Learn Certification framework diagram](/images/uploads/lean-cert.png "Learn Certification Framework")
+![Learn Certification framework diagram](/images/uploads/learn-cert-framework.png "Learn Certification Framework")
 
 ## The 60-Second Proctoring Hack
 
@@ -75,11 +83,11 @@ By keeping the process human, having an instructor set the scene and engage with
 
 ## Closing Thoughts
 
-This project started with a zero-dollar budget and a spreadsheet. It grew through deep collaboration with customer-facing teams and business leaders to define what a customer actually needs to do to be successful.
+This project started with a  budget of zero and a spreadsheet. It grew through deep collaboration with customer-facing teams and business leaders to define what a customer actually needs to do to be successful.
 
-Today, it stands as a core part of our customer education strategy and we are now building out specialised credentials based on this foundational-level exam.
+Today, it stands as a core part of our customer education strategy and we are now building out specialised credentials based on the JTA and the competency matrix it helped me build.
 
-If you are waiting for a massive budget to start your certification journey, my advice is simple: Stop waiting. Map your competencies, engage your SMEs, and start building!
+If you are waiting for a massive budget to start your certification journey, hopefully this approach can help address some of the barriers you're facing
 
 ***
 
