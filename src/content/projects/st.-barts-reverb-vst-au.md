@@ -74,7 +74,7 @@ Get it free! Download includes standalone, VST3, and AU versions.
 
 :::buttons
 
-Download St Barts | https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGwYgV3X/view?usp=drive_link | outline
+Download St Barts | https://github.com/joeleaton/st-bartholomews | outline
 :::
 
 ## Installing on macOS
@@ -82,11 +82,9 @@ Download St Barts | https://drive.google.com/file/d/1i1WcKehlrApvIUXkUX5m7zQKVGw
 The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.
 
 1. Unzip and copy the components to:
-
     - AU → `~/Library/Audio/Plug-Ins/Components/St Barts Reverb.component`
     - VST3 → `~/Library/Audio/Plug-Ins/VST3/St Barts Reverb.vst3`
     - Standalone → wherever you like (e.g. `/Applications`)
-
 2. Clear the download quarantine. Open Terminal and run, adjusting paths if needed:
 
 ```plain
