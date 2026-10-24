@@ -55,7 +55,7 @@ MIDI → │  EXCITER  │ → │ RESONATOR │ → │  OUTPUT   │ → │ M
 
 ### The exciter
 
-The exciter is where the energy comes from. You turn the **Wave** knob for a continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. 
+The exciter is where the sound originates. You turn the **Wave** knob for a continuous morph through five waveforms (sine → triangle → ramp → pulse → square), crossfaded against a noise generator with a sample-and-hold rate of its own. 
 
 A short, plucky envelope gives you Karplus-Strong-style strings whereas a long sustained envelope into the loop gives you a bowed pad. 
 
@@ -85,7 +85,7 @@ Tap a source tile to arm it, then click any knob on the synth. A connection ligh
 
 Every modulated knob shows a coloured arc around its bezel for the modulation's excursion, and an animated dot riding along where the live value currently is.
 
-![Quad LFO and modulation matrix](/images/uploads/tides-ui-mod-new.png "Quad LFO panel on the left, modulation matrix on the right. Tiles light when active; the W↔RND knob crossfades each LFO between periodic waves and sample-and-hold.")
+![Quad LFO and modulation matrix](/images/uploads/tides-ui-mod-new.png "Quad LFO panel in the middle with the modulation matrix on the right. Tiles light when active; the W↔RND knob crossfades each LFO between periodic waves and sample-and-hold.")
 
 ### Voice groups
 
@@ -107,11 +107,11 @@ Admittedly untested with a real MPE controller, but lower-zone MPE is in there. 
 
 Channel-mode MIDI works fine if, like me, you don't have an MPE controller.
 
-## Design notes.
+## Design notes
 
-There are 33 factory presets across eight categories: plucks, pads, self-oscillating tones, basses, bell/metallic textures, strings, glitchy random things, and multi-voice layered stacks. Each one ships with designer notes explaining what technique it's showing off.
+There are 33 factory presets across eight categories including plucks, pads, self-oscillating tones, basses, bell/metallic textures, strings, glitchy random things, and multi-voice layered stacks. 
 
-The next iteration will focus on some better presets as these were a bit rushed. You can get some amazing sounds with some interesting modulation settings and I keep meaning to replace some of he more stale presets. As always, time...
+The next iteration will focus on some better presets as these were a bit rushed. You can get some amazing sounds with some interesting modulation settings as I keep working to replace some of he more stale presets. As always, time...
 
 ## Download
 
