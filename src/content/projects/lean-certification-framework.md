@@ -93,10 +93,12 @@ If you are waiting for a massive budget to start your certification journey, hop
 
 ### Download the Framework
 
-Ready to build your own defensible certification program without the huge price tag? I  documented my **Lean Certification**  I used, from Job Task Analysis to the "60-second proctoring" hack into a repeatable toolkit.
+I documented my **Lean Certification framework**, from Job Task Analysis to the 60-second proctoring hack into a repeatable toolkit.
 
 :::buttons
 
 Download | [https://drive.proton.me/urls/XN1HEVRPD8#62VM20UlX5lI](https://drive.proton.me/urls/XN1HEVRPD8#62VM20UlX5lI) | outline
 
 :::
+
+Questions? [Contact me](https://joeleaton.co.uk/contact), I'm more than happy to expand on any of the stages in more detail.
