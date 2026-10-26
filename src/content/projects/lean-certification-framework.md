@@ -97,6 +97,6 @@ Ready to build your own defensible certification program without the huge price 
 
 :::buttons
 
-Download | [https://drive.proton.me/urls/62S2P07TRM#cEIFUKt7CAEN](https://drive.proton.me/urls/62S2P07TRM#cEIFUKt7CAEN) | outline
+Download | [https://drive.proton.me/urls/XN1HEVRPD8#62VM20UlX5lI](https://drive.proton.me/urls/XN1HEVRPD8#62VM20UlX5lI) | outline
 
 :::
