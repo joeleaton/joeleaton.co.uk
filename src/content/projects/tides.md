@@ -124,6 +124,9 @@ The download includes a quick-start README and two PDFs — a friendly user guid
 Download Tides v1.1 | [https://github.com/joeleaton/tides](https://github.com/joeleaton/tides) | outline
 :::
 
+:::signup
+:::
+
 # Installing on macOS
 
 The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.

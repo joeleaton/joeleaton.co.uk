@@ -105,6 +105,9 @@ Download Orbit| [https://github.com/joeleaton/orbit](https://github.com/joeleato
 
 :::
 
+:::signup
+:::
+
 ## Installing on macOS
 
 The build is ad-hoc signed, not notarised, and the files pick up macOS's download quarantine on the way to you — so macOS will block them on first open until you clear it. This is expected.
