@@ -51,7 +51,7 @@ export default function remarkSignup(options = {}) {
 function formHtml(action) {
   return `<section class="md-signup" aria-label="Get plugin updates by email">
 <p class="md-signup-title">Want to hear about updates?</p>
-<p class="md-signup-intro">Sign up to hear about new plugins and updates to existing ones. It's optional: you don't need to sign up to download.</p>
+<p class="md-signup-intro">Sign up to hear about new plugins and updates to existing ones.</p>
 <form action="${esc(action)}" method="post" target="_blank">
 <label class="md-signup-email">Email<input type="email" name="fields[email]" autocomplete="email" required /></label>
 <div class="g-recaptcha" data-sitekey="${RECAPTCHA_SITE_KEY}"></div>
