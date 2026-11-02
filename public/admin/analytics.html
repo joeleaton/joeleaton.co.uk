@@ -225,6 +225,12 @@
       font-weight: 700;
     }
 
+    .stat-card .note {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+
     /* Tables */
     .data-grid {
       display: grid;
@@ -521,6 +527,22 @@
     </div>
   </div>
 
+  <!-- Plugin downloads -->
+  <div class="realtime-section">
+    <div class="realtime-header">
+      <h2>Plugin Downloads</h2>
+      <span class="realtime-updated" id="downloadsUpdated"></span>
+    </div>
+
+    <div id="downloadsError" class="error-msg" style="display:none;"></div>
+    <div id="downloadsCards" class="stat-grid"></div>
+
+    <div class="data-panel">
+      <div class="panel-header">All-Time Downloads by Release</div>
+      <div id="downloadsTable" class="loading"><div class="spinner"></div><br/>Loading...</div>
+    </div>
+  </div>
+
   <!-- Summary stats -->
   <div class="stat-grid">
     <div class="stat-card">
@@ -736,6 +758,7 @@
     document.getElementById('signOutBtn').style.display = 'inline-flex';
     initDates();
     fetchAll();
+    fetchDownloads();
   }
 
   // Auto-login on page load if token is still valid
@@ -966,6 +989,119 @@
       clearInterval(realtimeInterval);
       realtimeInterval = null;
     }
+  }
+
+  // Plugin downloads — all-time counts from public GitHub release assets.
+  // Unauthenticated GitHub API is limited to 60 requests/hour per IP, so results are cached.
+  const PLUGINS = [
+    { name: 'Orbit', repo: 'joeleaton/orbit' },
+    { name: 'Tides', repo: 'joeleaton/tides' },
+    { name: 'St Barts', repo: 'joeleaton/st-bartholomews' },
+    { name: 'Life', repo: 'joeleaton/life' },
+  ];
+  const DOWNLOADS_CACHE_KEY = 'plugin_downloads_cache';
+  const DOWNLOADS_CACHE_MS = 10 * 60 * 1000;
+
+  function loadDownloadsCache() {
+    try {
+      return JSON.parse(localStorage.getItem(DOWNLOADS_CACHE_KEY));
+    } catch {
+      return null;
+    }
+  }
+
+  async function fetchPluginReleases(plugin) {
+    const res = await fetch(`https://api.github.com/repos/${plugin.repo}/releases?per_page=100`, {
+      headers: { 'Accept': 'application/vnd.github+json' },
+    });
+
+    if (!res.ok) {
+      const limited = res.status === 403 || res.status === 429;
+      throw new Error(limited ? 'GitHub rate limit reached' : `GitHub API error ${res.status} for ${plugin.repo}`);
+    }
+
+    const releases = await res.json();
+    return {
+      name: plugin.name,
+      releases: releases.map(r => ({
+        tag: r.tag_name,
+        published: r.published_at,
+        downloads: r.assets.reduce((sum, a) => sum + a.download_count, 0),
+      })),
+    };
+  }
+
+  async function fetchDownloads() {
+    const errorBox = document.getElementById('downloadsError');
+    errorBox.style.display = 'none';
+
+    const cache = loadDownloadsCache();
+    if (cache && Date.now() - cache.fetchedAt < DOWNLOADS_CACHE_MS) {
+      renderDownloads(cache);
+      return;
+    }
+
+    try {
+      const plugins = await Promise.all(PLUGINS.map(fetchPluginReleases));
+      const fresh = { fetchedAt: Date.now(), plugins };
+      localStorage.setItem(DOWNLOADS_CACHE_KEY, JSON.stringify(fresh));
+      renderDownloads(fresh);
+    } catch (err) {
+      errorBox.textContent = cache
+        ? `${err.message}. Showing the last figures fetched.`
+        : `Couldn't load downloads: ${err.message}.`;
+      errorBox.style.display = 'block';
+      if (cache) {
+        renderDownloads(cache);
+      } else {
+        document.getElementById('downloadsTable').innerHTML = '';
+      }
+    }
+  }
+
+  function renderDownloads({ fetchedAt, plugins }) {
+    const pluginTotal = p => p.releases.reduce((sum, r) => sum + r.downloads, 0);
+    const tracked = plugins.filter(p => p.releases.length > 0);
+    const untracked = plugins.filter(p => p.releases.length === 0);
+
+    const card = (label, value, note) => `
+      <div class="stat-card">
+        <div class="label">${escapeHtml(label)}</div>
+        <div class="value">${value}</div>
+        <div class="note">${escapeHtml(note)}</div>
+      </div>`;
+
+    const grandTotal = tracked.reduce((sum, p) => sum + pluginTotal(p), 0);
+    const totalNote = untracked.length
+      ? `Excludes ${untracked.map(p => p.name).join(', ')}`
+      : 'All plugins';
+
+    document.getElementById('downloadsCards').innerHTML =
+      card('Total Downloads', fmtNum(grandTotal), totalNote) +
+      plugins.map(p => p.releases.length
+        ? card(p.name, fmtNum(pluginTotal(p)), `Latest: ${p.releases[0].tag}`)
+        : card(p.name, '&ndash;', 'No GitHub release to count')
+      ).join('');
+
+    const rows = tracked.flatMap(p => p.releases.map(r => ({
+      dimensionValues: [
+        { value: p.name },
+        { value: r.tag },
+        { value: new Date(r.published).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) },
+      ],
+      metricValues: [{ value: r.downloads }],
+    })));
+    const maxVal = Math.max(0, ...rows.map(r => r.metricValues[0].value));
+
+    const table = document.getElementById('downloadsTable');
+    table.classList.remove('loading');
+    table.innerHTML = buildTable(
+      [{ label: 'Plugin' }, { label: 'Release' }, { label: 'Published' }, { label: 'Downloads', align: 'right' }],
+      rows, maxVal
+    );
+
+    document.getElementById('downloadsUpdated').textContent =
+      'Updated ' + new Date(fetchedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
   // Fetch all data
