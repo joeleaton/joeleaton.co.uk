@@ -137,6 +137,35 @@
       color: var(--text-primary);
     }
 
+    /* Tabs */
+    .dash-tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    .dash-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      padding: 0.75rem 1rem;
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .dash-tab:hover { color: var(--text-primary); }
+
+    .dash-tab[aria-selected="true"] {
+      color: var(--text-primary);
+      border-bottom-color: var(--accent-primary);
+    }
+
     /* Dashboard header */
     .dash-header {
       display: flex;
@@ -638,6 +667,14 @@
 <!-- Dashboard -->
 <div id="dashboard" class="container" style="display:none;">
 
+  <div class="dash-tabs" role="tablist" aria-label="Dashboard views">
+    <button class="dash-tab" role="tab" id="tabBtnSite" data-tab="site" aria-controls="tabSite" onclick="selectTab('site')">Site Traffic</button>
+    <button class="dash-tab" role="tab" id="tabBtnDownloads" data-tab="downloads" aria-controls="tabDownloads" onclick="selectTab('downloads')">Plugin Downloads</button>
+  </div>
+
+  <!-- Site traffic tab -->
+  <div id="tabSite" role="tabpanel" aria-labelledby="tabBtnSite">
+
   <div class="dash-header">
     <h2>Dashboard</h2>
     <div class="date-controls">
@@ -694,36 +731,6 @@
     </div>
   </div>
 
-  <!-- Plugin downloads -->
-  <div class="realtime-section">
-    <div class="realtime-header">
-      <h2>Plugin Downloads</h2>
-      <span class="realtime-updated" id="downloadsUpdated"></span>
-    </div>
-
-    <div id="downloadsError" class="error-msg" style="display:none;"></div>
-    <div id="downloadsCards" class="stat-grid"></div>
-    <div id="downloadsChangeCards" class="stat-grid"></div>
-
-    <div class="data-panel" style="margin-bottom:1.5rem;">
-      <div class="panel-header">Downloads Over Time</div>
-      <div id="downloadsTrend" class="loading"><div class="spinner"></div><br/>Loading...</div>
-    </div>
-
-    <div class="data-panel">
-      <div class="panel-header">All-Time Downloads by Release</div>
-      <div id="downloadsTable" class="loading"><div class="spinner"></div><br/>Loading...</div>
-    </div>
-  </div>
-
-  <dialog id="downloadDates" class="dates-dialog" aria-labelledby="downloadDatesTitle">
-    <div class="dates-header">
-      <h3 id="downloadDatesTitle"></h3>
-      <button class="btn btn-small btn-outline" onclick="document.getElementById('downloadDates').close()">Close</button>
-    </div>
-    <div id="downloadDatesBody" class="dates-body" tabindex="0"></div>
-  </dialog>
-
   <!-- Summary stats -->
   <div class="stat-grid">
     <div class="stat-card">
@@ -761,6 +768,38 @@
       <div class="panel-header">Popular Pages</div>
       <div id="pagesTable" class="loading"><div class="spinner"></div><br/>Loading...</div>
     </div>
+  </div>
+
+  </div>
+
+  <!-- Plugin downloads tab -->
+  <div id="tabDownloads" role="tabpanel" aria-labelledby="tabBtnDownloads" hidden>
+    <div class="realtime-header">
+      <h2>Plugin Downloads</h2>
+      <span class="realtime-updated" id="downloadsUpdated"></span>
+    </div>
+
+    <div id="downloadsError" class="error-msg" style="display:none;"></div>
+    <div id="downloadsCards" class="stat-grid"></div>
+    <div id="downloadsChangeCards" class="stat-grid"></div>
+
+    <div class="data-panel" style="margin-bottom:1.5rem;">
+      <div class="panel-header">Downloads Over Time</div>
+      <div id="downloadsTrend" class="loading"><div class="spinner"></div><br/>Loading...</div>
+    </div>
+
+    <div class="data-panel">
+      <div class="panel-header">All-Time Downloads by Release</div>
+      <div id="downloadsTable" class="loading"><div class="spinner"></div><br/>Loading...</div>
+    </div>
+
+    <dialog id="downloadDates" class="dates-dialog" aria-labelledby="downloadDatesTitle">
+      <div class="dates-header">
+        <h3 id="downloadDatesTitle"></h3>
+        <button class="btn btn-small btn-outline" onclick="document.getElementById('downloadDates').close()">Close</button>
+      </div>
+      <div id="downloadDatesBody" class="dates-body" tabindex="0"></div>
+    </dialog>
   </div>
 </div>
 
@@ -1613,6 +1652,30 @@
   window.addEventListener('resize', () => {
     if (downloadHistory && document.getElementById('trendChart')) renderDownloadHistory(downloadHistory);
   });
+
+  // Tabs. The open tab lives in the URL hash so a reload or bookmark keeps it.
+  function selectTab(name) {
+    document.querySelectorAll('.dash-tab').forEach(tab => {
+      const selected = tab.dataset.tab === name;
+      tab.setAttribute('aria-selected', selected);
+      tab.tabIndex = selected ? 0 : -1;
+    });
+    document.getElementById('tabSite').hidden = name !== 'site';
+    document.getElementById('tabDownloads').hidden = name !== 'downloads';
+    history.replaceState(null, '', name === 'downloads' ? '#downloads' : location.pathname + location.search);
+
+    // The chart sizes itself to its container, which has no width while its tab is hidden.
+    if (name === 'downloads' && downloadHistory) renderDownloadHistory(downloadHistory);
+  }
+
+  document.querySelector('.dash-tabs').addEventListener('keydown', e => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const next = e.target.dataset.tab === 'site' ? 'downloads' : 'site';
+    selectTab(next);
+    document.querySelector(`.dash-tab[data-tab="${next}"]`).focus();
+  });
+
+  selectTab(location.hash === '#downloads' ? 'downloads' : 'site');
 
   // Fetch all data
   async function fetchAll() {
