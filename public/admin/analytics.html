@@ -446,6 +446,107 @@
       border-bottom-color: rgba(6, 255, 165, 0.1);
     }
 
+    /* Plugin download trend */
+    .trend-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      padding: 1rem 1.25rem 0;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .trend-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .trend-key {
+      width: 14px;
+      height: 2px;
+      border-radius: 1px;
+    }
+
+    .trend-chart {
+      position: relative;
+      padding: 0.5rem 1.25rem 0;
+    }
+
+    .trend-chart svg {
+      display: block;
+      width: 100%;
+      touch-action: pan-y;
+    }
+
+    .trend-chart svg:focus-visible {
+      outline: 1px solid var(--accent-secondary);
+      outline-offset: 2px;
+    }
+
+    .trend-chart text {
+      font-family: var(--font-body);
+      font-size: 11px;
+      fill: var(--text-secondary);
+    }
+
+    .trend-chart .axis-tick {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .trend-tooltip {
+      position: absolute;
+      top: 0.75rem;
+      pointer-events: none;
+      background: var(--bg-primary);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+
+    .trend-tooltip-row {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .trend-tooltip-row strong {
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      min-width: 2ch;
+      text-align: right;
+    }
+
+    .trend-note {
+      padding: 0.75rem 1.25rem 1rem;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .trend-table-wrap {
+      overflow-x: auto;
+    }
+
+    @media (max-width: 480px) {
+      .trend-table-wrap .data-table th,
+      .trend-table-wrap .data-table td {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+      }
+    }
+
+    .trend-history summary {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-top: 1px solid var(--border-color);
+    }
+
     /* Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
   </style>
@@ -536,6 +637,12 @@
 
     <div id="downloadsError" class="error-msg" style="display:none;"></div>
     <div id="downloadsCards" class="stat-grid"></div>
+    <div id="downloadsChangeCards" class="stat-grid"></div>
+
+    <div class="data-panel" style="margin-bottom:1.5rem;">
+      <div class="panel-header">Downloads Over Time</div>
+      <div id="downloadsTrend" class="loading"><div class="spinner"></div><br/>Loading...</div>
+    </div>
 
     <div class="data-panel">
       <div class="panel-header">All-Time Downloads by Release</div>
@@ -759,6 +866,7 @@
     initDates();
     fetchAll();
     fetchDownloads();
+    fetchDownloadHistory();
   }
 
   // Auto-login on page load if token is still valid
@@ -994,10 +1102,10 @@
   // Plugin downloads — all-time counts from public GitHub release assets.
   // Unauthenticated GitHub API is limited to 60 requests/hour per IP, so results are cached.
   const PLUGINS = [
-    { name: 'Orbit', repo: 'joeleaton/orbit' },
-    { name: 'Tides', repo: 'joeleaton/tides' },
-    { name: 'St Barts', repo: 'joeleaton/st-bartholomews' },
-    { name: 'Life', repo: 'joeleaton/life' },
+    { name: 'Orbit', repo: 'joeleaton/orbit', key: 'orbit', color: '#3987e5' },
+    { name: 'Tides', repo: 'joeleaton/tides', key: 'tides', color: '#d95926' },
+    { name: 'St Barts', repo: 'joeleaton/st-bartholomews', key: 'st-bartholomews', color: '#199e70' },
+    { name: 'Life', repo: 'joeleaton/life', key: 'life', color: '#c98500' },
   ];
   const DOWNLOADS_CACHE_KEY = 'plugin_downloads_cache';
   const DOWNLOADS_CACHE_MS = 10 * 60 * 1000;
@@ -1103,6 +1211,271 @@
     document.getElementById('downloadsUpdated').textContent =
       'Updated ' + new Date(fetchedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
+
+  // Plugin download history — written daily by .github/workflows/plugin-downloads.yml.
+  // A snapshot is only added when a total changes, so counts carry forward between dates.
+  // Dates are UTC, matching the workflow. A null count means no releases exist yet.
+  const DAY_MS = 24 * 60 * 60 * 1000;
+  const toDay = date => Date.parse(date + 'T00:00:00Z') / DAY_MS;
+  const fromDay = day => new Date(day * DAY_MS).toISOString().slice(0, 10);
+  const fmtDay = date => new Date(date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const fmtDayShort = date => new Date(date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+  const fmtChange = n => n === null ? '&ndash;' : n > 0 ? `+${fmtNum(n)}` : n < 0 ? `&minus;${fmtNum(-n)}` : '0';
+  const fmtCount = n => n === null ? '&ndash;' : fmtNum(n);
+  const fmtAxis = n => n >= 1000 ? `${n / 1000}K` : String(n);
+  const countOf = (snapshot, plugin) => snapshot.downloads[plugin.key] ?? null;
+  const sumCounts = counts => {
+    const known = counts.filter(c => c !== null);
+    return known.length ? known.reduce((sum, c) => sum + c, 0) : null;
+  };
+
+  let downloadHistory = null;
+
+  async function fetchDownloadHistory() {
+    const trend = document.getElementById('downloadsTrend');
+    try {
+      const res = await fetch('/data/plugin-downloads.json', { cache: 'no-cache' });
+      if (res.status === 404) {
+        downloadHistory = null;
+        renderDownloadHistory({ snapshots: [] });
+        return;
+      }
+      if (!res.ok) throw new Error(`error ${res.status}`);
+      renderDownloadHistory(await res.json());
+    } catch (err) {
+      downloadHistory = null;
+      trend.classList.remove('loading');
+      trend.innerHTML = `<div style="padding:1.5rem;color:var(--text-secondary);text-align:center;">Couldn't load download history: ${escapeHtml(err.message)}.</div>`;
+    }
+  }
+
+  // Change over the last `days` days, or as far back as the history reaches.
+  function downloadChange(snapshots, days, today) {
+    if (toDay(snapshots[0].date) >= today) return null;
+    const windowStart = today - days;
+    const earlier = snapshots.filter(s => toDay(s.date) <= windowStart);
+    const baseline = earlier.at(-1) || snapshots[0];
+    const latest = snapshots.at(-1);
+    const perPlugin = PLUGINS.map(p => {
+      const now = countOf(latest, p);
+      if (now === null) return null;
+      // No count at the baseline means no release existed, so every download since is new.
+      return now - (countOf(baseline, p) ?? 0);
+    });
+    return { total: sumCounts(perPlugin), perPlugin, since: earlier.length ? fromDay(windowStart) : baseline.date };
+  }
+
+  function renderDownloadHistory(history) {
+    const trend = document.getElementById('downloadsTrend');
+    const changeCards = document.getElementById('downloadsChangeCards');
+    const snapshots = history.snapshots;
+    trend.classList.remove('loading');
+
+    if (snapshots.length === 0) {
+      downloadHistory = null;
+      changeCards.innerHTML = '';
+      trend.innerHTML = '<div style="padding:1.5rem;color:var(--text-secondary);text-align:center;">No history yet. It starts with the first daily snapshot.</div>';
+      return;
+    }
+
+    downloadHistory = history;
+    const today = Math.max(toDay(new Date().toISOString().slice(0, 10)), toDay(snapshots.at(-1).date));
+    const week = downloadChange(snapshots, 7, today);
+    const month = downloadChange(snapshots, 30, today);
+
+    const changeCard = (label, change) => `
+      <div class="stat-card">
+        <div class="label">${label}</div>
+        <div class="value">${change ? fmtChange(change.total) : '&ndash;'}</div>
+        <div class="note">${change ? `Since ${fmtDay(change.since)}` : 'Tracking started today'}</div>
+      </div>`;
+    changeCards.innerHTML = changeCard('Last 7 Days', week) + changeCard('Last 30 Days', month);
+
+    const latest = snapshots.at(-1);
+    const legend = PLUGINS.map(p => `
+      <span><i class="trend-key" style="background:${p.color}"></i>${escapeHtml(p.name)}${countOf(latest, p) === null ? ' (no release yet)' : ''}</span>`).join('');
+
+    const note = snapshots.length === 1 && toDay(latest.date) === today
+      ? `Tracking started ${fmtDay(latest.date)}. The trend builds as new downloads are recorded.`
+      : `Tracked since ${fmtDay(snapshots[0].date)}. Counts last changed ${fmtDay(latest.date)}.`;
+
+    const tableRow = (name, total, weekChange, monthChange) => `
+      <tr><td>${name}</td><td class="num">${fmtCount(total)}</td><td class="num">${fmtChange(weekChange)}</td><td class="num">${fmtChange(monthChange)}</td></tr>`;
+    const changeRows = PLUGINS.map((p, i) => tableRow(
+      escapeHtml(p.name), countOf(latest, p), week ? week.perPlugin[i] : null, month ? month.perPlugin[i] : null
+    )).join('');
+    const totalRow = tableRow(
+      'All plugins', sumCounts(PLUGINS.map(p => countOf(latest, p))), week ? week.total : null, month ? month.total : null
+    );
+
+    const historyRows = [...snapshots].reverse().map(s => `
+      <tr><td>${fmtDay(s.date)}</td>${PLUGINS.map(p => `<td class="num">${fmtCount(countOf(s, p))}</td>`).join('')}</tr>`).join('');
+
+    trend.innerHTML = `
+      <div class="trend-legend">${legend}</div>
+      <div class="trend-chart" id="trendChart"></div>
+      <div class="trend-note">${note}</div>
+      <div class="trend-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Plugin</th><th class="num">Recorded</th><th class="num">7 days</th><th class="num">30 days</th></tr></thead>
+          <tbody>${changeRows}${totalRow}</tbody>
+        </table>
+      </div>
+      <details class="trend-history">
+        <summary>All snapshots</summary>
+        <div class="trend-table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Date</th>${PLUGINS.map(p => `<th class="num">${escapeHtml(p.name)}</th>`).join('')}</tr></thead>
+            <tbody>${historyRows}</tbody>
+          </table>
+        </div>
+      </details>`;
+
+    drawTrendChart(snapshots, today);
+  }
+
+  function drawTrendChart(snapshots, today) {
+    const container = document.getElementById('trendChart');
+    const style = getComputedStyle(container);
+    const width = Math.max(280, container.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight));
+    const height = 240;
+    const margin = { top: 12, right: 72, bottom: 26, left: 32 };
+    const plotRight = width - margin.right;
+    const plotBottom = height - margin.bottom;
+    const surface = '#0b1327';
+
+    const firstDay = toDay(snapshots[0].date);
+    const span = today - firstDay;
+    const x = day => span === 0
+      ? (margin.left + plotRight) / 2
+      : margin.left + ((day - firstDay) / span) * (plotRight - margin.left);
+
+    // Clean y ticks: a step of 1, 2 or 5 x 10^n, four intervals at most.
+    const maxCount = Math.max(1, ...snapshots.flatMap(s => PLUGINS.map(p => countOf(s, p) ?? 0)));
+    const magnitude = 10 ** Math.floor(Math.log10(maxCount / 4 || 1));
+    const step = Math.max(1, [1, 2, 5, 10].map(m => m * magnitude).find(s => s * 4 >= maxCount));
+    const yMax = Math.ceil(maxCount / step) * step;
+    const y = count => plotBottom - (count / yMax) * (plotBottom - margin.top);
+
+    let svg = '';
+    for (let tick = 0; tick <= yMax; tick += step) {
+      const stroke = tick === 0 ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.07)';
+      svg += `<line x1="${margin.left}" x2="${plotRight}" y1="${y(tick)}" y2="${y(tick)}" stroke="${stroke}"/>`;
+      svg += `<text class="axis-tick" x="${margin.left - 8}" y="${y(tick) + 4}" text-anchor="end">${fmtAxis(tick)}</text>`;
+    }
+
+    const tickCount = Math.min(span, Math.floor((plotRight - margin.left) / 90));
+    for (let i = 0; i <= tickCount; i++) {
+      const day = tickCount === 0 ? firstDay : Math.round(firstDay + (span * i) / tickCount);
+      const anchor = span > 0 && i === tickCount ? 'end' : span > 0 && i === 0 ? 'start' : 'middle';
+      svg += `<text class="axis-tick" x="${x(day)}" y="${height - 8}" text-anchor="${anchor}">${fmtDayShort(fromDay(day))}</text>`;
+    }
+
+    // Step lines: a count holds until the snapshot that changes it.
+    const ends = [];
+    PLUGINS.forEach(p => {
+      const points = snapshots.filter(s => countOf(s, p) !== null);
+      if (points.length === 0) return;
+      let d = `M${x(toDay(points[0].date))} ${y(countOf(points[0], p))}`;
+      points.slice(1).forEach(s => {
+        d += `H${x(toDay(s.date))}V${y(countOf(s, p))}`;
+      });
+      const last = countOf(points.at(-1), p);
+      d += `H${x(today)}`;
+      svg += `<path d="${d}" fill="none" stroke="${p.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+      ends.push({ plugin: p, count: last });
+    });
+
+    // Draw the largest last so its dot and label win where series overlap.
+    ends.sort((a, b) => a.count - b.count);
+    ends.forEach(e => {
+      svg += `<circle cx="${x(today)}" cy="${y(e.count)}" r="4" fill="${e.plugin.color}" stroke="${surface}" stroke-width="2"/>`;
+    });
+
+    // Direct-label line ends, dropping any that would collide. The legend still names them.
+    const placed = [];
+    [...ends].reverse().forEach(e => {
+      const labelY = y(e.count);
+      if (placed.some(py => Math.abs(py - labelY) < 14)) return;
+      placed.push(labelY);
+      svg += `<text x="${x(today) + 10}" y="${labelY + 4}">${escapeHtml(e.plugin.name)} ${fmtNum(e.count)}</text>`;
+    });
+
+    svg += `<g class="trend-cursor" style="display:none;"><line y1="${margin.top}" y2="${plotBottom}" stroke="rgba(255,255,255,0.3)"/>`;
+    PLUGINS.forEach(p => {
+      svg += `<circle r="4" fill="${p.color}" stroke="${surface}" stroke-width="2" data-key="${p.key}"/>`;
+    });
+    svg += '</g>';
+
+    const label = `Plugin downloads from ${fmtDay(snapshots[0].date)} to ${fmtDay(fromDay(today))}. Use the left and right arrow keys to read each day.`;
+    container.innerHTML = `
+      <svg viewBox="0 0 ${width} ${height}" height="${height}" tabindex="0" role="img" aria-label="${escapeHtml(label)}">${svg}</svg>
+      <div class="trend-tooltip" style="display:none;"></div>`;
+
+    const svgEl = container.querySelector('svg');
+    const cursor = container.querySelector('.trend-cursor');
+    const tooltip = container.querySelector('.trend-tooltip');
+    let activeDay = today;
+
+    function showDay(day) {
+      activeDay = Math.min(today, Math.max(firstDay, day));
+      const date = fromDay(activeDay);
+      const snapshot = snapshots.filter(s => s.date <= date).at(-1);
+      const cx = x(activeDay);
+
+      cursor.style.display = '';
+      const line = cursor.querySelector('line');
+      line.setAttribute('x1', cx);
+      line.setAttribute('x2', cx);
+      PLUGINS.forEach(p => {
+        const dot = cursor.querySelector(`[data-key="${p.key}"]`);
+        const count = countOf(snapshot, p);
+        dot.style.display = count === null ? 'none' : '';
+        if (count !== null) {
+          dot.setAttribute('cx', cx);
+          dot.setAttribute('cy', y(count));
+        }
+      });
+
+      const row = (key, value, name) => `<div class="trend-tooltip-row">${key}<strong>${fmtCount(value)}</strong> ${escapeHtml(name)}</div>`;
+      tooltip.innerHTML = fmtDay(date) +
+        PLUGINS.map(p => row(`<i class="trend-key" style="background:${p.color}"></i>`, countOf(snapshot, p), p.name)).join('') +
+        row('<i class="trend-key"></i>', sumCounts(PLUGINS.map(p => countOf(snapshot, p))), 'Total');
+      tooltip.style.display = 'block';
+
+      // Keep the tooltip inside the panel, flipping it to the left of the cursor if needed.
+      const svgRect = svgEl.getBoundingClientRect();
+      const offset = svgRect.left - container.getBoundingClientRect().left + cx * (svgRect.width / width);
+      const tipWidth = tooltip.offsetWidth;
+      const fits = offset + 12 + tipWidth <= container.clientWidth;
+      tooltip.style.left = `${Math.max(0, fits ? offset + 12 : offset - 12 - tipWidth)}px`;
+    }
+
+    function hideDay() {
+      cursor.style.display = 'none';
+      tooltip.style.display = 'none';
+    }
+
+    svgEl.addEventListener('pointermove', e => {
+      const rect = svgEl.getBoundingClientRect();
+      const px = (e.clientX - rect.left) * (width / rect.width);
+      showDay(span === 0 ? firstDay : Math.round(firstDay + ((px - margin.left) / (plotRight - margin.left)) * span));
+    });
+    svgEl.addEventListener('pointerleave', hideDay);
+    svgEl.addEventListener('focus', () => {
+      if (svgEl.matches(':focus-visible')) showDay(activeDay);
+    });
+    svgEl.addEventListener('blur', hideDay);
+    svgEl.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      showDay(activeDay + (e.key === 'ArrowLeft' ? -1 : 1));
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    if (downloadHistory && document.getElementById('trendChart')) renderDownloadHistory(downloadHistory);
+  });
 
   // Fetch all data
   async function fetchAll() {
