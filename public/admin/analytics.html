@@ -547,6 +547,72 @@
       border-top: 1px solid var(--border-color);
     }
 
+    /* Plugin download dates */
+    .stat-card .dates-btn {
+      margin-top: 0.75rem;
+    }
+
+    .dates-dialog {
+      width: min(440px, calc(100vw - 2rem));
+      max-height: calc(100dvh - 2rem);
+      margin: auto;
+      padding: 0;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+    }
+
+    .dates-dialog[open] {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dates-dialog::backdrop {
+      background: rgba(0, 8, 20, 0.75);
+    }
+
+    .dates-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .dates-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+    }
+
+    .dates-body {
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .dates-body:focus-visible {
+      outline: 1px solid var(--accent-secondary);
+      outline-offset: -1px;
+    }
+
+    .dates-line {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .dates-baseline {
+      border-top: 1px solid var(--border-color);
+    }
+
+    .dates-note {
+      padding: 0.75rem 1.25rem 1rem;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+
     /* Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
   </style>
@@ -649,6 +715,14 @@
       <div id="downloadsTable" class="loading"><div class="spinner"></div><br/>Loading...</div>
     </div>
   </div>
+
+  <dialog id="downloadDates" class="dates-dialog" aria-labelledby="downloadDatesTitle">
+    <div class="dates-header">
+      <h3 id="downloadDatesTitle"></h3>
+      <button class="btn btn-small btn-outline" onclick="document.getElementById('downloadDates').close()">Close</button>
+    </div>
+    <div id="downloadDatesBody" class="dates-body" tabindex="0"></div>
+  </dialog>
 
   <!-- Summary stats -->
   <div class="stat-grid">
@@ -1172,12 +1246,14 @@
     const tracked = plugins.filter(p => p.releases.length > 0);
     const untracked = plugins.filter(p => p.releases.length === 0);
 
-    const card = (label, value, note) => `
+    const card = (label, value, note, action = '') => `
       <div class="stat-card">
         <div class="label">${escapeHtml(label)}</div>
         <div class="value">${value}</div>
         <div class="note">${escapeHtml(note)}</div>
+        ${action}
       </div>`;
+    const datesButton = i => `<button class="btn btn-small btn-outline dates-btn" onclick="openDownloadDates(${i})">Download dates<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);"> for ${escapeHtml(PLUGINS[i].name)}</span></button>`;
 
     const grandTotal = tracked.reduce((sum, p) => sum + pluginTotal(p), 0);
     const totalNote = untracked.length
@@ -1186,9 +1262,9 @@
 
     document.getElementById('downloadsCards').innerHTML =
       card('Total Downloads', fmtNum(grandTotal), totalNote) +
-      plugins.map(p => p.releases.length
-        ? card(p.name, fmtNum(pluginTotal(p)), `Latest: ${p.releases[0].tag}`)
-        : card(p.name, '&ndash;', 'No GitHub release to count')
+      plugins.map((p, i) => p.releases.length
+        ? card(p.name, fmtNum(pluginTotal(p)), `Latest: ${p.releases[0].tag}`, datesButton(i))
+        : card(p.name, '&ndash;', 'No GitHub release to count', datesButton(i))
       ).join('');
 
     const rows = tracked.flatMap(p => p.releases.map(r => ({
@@ -1472,6 +1548,67 @@
       showDay(activeDay + (e.key === 'ArrowLeft' ? -1 : 1));
     });
   }
+
+  // Increases per snapshot for one plugin. GitHub has no per-download timestamps, and
+  // whatever the first count held can't be dated, so it's kept apart as a baseline.
+  function pluginDownloadDates(snapshots, plugin) {
+    const increases = [];
+    let baseline = null;
+    let previous = null;
+    snapshots.forEach((s, i) => {
+      const count = countOf(s, plugin);
+      if (count === null) return;
+      if (previous === null && i === 0) {
+        baseline = count;
+      } else if (count !== (previous ?? 0)) {
+        // No earlier count means no release existed, so the whole count is new.
+        increases.push({ date: s.date, change: count - (previous ?? 0) });
+      }
+      previous = count;
+    });
+    return { baseline, increases, latest: countOf(snapshots.at(-1), plugin) };
+  }
+
+  function openDownloadDates(index) {
+    const plugin = PLUGINS[index];
+    const dialog = document.getElementById('downloadDates');
+    const message = text => `<div class="dates-line" style="color:var(--text-secondary);">${escapeHtml(text)}</div>`;
+    document.getElementById('downloadDatesTitle').textContent = `${plugin.name} download dates`;
+
+    let body;
+    const snapshots = downloadHistory ? downloadHistory.snapshots : [];
+    const dates = snapshots.length ? pluginDownloadDates(snapshots, plugin) : null;
+    if (!dates) {
+      body = message('No history yet. It starts with the first daily snapshot.');
+    } else if (dates.baseline === null && dates.increases.length === 0) {
+      body = message(`${plugin.name} has no GitHub release yet, so there are no downloads to date.`);
+    } else {
+      const rows = [...dates.increases].reverse().map(r => `
+        <tr><td>${fmtDay(r.date)}</td><td class="num">${fmtChange(r.change)}</td></tr>`).join('');
+      const fell = dates.increases.some(r => r.change < 0);
+      body = `
+        <div class="dates-line"><strong>${fmtCount(dates.latest)}</strong> recorded in total</div>
+        ${rows
+          ? `<table class="data-table"><thead><tr><th>Recorded on</th><th class="num">Change</th></tr></thead><tbody>${rows}</tbody></table>`
+          : message('No new downloads recorded since tracking began.')}
+        ${dates.baseline === null ? '' : `<div class="dates-line dates-baseline"><strong>${fmtNum(dates.baseline)}</strong> before tracking began ${fmtDay(snapshots[0].date)}</div>`}
+        <div class="dates-note">
+          GitHub doesn't record when each download happened, so these dates come from a daily count.
+          Each date is when a change was recorded. It covers everything since the previous check: usually the 24 hours up to about 03:00 UTC that day, or longer if a check was missed.
+          ${dates.baseline === null ? '' : 'Downloads from before the first count can\'t be dated.'}
+          ${fell ? 'A fall means a release or file was removed, taking its count with it.' : ''}
+        </div>`;
+    }
+
+    document.getElementById('downloadDatesBody').innerHTML = body;
+    dialog.showModal();
+    document.getElementById('downloadDatesBody').scrollTop = 0;
+  }
+
+  // Clicking the backdrop closes the dialog; its content fills the box, so only the backdrop targets it.
+  document.getElementById('downloadDates').addEventListener('click', e => {
+    if (e.target === e.currentTarget) e.currentTarget.close();
+  });
 
   window.addEventListener('resize', () => {
     if (downloadHistory && document.getElementById('trendChart')) renderDownloadHistory(downloadHistory);
