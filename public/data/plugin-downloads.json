@@ -1,0 +1,13 @@
+{
+  "snapshots": [
+    {
+      "date": "2026-11-02",
+      "downloads": {
+        "orbit": 4,
+        "tides": 33,
+        "st-bartholomews": 1,
+        "life": null
+      }
+    }
+  ]
+}
