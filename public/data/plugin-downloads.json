@@ -17,6 +17,15 @@
         "st-bartholomews": 1,
         "life": null
       }
+    },
+    {
+      "date": "2026-11-08",
+      "downloads": {
+        "orbit": 5,
+        "tides": 35,
+        "st-bartholomews": 1,
+        "life": null
+      }
     }
   ]
 }
