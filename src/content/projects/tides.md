@@ -121,7 +121,7 @@ The download includes a quick-start README and two PDFs — a friendly user guid
 
 :::buttons
 
-Download Tides v1.1 | [https://github.com/joeleaton/tides](https://github.com/joeleaton/tides) | outline
+Download Tides | [https://github.com/joeleaton/tides](https://github.com/joeleaton/tides) | outline
 :::
 
 :::signup
