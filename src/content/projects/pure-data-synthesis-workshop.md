@@ -37,9 +37,9 @@ Using additive synthesis, construct chords of sine waves, control movement, add 
 
 Elysium is built using the free/open source [plugdata](https://plugdata.org/) environment for the Pure Data visual programming language. This started life in a different guise years ago as an iPhone app, but I recently rewrote it for the modern world as a plugin directly for the DAW.
 
-I refactored the patches from the (now defunct) pd-extended library, to run in pd-vanilla. This was to allow me to compile it in Heavy for C++/native VST development but I quite liked working through plugdata in a DAW.
+I refactored my old patches from the (now defunct) pd-extended library, to run in pd-vanilla. This was to allow me to compile it in Heavy for C++/native VST development but I quite liked working through plugdata in a DAW.
 
-The synth consists of 3 banks of oscillators; sine waves, harmonic notes, and organ notes (both the Harmonic and Organ notes are additive sine functions). Each bank has two sets of 8 notes of identical pitches. You adjust the volume levels of the pitches to build chords that cross-fade from one to the other. And you set the base pitch of note 1, the the octave, and the scale which determines the relative pitches across the bank.
+The synth consists of 3 banks of oscillators. Sine waves, harmonic notes, and organ notes (both the Harmonic and Organ notes are additive sine functions). Each bank has two sets of 8 notes of identical pitches. You adjust the volume levels of the pitches to build chords that cross-fade from one to the other. And you set the base pitch of note 1, the the octave, and the scale which determines the relative pitches across the bank.
 
 Each of the three banks has a set of  effects including chorus, distortion, and AM/FM modulation, and they all  pass through a global reverb unit I built, _Space,_ where you control characteristics as opposed to just straight up reverb params. The modulation processor is based on an old analogue Throbbing Gristle device, but it's my own interpretation of it (I reused it in Orbit).
 
