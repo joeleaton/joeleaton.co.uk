@@ -55,7 +55,7 @@ That's the pattern I keep coming back to with these tools. Let the AI do the fuz
 
 As I mentioned in my [Leaving Google](/blog/leaving-google) post you'll know I'm a bit twitchy about free (well, free and data). So, looking at this:
 
-- **n8n** - free to self-host, or a trial on their cloud
+- **n8n** - on a free trial for now, moving to my NAS after
 - **Supabase** and **Telegram** - free tiers, more than enough here
 - **OpenAI** - a small model, roughly 2,000 tokens a week. A fraction of a penny per run
 - **ElevenLabs** - voice cloning isn't on the free tier, so this is the one bit I actually pay for
