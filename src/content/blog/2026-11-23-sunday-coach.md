@@ -1,5 +1,5 @@
 ---
-title: 'Sunday Coach: An AI Voice Note About My Week'
+title: Sunday Coach - An AI Voice Note About My Running Week
 slug: sunday-coach
 draft: false
 description: Gluing AI onto the apps I already built, for next to nothing.
