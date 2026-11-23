@@ -1,7 +1,7 @@
 ---
 title: 'Sunday Coach: An AI Voice Note About My Week'
 slug: sunday-coach
-draft: true
+draft: false
 description: Gluing AI onto the apps I already built, for next to nothing.
 category: running
 tags:
