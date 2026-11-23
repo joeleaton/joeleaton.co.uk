@@ -53,14 +53,14 @@ That's the pattern I keep coming back to with these tools. Let the AI do the fuz
 
 ## The price of (almost) free
 
-If you've read my [Leaving Google](/blog/leaving-google) post you'll know I'm a bit twitchy about free (well, free and data). So, honestly:
+As I mentioned in my [Leaving Google](/blog/leaving-google) post you'll know I'm a bit twitchy about free (well, free and data). So, looking at this:
 
 - **n8n** - free to self-host, or a trial on their cloud
 - **Supabase** and **Telegram** - free tiers, more than enough here
 - **OpenAI** - a small model, roughly 2,000 tokens a week. A fraction of a penny per run
 - **ElevenLabs** - voice cloning isn't on the free tier, so this is the one bit I actually pay for
 
-And yes, I'm aware of the irony of writing a whole post about taking my data back from big tech, then handing voice samples to ElevenLabs and a weekly summary of my training to an LLM. That's the trade I'm making for the fun of it, eyes open. It's something I'd think harder about if this was anyone's data but my own.
+And yes, I'm aware of the irony of writing a whole post about taking my data back from big tech, then handing voice samples to ElevenLabs and a weekly summary of my training to an LLM. That's the trade I'm making for the fun of it, eyes open. 
 
 ## Augment, don't rebuild
 
