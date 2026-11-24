@@ -5,11 +5,12 @@ description: Book Chapters, Journal Articles, and Conference Papers
 menuOrder: 3
 showInMenu: true
 titlePrefix: ''
+showAboutSections: false
 ---
 
 ![photo of books](/images/uploads/PXL_20260208_161256174.MP.jpg "Books of publications")
 
-At some point I'll add PDF links but in the meantime please [contact me](../contact/) if you'd like access to any content.
+You can access and download my publications from my [ResearchGate profile](https://www.researchgate.net/profile/Joel-Eaton/research). 
 
 ## Book chapters
 
@@ -25,7 +26,7 @@ Miranda, E., Magee, W., Wilson, J., Eaton, J., Palaniappan, R. 2011. _Brain‐Co
 
 Kirke, A., Eaton, J., Miranda, E. 2015. _Real-Time Hallucination Simulation and Sonification through User-Led Development of an iPad Augmented Reality Performance_. Leonardo. vol 48 (3). 235–242. MIT Press.
 
-Kirke, A., Davies, G., Eaton, J. 2020._&#160;Application of Optimization and Simulation to Musical Composition that Emerges Dynamically during Ensemble Singing Performance&#160;_[_arXiv:2006.03471_](https://arxiv.org/abs/2006.03471)_&#160;[cs.SD]_
+Kirke, A., Davies, G., Eaton, J. 2020. _Application of Optimization and Simulation to Musical Composition that Emerges Dynamically during Ensemble Singing Performance_ _[arXiv:2006.03471](https://arxiv.org/abs/2006.03471)_ _[cs.SD]_
 
 ## Conference proceedings
 
@@ -39,7 +40,7 @@ Eaton, J., Miranda, E. 2014. _Expanding on brain control: A real-time hybrid bcm
 
 Eaton, J., Williams, D., Miranda, E. 2014. _Affective Jukebox: A Confirmatory Study of EEG Emotional Correlates in Response to Musical Stimuli._ Joint SMC | ICMC 2014, 11th Sound and Music Conference |14th International Computer Music Conference, University of Athens, Greece.
 
-Eaton, J., Jin, W., Miranda, E. 2014 _The Space Between Us. A live performance with musical score generated via emotional levels measured in EEG of one performer and an audience member. _New Interfaces for Musical Expression (NIME), London, UK.
+Eaton, J., Jin, W., Miranda, E. 2014. _The Space Between Us_. A live performance with musical score generated via emotional levels measured in EEG of one performer and an audience member. \_New Interfaces for Musical Expression (NIME), London, UK.
 
 Eaton, J., Miranda, E .R. 2013. _BCMI Systems for Musical Performance_. 10th International Symposium on Computer Music Multidisciplinary Research (CMMR): Sound, Music and Motion. Marseille, France
 
