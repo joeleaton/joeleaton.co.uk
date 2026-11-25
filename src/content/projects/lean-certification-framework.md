@@ -102,3 +102,5 @@ Download | [https://drive.proton.me/urls/XN1HEVRPD8#62VM20UlX5lI](https://drive.
 :::
 
 Questions? [Contact me](https://joeleaton.co.uk/contact), I'm more than happy to expand on any of the stages in more detail.
+
+<figure><img src="/images/uploads/joel-pulse.jpeg" alt="Joel presenting the Learn Certification Framework at Gainsight Pulse Europe 2026" title="Joel presenting the Learn Certification Framework at Gainsight Pulse Europe 2026"><figcaption>Joel presenting the Learn Certification Framework at Gainsight Pulse Europe 2026</figcaption></figure>
