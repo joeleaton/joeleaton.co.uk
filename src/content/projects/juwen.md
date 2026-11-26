@@ -1,7 +1,7 @@
 ---
 title: Juwen synth plugin
 slug: juwen
-draft: true
+draft: false
 description: My old Roland Juno-6, rebuilt as a plugin from circuit measurements, with 12 voices and the modern playability the original bad boy never had.
 categories:
   - music
