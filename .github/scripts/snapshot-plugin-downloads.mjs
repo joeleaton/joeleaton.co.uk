@@ -8,7 +8,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 
-const REPOS = ['joeleaton/orbit', 'joeleaton/tides', 'joeleaton/st-bartholomews', 'joeleaton/life'];
+const REPOS = ['joeleaton/orbit', 'joeleaton/tides', 'joeleaton/st-bartholomews', 'joeleaton/life', 'joeleaton/juwen-public'];
 const OUTPUT = process.argv[2] || 'public/data/plugin-downloads.json';
 
 async function fetchReleases(repo) {
