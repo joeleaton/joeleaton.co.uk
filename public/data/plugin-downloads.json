@@ -80,6 +80,16 @@
         "st-bartholomews": 1,
         "life": null
       }
+    },
+    {
+      "date": "2026-11-27",
+      "downloads": {
+        "orbit": 7,
+        "tides": 46,
+        "st-bartholomews": 1,
+        "life": null,
+        "juwen-public": 1
+      }
     }
   ]
 }
